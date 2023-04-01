@@ -1,4 +1,4 @@
-var privatecounter = 0; // Declare the variable outside the function
+let privatecounter = 0; // Declare the variable outside the function
 
 function addgoal() {
   // Get input
@@ -9,7 +9,7 @@ function addgoal() {
   document.cookie = `${privatecounter}=${goal}`;
   privatecounter++;
 }
-var counter = 1;
+let counter = 0;
 while (document.cookie.split(";")[counter] !== undefined)
 {
     var newPara = document.createElement("p");
