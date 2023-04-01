@@ -31,8 +31,7 @@ function update_list()
 
     // Add the new paragraph element to the div element
     myDiv.appendChild(newPara);
-
-    privatecounter++;
+    
     counter++;
   }
 }
