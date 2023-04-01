@@ -9,7 +9,7 @@ function addgoal() {
   document.cookie = `${privatecounter}=${goal}`;
   privatecounter++;
 }
-var counter = 0;
+var counter = 1;
 while (document.cookie.split(";")[counter] !== undefined)
 {
     var newPara = document.createElement("p");
