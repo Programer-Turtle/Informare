@@ -138,3 +138,28 @@ div.box
     border-radius: 20px;
     margin: 0 auto;
 }
+
+div.schedulebackground
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.schedulebox
+{
+    background-color: rgb(30, 75, 173);
+    border-radius: 20px;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    margin: 10px;
+}
+
+p.scheduletext
+{
+    font-size: 15px;
+}
