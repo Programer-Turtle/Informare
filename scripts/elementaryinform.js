@@ -1,5 +1,5 @@
 let menu = [];
-let grade = ["schoolnull", "schoolnull", "schoolnull", "schoolnull", "schoolnull", "schoolnull", "schoolnull", "schoolnull", "schoolnull", "schoolnull", "schoolnull", "schoolnull", "schoolnull", "schoolnull", "schoolnull", "schoolnull", "schoolnull", "schoolnull", "schoolnull", "schoolnull", "schoolnull", "schoolnull", "schoolnull", "schoolnull", "schoolnull", "schoolnull", "schoolnull", "schoolnull", "schoolnull", "schoolnull", "schoolnull"];
+let grade = [];
 var date = new Date();
 var day = date.getDate() - 1;
 let finalgrade = grade[day];
@@ -37,3 +37,4 @@ for (items in menu)
     document.getElementById(target).appendChild(newP);
     document.getElementById(target).appendChild(newP2);
 }
+window.location.href = "SchoolShutDown.html";
