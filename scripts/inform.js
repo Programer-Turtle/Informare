@@ -4,7 +4,7 @@ var date = new Date();
 var day = date.getDate() - 1;
 let finalgrade = grade[day];
 
-if (finalgrade == "schoolnull")
+if (finalgrade === "schoolnull")
 {
     window.location.href = "noschool.html";
 }
