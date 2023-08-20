@@ -1,5 +1,5 @@
-let menu = [];
-let grade = [];
+let menu = [“N/A”, “N/A”, “N/A”, “N/A”, “N/A”, “N/A”, “N/A”, “N/A”, “N/A”, “N/A”, “N/A”, “N/A”, “N/A”, “N/A”, “N/A”, “N/A”, “N/A”, “N/A”, “Saturday”, “Sunday”, “Orange Chicken”, “BBQ Rib Sandwich”, “Hamburger/Cheese”, “Chicken-N-Noodles”, “Quesadilla”, “Saturday”, “Sunday”, “Calzones”, “Taco Salad”, “Papa Johns”, “Chicken-N-Dumplings”];
+let grade = [“N/A”, “N/A”, “N/A”, “N/A”, “N/A”, “N/A”, “N/A”, “N/A”, “N/A”, “N/A”, “N/A”, “N/A”, “N/A”, “N/A”, “N/A”, “N/A”, “N/A”, “N/A”, “N/A”, “N/A”, “26”, “Unknown”, “15”, “25”, “34”, “N/A”, “N/A”, “22”, “51”, “45”, “44”];
 var date = new Date();
 var day = date.getDate() - 1;
 let finalgrade = grade[day];
@@ -37,4 +37,3 @@ for (items in menu)
     document.getElementById(target).appendChild(newP);
     document.getElementById(target).appendChild(newP2);
 }
-window.location.href = "SchoolShutDown.html";
