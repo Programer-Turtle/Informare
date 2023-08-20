@@ -4,8 +4,6 @@ var date = new Date();
 var day = date.getDate() - 1;
 let finalgrade = grade[day];
 
-cconsole.log("test")
-
 if (finalgrade === "schoolnull")
 {
     window.location.href = "noschool.html";
