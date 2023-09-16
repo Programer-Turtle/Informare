@@ -6,8 +6,19 @@
         <link rel="stylesheet" href="inform.css">
     </head>
     <body>
+        <!--navigation bar-->
+        <div class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="updates.html">Patch Notes</a></li>
+                <li class="active"><a href="Homework.html">Homework</a></li>
+                <li><img src="photos/logo.png" class="logo"></li>
+            </ul>
+        </div>
+
+        <!--Main Page-->
         <h1>Homework Manager</h1>
-        <div class="classes-bar">
+        <div class="homework_bar">
             <h1 id="homework" class="class">Homework</h1>
             <div id="list" class="list">
             </div>
@@ -17,7 +28,6 @@
             <button onclick="addgoal()" class="plus">+</button>
         </div>
         
-        <a href="index.html">Back</a>
         <script src="scripts/classes.js"></script>
     </body>
 </html>

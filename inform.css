@@ -39,14 +39,6 @@ br
     font-size: 25px;
 }
 
-div.navbar
-{
-    background-color:rgb(124, 170, 255);
-    padding: 100vw, 11px;
-    display: flex;
-    align-items: center;
-}
-
 a
 {
     margin: 20px;
@@ -60,14 +52,16 @@ a:hover
     text-decoration: underline;
 }
 
-div.classes-bar
+div.homework_bar
 {
-    background-color: rgb(62, 105, 199);
+    background-color: rgb(52, 77, 143);
     border-radius: 20px;
-    width: 600px;
-    height: fit-content;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* Added */
+    align-items: center; /* Added */
 }
+
 
 h1.class
 {
@@ -129,7 +123,7 @@ input
 
 div.list
 {
-    height: 250px;
+    height: auto;
 }
 
 div.box
@@ -138,6 +132,40 @@ div.box
     border-radius: 20px;
     margin: 0 auto;
 }
+
+div.patchnote_bar
+{
+    background-color: rgb(57, 114, 235);
+    border-radius: 20px;
+    margin: 0 auto;
+    margin-bottom: 30px; 
+}
+
+div.version_bar
+{
+    background-color: rgb(80, 130, 236);
+    border-radius: 20px;
+    margin: 0 auto; 
+}
+
+div.homework_bar
+{
+    display: block;
+    background-color: rgb(52, 77, 143);
+    border-radius: 20px;
+    padding-bottom: 20px;
+    margin: 0 auto;
+}
+
+div.assignment_bar {
+    background-color: rgb(59, 84, 155);
+    padding-bottom: 20px;
+    margin: 5px auto;
+    display: flex;
+    justify-content: space-between; /* Distribute space between children */
+    align-items: center; /* Center horizontally */
+}
+
 
 div.schedulebackground
 {
@@ -162,4 +190,44 @@ div.schedulebackground
 p.scheduletext
 {
     font-size: 15px;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    width: 100vw;
+    top: 0%;
+    left: 0%;
+    overflow: hidden;
+    background-color: rgb(62, 105, 199);
+}
+
+li {
+    display: inline-block;
+}
+
+li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0;
+    font-size: 30px;
+}
+
+li a:hover {
+    background-color: rgb(52, 89, 168);
+}
+
+.active {
+    background-color: rgb(46, 190, 190);
+}
+
+img.logo
+{
+    margin-left: 5px; /* Adjust the top margin if needed */
+    width: 40px;
+    height: 40px;
 }
