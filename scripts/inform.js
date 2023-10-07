@@ -1,5 +1,5 @@
-let menu = ["Mini Corn Dog", "Saturday", "Sunday", "Labor Day", "Chicken Chunks", "Papa Johns", "Crispy Chicken legs", "Chili Cheese Coney", "Saturday", "Sunday", "Quesadilla", "Chicken Wings", "Cheesy Scrambled Eggs", "Mini Sub", "Hamburger/Cheese", "Saturday", "Sunday", "Loaded Fries", "Taco Pita Pocket", "Papa Johns", "Chicken, Bacon, Ranch", "Biscuit and Gravy", "Saturday", "Sunday", "Calzones", "Buffalo Dip", "Orange Chicken", "Chicken Patty", "BBQ Rib Sandwich", "Saturday", "Sunday"];
-let grade = ["34", "N/A", "N/A", "N/A", "44.5", "45", "35", "N/A", "N/A", "N/A", "45", "N/A", "32", "N/A", "15", "N/A", "N/A", "54", "N/A", "45", "52", "45", "N/A", "N/A", "22", "0", "26", "60", "42", "N/A", "N/A"];
+let menu = ["Sunday", "Chili Cheese HotDog", "Papa Johns", "Hamb/Cheese", "Quesadillas", "Saturday", "Sunday", "Popcorn Chicken", "Buffalo Dip", "Calzones", "Taco Salad", "Crispy Chicken", "Saturday", "Sunday", "Sloppy Joe-Bun", "Orange Chicken", "E-Learning Day", "Hamb/Cheese", "French Bread", "Saturday", "Sunday", "Fall Break", "Fall Break", "Fall Break", "Fall Break", "Fall Break", "Saturday", "Sunday", "Calzones", "Witches Warts, Mummy FIngers, Eye of Newt Toes, Werewolf Teeth, and Dracula’s Coffin Bat Juice"];
+let grade = ["N/A", "N/A", "45", "15", "45", "N/A", "N/A", "44.5", "0", "22", "51", "35", "N/A", "N/A", "N/A", "26", "N/A", "15", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "22", "SPOOKY"];
 var date = new Date();
 var day = date.getDate() - 1;
 let finalgrade = grade[day];
