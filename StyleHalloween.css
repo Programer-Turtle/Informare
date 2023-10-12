@@ -1,0 +1,233 @@
+body
+{
+    background-color: rgb(243, 171, 89);
+}
+
+h1
+{
+    color: whitesmoke;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 75px;
+}
+
+h2
+{
+    color: whitesmoke;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100px;
+}
+
+p
+{
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5px;
+    font-size: 40px;
+    display: inline-block;
+    word-wrap: break-word;
+}
+
+div.inputs
+{
+    text-align: center;
+}
+
+br
+{
+    font-size: 25px;
+}
+
+a
+{
+    margin: 20px;
+    font-size: 40px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+div.homework_bar
+{
+    background-color: rgb(206, 128, 39);
+    border-radius: 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* Added */
+    align-items: center; /* Added */
+}
+
+
+h1.class
+{
+    display: flex;
+    background-color: rgb(228, 154, 57);
+    border-radius: 20px;
+}
+
+button
+{
+    background-color: rgb(253, 167, 37);
+    border: none;
+    border-radius: 6px;
+    font-size: 35px;
+    margin: 10px;
+    padding: 14px, 8px;
+    cursor: pointer;
+}
+
+button:active
+{
+    background-color: rgb(255, 184, 78);
+}
+
+button:hover
+{
+    box-shadow: 0 0 10px rgb(218, 149, 69);
+}
+
+div.addbutton
+{
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: right;
+}
+
+.plus
+{
+    width: 40px;
+    height: 42px;
+    color: whitesmoke;
+}
+
+input
+{
+    background-color: rgb(223, 138, 68);
+    border: none;
+    width: 300px;
+    height: 42px;
+    margin: 10px;
+    border-radius: 15px;
+    color: whitesmoke;
+    font-size: 25px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div.list
+{
+    height: auto;
+}
+
+div.box
+{
+    background-color: rgb(255, 153, 0);
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+div.patchnote_bar
+{
+    background-color: rgb(236, 156, 6);
+    border-radius: 20px;
+    margin: 0 auto;
+    margin-bottom: 30px; 
+}
+
+div.version_bar
+{
+    background-color: rgb(255, 189, 90);
+    border-radius: 20px;
+    margin: 0 auto; 
+}
+
+div.homework_bar
+{
+    display: block;
+    background-color: rgb(218, 127, 8);
+    border-radius: 20px;
+    padding-bottom: 20px;
+    margin: 0 auto;
+}
+
+div.assignment_bar {
+    background-color: rgb(255, 153, 0);
+    padding-bottom: 20px;
+    margin: 5px auto;
+    display: flex;
+    justify-content: space-between; /* Distribute space between children */
+    align-items: center; /* Center horizontally */
+}
+
+
+div.schedulebackground
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.schedulebox
+{
+    background-color: rgb(221, 144, 27);
+    border-radius: 20px;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    margin: 10px;
+}
+
+p.scheduletext
+{
+    font-size: 15px;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    width: 100vw;
+    top: 0%;
+    left: 0%;
+    overflow: hidden;
+    background-color: rgb(221, 123, 10);
+}
+
+li {
+    display: inline-block;
+}
+
+li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0;
+    font-size: 30px;
+}
+
+li a:hover {
+    background-color: rgb(240, 158, 36);
+}
+
+.active {
+    background-color: rgb(255, 177, 59);
+}
+
+img.logo
+{
+    margin-left: 5px; /* Adjust the top margin if needed */
+    width: 39px;
+    height: 39px;
+}
