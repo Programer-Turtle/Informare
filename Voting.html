@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="photos/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="inform.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voting</title>
+</head>
+<body>
+  <div class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="updates.html">Patch Notes</a></li>
+      <li><a href="Homework.html">Homework</a></li>
+      <li class="active"><a href="Voting.html">Voting</a></li>
+      <li><img src="photos/logo.png" class="logo"></li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h2>Voting</h2>
+  </div>
+  <div class="box">
+    <!--Form-->
+    <form id="Form" action="https://docs.google.com/forms/d/e/1FAIpQLSdaQ_UCoYD-LkFtr8by-Ozd_Rf7Svi9AWtScoOSj5qhT_oCGQ/formResponse" method="post" target="hiddenconfirm">
+
+        <!--What Should Be Added Next?-->
+        <label for=""><p>What update would You like to see next?</p></label><br>
+            <input type="radio" name="entry.1230455769" id="entry.1230455769" value="ProVersion">
+            <label for="ProVersion"><p>Informare Pro Version</p></label><br>
+            <input type="radio" name="entry.1230455769" id="entry.1230455769" value="Themes">
+            <label for="themes"><p>Custom Themes Update</p></label><br>
+
+        <!--SubmitButton-->
+        <button type="submit">Submit</button>
+    </form>
+
+    <!--Submitted Page-->
+    <div id="SubmittedPage" style="display: none;">
+        <h2>Form Submitted</h2>
+        <p>Thanks for contributing to the development process!</p>
+    </div>
+
+    <!--Form Closed-->
+    <div id="ClosedPage" style="display: none;">
+        <h2>Form Closed</h2>
+        <p>The form has been closed. Final Outcome of vote will be released soon.</p>
+    </div>
+  </div>
+
+  <script src="scripts/Voting.js"></script>
+</body>
+</html>
