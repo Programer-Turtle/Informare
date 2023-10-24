@@ -17,7 +17,6 @@ if (localStorage.getItem("Submitted") != null)
 }
 
 document.getElementById('Form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the default form submission behavior
     document.getElementById('Form').style.display = "none";
     document.getElementById('SubmittedPage').style.display = "block";
     localStorage.setItem("Submitted", "True")
