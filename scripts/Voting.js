@@ -1,4 +1,4 @@
-let closed = false;
+let closed = true;
 
 if (closed == true)
 {

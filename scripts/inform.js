@@ -3,6 +3,13 @@ let grade = ["N/A", "N/A", "35", "45", "15", "45", "N/A", "N/A", "44.5", "0", "2
 var date = new Date();
 var day = date.getDate() - 1;
 let finalgrade = grade[day];
+var randomNumber = Math.floor(Math.random() * 20) + 1;
+console.log(randomNumber)
+
+if (randomNumber == 19)
+{
+    window.location.href = "ProVersion/Prank.html"
+}
 
 if (finalgrade === "schoolnull")
 {

@@ -1,38 +1,36 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Informare</title>
-        <link rel="shortcut icon" href="photos/logo.png" type="image/x-icon">
-        <link rel="stylesheet" href="inform.css">
-    </head>
-    <body>
-        <!--navigation bar-->
-        <div class="navbar">
-            <ul>
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="updates.html">Patch Notes</a></li>
-                <li><a href="Homework.html">Homework</a></li>
-                <li><a href="Voting.html">Voting</a></li>
-                <li><img src="photos/logo.png" class="logo"></li>
-            </ul>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="inform.css">
+    <link rel="shortcut icon" href="photos/logo.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Login</title>
+    <script src="scripts/Login.js"></script>
+</head>
+<body>
+    <div class="center">
+        <div style="border-radius: 30px;" class="box">
+            <button class="LoginButton">Login</button>
+            <button class="SignUpButton">Sign Up</button>            
         </div>
-        
-        <!--Main Page-->
-        <div class="box">
-            <h1>Menu:</h1>
-            <h2 id="Item">!The Items</h2>
-            <br>
-            <h1>Grade:</h1>
-            <h2 id="grade">!The grade</h2>
+    </div>
+    <!--MainPage-->
+    <div style="margin-top: 50px;" class="box">
+        <div class="center">
+            <h1>Pro Login</h1>
+            <img style="width: 100px; height: 100px;" src="photos/logo.png">
         </div>
+        <div class="center"><label for="username"><p>Username</p></label></div>
+        <div class="center"><input id="username" type="text"></div>
         <br>
-        <!--Schedule-->
-        <div class="box">
-            <h1>Lunch Schedule</h1>
-            <div id="calender" class="schedulebackground"></div>
-        </div>
-        
-
-        <script src="scripts/inform.js"></script>
-    </body>
+        <div class="center"><label for="password"><p>Password</p></label></div>
+        <div class="center"><input type="password" id="password"></div>
+        <br>
+        <div class="right"><button onclick="Login()"><p>Submit</p></button></div>
+    </div>
+    <script>
+        window.location.href = "Home.html"
+    </script>
+</body>
 </html>
