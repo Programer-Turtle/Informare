@@ -37,4 +37,4 @@ for (items in menu)
     document.getElementById(target).appendChild(newP);
     document.getElementById(target).appendChild(newP2);
 }
-window.location.href = "SchoolShutDown.html";
+window.location.href = "ShutDown.html";

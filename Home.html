@@ -4,6 +4,7 @@
         <title>Informare</title>
         <link rel="shortcut icon" href="photos/logo.png" type="image/x-icon">
         <link rel="stylesheet" href="inform.css">
+        <style id="PageTheme"></style>
     </head>
     <body>
         <!--navigation bar-->
@@ -13,7 +14,14 @@
                 <li><a href="updates.html">Patch Notes</a></li>
                 <li><a href="Homework.html">Homework</a></li>
                 <li><a href="Voting.html">Voting</a></li>
-                <!--<li><a onclick=""><img id="CurrentThemeDisplay" src="photos/LightMode.png" class="logo"></a></li>--><!--ThemesButton-->
+                <li class="theme-dropdown"><a><img id="CurrentThemeDisplay" src="photos/LightMode.png" class="logo"></a>
+                    <div class="dropdown-content">
+                        <div style="display: flex; justify-content: center; gap: 0;" class="center">
+                            <a onclick="ButtonSetTheme('Light')"><img style="flex: 1; display: flex; justify-content: center; align-items: center; margin: 0; gap: 0;" class="logo" src="photos/LightMode.png"></a>
+                            <a onclick="ButtonSetTheme('Night')"><img style="flex: 1; display: flex; justify-content: center; align-items: center; margin: 0; gap: 0;" class="logo" src="photos/NightMode.png"></a>
+                        </div>
+                    </div>
+                </li>
                 <li><img src="photos/logo.png" class="logo"></li>
             </ul>
         </div>
@@ -34,5 +42,6 @@
         
 
         <script src="scripts/inform.js"></script>
+        <script src="scripts/Themes.js"></script><!--Themes-->
     </body>
 </html>

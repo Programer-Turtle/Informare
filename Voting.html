@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="inform.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Voting</title>
+  <style id="PageTheme"></style>
 </head>
 <body>
   <div class="navbar">
@@ -14,6 +15,14 @@
       <li><a href="updates.html">Patch Notes</a></li>
       <li><a href="Homework.html">Homework</a></li>
       <li class="active"><a href="Voting.html">Voting</a></li>
+      <li class="theme-dropdown"><a><img id="CurrentThemeDisplay" src="photos/LightMode.png" class="logo"></a>
+        <div class="dropdown-content">
+            <div style="display: flex; justify-content: center; gap: 0;" class="center">
+                <a onclick="ButtonSetTheme('Light')"><img style="flex: 1; display: flex; justify-content: center; align-items: center; margin: 0; gap: 0;" class="logo" src="photos/LightMode.png"></a>
+                <a onclick="ButtonSetTheme('Night')"><img style="flex: 1; display: flex; justify-content: center; align-items: center; margin: 0; gap: 0;" class="logo" src="photos/NightMode.png"></a>
+            </div>
+        </div>
+    </li>
       <li><img src="photos/logo.png" class="logo"></li>
     </ul>
   </div>
@@ -50,5 +59,6 @@
   </div>
 
   <script src="scripts/Voting.js"></script>
+  <script src="scripts/Themes.js"></script><!--Themes-->
 </body>
 </html>
