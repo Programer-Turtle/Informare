@@ -9,6 +9,7 @@ SetPageTheme();
 
 function ButtonSetTheme(ChosenTheme)
 {
+    //Determines Color
     if(ChosenTheme == "Light")
     {
         localStorage.setItem("Theme", "Light");
@@ -24,6 +25,7 @@ function ButtonSetTheme(ChosenTheme)
 
 function SetPageTheme()
 {
+    //Changes Page Colors
     CurrentTheme = localStorage.getItem("Theme");
     if (CurrentTheme == "Light")
     {
