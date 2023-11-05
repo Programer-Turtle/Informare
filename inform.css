@@ -9,6 +9,7 @@ h1
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 75px;
+    margin-bottom: 30px;
 }
 
 h2
@@ -17,6 +18,7 @@ h2
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 100px;
+    margin-top: 30px;
 }
 
 p
@@ -130,23 +132,30 @@ input
 {
     background-color: rgb(57, 114, 235);
     border-radius: 20px;
-    margin: 0 auto;
+    margin-top: 50px;
 }
 
 .patchnote_bar
 {
     background-color: rgb(57, 114, 235);
     border-radius: 20px;
-    margin: 0 auto;
     margin-bottom: 30px; 
+    transition: 0.6s;
+}
+
+.patchnote_bar h1
+{
+    margin-left: 10px;
+    margin-bottom: 3px;
 }
 
 .version_bar
 {
     background-color: rgb(80, 130, 236);
     border-radius: 20px;
-    margin: 0 auto; 
+    transition: 0.6s;
 }
+
 
 .homework_bar
 {
@@ -180,16 +189,70 @@ input
     border-radius: 20px;
     width: 150px;
     height: 150px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    margin: 10px;
+    margin-right: 9px;
+    margin-left: 9px;
+    margin-top: 9px;
+    margin-bottom: 9px;
+    transition: .9s;
+}
+
+.schedulebox:hover
+{
+    background-color: rgb(40, 91, 202);
+    border-radius: 20px;
+    width: 175px;
+    height: 175px;
+    margin-right: 3px;
+    margin-left: 3px;
+    margin-top: 5px;
+    margin-bottom: 9px;
+    box-shadow: 5px 5px 5px 5px #0482C4;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.schedulebox-CurrentDay
+{
+    background-color: rgb(40, 91, 202);
+    border-radius: 20px;
+    width: 175px;
+    height: 175px;
+    margin-right: 3px;
+    margin-left: 3px;
+    margin-top: 5px;
+    margin-bottom: 9px;
+    transition: 1s;
+    box-shadow: 5px 5px 5px 5px #0482C4;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.DateBox
+{
+    background-color: rgb(27, 58, 124);
+    height: 30px;
+    width: 30px;
+    margin: 0;
+    padding: 5px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 10px;
+    transition: 1s;
 }
 
 p.scheduletext
 {
     font-size: 15px;
+    text-align: center;
+}
+
+p.scheduletextbold
+{
+    font-size: 20px;
+    text-align: center;
+    margin-left: 25%;
+    margin-top: 25%;
+    margin-right: 0;
+    margin-bottom: 0;
 }
 
 ul {
@@ -232,6 +295,26 @@ img.logo
     margin-right: 2.5px;
     width: 39px;
     height: 39px;
+}
+
+.grid 
+{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; 
+    margin: 0;
+    overflow-x: auto;
+}
+
+
+
+.left
+{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: center;
 }
 
 .center
@@ -280,7 +363,8 @@ img.logo
     width: 144.53px;
 }
 
-.theme-dropdown {
+.theme-dropdown 
+{
     position: relative;
     display: inline-block;
     margin: 0;
@@ -288,7 +372,8 @@ img.logo
     border: none;
 }
 
-.dropdown-content {
+.dropdown-content 
+{
     display: none;
     position: fixed;
     background-color: rgb(52, 89, 168);
@@ -315,7 +400,13 @@ img.logo
     display: block;
 }
 
-.dropdown-content a:hover {
+.dropdown-content a:hover 
+{
     cursor: pointer;
     background-color: rgb(44, 97, 211);
+}
+
+.ColorWheelContainer
+{
+    /* none */
 }

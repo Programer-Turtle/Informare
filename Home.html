@@ -17,8 +17,9 @@
                 <li class="theme-dropdown"><a><img id="CurrentThemeDisplay" src="photos/LightMode.png" class="logo"></a>
                     <div class="dropdown-content">
                         <div style="display: flex; justify-content: center; gap: 0;" class="center">
-                            <a onclick="ButtonSetTheme('Light')"><img style="flex: 1; display: flex; justify-content: center; align-items: center; margin: 0; gap: 0;" class="logo" src="photos/LightMode.png"></a>
-                            <a onclick="ButtonSetTheme('Night')"><img style="flex: 1; display: flex; justify-content: center; align-items: center; margin: 0; gap: 0;" class="logo" src="photos/NightMode.png"></a>
+                            <a style="z-index: 1;" onclick="ButtonSetTheme('Light')"><img class="logo" src="photos/LightMode.png"></a>
+                            <!-- <a style="z-index: 1;" onclick="ButtonSetTheme('Custom')"><img class="logo" src="photos/HalloweenLogo.png"></a> -->
+                            <a style="z-index: 1;" onclick="ButtonSetTheme('Night')"><img class="logo" src="photos/NightMode.png"></a>
                         </div>
                     </div>
                 </li>
@@ -28,10 +29,10 @@
         
         <!--Main Page-->
         <div class="box">
-            <h1>Menu:</h1>
+            <h1>Menu</h1>
             <h2 id="Item">!The Items</h2>
             <br>
-            <h1>Grade:</h1>
+            <h1>Grade</h1>
             <h2 id="grade">!The grade</h2>
         </div>
         <!--Schedule-->
@@ -43,5 +44,6 @@
 
         <script src="scripts/inform.js"></script>
         <script src="scripts/Themes.js"></script><!--Themes-->
+        <script src="scripts/Prank.js"></script>
     </body>
 </html>

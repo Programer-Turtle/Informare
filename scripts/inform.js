@@ -3,13 +3,6 @@ let grade = ["45", "44", "15", "N/A", "N/A", "60", "N/A", "22", "N/A", "N/A", "N
 var date = new Date();
 var day = date.getDate() - 1;
 let finalgrade = grade[day];
-var randomNumber = Math.floor(Math.random() * 20) + 1;
-console.log(randomNumber)
-
-if (randomNumber == 19)
-{
-    window.location.href = "ProVersion/Prank.html"
-}
 
 if (finalgrade === "schoolnull")
 {
@@ -61,22 +54,75 @@ if (finalgrade <= 10 & finalgrade >= 0)
 document.getElementById("Item").innerHTML = menu[day];
 document.getElementById("grade").innerHTML = finalgrade + "/60";
 
-for (items in menu)
-{
+// Assuming `menu` and `grade` are arrays and have the same length
+for (var i = 0; i < menu.length; i++) {
+    // Create the main div
     var newDiv = document.createElement("div");
-    newDiv.id = "S" + items;
-    newDiv.className = "schedulebox";
-    document.getElementById("calender").appendChild(newDiv);
-    //menu text
+    if (day == i)
+    {
+        newDiv.className = "schedulebox-CurrentDay";
+    }else
+    {
+        newDiv.className = "schedulebox";
+    }
+    //Create grid Div
+    var newGrid = document.createElement("div");
+    newGrid.className = "grid";
+
+    //Create DateBox
+    var DateBox = document.createElement("div");
+    DateBox.className = "DateBox";
+    
+    //Create DateBoxText
+    var DateBoxText = document.createElement("p");
+    DateBoxText.className = "scheduletextbold";
+    DateBoxText.innerHTML = i + 1;
+    
+    // Create the center divs
+    var newCenter = document.createElement("div");
+    newCenter.className = "center";
+
+    var newCenter2 = document.createElement("div");
+    newCenter2.className = "center";
+
+    var newCenter3 = document.createElement("div");
+    newCenter3.className = "center";
+
+    var newCenter4 = document.createElement("div");
+    newCenter4.className = "center";
+
+    // Create the menu header
     var newP = document.createElement("p");
     newP.className = "scheduletext";
-    newP.innerHTML = "Item: " + menu[items];
-    //grade text
+    newP.innerHTML = "Item";
+
+    // Create the menu text
     var newP2 = document.createElement("p");
     newP2.className = "scheduletext";
-    newP2.innerHTML = "Grade: " + grade[items];
-    //appends text
-    target = "S" + items;
-    document.getElementById(target).appendChild(newP);
-    document.getElementById(target).appendChild(newP2);
+    newP2.innerHTML = menu[i];
+
+    // Create the grade header
+    var newP3 = document.createElement("p");
+    newP3.className = "scheduletext";
+    newP3.innerHTML = "Grade";
+
+    // Create the grade text
+    var newP4 = document.createElement("p");
+    newP4.className = "scheduletext";
+    newP4.innerHTML = grade[i];
+
+    //Append DateBoxText to DateBox and Append DateBox to newGrid
+    DateBox.appendChild(DateBoxText);
+    newGrid.appendChild(DateBox);
+    newGrid.appendChild(newP);
+    // Append the center div to the main div
+    newDiv.append(newGrid, newCenter2, document.createElement("br"), newCenter3, newCenter4);
+
+    // Append the paragraphs to the center div
+    newCenter2.appendChild(newP2);
+    newCenter3.appendChild(newP3);
+    newCenter4.appendChild(newP4);
+
+    // Append the main div to the calendar container
+    document.getElementById("calender").appendChild(newDiv); // Ensure that "calender" is the correct ID
 }
