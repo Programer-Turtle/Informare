@@ -266,6 +266,8 @@ ul {
     left: 0%;
     overflow: hidden;
     background-color: rgb(62, 105, 199);
+    z-index: 3;
+    margin: 0;
 }
 
 li {
@@ -351,7 +353,7 @@ img.logo
 
 .SignUpButton
 {
-    background-color: rgb(57, 114, 235);
+    background-color: #3972EB;
     margin: 0%;
     border: 0;
     border-top-left-radius: 0;
@@ -409,4 +411,89 @@ img.logo
 .ColorWheelContainer
 {
     /* none */
+}
+
+.UI 
+{
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    background-color: rgba(56, 56, 56, 0.473);
+    transition: 0.9s;
+}
+
+.Update-Pop-Up-Background 
+{
+    background-color: #396ee0;
+    width: 40vw;
+    border-radius: 20px;
+    align-self: center;
+    justify-self: center;
+    height: 90vh;
+    margin-top: 5vh;
+    transition: 0.6s;
+}
+
+.Feature-Row
+{
+    width: 100%;
+    height: 60vh;
+    display: grid;
+    /* grid-template-columns: 1fr; */
+    
+}
+.OuterBubble
+{
+    display: grid; 
+    border-radius: 60px; 
+    width: 80px; 
+    height: 80px; 
+    background-color: white; 
+    margin-left: 5px;
+    padding-right: 6px;
+    padding-left: 6px;
+}
+
+.InnerBubble
+{
+    display: grid;
+    border-radius: 60px; 
+    width: 65px; 
+    height: 65px; 
+    margin: 0%; 
+    align-self: center; 
+    justify-self: center;
+    background-color: #396ee0;
+}
+
+p.BubbleNumber
+{
+    font-size: 50px;
+    align-self: center;
+    justify-self: center;
+    margin: 0;
+}
+
+.CustomColorDropDown
+{
+    display: grid;
+    width: 100%;
+    height: 160px;
+    transition: 0.6s;
+}
+
+input[type="color"]
+{
+    background: none;
+    border-radius: 64px;
+    align-self: center;
+    justify-self: center;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
 }
