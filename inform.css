@@ -189,9 +189,9 @@ input
     border-radius: 20px;
     width: 150px;
     height: 150px;
-    margin-right: 9px;
-    margin-left: 9px;
-    margin-top: 9px;
+    margin-right: 25px;
+    margin-left: 10px;
+    margin-top: 5px;
     margin-bottom: 9px;
     transition: .9s;
 }
@@ -203,7 +203,7 @@ input
     width: 175px;
     height: 175px;
     margin-right: 3px;
-    margin-left: 3px;
+    margin-left: 0;
     margin-top: 5px;
     margin-bottom: 9px;
     box-shadow: 5px 5px 5px 5px #0482C4;
@@ -217,8 +217,8 @@ input
     border-radius: 20px;
     width: 175px;
     height: 175px;
-    margin-right: 3px;
-    margin-left: 3px;
+    margin-right: 13px;
+    margin-left: 0;
     margin-top: 5px;
     margin-bottom: 9px;
     transition: 1s;
