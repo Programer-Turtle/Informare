@@ -82,7 +82,6 @@ function SetPageTheme()
         // ... image and display code ...
 
         //ShowsCustomMenu
-        //ID: X4F9Z8T2
         var customColorDropdown = document.getElementById("CustomColorDropDown");
         customColorDropdown.style.height = "160px"
         customColorDropdown.innerHTML = "<div class='CustomColorDropDown'><input id='ChosenColor' type='color'><button style='align-self: center; justify-self: center;' onclick=\"SetCustomColor(); Verify_Feature('Custom_Theme', '1234');\"'><p>Apply</p></button></div>";
