@@ -64,6 +64,8 @@ function SetPageTheme()
     CurrentTheme = localStorage.getItem("Theme");
     if (CurrentTheme == "Light")
     {
+        document.getElementById("PageTheme").innerHTML = null;
+        
         try
         {
             document.getElementById("CurrentThemeDisplay").src = "photos/LightMode.png"
@@ -73,9 +75,17 @@ function SetPageTheme()
         {
             console.log("NoImage Found");
         }
-        document.getElementById("PageTheme").innerHTML = null;
-        document.getElementById("CustomColorDropDown").style.height = "0px"
-        document.getElementById("CustomColorDropDown").innerHTML = null;
+        
+        try
+        {
+            document.getElementById("CustomColorDropDown").style.height = "0px"
+            document.getElementById("CustomColorDropDown").innerHTML = null;
+        }
+
+        catch
+        {
+            console.log("No Menu Found");
+        }
     }
 
     if (CurrentTheme == "Custom") {
@@ -106,7 +116,7 @@ function SetPageTheme()
         }
         catch
         {
-            console.log("No Meanu Found");
+            console.log("No Menu Found");
         }
 
         //Calculates all Colors
@@ -195,8 +205,16 @@ function SetPageTheme()
         h1.class{background-color:#898989;} 
         .DateBox{background-color:#494646;}
         `
-        document.getElementById("CustomColorDropDown").style.height = "0px"
-        document.getElementById("CustomColorDropDown").innerHTML = null;
+        try
+        {
+            document.getElementById("CustomColorDropDown").style.height = "0px"
+            document.getElementById("CustomColorDropDown").innerHTML = null;
+        }
+
+        catch
+        {
+            console.log("No Menu Found");
+        }
     }
 }
 
