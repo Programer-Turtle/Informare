@@ -16,9 +16,14 @@
                 <li><a href="Voting.html">Voting</a></li>
                 <li class="theme-dropdown"><a><img id="CurrentThemeDisplay" src="photos/LightMode.png" class="logo"></a>
                     <div class="dropdown-content">
-                        <div style="display: flex; justify-content: center; gap: 0;" class="center">
-                            <a onclick="ButtonSetTheme('Light')"><img style="flex: 1; display: flex; justify-content: center; align-items: center; margin: 0; gap: 0;" class="logo" src="photos/LightMode.png"></a>
-                            <a onclick="ButtonSetTheme('Night')"><img style="flex: 1; display: flex; justify-content: center; align-items: center; margin: 0; gap: 0;" class="logo" src="photos/NightMode.png"></a>
+                        <div class="center">
+                            <a style="z-index: 1;" onclick="ButtonSetTheme('Light')"><img class="logo" src="photos/LightMode.png"></a>
+                            <!-- <a style="z-index: 1;" onclick="ButtonSetTheme('Custom')"><img class="logo" src="photos/HalloweenLogo.png"></a> -->
+                            <a style="z-index: 1;" onclick="ButtonSetTheme('Night')"><img class="logo" src="photos/NightMode.png"></a>
+                        </div>
+                        <div id="CustomColorDropDown" class="CustomColorDropDown">
+                            <input id='ChosenColor' type="color">
+                            <button style="align-self: center; justify-self: center;"><p>Apply</p></button>
                         </div>
                     </div>
                 </li>
@@ -31,9 +36,17 @@
             <h2>Patch Notes</h2>
         </div>
 
+        <!--Themes and Protection Update 2.7.7 (Beta)-->
+        <div class="patchnote_bar">
+            <h1 style="text-align: left;">Themes and Protection Update 2.7.7 (Beta)</h1>
+            <div class="version_bar">
+                <p>"I have nearly finished the Themes Update and have added a protection system to prevent bypassing restrictions on using unfinished features.</p>
+            </div>
+        </div>
+
         <!--Themes BugFix 2.7.6 (Beta)-->
         <div class="patchnote_bar">
-            <h1 style="text-align: left;">Themes 2.7.6 (Beta)</h1>
+            <h1 style="text-align: left;">Themes BugPatch 2.7.6 (Beta)</h1>
             <div class="version_bar">
                 <p>I fixed the bug when hovering over a DateBox on the lunch schedule could cause stuttering.</p>
             </div>
@@ -87,5 +100,6 @@
             </div>
         </div>
         <script src="scripts/Themes.js"></script><!--Themes-->
+        <script src="scripts/Verify.js"></script>
     </body>
 </html>

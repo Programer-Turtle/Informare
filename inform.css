@@ -171,8 +171,8 @@ input
     padding-bottom: 20px;
     margin: 5px auto;
     display: flex;
-    justify-content: space-between; /* Distribute space between children */
-    align-items: center; /* Center horizontally */
+    justify-content: space-between;
+    align-items: center;
 }
 
 
