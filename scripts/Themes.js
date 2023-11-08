@@ -79,14 +79,38 @@ function SetPageTheme()
     }
 
     if (CurrentTheme == "Custom") {
-        // ... image and display code ...
+        //Verify
+        if (Verify_Feature('Custom_Theme', 'ShutDown') != true)
+        {
+            return
+        }
+
+        //Changed Image
+        try
+        {
+            document.getElementById("CurrentThemeDisplay").src = "photos/HalloweenLogo.png"
+        }
+
+        catch
+        {
+            console.log("NoImage Found");
+        }
+
 
         //ShowsCustomMenu
-        var customColorDropdown = document.getElementById("CustomColorDropDown");
-        customColorDropdown.style.height = "160px"
-        customColorDropdown.innerHTML = "<div class='CustomColorDropDown'><input id='ChosenColor' type='color'><button style='align-self: center; justify-self: center;' onclick=\"SetCustomColor(); Verify_Feature('Custom_Theme', '1234');\"'><p>Apply</p></button></div>";
+        try
+        {
+            var customColorDropdown = document.getElementById("CustomColorDropDown");
+            customColorDropdown.style.height = "160px"
+            customColorDropdown.innerHTML = "<div class='CustomColorDropDown'><input id='ChosenColor' type='color'><button style='align-self: center; justify-self: center;' onclick=\"SetCustomColor()\"'><p>Apply</p></button></div>";
+        }
+        catch
+        {
+            console.log("No Meanu Found");
+        }
+
         //Calculates all Colors
-        var CustomColor = localStorage.getItem("CustomColor") || "rgb(66, 66, 66)"; // Use a default if null
+        var CustomColor = localStorage.getItem("CustomColor") || "rgb(0, 0, 255)"; // Use a default if null
         var rgb = parseRgb(CustomColor); // Assuming parseRgb is a function you've defined to parse rgb strings
 
         // Adjust colors based on the custom color
