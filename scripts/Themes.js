@@ -89,16 +89,11 @@ function SetPageTheme()
     }
 
     if (CurrentTheme == "Custom") {
-        //Verify
-        if (Verify_Feature('Custom_Theme', 'ShutDown') != true)
-        {
-            return
-        }
 
         //Changed Image
         try
         {
-            document.getElementById("CurrentThemeDisplay").src = "photos/HalloweenLogo.png"
+            document.getElementById("CurrentThemeDisplay").src = "photos/CustomMode.png"
         }
 
         catch

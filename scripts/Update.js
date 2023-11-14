@@ -1,8 +1,8 @@
-// if (localStorage.getItem("NewUpdateSeen") != document.getElementById("Version").innerText)
-// {
-//     document.getElementById("UI").style.display = "grid";
-//     localStorage.setItem("NewUpdateSeen", document.getElementById("Version").innerText)
-// }
+if (localStorage.getItem("NewUpdateSeen") != document.getElementById("Version").innerText)
+{
+    document.getElementById("UI").style.display = "grid";
+    localStorage.setItem("NewUpdateSeen", document.getElementById("Version").innerText)
+}
 
 function ClosePopUp() {
     var uiElement = document.getElementById("UI");
