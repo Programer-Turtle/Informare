@@ -277,7 +277,10 @@ li {
 li a {
     color: white;
     text-decoration: none;
-    padding: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 100%;
+    padding-top: 100%;
     margin: 0;
     font-size: 30px;
     transition: .6s;
