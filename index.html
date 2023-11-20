@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="inform.css">
+    <link rel="shortcut icon" href="photos/logo.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style id="PageTheme"></style>
+</head>
+<body>
+    <!--MainPage-->
+    <div style="padding: 0; margin: 0;" class="center">
+        <div style="border-radius: 30px;" class="box">
+            <button onclick="SetType('Login')" class="LoginButton">Login</button>
+            <button onclick="SetType('SignUp')" class="SignUpButton">Sign Up</button>            
+        </div>
+    </div>
+    <!--Login-->
+    <div id="Login" style="margin-top: 50px;" class="box">
+        <div class="center">
+            <h1>Login</h1>
+            <img style="width: 100px; height: 100px;" src="photos/logo.png">
+        </div>
+        <div class="center"><label for="Email"><p>Email</p></label></div>
+        <div class="center"><input id="Email" type="email"></div>
+        <br>
+        <div class="center"><label for="password"><p>Password</p></label></div>
+        <div class="center"><input type="password" id="password"></div>
+        <p id="LoginError" class="AccountFail"></p>
+        <br>
+        <div class="right"><button onclick="Login('Auto', 0, 0)"><p>Login</p></button></div>
+    </div>
+    <!--SignUp-->
+    <div id="SignUp" style="margin-top: 50px; display: none;" class="box">
+        <div class="center">
+            <h1>SignUp</h1>
+            <img style="width: 100px; height: 100px;" src="photos/logo.png">
+        </div>
+        <div class="center"><label for="EmailSignUp"><p>Email</p></label></div>
+        <div class="center"><input id="EmailSignUp" type="email"></div>
+        <br>
+        <div class="center"><label for="passwordSignUp"><p>Password</p></label></div>
+        <div class="center"><input type="password" id="passwordSignUp"></div>
+        <p id="SignUpError" class="AccountFail"></p>
+        <br>
+        <div class="right"><button onclick="SignUp()"><p>Create</p></button></div>
+    </div>
+    <script src="scripts/Login.js"></script>
+    <script src="scripts/Verify.js"></script>
+    <script src="scripts/Themes.js"></script><!--Themes-->
+</body>
+</html>
