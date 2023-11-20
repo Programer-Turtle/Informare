@@ -12,30 +12,18 @@
             <div id="PopUp" class="Update-Pop-Up-Background">
                 <!-- UpdateTitle -->
                 <div style="margin: 10px;" class="box">
-                    <p id="Version" style="text-align: center; width: 100%;">Version 2.7</p>
+                    <p id="Version" style="text-align: center; width: 100%;">Version 2.8 (Beta)</p>
                 </div>
                 
                 <!-- Highlights -->
                 <div class="Feature-Row">
                     <div class="left">
                         <div class="OuterBubble"><div class="InnerBubble"><p class="BubbleNumber">1</p></div></div>
-                        <div class="box" style="margin-top: 0; margin-left: 10px; margin-right: 5px; width: 100%;"><p>Added Light/Night Themes</p></div>
+                        <div class="box" style="margin-top: 0; margin-left: 10px; margin-right: 5px; width: 100%;"><p>Added Login and SignUp Feature</p></div>
                     </div>
                     <div class="left">
                         <div class="OuterBubble"><div class="InnerBubble"><p class="BubbleNumber">2</p></div></div>
-                        <div class="box" style="margin-top: 0; margin-left: 10px; margin-right: 5px; width: 100%;"><p>Added Custom Colors</p></div>
-                    </div>
-                    <div class="left">
-                        <div class="OuterBubble"><div class="InnerBubble"><p class="BubbleNumber">3</p></div></div>
-                        <div class="box" style="margin-top: 0; margin-left: 10px; margin-right: 5px; width: 100%;"><p>Added Protection System</p></div>
-                    </div>
-                    <div class="left">
-                        <div class="OuterBubble"><div class="InnerBubble"><p class="BubbleNumber">4</p></div></div>
-                        <div class="box" style="margin-top: 0; margin-left: 10px; margin-right: 5px; width: 100%;"><p>Added Update PopUp Screen</p></div>
-                    </div>
-                    <div class="left">
-                        <div class="OuterBubble"><div class="InnerBubble"><p class="BubbleNumber">5</p></div></div>
-                        <div class="box" style="margin-top: 0; margin-left: 10px; margin-right: 5px; width: 100%;"><p>Redesigned Designs of Informare</p></div>
+                        <div class="box" style="margin-top: 0; margin-left: 10px; margin-right: 5px; width: 100%;"><p>Working On Adding PFP Pictures</p></div>
                     </div>
                 </div>
 
@@ -67,7 +55,14 @@
                         </div>
                     </div>
                 </li>
-                <li><img src="photos/logo.png" class="logo"></li>
+                <li ><img src="photos/logo.png" class="logo"></li>
+                <li class="theme-dropdown" style="margin-left: auto; margin-right: 159px;"><a><img id="PFP" src="photos/NoPFP.png" class="logo"></a>
+                    <div class="dropdown-content">
+                        <!-- <input id="ChosenPFP" type="file" name="image" accept="image/*" />
+                        <button onclick="SetPFPInDatabase()"><p>Apply</p></button> -->
+                        <a style="z-index: 1;" onclick="LogOut()"><p>Log out</p></a>
+                    </div>
+                </li>
             </ul>
         </div>
         
@@ -87,6 +82,7 @@
 
         <!--Scripts-->
         <script src="scripts/Verify.js"></script>
+        <script src="scripts/Account.js"></script>
         <script src="scripts/inform.js"></script>
         <script src="scripts/Themes.js"></script><!--Themes-->
         <script src="scripts/Prank.js"></script>

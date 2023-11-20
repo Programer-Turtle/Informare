@@ -5,7 +5,6 @@ function addgoal() {
   var goal = document.getElementById("goal_input").value;
   document.getElementById("goal_input").value = "";
 
-  // Uploads cookie with a unique key based on the current value of amount_of_work
   amount_of_work++;
   localStorage.setItem("goal_" + amount_of_work, goal);
   localStorage.setItem("amount", amount_of_work);

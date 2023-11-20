@@ -500,3 +500,16 @@ input[type="color"]
     height: 60px;
     cursor: pointer;
 }
+
+input[type="file"]
+{
+    width: 120px;
+}
+
+p.AccountFail
+{
+    font-size: 20px;
+    display: none; 
+    text-align: center;  
+    color: rgb(247, 103, 103);
+}
