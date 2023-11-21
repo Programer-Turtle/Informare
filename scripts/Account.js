@@ -1,8 +1,40 @@
 function LogOut()
 {
     localStorage.removeItem("username");
-    localStorage.removeItem("username");
+    localStorage.removeItem("token");
     window.location = "index.html"
+}
+
+function DeleteAccount(password)
+{
+    let email = localStorage.getItem("username");
+    if(!email)
+    {
+        console.error("No Email");
+        return;
+    }else if(!password)
+    {
+        console.error("No Password");
+        return;
+    }
+    fetch('https://informarewebserver.karsonoculus.repl.co/DeleteAccount', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            username: email,
+            password: StoredToken
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        window.location = "index.html";
+    })
+    .catch((error) => {
+        console.log(error);
+    });
 }
 
 // function SetPFP(image) {
