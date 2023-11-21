@@ -51,7 +51,7 @@ async function handlePageLoad() {
 
     const accountVerified = await Verify_Account();
 
-    if (!accountVerified && !isLoginPage || !accountVerified && !isLoginPage2) {
+    if (!accountVerified && !isLoginPage && !accountVerified && !isLoginPage2) {
         LoadLoginScreen();
     } else if (accountVerified && isLoginPage || accountVerified && isLoginPage2) {
         window.location = "Home.html";
