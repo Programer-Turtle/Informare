@@ -47,13 +47,13 @@ async function Verify_Account() {
 async function handlePageLoad() {
     const url = window.location.href;
     const isLoginPage = url.substring(url.lastIndexOf('/') + 1).toLowerCase() === "index.html";
-    const isLoginPage2 = url.substring(url.lastIndexOf('/') + 1).toLowerCase() === "Informare";
+    const isLoginPage2 = url.substring(url.lastIndexOf('/') + 1).toLowerCase() === "";
 
     const accountVerified = await Verify_Account();
 
     if (!accountVerified && !isLoginPage || !accountVerified && !isLoginPage2) {
         LoadLoginScreen();
-    } else if (accountVerified && isLoginPage) {
+    } else if (accountVerified && isLoginPage || accountVerified && isLoginPage2) {
         window.location = "Home.html";
     }
 }
