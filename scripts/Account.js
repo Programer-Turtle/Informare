@@ -5,10 +5,13 @@ function LogOut()
     window.location = "index.html"
 }
 
-function ResetKeys()
+function ResetKeys(TypeOfReset, email, password)
 {
-    let email = localStorage.getItem("username");
-    let password = document.getElementById("KeysPasswordBox").value;
+    if(TypeOfReset == "Auto")
+    {
+        email = localStorage.getItem("username");
+        password = document.getElementById("KeysPasswordBox").value;
+    }
     if(!email)
     {
         console.error("No Email");
@@ -71,7 +74,7 @@ function ChangePassword()
         console.log(data);
         if(data == "Password changed successfully.")
         {
-            Login("Manual", email, newPassword);
+            ResetKeys("Manual", email, newPassword)
         }
     })
     .catch((error) => {

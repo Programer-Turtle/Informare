@@ -138,6 +138,9 @@ function SetPageTheme()
         var Custom_Assignment_Bar_color = `rgb(${rgb.r+59}, ${rgb.g-171}, ${rgb.b-100})`
         var Custom_Class_H1_color = `rgb(${rgb.r+143}, ${rgb.g-92}, ${rgb.b-0})`
         var Custom_DateBox_color = `rgb(${rgb.r+27}, ${rgb.g-197}, ${rgb.b-131})`
+        var Custom_Update_PopUp_color = `rgb(${rgb.r+57}, ${rgb.g-145}, ${rgb.b-31})`
+        var Custom_InnerBubble_color = Custom_Update_PopUp_color;
+        var Custom_SignUp_Button_color = `rgb(${rgb.r+57}, ${rgb.g-111}, ${rgb.b-20})`
 
         // Generate CSS for body background and box background
         var colorHTML = `
@@ -161,6 +164,9 @@ function SetPageTheme()
             .assignment_bar {background-color:${Custom_Assignment_Bar_color};}
             h1.class{background-color:${Custom_Class_H1_color};} 
             .DateBox{background-color:${Custom_DateBox_color};}
+            .Update-Pop-Up-Background{background-color:${Custom_Update_PopUp_color};}
+            .InnerBubble{background-color: ${Custom_InnerBubble_color};}
+            .SignUpButton{background-color:${Custom_SignUp_Button_color};}
         `;
 
         // Set the CSS styles
@@ -199,6 +205,9 @@ function SetPageTheme()
         .assignment_bar {background-color:#525454;} 
         h1.class{background-color:#898989;} 
         .DateBox{background-color:#494646;}
+        .Update-Pop-Up-Background{background-color: #565656;}
+        .InnerBubble{background-color: #565656;}
+        .SignUpButton{background-color:#3D3F45;}
         `
         try
         {
