@@ -43,20 +43,77 @@
     </div>
 
     <!--PopUpMenus-->
+    <div class="UI" id="UI">
+        <!--Change Password-->
+        <div id="ChangePasswordPopUp" style="display: none;" class="Update-Pop-Up-Background">
+            <div class="box" style="margin-top: 0;"><h1 style="margin-top: 0;">Change Password</h1></div>
+            <h1>Current Password</h1>
+            <div class="center">
+                <input id="ChangedPasswordBox" type="password">
+            </div>
+            <h1>New Password</h1>
+            <div class="center">
+                <input id="NewPasswordBox" type="password">
+            </div>
+            <br>
+            <div class="center">
+                <button onclick="HidePopUp('ChangePasswordPopUp'), HidePopUp('UI')"><p>Cancle</p></button>
+                <button onclick="ChangePassword();"><p>Change</p></button>
+            </div>
+        </div>
+        <!--Reset Keys-->
+        <div id="KeysPopUp" style="display: none;" class="Update-Pop-Up-Background">
+            <div class="box" style="margin-top: 0;"><h1 style="margin-top: 0;">Reset Keys</h1></div>
+            <h1>Password</h1>
+            <div class="center">
+                <input id="KeysPasswordBox" type="password">
+            </div>
+            <br>
+            <div class="center">
+                <button onclick="HidePopUp('KeysPopUp'), HidePopUp('UI')"><p>Cancle</p></button>
+                <button onclick="ResetKeys();"><p>Reset</p></button>
+            </div>
+        </div>
+        <!--Delete Account-->
+        <div id="DeleteAccountPopUp" style="display: none;" class="Update-Pop-Up-Background">
+            <div class="box" style="margin-top: 0;"><h1 style="color: rgb(247, 50, 50); margin-top: 0;">Delete Account</h1></div>
+            <h1>Password</h1>
+            <div class="center">
+                <input id="DeletePasswordBox" type="password">
+            </div>
+            <br>
+            <div class="center">
+                <button onclick="HidePopUp('DeleteAccountPopUp'), HidePopUp('UI')"><p>Cancle</p></button>
+                <button onclick="DeleteAccount()"><p style="color: rgb(247, 50, 50);">Delete</p></button>
+            </div>
+        </div>
+    </div>
 
     <!--MainPage-->
     <div class="box">
-        <h1 style="margin-bottom: 5px;">Account</h1>
-        <h1 style="margin-top: 5px;">Settings</h1>
+        <h1 class="version_bar">Account Settings</h1>
         <br>
+        <!--Change Password-->
         <div class="left">
-            <button><p>Change password</p></button>
+            <button onclick="ShowPopUp('UI', 'grid'), ShowPopUp('ChangePasswordPopUp', 'block')"><p>Change password</p></button>
             <p>Change your account's password</p>
+        </div>
+        <!--Reset Keys-->
+        <div class="left">
+            <button onclick="ShowPopUp('UI', 'grid'), ShowPopUp('KeysPopUp', 'block')"><p>Reset All Keys</p></button>
+            <p>Reset all keys <span style="color: rgb(255, 145, 0);">!!!</span> This will log out all other devices</p>
+        </div>
+        <!--Delete Account-->
+        <div class="left">
+            <button onclick="ShowPopUp('UI', 'grid'), ShowPopUp('DeleteAccountPopUp', 'block')"><p style="color: rgb(247, 50, 50);">Delete Account</p></button>
+            <p><span style="color: rgb(247, 50, 50);">Delete</span> Account <span style="color: rgb(255, 145, 0);">!!!</span> Your account can not be recovered</p>
         </div>
     </div>
 
     <script src="scripts/Verify.js"></script>
+    <script src="scripts/Login.js"></script>
     <script src="scripts/Account.js"></script>
+    <script src="scripts/Themes.js"></script>
     <script src="scripts/PopUp.js"></script>
 </body>
 </html>

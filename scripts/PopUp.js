@@ -1,6 +1,6 @@
-function ShowPopUp(PopUpID)
+function ShowPopUp(PopUpID, DisplayType)
 {
-    document.getElementById(PopUpID).style.display = "fixed";
+    document.getElementById(PopUpID).style.display = DisplayType;
 }
 
 function HidePopUp(PopUpID)

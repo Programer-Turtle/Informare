@@ -52,6 +52,8 @@ async function handlePageLoad() {
     const accountVerified = await Verify_Account();
 
     if (!accountVerified && !isLoginPage && !accountVerified && !isLoginPage2) {
+        localStorage.removeItem("username");
+        localStorage.removeItem("token");
         LoadLoginScreen();
     } else if (accountVerified && isLoginPage || accountVerified && isLoginPage2) {
         window.location = "Home.html";

@@ -43,6 +43,7 @@ function Login(TypeOfLogin, email, password) {
     if (TypeOfLogin == "Auto")
     {
         email = document.getElementById("Email").value;
+        email = email.toLowerCase();
         password = document.getElementById("password").value;
     }
 
@@ -78,6 +79,7 @@ function Login(TypeOfLogin, email, password) {
 
 function SignUp() {
     let email = document.getElementById("EmailSignUp").value;
+    email = email.toLowerCase();
     let password = document.getElementById("passwordSignUp").value;
 
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;

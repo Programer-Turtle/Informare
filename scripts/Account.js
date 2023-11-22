@@ -5,9 +5,84 @@ function LogOut()
     window.location = "index.html"
 }
 
-function DeleteAccount(password)
+function ResetKeys()
 {
     let email = localStorage.getItem("username");
+    let password = document.getElementById("KeysPasswordBox").value;
+    if(!email)
+    {
+        console.error("No Email");
+        return;
+    }else if(!password)
+    {
+        console.error("No Password");
+        return;
+    }
+    fetch('https://informarewebserver.karsonoculus.repl.co/ResetKeys', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            username: email,
+            password: password
+        })
+    })
+    .then(response => response.text())
+    .then(data => {
+        console.log(data);
+        if(data == "Keys Reset")
+        {
+            Login("Manual", email, password);
+        }
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+}
+
+function ChangePassword()
+{
+    let email = localStorage.getItem("username");
+    let password = document.getElementById("ChangedPasswordBox").value;
+    let newPassword = document.getElementById("NewPasswordBox").value;
+    if(!email)
+    {
+        console.error("No Email");
+        return;
+    }else if(!password)
+    {
+        console.error("No Password");
+        return;
+    }
+    fetch('https://informarewebserver.karsonoculus.repl.co/ChangePassword', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            username: email,
+            password: password,
+            newpassword: newPassword
+        })
+    })
+    .then(response => response.text())
+    .then(data => {
+        console.log(data);
+        if(data == "Password changed successfully.")
+        {
+            Login("Manual", email, newPassword);
+        }
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+}
+
+function DeleteAccount()
+{
+    let email = localStorage.getItem("username");
+    let password = document.getElementById("DeletePasswordBox").value;
     if(!email)
     {
         console.error("No Email");
@@ -24,13 +99,18 @@ function DeleteAccount(password)
         },
         body: JSON.stringify({
             username: email,
-            password: StoredToken
+            password: password
         })
     })
-    .then(response => response.json())
+    .then(response => response.text())
     .then(data => {
         console.log(data);
-        window.location = "index.html";
+        if(data == "Account Deleted")
+        {
+            localStorage.removeItem("username");
+            localStorage.removeItem("token");
+            window.location = "index.html"
+        }
     })
     .catch((error) => {
         console.log(error);
