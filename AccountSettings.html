@@ -61,8 +61,8 @@
                 <button onclick="ChangePassword();"><p>Change</p></button>
             </div>
         </div>
-        <!--Reset Keys-->
-        <div id="KeysPopUp" style="display: none;" class="Update-Pop-Up-Background">
+        <!--Reset Tokens-->
+        <div id="TokensPopUp" style="display: none;" class="Update-Pop-Up-Background">
             <div class="box" style="margin-top: 0;"><h1 style="margin-top: 0;">Reset Keys</h1></div>
             <h1>Password</h1>
             <div class="center">
@@ -70,8 +70,8 @@
             </div>
             <br>
             <div class="center">
-                <button onclick="HidePopUp('KeysPopUp'), HidePopUp('UI')"><p>Cancle</p></button>
-                <button onclick="ResetKeys('Auto', 0, 0);"><p>Reset</p></button>
+                <button onclick="HidePopUp('TokensPopUp'), HidePopUp('UI')"><p>Cancle</p></button>
+                <button onclick="ResetTokens('Auto', 0, 0);"><p>Reset</p></button>
             </div>
         </div>
         <!--Delete Account-->
@@ -98,10 +98,10 @@
             <button onclick="ShowPopUp('UI', 'grid'), ShowPopUp('ChangePasswordPopUp', 'block')"><p>Change password</p></button>
             <p>Change your account's password</p>
         </div>
-        <!--Reset Keys-->
+        <!--Reset Tokens-->
         <div class="left">
-            <button onclick="ShowPopUp('UI', 'grid'), ShowPopUp('KeysPopUp', 'block')"><p>Reset All Keys</p></button>
-            <p>Reset all keys <span style="color: rgb(255, 145, 0);">!!!</span> This will log out all other devices</p>
+            <button onclick="ShowPopUp('UI', 'grid'), ShowPopUp('TokensPopUp', 'block')"><p>Reset All Tokens</p></button>
+            <p>Reset all tokens <span style="color: rgb(255, 145, 0);">!!!</span> This will log out all other devices</p>
         </div>
         <!--Delete Account-->
         <div class="left">

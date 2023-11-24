@@ -5,7 +5,7 @@ function LogOut()
     window.location = "index.html"
 }
 
-function ResetKeys(TypeOfReset, email, password)
+function ResetTokens(TypeOfReset, email, password)
 {
     if(TypeOfReset == "Auto")
     {
@@ -21,7 +21,7 @@ function ResetKeys(TypeOfReset, email, password)
         console.error("No Password");
         return;
     }
-    fetch('https://informarewebserver.karsonoculus.repl.co/ResetKeys', {
+    fetch('https://informarewebserver.karsonoculus.repl.co/ResetTokens', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -34,7 +34,7 @@ function ResetKeys(TypeOfReset, email, password)
     .then(response => response.text())
     .then(data => {
         console.log(data);
-        if(data == "Keys Reset")
+        if(data == "Tokens Reset")
         {
             Login("Manual", email, password);
         }

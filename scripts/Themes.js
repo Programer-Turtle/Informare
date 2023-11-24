@@ -130,7 +130,7 @@ function SetPageTheme()
         var Custom_Active_color = `rgb(${rgb.r+46}, ${rgb.g-65}, ${rgb.b-65})`
         var Custom_DropDown_Content_color = `rgb(${rgb.r+52}, ${rgb.g-166}, ${rgb.b-87})`
         var Custom_DropDown_Content_a_Hover_color = `rgb(${rgb.r+44}, ${rgb.g-158}, ${rgb.b-44})`
-        var Custom_Button_color = `rgb(${rgb.r+110}, ${rgb.g-115}, ${rgb.b-0})`
+        var Custom_Button_color = `rgb(${rgb.r+110}, ${rgb.g-145}, ${rgb.b-0})`
         var Custom_Button_Active_color = `rgb(${rgb.r+78}, ${rgb.g-177}, ${rgb.b-0})`
         var Custom_Button_Hover_Shadow_color = `rgb(${rgb.r+69}, ${rgb.g-186}, ${rgb.b-37})`
         var Custom_Input_color = `rgb(${rgb.r+143}, ${rgb.g-92}, ${rgb.b-0})`
@@ -140,7 +140,9 @@ function SetPageTheme()
         var Custom_DateBox_color = `rgb(${rgb.r+27}, ${rgb.g-197}, ${rgb.b-131})`
         var Custom_Update_PopUp_color = `rgb(${rgb.r+57}, ${rgb.g-145}, ${rgb.b-31})`
         var Custom_InnerBubble_color = Custom_Update_PopUp_color;
-        var Custom_SignUp_Button_color = `rgb(${rgb.r+57}, ${rgb.g-111}, ${rgb.b-20})`
+        var Custom_SignUp_Button_color = `rgb(${rgb.r+57}, ${rgb.g-141}, ${rgb.b-20})`
+        var Custom_TextArea_color = `rgb(${rgb.r+143}, ${rgb.g-92}, ${rgb.b-0})`
+        var Custom_DropDown_color = `rgb(${rgb.r+117}, ${rgb.g-114}, ${rgb.b-10})`
 
         // Generate CSS for body background and box background
         var colorHTML = `
@@ -167,6 +169,9 @@ function SetPageTheme()
             .Update-Pop-Up-Background{background-color:${Custom_Update_PopUp_color};}
             .InnerBubble{background-color: ${Custom_InnerBubble_color};}
             .SignUpButton{background-color:${Custom_SignUp_Button_color};}
+            textarea{background-color:${Custom_TextArea_color};}
+            select{background-color:${Custom_DropDown_color};}
+            option{background-color:${Custom_DropDown_color};}
         `;
 
         // Set the CSS styles
@@ -208,6 +213,9 @@ function SetPageTheme()
         .Update-Pop-Up-Background{background-color: #565656;}
         .InnerBubble{background-color: #565656;}
         .SignUpButton{background-color:#3D3F45;}
+        textarea{background-color:#B5B5B5;}
+        select{background-color:#B4B7C4;}
+        option{background-color:#B4B7C4;}
         `
         try
         {

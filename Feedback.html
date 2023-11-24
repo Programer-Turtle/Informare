@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="shortcut icon" href="photos/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="inform.css">
+    <style id="PageTheme"></style>
+</head>
+<body>
+    <!--navigation bar-->
+    <div class="navbar">
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="updates.html">Patch Notes</a></li>
+            <li><a href="Homework.html">Homework</a></li>
+            <li><a href="Voting.html">Voting</a></li>
+            <!-- <li><a href="Classes.html">Classes</a></li> -->
+            <!-- <li><a href="Chat.html">Chat</a></li> -->
+            <li class="active"><a href="Feedback.html">Feedback</a></li>
+            <li class="theme-dropdown"><a><img id="CurrentThemeDisplay" src="photos/LightMode.png" class="logo"></a>
+                <div class="dropdown-content">
+                    <div class="center">
+                        <a style="z-index: 1;" onclick="ButtonSetTheme('Light')"><img class="logo" src="photos/LightMode.png"></a>
+                        <a style="z-index: 1;" onclick="ButtonSetTheme('Custom')"><img class="logo" src="photos/CustomMode.png"></a>
+                        <a style="z-index: 1;" onclick="ButtonSetTheme('Night')"><img class="logo" src="photos/NightMode.png"></a>
+                    </div>
+                    <div id="CustomColorDropDown" class="CustomColorDropDown">
+                        <input id='ChosenColor' type="color">
+                        <button style="align-self: center; justify-self: center;"><p>Apply</p></button>
+                    </div>
+                </div>
+            </li>
+            <li ><img src="photos/logo.png" class="logo"></li>
+            <li class="theme-dropdown" style="margin-left: auto; margin-right: 159px;"><a><img id="PFP" src="photos/NoPFP.png" class="logo"></a>
+                <div class="dropdown-content">
+                    <!-- <input id="ChosenPFP" type="file" name="image" accept="image/*" />
+                    <button onclick="SetPFPInDatabase()"><p>Apply</p></button> -->
+                    <a style="z-index: 1;" href="AccountSettings.html"><p>Account Settings</p></a>
+                    <a style="z-index: 1;" onclick="LogOut()"><p>Log out</p></a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!--MainPage-->
+    <div style="padding: 0; margin: 0;" class="center">
+        <div style="border-radius: 30px;" class="box">
+            <button style="width: 200px;" onclick="HidePopUp('ViewOtherFeedbackPage'), ShowPopUp('SubmitFeedbackPage', 'block')" class="LoginButton"><p>Submit Feedback</p></button>
+            <button style="width: 200px;" onclick="HidePopUp('SubmitFeedbackPage'), ShowPopUp('ViewOtherFeedbackPage', 'block')" class="SignUpButton"><p>View Feedback</p></button>            
+        </div>
+    </div>
+
+    <!--Submit Feedback-->
+    <div id="SubmitFeedbackPage">
+        <div class="box">
+            <div class="box">
+                <h1 style="text-align: left;">Submit Feedback</h1>
+                <label for="category"><p>Problem Category</p></label>
+                <select name="category" id="category">
+                    <option value="design-ui">Design/UI</option>
+                    <option value="functionality">Functionality</option>
+                    <option value="community">Community</option>
+                    <option value="other">Other</option>
+                </select>
+                
+                <div class="version_bar">
+                    <!--TextBox-->
+                    <textarea oninput="this.style.height = ''; this.style.height = this.scrollHeight + 'px'"></textarea>
+
+                    <!--SubmitButton-->
+                    <div class="right">
+                        <button><p>Submit</p></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--View Other Feedback-->
+    <div style="display: none;" id="ViewOtherFeedbackPage">
+        <div class="box"><h2>Feedback</h2></div>
+    </div>
+    
+    <script src="scripts/Verify.js"></script>
+    <script src="scripts/Account.js"></script>
+    <script src="scripts/Themes.js"></script><!--Themes-->
+    <script src="scripts/PopUp.js"></script>
+</body>
+</html>
