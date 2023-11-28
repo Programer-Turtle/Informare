@@ -27,7 +27,7 @@ function LoginError(Type)
     {
         console.error(Type);
         SetErrorText("LogIn", Type);
-    }
+    } //error
 }
 
 function SignUpError(Type)
