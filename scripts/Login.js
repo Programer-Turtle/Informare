@@ -23,6 +23,11 @@ function LoginError(Type)
         console.error('Invalid Email Format');
         SetErrorText("Login", 'Invalid Email Format');
     }
+    else
+    {
+        console.error(Type);
+        SetErrorText("LogIn", Type);
+    }
 }
 
 function SignUpError(Type)
@@ -36,6 +41,11 @@ function SignUpError(Type)
     {
         console.error('Invalid Email Format');
         SetErrorText("SignUp", 'Invalid Email Format');
+    }
+    else
+    {
+        console.error(Type);
+        SetErrorText("SignUp", Type);
     }
 }
 
