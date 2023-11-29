@@ -47,15 +47,17 @@
         <!--Change Password-->
         <div id="ChangePasswordPopUp" style="display: none;" class="Update-Pop-Up-Background">
             <div class="box" style="margin-top: 0;"><h1 style="margin-top: 0;">Change Password</h1></div>
-            <h1>Current Password</h1>
+            <h3 style="margin-top: 5px; margin-bottom: 5px;">Current Password</h3>
             <div class="center">
-                <input id="ChangedPasswordBox" type="password">
+                <input style="margin-bottom: 5px;" maxlength="20" id="ChangedPasswordBox" type="password">
             </div>
-            <h1>New Password</h1>
             <div class="center">
-                <input id="NewPasswordBox" type="password">
+                <p id="ChangePasswordError" class="AccountFail"></p>
             </div>
-            <br>
+            <h3 style="margin-top: 5px; margin-bottom: 5px;">New Password</h3>
+            <div class="center">
+                <input maxlength="20" id="NewPasswordBox" type="password">
+            </div>
             <div class="center">
                 <button onclick="HidePopUp('ChangePasswordPopUp'), HidePopUp('UI')"><p>Cancle</p></button>
                 <button onclick="ChangePassword();"><p>Change</p></button>
@@ -66,7 +68,10 @@
             <div class="box" style="margin-top: 0;"><h1 style="margin-top: 0;">Reset Keys</h1></div>
             <h1>Password</h1>
             <div class="center">
-                <input id="KeysPasswordBox" type="password">
+                <input maxlength="20" id="KeysPasswordBox" type="password">
+            </div>
+            <div class="center">
+                <p id="TokenError" class="AccountFail"></p>
             </div>
             <br>
             <div class="center">
@@ -79,7 +84,10 @@
             <div class="box" style="margin-top: 0;"><h1 style="color: rgb(247, 50, 50); margin-top: 0;">Delete Account</h1></div>
             <h1>Password</h1>
             <div class="center">
-                <input id="DeletePasswordBox" type="password">
+                <input maxlength="20" id="DeletePasswordBox" type="password">
+            </div>
+            <div class="center">
+                <p id="DeleteAccountError" class="AccountFail"></p>
             </div>
             <br>
             <div class="center">

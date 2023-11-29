@@ -13,40 +13,22 @@ function SetErrorText(type, text)
 
 function LoginError(Type)
 {
-    document.getElementById("LoginError").style.display = "block";
-    if (Type == "WrongInfo")
+    if (document.getElementById("LoginError") == null)
     {
-        console.error('Account not found or error occured');
-        SetErrorText("Login", "Email or Passsword are Incorrect");
-    } else if(Type == "NotEmail")
-    {
-        console.error('Invalid Email Format');
-        SetErrorText("Login", 'Invalid Email Format');
+        console.error("Error")
+        return;
     }
-    else
-    {
-        console.error(Type);
-        SetErrorText("LogIn", Type);
-    } //error
+    console.log("worked")
+    document.getElementById("LoginError").style.display = "block";
+    console.error(Type);
+    SetErrorText("Login", Type);
 }
 
 function SignUpError(Type)
 {
     document.getElementById("SignUpError").style.display = "block";
-    if (Type == "WrongInfo")
-    {
-        console.log("Account Already Exist");
-        SetErrorText("SignUp", "Account Alread Exist")
-    } else if(Type == "NotEmail")
-    {
-        console.error('Invalid Email Format');
-        SetErrorText("SignUp", 'Invalid Email Format');
-    }
-    else
-    {
-        console.error(Type);
-        SetErrorText("SignUp", Type);
-    }
+    console.error(Type);
+    SetErrorText("SignUp", Type);
 }
 
 function Login(TypeOfLogin, email, password) {
@@ -59,7 +41,7 @@ function Login(TypeOfLogin, email, password) {
 
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     if (!emailRegex.test(email)) {
-        LoginError("NotEmail");
+        LoginError("Not Valid Email Format");
         return; // Exit the function if the email is not valid
     }
 
@@ -73,7 +55,17 @@ function Login(TypeOfLogin, email, password) {
             password: password
         })
     })
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            // Handle the error response as JSON
+            return response.json().then(errorData => {
+                throw new Error(errorData.error || 'Server responded with an error');
+            });
+        }
+
+        // Assuming the server sends JSON data
+        return response.json();
+    })
     .then(data => {
         AccountInfo = data;
         console.log(data);
@@ -82,8 +74,8 @@ function Login(TypeOfLogin, email, password) {
         console.log('Username and password found in database.');
         window.location = "Home.html";
     })
-    .catch(() => {
-        LoginError("WrongInfo");
+    .catch((error) => {
+        LoginError(error.message);
     });
 }
 
@@ -94,7 +86,7 @@ function SignUp() {
 
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     if (!emailRegex.test(email)) {
-        SignUpError("NotEmail");
+        SignUpError("Not Valid Email Format");
         return; // Exit the function if the email is not valid
     }
 
@@ -104,25 +96,36 @@ function SignUp() {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            username: email, // Assuming the username is the email
+            username: email,
             password: password
         })
     })
     .then(response => {
         if (!response.ok) {
-            throw new Error('Server responded with an error');
+            // Handle the error response as JSON
+            return response.json().then(errorData => {
+                throw new Error(errorData.error || 'Server responded with an error');
+            });
         }
-        return response.text();
+
+        // Assuming the server sends JSON data
+        return response.json();
     })
     .then(data => {
-        console.log(data); // Log response to console
+        console.log(data); // Log response data to console
+        // Assuming the server sends a message in the 'message' property
+        if (data && data.message) {
+            // Handle success message or any other information from the server
+            console.log(data.message);
+        }
+
+        // Call the Login function after successful account creation
         Login("Manual", email, password);
     })
-    .catch(() => {
-        SignUpError("WrongInfo");
+    .catch(error => {
+        SignUpError(error.message);
     });
 }
-
 
 function SetType(LoginorSignup)
 {

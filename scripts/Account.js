@@ -5,6 +5,13 @@ function LogOut()
     window.location = "index.html"
 }
 
+function SetErrorTextSpecific(type, text)
+{
+    let ErrorText = document.getElementById(type)
+    ErrorText.style.display = "block"
+    ErrorText.innerText = text;
+}
+
 function ResetTokens(TypeOfReset, email, password)
 {
     if(TypeOfReset == "Auto")
@@ -31,16 +38,22 @@ function ResetTokens(TypeOfReset, email, password)
             password: password
         })
     })
-    .then(response => response.text())
-    .then(data => {
-        console.log(data);
-        if(data == "Tokens Reset")
-        {
-            Login("Manual", email, password);
+    .then(response => {
+        if (!response.ok) {
+            // If not JSON, treat the response as plain text
+            return response.text().then(errorText => {
+                // Throw a new Error with the plain text error message
+                throw new Error(errorText || 'Server responded with an error');
+            });
         }
+    
+        return response;
+    })
+    .then(data => {
+        Login("Manual", email, password);
     })
     .catch((error) => {
-        console.log(error);
+        SetErrorTextSpecific("TokenError", error.message);
     });
 }
 
@@ -69,7 +82,17 @@ function ChangePassword()
             newpassword: newPassword
         })
     })
-    .then(response => response.text())
+    .then(response => {
+        if (!response.ok) {
+            // If not JSON, treat the response as plain text
+            return response.text().then(errorText => {
+                // Throw a new Error with the plain text error message
+                throw new Error(errorText || 'Server responded with an error');
+            });
+        }
+    
+        return response;
+    })
     .then(data => {
         console.log(data);
         if(data == "Password changed successfully.")
@@ -78,7 +101,7 @@ function ChangePassword()
         }
     })
     .catch((error) => {
-        console.log(error);
+        SetErrorTextSpecific("ChangePasswordError", error.message);
     });
 }
 
@@ -105,18 +128,24 @@ function DeleteAccount()
             password: password
         })
     })
-    .then(response => response.text())
-    .then(data => {
-        console.log(data);
-        if(data == "Account Deleted")
-        {
-            localStorage.removeItem("username");
-            localStorage.removeItem("token");
-            window.location = "index.html"
+    .then(response => {
+        if (!response.ok) {
+            // If not JSON, treat the response as plain text
+            return response.text().then(errorText => {
+                // Throw a new Error with the plain text error message
+                throw new Error(errorText || 'Server responded with an error');
+            });
         }
+    
+        return response;
+    })
+    .then(data => {
+        localStorage.removeItem("username");
+        localStorage.removeItem("token");
+        window.location = "index.html"
     })
     .catch((error) => {
-        console.log(error);
+        SetErrorTextSpecific("DeleteAccountError", error.message);
     });
 }
 
