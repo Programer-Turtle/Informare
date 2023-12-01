@@ -1,5 +1,5 @@
-let menu = ["The school didn't post the schedule yet :("];
-let grade = ["N/A"];
+let menu = ["N/A", "The school didn't post the schedule yet :("];
+let grade = ["N/A", "N/A"];
 var date = new Date();
 var day = date.getDate() - 1;
 let finalgrade = grade[day];

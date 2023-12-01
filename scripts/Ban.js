@@ -2,6 +2,10 @@
 // const formattedDate = `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
 localStorage.setItem("BanSeen", true);
 let banData = JSON.parse(localStorage.getItem("BanData"));
+if(banData ==  null || banData == undefined)
+{
+    window.location = "Home.html"
+}
 let type = banData.Status;
 let Expire_Date = banData.Expire_Date;
 let Reason = banData.Reason
