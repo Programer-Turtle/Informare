@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blocked</title>
+    <link rel="stylesheet" href="inform.css">
+    <style>
+        li a:hover
+        {
+            background-color: rgb(131, 12, 12);
+        }
+        a
+        {
+            background-color: rgb(221, 27, 27);
+        }
+        .dropdown-content a:hover
+        {
+            background-color: rgb(131, 12, 12);
+        }
+    </style>
+    <link rel="shortcut icon" href="photos/logo.png" type="image/x-icon">
+</head>
+<body style="background-color: rgb(255, 90, 90);">
+    <!--navigation bar-->
+    <div  class="navbar">
+        <ul style="background-color: rgb(221, 27, 27);">
+            <li><a href="Home.html">Home</a></li>
+            <li ><img src="photos/logo.png" class="logo"></li>
+                <li class="theme-dropdown" style="margin-left: auto; margin-right: 159px;"><a><img id="PFP" src="photos/NoPFP.png" class="logo"></a>
+                    <div class="dropdown-content">
+                        <a style="z-index: 1;" onclick="LogOut()"><p>Log out</p></a>
+                    </div>
+                </li>
+            </li>
+        </ul>
+    </div>
+
+    <!--MainPage-->
+    <div class="box" style="background-color: rgb(231, 46, 46);">
+        <div style="background-color: rgb(221, 27, 27);" class="patchnote_bar"><h2>You Have Been Ban</h2></div>
+        <h1>Type</h1>
+        <h2 id="Type"></h2>
+        <p style="text-align: center; display: block;" id="explanation"></p>
+        <h1>Reason</h1>
+        <p style="text-align: center; display: block;" id="Reason"></p>
+        <h1>Expiration Date</h1>
+        <h2 id="Expire_Date"></h2>
+    </div>
+    <script src="scripts/Ban.js"></script><!--Themes-->
+    <script src="scripts/Account.js"></script>
+</body>
+</html>

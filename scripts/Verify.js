@@ -11,6 +11,12 @@ function Verify_Feature(Feature, id)
     }
 }
 
+function CheckBanType(BanData)
+{
+    console.log(BanData.Status)
+    return BanData.Status;
+}
+
 function LoadLoginScreen()
 {
     window.location = "index.html";
@@ -37,7 +43,8 @@ async function Verify_Account() {
         });
 
         const data = await response.json();
-        return data === true;
+        console.log(data);
+        return data;
     } catch (error) {
         console.error('Error occurred during account verification', error);
         return false;
@@ -49,7 +56,23 @@ async function handlePageLoad() {
     const isLoginPage = url.substring(url.lastIndexOf('/') + 1).toLowerCase() === "index.html";
     const isLoginPage2 = url.substring(url.lastIndexOf('/') + 1).toLowerCase() === "";
 
-    const accountVerified = await Verify_Account();
+    let accountVerified = await Verify_Account();
+
+    if(accountVerified && accountVerified != false)
+    {
+        if(CheckBanType(accountVerified) == "SocialBan")
+        {
+            localStorage.setItem("BanData", JSON.stringify(accountVerified));
+            if (localStorage.getItem("BanSeen") === null || localStorage.getItem("BanSeen") === undefined)
+            {
+                window.location = "Ban.html"
+            }
+            else
+            {
+                accountVerified = true
+            }
+        }
+    }
 
     if (!accountVerified && !isLoginPage && !accountVerified && !isLoginPage2) {
         localStorage.removeItem("username");

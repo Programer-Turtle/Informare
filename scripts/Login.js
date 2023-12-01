@@ -68,13 +68,41 @@ function Login(TypeOfLogin, email, password) {
     })
     .then(data => {
         AccountInfo = data;
-        console.log(data);
-        localStorage.setItem("username", data.username)
-        localStorage.setItem("token", data.token)
-        console.log('Username and password found in database.');
-        window.location = "Home.html";
+        // console.log(AccountInfo);
+        if(AccountInfo.username)
+        {
+            console.log(data);
+            localStorage.setItem("username", data.username)
+            localStorage.setItem("token", data.token)
+            console.log('Username and password found in database.');
+            window.location = "Home.html";
+        }
+        else if (AccountInfo.Status)
+        {
+            console.log(data)
+            localStorage.setItem("BanData", JSON.stringify(data));
+            if(CheckBanType(AccountInfo) == "SocialBan")
+            {
+                localStorage.setItem("username", email)
+                localStorage.setItem("token", AccountInfo.token)
+                if (localStorage.getItem("BanSeen") === null || localStorage.getItem("BanSeen") === undefined)
+                {
+                    window.location = "Ban.html"
+                }
+                else 
+                {
+                    window.location = "Home.html"
+                }
+            }
+            else if (CheckBanType(AccountInfo) == "All")
+            {
+                console.log("All Ban")
+                window.location = "Ban.html"
+            }
+        }
     })
     .catch((error) => {
+        console.log(error)
         LoginError(error.message);
     });
 }

@@ -1,7 +1,6 @@
 function LogOut()
 {
-    localStorage.removeItem("username");
-    localStorage.removeItem("token");
+    localStorage.clear()
     window.location = "index.html"
 }
 
