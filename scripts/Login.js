@@ -5,9 +5,24 @@ function SetErrorText(type, text)
     if(type == "Login")
     {
         document.getElementById("LoginError").innerText = text;
+        document.getElementById("LoginLoad").style.display = "none"
     } else if(type == "SignUp")
     {
         document.getElementById("SignUpError").innerText = text;
+        document.getElementById("SignUpLoad").style.display = "none"
+    }
+}
+
+function SetLoadingIcon(type)
+{
+    if(type == "Login")
+    {
+        document.getElementById("LoginError").innerText = "";
+        document.getElementById("LoginLoad").style.display = "flex"
+    } else if(type == "SignUp")
+    {
+        document.getElementById("SignUpError").innerText = "";
+        document.getElementById("SignUpLoad").style.display = "flex"
     }
 }
 
@@ -44,6 +59,8 @@ function Login(TypeOfLogin, email, password) {
         LoginError("Not Valid Email Format");
         return; // Exit the function if the email is not valid
     }
+
+    SetLoadingIcon('Login')
 
     fetch('https://informarewebserver.karsonoculus.repl.co/login', {
         method: 'POST',
@@ -102,8 +119,14 @@ function Login(TypeOfLogin, email, password) {
         }
     })
     .catch((error) => {
-        console.log(error)
-        LoginError(error.message);
+        if (error.message == "Failed to fetch")
+        {
+            LoginError("Failed to connect. Try again momentarily.");
+        }
+        else
+        {
+            LoginError(error.message);
+        }
     });
 }
 
@@ -117,6 +140,8 @@ function SignUp() {
         SignUpError("Not Valid Email Format");
         return; // Exit the function if the email is not valid
     }
+
+    SetLoadingIcon('SignUp')
 
     fetch('https://informarewebserver.karsonoculus.repl.co/createAccount', {
         method: 'POST',
@@ -151,7 +176,14 @@ function SignUp() {
         Login("Manual", email, password);
     })
     .catch(error => {
-        SignUpError(error.message);
+        if (error.message == "Failed to fetch")
+        {
+            SignUpError("Failed to connect. Try again momentarily.");
+        }
+        else
+        {
+            SignUpError(error.message);
+        }
     });
 }
 

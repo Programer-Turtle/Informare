@@ -28,6 +28,13 @@
         <div class="center"><label for="password"><p>Password</p></label></div>
         <div class="center"><input maxlength="20" type="password" id="password"></div>
         <p id="LoginError" class="AccountFail"></p>
+        <div style="display: none;" id="LoginLoad" class="center">
+            <div class="loading-icon">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
         <br>
         <div class="right"><button onclick="Login('Auto', 0, 0)"><p>Login</p></button></div>
     </div>
@@ -43,6 +50,13 @@
         <div class="center"><label for="passwordSignUp"><p>Password</p></label></div>
         <div class="center"><input maxlength="20" type="password" id="passwordSignUp"></div>
         <p id="SignUpError" class="AccountFail"></p>
+        <div style="display: none;" id="SignUpLoad" class="center">
+            <div class="loading-icon">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
         <br>
         <div class="right"><button onclick="SignUp()"><p>Create</p></button></div>
     </div>

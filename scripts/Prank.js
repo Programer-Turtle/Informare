@@ -9,4 +9,9 @@ async function prank()
     }
 }
 
-let x = await prank()
+async function CheckForPrank()
+{
+    await prank()
+}
+
+CheckForPrank()
