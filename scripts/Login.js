@@ -60,7 +60,10 @@ function Login(TypeOfLogin, email, password) {
         return; // Exit the function if the email is not valid
     }
 
-    SetLoadingIcon('Login')
+    if (TypeOfLogin == "Auto")
+    {
+        SetLoadingIcon('Login')
+    }
 
     fetch('https://informarewebserver.karsonoculus.repl.co/login', {
         method: 'POST',

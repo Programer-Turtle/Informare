@@ -48,7 +48,8 @@ function ResetTokens(TypeOfReset, email, password)
     
         return response;
     })
-    .then(data => {
+    .then(response => {
+        console.log("Test")
         Login("Manual", email, password);
     })
     .catch((error) => {
@@ -93,11 +94,7 @@ function ChangePassword()
         return response;
     })
     .then(data => {
-        console.log(data);
-        if(data == "Password changed successfully.")
-        {
-            ResetKeys("Manual", email, newPassword)
-        }
+        ResetTokens("Manual", email, newPassword)
     })
     .catch((error) => {
         SetErrorTextSpecific("ChangePasswordError", error.message);

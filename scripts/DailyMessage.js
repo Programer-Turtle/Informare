@@ -184,7 +184,7 @@ async function GetAllData() {
         let message = "";
         localStorage.setItem("MessageData", JSON.stringify(MessageData))
         const today = new Date();
-        const formattedDate = `${today.getFullYear()}-${(today.getMonth() + 1).toString().padStart(2, '0')}-${today.getUTCDate().toString().padStart(2, '0')}`;
+        const formattedDate = `${today.getFullYear()}-${(today.getMonth() + 1).toString().padStart(2, '0')}-${today.getDate().toString().padStart(2, '0')}`;
         if (MessageData[formattedDate] != null || MessageData[formattedDate] != undefined)
         {
             message = MessageData[formattedDate]
