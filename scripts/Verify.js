@@ -43,7 +43,6 @@ async function Verify_Account() {
         });
 
         const data = await response.json();
-        console.log(data);
         return data;
     } catch (error) {
         console.error('Error occurred during account verification', error);
@@ -58,7 +57,7 @@ async function handlePageLoad() {
 
     let accountVerified = await Verify_Account();
 
-    if(accountVerified && accountVerified != false)
+    if(accountVerified != false)
     {
         if(CheckBanType(accountVerified) == "SocialBan")
         {
@@ -74,7 +73,7 @@ async function handlePageLoad() {
         }
     }
 
-    if (!accountVerified && !isLoginPage && !accountVerified && !isLoginPage2) {
+    if (!accountVerified && !isLoginPage && !isLoginPage2) {
         localStorage.removeItem("username");
         localStorage.removeItem("token");
         LoadLoginScreen();
