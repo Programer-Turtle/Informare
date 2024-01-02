@@ -1,5 +1,5 @@
-let menu = ["Mozzarella Sticks", "Saturday", "Sunday", "Hamb/Cheese", "Chicken- Creamy Alfredo Sauce W/Penne Noodles", "Old School Pizza", "Crispy Chicken Leg", "Corn Dog", "Saturday", "Sunday", "BBQ McRibish", "Baked Potato Bar", "Papa John’s", "Lasagna", "Mozzarella Sticks", "Saturday", "Sunday", "Quesadillas", "Orange Chicken", "Cheesy Meatball Sub", "Manager’s Choice", "Popcorn Chicken", "Christmas Break", "Christmas Break", "Christmas Break", "Christmas Break", "Christmas Break", "Christmas Break", "Christmas Break", "Christmas Break", "Christmas Break"];
-let grade = ["60", "N/A", "N/A", "15", "N/A", "49", "35", "34", "N/A", "N/A", "N/A", "N/A", "45", "48", "60", "N/A", "N/A", "45", "26", "N/A", "N/A", "44.5", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A"];
+let menu = [];
+let grade = [];
 var date = new Date();
 var day = date.getDate() - 1;
 let finalgrade = grade[day];
