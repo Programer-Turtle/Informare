@@ -31,7 +31,7 @@ async function Verify_Account() {
     }
 
     try {
-        const response = await fetch('https://informarewebserver.karsonoculus.repl.co/checkifloggedin', {
+        const response = await fetch('https://informare-web-server-karsonoculus.replit.app/checkifloggedin', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

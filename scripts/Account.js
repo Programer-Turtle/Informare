@@ -27,7 +27,7 @@ function ResetTokens(TypeOfReset, email, password)
         console.error("No Password");
         return;
     }
-    fetch('https://informarewebserver.karsonoculus.repl.co/ResetTokens', {
+    fetch('https://informare-web-server-karsonoculus.replit.app/ResetTokens', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -71,7 +71,7 @@ function ChangePassword()
         console.error("No Password");
         return;
     }
-    fetch('https://informarewebserver.karsonoculus.repl.co/ChangePassword', {
+    fetch('https://informare-web-server-karsonoculus.replit.app/ChangePassword', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -114,7 +114,7 @@ function DeleteAccount()
         console.error("No Password");
         return;
     }
-    fetch('https://informarewebserver.karsonoculus.repl.co/DeleteAccount', {
+    fetch('https://informare-web-server-karsonoculus.replit.app/DeleteAccount', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

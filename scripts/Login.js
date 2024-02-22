@@ -65,7 +65,7 @@ function Login(TypeOfLogin, email, password) {
         SetLoadingIcon('Login')
     }
 
-    fetch('https://informarewebserver.karsonoculus.repl.co/login', {
+    fetch('https://informare-web-server-karsonoculus.replit.app/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -146,7 +146,7 @@ function SignUp() {
 
     SetLoadingIcon('SignUp')
 
-    fetch('https://informarewebserver.karsonoculus.repl.co/createAccount', {
+    fetch('https://informare-web-server-karsonoculus.replit.app/createAccount', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
