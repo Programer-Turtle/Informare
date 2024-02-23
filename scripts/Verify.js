@@ -78,7 +78,6 @@ async function handlePageLoad() {
         localStorage.removeItem("token");
         LoadLoginScreen();
     } else if (accountVerified && isLoginPage || accountVerified && isLoginPage2) {
-        GetThemeServer()
         window.location = "Home.html";
     }
 }
