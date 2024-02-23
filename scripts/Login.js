@@ -94,6 +94,8 @@ function Login(TypeOfLogin, email, password) {
             console.log(data);
             localStorage.setItem("username", data.username)
             localStorage.setItem("token", data.token)
+            localStorage.setItem("Theme", data.theme)
+            localStorage.setItem("CustomColor", data.Rgb)
             console.log('Username and password found in database.');
             window.location = "Home.html";
         }

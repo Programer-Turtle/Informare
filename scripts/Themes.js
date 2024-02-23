@@ -6,6 +6,57 @@ if (localStorage.key("Theme") == null)
 let CurrentTheme = localStorage.getItem("Theme");
 SetPageTheme();
 
+async function PostTheme() {
+    console.log("Called")
+    let email = localStorage.getItem("username");
+    let StoredToken = localStorage.getItem("token");
+    let Theme = localStorage.getItem("Theme")
+    let Rgb = localStorage.getItem("CustomColor")
+    console.log("Theme: " + Theme + " Rgb: " + Rgb)
+
+    try {
+        const response = await fetch('https://informare-web-server-karsonoculus.replit.app/SetTheme', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                username: email,
+                token: StoredToken,
+                theme: Theme,
+                Rbg: Rgb
+            })
+        });
+
+        if (!response.ok) {
+            let errorData;
+            try {
+                errorData = await response.json();
+                throw new Error(errorData.error);
+            } catch (parseError) {
+                // If parsing the error JSON fails, use the raw text as the error message
+                throw new Error(response.statusText || 'Server responded with an error');
+            }
+        }
+
+        if (response.status === 200) {
+            //pass
+        } else {
+            // Handle other status codes if needed
+            throw new Error(`Unexpected response status: ${response.status} - ${response.statusText}`);
+        }
+
+    } catch (error) {
+        console.error(error.message);
+        if (error.message === "Failed to fetch") {
+            //idk
+        } else {
+           console.log(error.message);
+        }
+        return null;
+    }
+}
+
 function hexToRgbString(hex) {
     // Ensure the hash is removed from the start if it's there
     hex = hex.replace(/^#/, '');
@@ -19,7 +70,7 @@ function hexToRgbString(hex) {
     return "rgb(" + r + ", " + g + ", " + b + ")";
   }
   
-  function SetCustomColor() {
+async function SetCustomColor() {
       // Get the chosen color value
       var chosenColor = document.getElementById("ChosenColor").value;
   
@@ -34,27 +85,31 @@ function hexToRgbString(hex) {
   
       // Assuming SetPageTheme function needs an RGB value
       SetPageTheme();
+      await PostTheme()
   }
 
-function ButtonSetTheme(ChosenTheme)
+async function ButtonSetTheme(ChosenTheme)
 {
     //Determines Color
     if(ChosenTheme == "Light")
     {
         localStorage.setItem("Theme", "Light");
         SetPageTheme();
+        await PostTheme()
     }
 
     if(ChosenTheme == "Custom")
     {
         localStorage.setItem("Theme", "Custom");
         SetPageTheme();
+        await PostTheme()
     }
 
     if(ChosenTheme == "Night")
     {
         localStorage.setItem("Theme", "Night");
         SetPageTheme();
+        await PostTheme()
     }
 }
 
@@ -228,6 +283,7 @@ function SetPageTheme()
             console.log("No Menu Found");
         }
     }
+    return null;
 }
 
 function parseRgb(rgbString) {
