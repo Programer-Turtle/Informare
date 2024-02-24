@@ -1,13 +1,44 @@
-function Verify_Feature(Feature, id)
+async function GetThemeFromServer()
 {
-    if (Feature == "Custom_Theme" && id == "X4F9Z8T2")
-    {
+    let email = localStorage.getItem("username");
+    let StoredToken = localStorage.getItem("token");
+
+    if (!email || !StoredToken) {
+        return false;
+    }
+
+    try {
+        const response = await fetch('https://informare-web-server-karsonoculus.replit.app/GetThemeData', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                username: email,
+                token: StoredToken
+            })
+        });
+
+        if (!response.ok) {
+            let errorData;
+            try {
+                errorData = await response.json();
+            } catch (parseError) {
+                // If parsing the error JSON fails, use the raw text as the error message
+                throw new Error(response.statusText || 'Server responded with an error');
+            }
+            
+            throw new Error(errorData.error);
+        }
+
+        ThemeData = await response.json();
+        localStorage.setItem("Theme", ThemeData.theme)
+        localStorage.setItem("CustomColor", ThemeData.Rgb)
         return true
-    }else
-    {
-        localStorage.setItem("Theme", "Light");
-        localStorage.removeItem("CustomColor")
-        window.location = "Blocked.html";
+
+    } catch (error) {
+        console.error(error.message);
+        return null;
     }
 }
 
@@ -78,7 +109,11 @@ async function handlePageLoad() {
         localStorage.removeItem("token");
         LoadLoginScreen();
     } else if (accountVerified && isLoginPage || accountVerified && isLoginPage2) {
-        window.location = "Home.html";
+        var Theme = await GetThemeFromServer()
+        if (Theme == true)
+        {
+            window.location = "Home.html";
+        }
     }
 }
 
