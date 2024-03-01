@@ -3,21 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Informare</title>
+    <title>Moderation</title>
     <link rel="shortcut icon" href="photos/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="inform.css">
     <style id="PageTheme"></style>
 </head>
 <body>
     <!--navigation bar-->
-    <div id="NavBar" class="navbar">
+    <div class="navbar">
         <ul>
             <li><a href="Home.html">Home</a></li>
             <li><a href="updates.html">Patch Notes</a></li>
             <li><a href="Homework.html">Homework</a></li>
             <li><a href="Voting.html">Voting</a></li>
-            <!-- <li><a href="Classes.html">Classes</a></li> -->
-            <li class="active"><a href="Chat.html">Chat</a></li>
+            <!-- <li><a href="Classes.html">Classes</a></li>
+            <li><a href="Chat.html">Chat</a></li>
+            <li><a href="Feedback.html">Feedback</a></li> -->
+            <li><a href="MessageOfTheDay.html">Daily Message</a></li>
+            <li class="active" id="Mod"><a href="Moderation.html">Moderation</a></li>
             <li class="theme-dropdown"><a><img id="CurrentThemeDisplay" src="photos/LightMode.png" class="logo"></a>
                 <div class="dropdown-content">
                     <div class="center">
@@ -43,9 +46,42 @@
         </ul>
     </div>
 
+    <!--BanConfirm-->
+    <div class="UI", id="UI">
+        <div id="BanConfirm" class="Update-Pop-Up-Background">
+            <div class="box"><h1 style="color: red;">Ban Type</h1></div>
+            <h3>Type</h3>
+            <div class="center">
+                <select style="width: 300px; text-align: center;"  name="category" id="category">
+                    <option value="All">All Ban</option>
+                    <option value="SocialBan">Social Ban</option>
+                    <option value="Unban">Unban</option>
+                </select>
+            </div>
+            <h3>Experation Date</h3>
+            <div class="center"><input name="date" type="date" id="Date"></div>
+            <h3>Reason</h3>
+            <div style="margin-top: 1px;" class="center">
+                <textarea style="width: 600px;" name="" id="" cols="30" rows="3"></textarea>
+            </div>
+            <div class="center">
+                <button onclick="HidePopUp('UI', 'grid'), HidePopUp('BanConfirm', 'block')"><p>Cancle</p></button>
+                <button><p>Confirm</p></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="box">
+        <h1>Moderation Controls</h1>
+        <h2>This is in devlopment and does not work fully yet!!!</h2>
+        <div class="version_bar" id="UserList">
+            
+        </div>
+    </div>
     
-    
-    <!-- <script src="scripts/Verify.js"></script> -->
+    <script src="scripts/PopUp.js"></script>
+    <script src="scripts/Verify.js"></script>
+    <script src="scripts/Moderation.js"></script>
     <script src="scripts/Account.js"></script>
     <script src="scripts/Themes.js"></script><!--Themes-->
 </body>
