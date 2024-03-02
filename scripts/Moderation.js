@@ -34,7 +34,6 @@ async function GetUserList()
         Data = await response.json();
         console.log(Data.Users)
         localStorage.setItem("AllUsers", Data.Users)
-        localStorage.setItem("BanUsers", Data.BanUsers)
         return Data.Users
 
     } catch (error) {
@@ -56,8 +55,11 @@ function SetUserToBan(user)
 
 function GetBanInfo()
 {
+    var usertoban = localStorage.getItem("UserToBan")
     var catagory = document.getElementById("category").value
-    console.log(catagory)
+    var date = document.getElementById("Date").value
+    var reason = document.getElementById("reason").value
+    BanUser(usertoban, catagory, date, reason)
 }
 
 async function BanUser(UserToBan, type, Experation, Reason)
@@ -70,7 +72,7 @@ async function BanUser(UserToBan, type, Experation, Reason)
     }
 
     try {
-        const response = await fetch('https://informare-web-server-karsonoculus.replit.app/GetUserList', {
+        const response = await fetch('https://informare-web-server-karsonoculus.replit.app/BanUser', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -98,10 +100,8 @@ async function BanUser(UserToBan, type, Experation, Reason)
         }
 
         Data = await response.json();
-        console.log(Data.Users)
-        localStorage.setItem("AllUsers", Data.Users)
-        localStorage.setItem("BanUsers", Data.BanUsers)
-
+        console.log(Data)
+        location.reload();
     } catch (error) {
         console.error(error.message);
         return null;
@@ -133,7 +133,7 @@ async function ShowListOfUsers()
         var newRight = document.createElement("div")
         newRight.className = "right"
         var newButtonDiv = document.createElement("div")
-        newButtonDiv.innerHTML = `<button onclick='console.log("${users[i]}")'><p>Unavailable</p></button>`
+        newButtonDiv.innerHTML = `<button onclick='SetUserToBan("${users[i]}"), ShowBanMenu()'><p>Ban</p></button>`
 
         newLeft.appendChild(newUser)
         newRight.appendChild(newButtonDiv)
@@ -141,6 +141,7 @@ async function ShowListOfUsers()
         newBoc.appendChild(newRight)
         List.appendChild(newBoc)
     }
+    document.getElementById("LoadAnimation").style.display = "none"
 }
 
 ShowListOfUsers()

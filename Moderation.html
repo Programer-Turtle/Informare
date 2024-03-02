@@ -20,6 +20,7 @@
             <li><a href="Chat.html">Chat</a></li>
             <li><a href="Feedback.html">Feedback</a></li> -->
             <li><a href="MessageOfTheDay.html">Daily Message</a></li>
+            <li><a href="Policy.html">Policy</a></li>
             <li class="active" id="Mod"><a href="Moderation.html">Moderation</a></li>
             <li class="theme-dropdown"><a><img id="CurrentThemeDisplay" src="photos/LightMode.png" class="logo"></a>
                 <div class="dropdown-content">
@@ -62,20 +63,25 @@
             <div class="center"><input name="date" type="date" id="Date"></div>
             <h3>Reason</h3>
             <div style="margin-top: 1px;" class="center">
-                <textarea style="width: 600px;" name="" id="" cols="30" rows="3"></textarea>
+                <textarea style="width: 600px;" name="" id="reason" cols="30" rows="3"></textarea>
             </div>
             <div class="center">
                 <button onclick="HidePopUp('UI', 'grid'), HidePopUp('BanConfirm', 'block')"><p>Cancle</p></button>
-                <button><p>Confirm</p></button>
+                <button onclick="GetBanInfo()"><p>Confirm</p></button>
             </div>
         </div>
     </div>
 
     <div class="box">
         <h1>Moderation Controls</h1>
-        <h2>This is in devlopment and does not work fully yet!!!</h2>
         <div class="version_bar" id="UserList">
-            
+            <div class="center">
+                <div id="LoadAnimation"class="loading-icon">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
         </div>
     </div>
     
