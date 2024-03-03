@@ -136,7 +136,8 @@ async function handlePageLoad() {
 
     if(accountVerified != false)
     {
-        if(CheckBanType(accountVerified) == "SocialBan")
+        let bantype = CheckBanType(accountVerified)
+        if(bantype == "SocialBan")
         {
             localStorage.setItem("BanData", JSON.stringify(accountVerified));
             if (localStorage.getItem("BanSeen") === null || localStorage.getItem("BanSeen") === undefined)
@@ -147,6 +148,10 @@ async function handlePageLoad() {
             {
                 accountVerified = true
             }
+        }
+        else if(bantype == "All")
+        {
+            window.location = "Ban.html"
         }
     }
 

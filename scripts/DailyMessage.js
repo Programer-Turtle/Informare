@@ -33,7 +33,7 @@ async function GetDailyMessage() {
                 errorData = await response.json();
             } catch (parseError) {
                 // If parsing the error JSON fails, use the raw text as the error message
-                throw new Error(response.statusText || 'Server responded with an error');
+                throw new Error("Failed to connect or you are banned from this service.");
             }
             
             throw new Error(errorData.error);

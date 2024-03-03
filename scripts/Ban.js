@@ -19,6 +19,7 @@ function GetExplanationText(type)
     else if (type == "All")
     {
         return "You are restricted from accessing all functionalities, including core features like the lunch schedule and homework manager. The only available action is to log out.";
+    
     }
     else
     {
