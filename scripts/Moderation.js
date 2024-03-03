@@ -123,12 +123,16 @@ async function ShowListOfUsers()
     {
         var newBoc = document.createElement("div")
         newBoc.className = "box"
-        newBoc.style.marginTop = "7px"
+        newBoc.style.marginTop = "1px"
+        newBoc.style.marginBottom = "7px"
+        newBoc.style.marginLeft = "10px"
+        newBoc.style.marginRight = "10px"
         newBoc.style.paddingBottom = "30px"
         var newLeft = document.createElement("div")
         newLeft.className = "left"
         var newUser = document.createElement("p")
         newUser.style.fontSize = "35px"
+        newUser.style.marginLeft = "5px" 
         newUser.innerText = users[i]
         var newRight = document.createElement("div")
         newRight.className = "right"
