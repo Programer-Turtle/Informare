@@ -305,11 +305,12 @@ li a {
     transition: .6s;
 }
 
+/* Not an original block of code used for new font */
 @media screen and (max-width: 1366px)
 {
     li a
     {
-        font-size: 27px;
+        font-size: 25px;
     }
 }
 
