@@ -40,7 +40,8 @@ p
     /* font-family: Arial, Helvetica, sans-serif; */
     font-family: 'Montserrat';
     margin: 5px;
-    font-size: 40px;
+    /* font-size: 40px; */
+    font-size: 37px;
     display: inline-block;
     word-wrap: break-word;
 }
@@ -58,7 +59,8 @@ br
 a
 {
     margin: 20px;
-    font-size: 40px;
+    /* font-size: 40px; */
+    font-size: 37px;
     text-decoration: none;
     /* font-family: Arial, Helvetica, sans-serif; */
     font-family: 'Montserrat';
@@ -299,7 +301,8 @@ li a {
     padding-bottom: 100%;
     padding-top: 100%;
     margin: 0;
-    font-size: 30px;
+    /* font-size: 30px; */
+    font-size: clamp(24px, 30px, 34px);
     transition: .6s;
 }
 
