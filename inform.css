@@ -291,7 +291,7 @@ ul {
 
 li {
     display: inline-block;
-}
+}  
 
 li a {
     color: white;
@@ -305,6 +305,24 @@ li a {
     font-size: clamp(24px, 30px, 34px);
     transition: .6s;
 }
+
+@media screen and (max-width: 1366px)
+{
+    li a
+    {
+        font-size: 27px;
+    }
+}
+
+@media screen and (min-width: 1367px)
+{
+    li a
+    {
+        font-size: 30px;
+    }
+}
+
+
 
 li a:hover {
     background-color: rgb(52, 89, 168);
