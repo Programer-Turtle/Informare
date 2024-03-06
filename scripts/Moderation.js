@@ -34,7 +34,8 @@ async function GetUserList()
         Data = await response.json();
         console.log(Data.Users)
         localStorage.setItem("AllUsers", Data.Users)
-        return Data.Users
+        localStorage.setItem("BanUsers", Data.BanUsers)
+        return {User: Data.Users, Ban: Data.BanUsers}
 
     } catch (error) {
         console.error(error.message);
@@ -117,7 +118,8 @@ async function ShowListOfUsers()
 {
     let data = await GetUserList()
     console.log(data)
-    var users = await GetUserList()
+    var users = data.User
+    var BanUser = data.Ban
     var List = document.getElementById("UserList")
     for (var i = 0; i < users.length; i++)
     {
@@ -136,10 +138,20 @@ async function ShowListOfUsers()
         newUser.innerText = users[i]
         var newRight = document.createElement("div")
         newRight.className = "right"
+        if(BanUser.includes(users[i]))
+        {
+            var BanText = document.createElement("p")
+            BanText.style.color = "red"
+            BanText.innerText = "Banned"
+        }
         var newButtonDiv = document.createElement("div")
         newButtonDiv.innerHTML = `<button onclick='SetUserToBan("${users[i]}"), ShowBanMenu()'><p>Ban</p></button>`
 
         newLeft.appendChild(newUser)
+        if(BanUser.includes(users[i]))
+        {
+            newRight.appendChild(BanText)
+        }
         newRight.appendChild(newButtonDiv)
         newBoc.appendChild(newLeft)
         newBoc.appendChild(newRight)
