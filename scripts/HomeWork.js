@@ -1,74 +1,154 @@
-let amount_of_work = 0;
+//assignment_bar
+const List = document.getElementById("list")
+let AssignmentsList = []
 
-function addgoal() {
-  // Get input
-  var goal = document.getElementById("goal_input").value;
-  document.getElementById("goal_input").value = "";
-
-  amount_of_work++;
-  localStorage.setItem("goal_" + amount_of_work, goal);
-  localStorage.setItem("amount", amount_of_work);
-  update_list();
+function CheckIfDatePassedDue(Date)
+{
+  return false;
 }
 
-function update_list() {
-  amount_of_work = get_amount_of_assignments();
-  var myDiv = document.getElementById("list");
-  myDiv.innerHTML = '';
+function GetAssignmentDataFromInput()
+{
+  //Gets Input Data
+  let AssignmentInput = document.getElementById("assignmentInput").value
+  let DueDateInput = document.getElementById("DueDateInput").value
+  let PointsInput = document.getElementById("PointsInput").value
+  let NotesInput = document.getElementById("NotesInput").value
 
-  for (var i = 1; i <= amount_of_work; i++) {
-    var newDiv = document.createElement("div");
-    newDiv.id = i;
-    newDiv.className = "assignment_bar";
-    newDiv.style = "display: flex;";
-    myDiv.appendChild(newDiv);
-    var newp = document.createElement("p");
+  //Makes Inputs Empty
+  document.getElementById("assignmentInput").value = ""
+  document.getElementById("DueDateInput").value = ""
+  document.getElementById("PointsInput").value = ""
+  document.getElementById("NotesInput").value = ""
+
+  let AddedToListMessage = AddAssignmentToList(AssignmentInput, DueDateInput, PointsInput, NotesInput)
+  if(AddedToListMessage != "Added")
+  {
+    ShowPopUp("ErrorText", "block")
+    ChangeInnerText("ErrorText", AddedToListMessage)
+  }
+  else
+  {
+    HidePopUp('ErrorText')
     
-    // Retrieve the goal using the unique key
-    var goalKey = "goal_" + i;
-    var goalValue = localStorage.getItem(goalKey);
-    
-    newp.innerHTML = goalValue;
-    newDiv.appendChild(newp);
-
-    var newbutton = document.createElement("button");
-    newbutton.innerHTML = "<p>X</p>";
-
-    // Use an anonymous function to capture the correct goalKey reference
-    newbutton.onclick = (function(key, div) {
-      return function() {
-        // Remove the value from local storage
-        localStorage.removeItem(key);
-        
-        // Adjust the values of the remaining data
-        for (var j = parseInt(div.id) + 1; j <= amount_of_work; j++) {
-          var nextKey = "goal_" + j;
-          var nextValue = localStorage.getItem(nextKey);
-          localStorage.setItem("goal_" + (j - 1), nextValue);
-        }
-        
-        // Update the amount
-        amount_of_work--;
-        localStorage.setItem("amount", amount_of_work);
-
-        // Remove the div
-        div.parentNode.removeChild(div);
-
-        // Update the list again
-        update_list();
-      };
-    })(goalKey, newDiv);
-    
-    newDiv.appendChild(newbutton);
   }
 }
 
-function get_amount_of_assignments() {
-  let amount = 0;
-  if (localStorage.getItem("amount") != null) {
-    amount = parseInt(localStorage.getItem("amount"));
+function AddAssignmentToList(Assignment, Due, Points, Notes)
+{
+  if(Assignment == null || Assignment == "" || Due == null || Due == "" || Points == null || Points == "")
+  {
+    return "Assignment, Due, or Points is empty."
   }
-  return amount;
+  if(Points < 0)
+  {
+    return "Points Can't be a negative number."
+  }
+  AssignmentsList.push({AssignmentName: Assignment, DueDate: Due, AssignmentPoints: Points, AssignmentNotes: Notes})
+  ShowAssignments()
+  return "Added"
 }
 
-update_list();
+function DeleteAssignment(index)
+{
+  AssignmentsList.splice(index, 1)
+  ShowAssignments()
+}
+
+function ShowAssignments()
+{
+  List.innerHTML = ""
+  for (i=0; i<AssignmentsList.length; i++)
+  {
+    //Get Data
+    let AssignmentData = AssignmentsList[i]
+    let Assignment = AssignmentData.AssignmentName
+    let AssignmentDueDate = AssignmentData.DueDate
+    let AssignmentPoints = AssignmentData.AssignmentPoints
+    let AssignmentNotes = AssignmentData.AssignmentNotes
+    console.log(AssignmentDueDate)
+
+    //Create Assignment Bar
+    var Bar = document.createElement("div")
+    Bar.className = "patchnote_bar"
+
+    //Create Left1
+    var Left = document.createElement("div")
+    Left.className = "left"
+
+    //Create Assignment Text
+    var AssignmentText = document.createElement("p")
+    AssignmentText.innerText = Assignment
+
+    //Create Close Button
+    var CloseButton = document.createElement("div")
+    CloseButton.innerHTML = `<button onclick="DeleteAssignment(${i})"><p>Mark Done</p></button>`
+
+    //Create Left2
+    var Left2 = document.createElement("div")
+    Left2.className = "left"
+
+    //Create Points Text
+    var PointsText = document.createElement("p")
+    PointsText.innerText = `${AssignmentPoints} Points`
+
+    //Create Left3
+    var Left3 = document.createElement("div")
+    Left3.className = "left"
+
+    //Create Due Text
+    var DueDateText = document.createElement("p")
+    DueDateText.innerText = ` Due ${AssignmentDueDate}`
+
+    //Create Right
+    var Right = document.createElement("div")
+    Right.className = "right"
+
+    //Create Notes Buttons
+    var ShowNotesButton = document.createElement("div")
+    ShowNotesButton.innerHTML = `<button onclick="ShowPopUp('AssignmentNotes${i}', 'block'), ShowPopUp('HideNotesButton${i}', 'block'), HidePopUp('ShowNotesButton${i}')"><p>Show Notes</p></button>`
+    ShowNotesButton.id = `ShowNotesButton${i}`
+
+    var HideNotesButton = document.createElement("div")
+    HideNotesButton.innerHTML = `<button onclick="HidePopUp('AssignmentNotes${i}'), ShowPopUp('ShowNotesButton${i}', 'block'), HidePopUp('HideNotesButton${i}')"><p>Hide Notes</p></button>`
+    HideNotesButton.id = `HideNotesButton${i}`
+    HideNotesButton.style.display = "none"
+
+    //Create Notes Section
+    var Notes = document.createElement("p")
+    console.log(AssignmentNotes == "" || AssignmentNotes == null)
+    if(AssignmentNotes == "" || AssignmentNotes == null)
+    {
+      AssignmentNotes = "No notes have been set for this assignment."
+    }
+    Notes.innerText = AssignmentNotes
+    Notes.style.display = "none"
+    Notes.style.marginBottom = "5px"
+    Notes.id = `AssignmentNotes${i}`
+
+    //Append Assignment text and close button to left
+    Left.appendChild(AssignmentText)
+    Left.appendChild(CloseButton)
+
+    //Append Points text to Left2
+    Left2.appendChild(PointsText)
+
+    //Append Due Text ti left3
+    Left3.appendChild(DueDateText)
+    
+
+    //Append Buttons to Right
+    Right.appendChild(ShowNotesButton)
+    Right.appendChild(HideNotesButton)
+
+    //Append Items to main bar
+    Bar.appendChild(Left)
+    Bar.appendChild(Left2)
+    Bar.appendChild(Left3)
+    Bar.appendChild(Right)
+    Bar.appendChild(Notes)
+
+    //Appends Main Bar to List
+    List.append(Bar)
+  }
+}
