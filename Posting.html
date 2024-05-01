@@ -3,22 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feedback</title>
+    <title>Posting</title>
     <link rel="shortcut icon" href="photos/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="inform.css">
     <style id="PageTheme"></style>
 </head>
 <body>
     <!--navigation bar-->
-    <div id="NavBar" class="navbar">
+    <div class="navbar">
         <ul>
             <li><a href="Home.html">Home</a></li>
             <li><a href="updates.html">Patch Notes</a></li>
             <li><a href="Homework.html">Homework</a></li>
             <li><a href="Voting.html">Voting</a></li>
-            <!-- <li><a href="Classes.html">Classes</a></li> -->
-            <!-- <li><a href="Chat.html">Chat</a></li> -->
-            <li class="active"><a href="Feedback.html">Feedback</a></li>
+            <!-- <li><a href="Classes.html">Classes</a></li>
+            <li><a href="Chat.html">Chat</a></li>
+            <li><a href="Feedback.html">Feedback</a></li> -->
+            <li><a href="MessageOfTheDay.html">Daily Message</a></li>
+            <li><a href="Policy.html">Policy</a></li>
+            <li class="active"><a href="Posting.html">Posting</a></li>
+            <li id="Mod" style="display: none;"><a href="Moderation.html">Moderation</a></li>
             <li class="theme-dropdown"><a><img id="CurrentThemeDisplay" src="photos/LightMode.png" class="logo"></a>
                 <div class="dropdown-content">
                     <div class="center">
@@ -47,30 +51,36 @@
     <!--MainPage-->
     <div style="padding: 0; margin: 0;" class="center">
         <div style="border-radius: 30px;" class="box">
-            <button style="width: 200px;" onclick="HidePopUp('ViewOtherFeedbackPage'), ShowPopUp('SubmitFeedbackPage', 'block')" class="LoginButton"><p>Submit Feedback</p></button>
-            <button style="width: 200px;" onclick="HidePopUp('SubmitFeedbackPage'), ShowPopUp('ViewOtherFeedbackPage', 'block')" class="SignUpButton"><p>View Feedback</p></button>            
+            <button style="width: 200px;" onclick="HidePopUp('ViewOtherFeedbackPage'), ShowPopUp('SubmitFeedbackPage', 'block')" class="LoginButton"><p>Make a Post</p></button>
+            <button style="width: 200px;" onclick="HidePopUp('SubmitFeedbackPage'), ShowPopUp('ViewOtherFeedbackPage', 'block')" class="SignUpButton"><p>View Posts</p></button>            
         </div>
     </div>
 
     <!--Submit Feedback-->
     <div id="SubmitFeedbackPage">
         <div class="box">
-            <h1 style="text-align: left;">Submit Feedback</h1>
-            <label for="category"><p>Problem Category</p></label>
+            <h1 style="text-align: left;">Make a post</h1>
+            <label for="category"><p>Category</p></label>
             <select name="category" id="category">
-                <option value="design-ui">Design/UI</option>
-                <option value="functionality">Functionality</option>
-                <option value="community">Community</option>
-                <option value="other">Other</option>
+                <option value="Fun">Fun</option>
+                <option value="Serious">Serious</option>
+                <option value="Community">Community</option>
+                <option value="Complaint">Complaint</option>
+                <option value="Other">Other</option>
             </select>
                 
             <div class="version_bar">
                 <!--TextBox-->
-                <textarea oninput="this.style.height = ''; this.style.height = this.scrollHeight + 'px'"></textarea>
+                <textarea id="PostTextInput" oninput="this.style.height = ''; this.style.height = this.scrollHeight + 'px'"></textarea>
 
                 <!--SubmitButton-->
                 <div class="right">
-                    <button><p>Submit</p></button>
+                    <div id="PostLoad" style="margin-left: 0; margin-top: 0; margin-bottom: 20px; margin-right: 50px; display: none;" class="loading-icon">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                    <button id="PostButton" onclick="PublishPost()"><p>Post</p></button>
                 </div>
             </div>
         </div>
@@ -78,12 +88,23 @@
 
     <!--View Other Feedback-->
     <div style="display: none;" id="ViewOtherFeedbackPage">
-        <div class="box"><h2>Feedback</h2></div>
+        <div id="PostBox" class="box">
+            <h2>Posts</h2>
+            <div class="center">
+                <div id="LoadAnimation" style="margin-left: 0; margin-top: 0; margin-bottom: 20px; margin-right: 50px;" class="loading-icon">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </div>
+        
     </div>
     
-    <!-- <script src="scripts/Verify.js"></script> -->
+    <script src="scripts/Verify.js"></script>
     <script src="scripts/Account.js"></script>
     <script src="scripts/Themes.js"></script><!--Themes-->
     <script src="scripts/PopUp.js"></script>
+    <script src="scripts/Posting.js"></script>
 </body>
 </html>
