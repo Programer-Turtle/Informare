@@ -1,4 +1,4 @@
-let menu = ["Papa Johns", "Chicken & Dumplings"];
+let menu = ["Papa Johns", "Chicken & Dumplings", "Crispy Chicken Patty. Tell the lunch lady’s thank you!!", "Saturday", "Sunday", "Calzones", "Taco Salad", "Popcorn Chicken", "Chicken Bacon Ranch", "Old School Pizza", "Saturday", "Sunday", "Sloppy Joe", "Orange Chicken", "Papa John", "Salisbury Steak", "Pita Pocket", "Saturday", "Sunday", "Pizza Burger", "Buffalo Chicken", "Manager Choice", "Papa John", "Manager Choice", "No School", "No School", "No School", "No School", "No School", "No School", "No School"]
 let grade = ["45", "44"]
 var date = new Date();
 var day = date.getDate() - 1;
