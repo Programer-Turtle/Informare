@@ -1,5 +1,5 @@
-let menu = ["Papa Johns"];
-let grade = ["45"]
+let menu = ["Papa Johns", "Chicken & Dumplings"];
+let grade = ["45", "44"]
 var date = new Date();
 var day = date.getDate() - 1;
 let finalgrade = grade[day];
