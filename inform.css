@@ -304,20 +304,20 @@ li a {
     transition: .6s;
 }
 
-/* Not an original block of code used for new font */
-@media screen and (max-width: 1472px)
-{
-    li a
-    {
-        font-size: 24px;
+:root {
+    --font-size-small: 18px;
+    --font-size-large: 24px;
+}
+
+@media screen and (max-width: 1472px) {
+    li a {
+        font-size: var(--font-size-large);
     }
 }
 
-@media screen and (min-width: 1367px)
-{
-    li a
-    {
-        font-size: 21;
+@media screen and (min-width: 1367px) {
+    li a {
+        font-size: var(--font-size-small);
     }
 }
 
