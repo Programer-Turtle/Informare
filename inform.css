@@ -309,13 +309,13 @@ li a {
     --font-size-large: 24px;
 }
 
-@media screen and (max-width: 1472px) {
+@media screen and (min-width: 1472px) {
     li a {
         font-size: var(--font-size-large);
     }
 }
 
-@media screen and (min-width: 1367px) {
+@media screen and (max-width: 1367px) {
     li a {
         font-size: var(--font-size-small);
     }
