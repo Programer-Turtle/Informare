@@ -155,6 +155,35 @@ async function ShowPostList(Data)
         NewLeft2.className = "left"
         var NewName = document.createElement("p")
         NewName.innerText = Data[DataKeys[i]].User
+        var RoleText = document.createElement("p")
+        let UserLevel = Data[DataKeys[i]].Level
+        RoleText.innerText = UserLevel
+        RoleText.style.fontSize = "50px"
+        RoleText.style.fontWeight = 800;
+        if(UserLevel == "Admin")
+        {
+            RoleText.style.color = "lime"
+        }
+        else if (UserLevel == "Daily_Messenger")
+        {
+            RoleText.style.color = "purple"
+        }
+        else if (UserLevel == "Head_Moderator")
+        {
+            RoleText.style.color = "#d11717"
+        }
+        else if (UserLevel == "Head_Judge")
+        {
+            RoleText.style.color = "gold"
+        }
+        else if(UserLevel == "Designer")
+        {
+            RoleText.style.color = "blue"
+        }
+        else if (UserLevel == "Moderator")
+        {
+            RoleText.style.color = "red"
+        }
         var DeleteButton = document.createElement("div")
         DeleteButton.innerHTML = `<button onclick="DeltePost('${DataKeys[i]}')"><p>Delete</p></button>`
         var NewType = document.createElement("p")
@@ -169,6 +198,10 @@ async function ShowPostList(Data)
         
 
         NewLeft.appendChild(NewName)
+        if(UserLevel != "Free")
+        {
+            NewLeft.appendChild(RoleText)
+        }
         if(Data[DataKeys[i]].User == localStorage.getItem("username") || localStorage.getItem("Mod?") == "true")
         {
             NewLeft.appendChild(DeleteButton)
