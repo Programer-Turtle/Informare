@@ -1,6 +1,98 @@
 //assignment_bar
 const List = document.getElementById("list")
 let AssignmentsList = []
+let CurrentDate = new Date()
+CurrentDate.setHours(0,0,0,0)
+
+async function GetHomeworkList()
+{
+    let email = localStorage.getItem("username");
+    let StoredToken = localStorage.getItem("token");
+
+    if (!email || !StoredToken) {
+        return false;
+    }
+
+    try {
+        const response = await fetch('https://informare-web-server-karsonoculus.replit.app/GetHomework', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                username: email,
+                token: StoredToken
+            })
+        });
+
+        if (!response.ok) {
+            let errorData;
+            try {
+                errorData = await response.json();
+            } catch (parseError) {
+                // If parsing the error JSON fails, use the raw text as the error message
+                throw new Error(response.statusText || 'Server responded with an error');
+            }
+            
+            throw new Error(errorData.error);
+        }
+
+        Data = await response.json();
+        HidePopUp('Loading')
+        console.log(Data)
+        return Data
+
+    } catch (error) {
+        console.error(error.message);
+        return null;
+    }
+}
+
+async function SetHomeworkList(HomeWorkList) {
+  let Username = localStorage.getItem("username")
+  let StoredToken = localStorage.getItem("token");
+
+  try {
+      const response = await fetch('https://informare-web-server-karsonoculus.replit.app/SetHomework', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+              username: Username,
+              token: StoredToken,
+              HomeworkData: HomeWorkList
+          })
+      });
+
+      if (!response.ok) {
+          let errorData;
+          try {
+              errorData = await response.json();
+              console.log(errorData.error)
+              throw new Error(errorData.error);
+          } catch (parseError) {
+              // If parsing the error JSON fails, use the raw text as the error message
+              throw new Error(response.error || 'Server responded with an error');
+          }
+      }
+
+      if (response.status === 200) {
+          console.log('Good')
+      } else {
+          // Handle other status codes if needed
+          throw new Error(`Unexpected response status: ${response.status} - ${response.statusText}`);
+      }
+
+  } catch (error) {
+      console.error(error.message);
+      if (error.message === "Failed to fetch") {
+          //idk
+      } else {
+         console.log(error.message);
+      }
+  }
+}
 
 function CheckIfDatePassedDue(Date)
 {
@@ -11,7 +103,8 @@ function GetAssignmentDataFromInput()
 {
   //Gets Input Data
   let AssignmentInput = document.getElementById("assignmentInput").value
-  let DueDateInput = document.getElementById("DueDateInput").value
+  let DueDateInput = document.getElementById("DueDateInput").value;
+  // let [year, month, day] = DueDateInput.split("-").map(Number);
   let PointsInput = document.getElementById("PointsInput").value
   let NotesInput = document.getElementById("NotesInput").value
 
@@ -46,12 +139,14 @@ function AddAssignmentToList(Assignment, Due, Points, Notes)
   }
   AssignmentsList.push({AssignmentName: Assignment, DueDate: Due, AssignmentPoints: Points, AssignmentNotes: Notes})
   ShowAssignments()
+  SetHomeworkList(AssignmentsList)
   return "Added"
 }
 
 function DeleteAssignment(index)
 {
   AssignmentsList.splice(index, 1)
+  SetHomeworkList(AssignmentsList)
   ShowAssignments()
 }
 
@@ -63,10 +158,11 @@ function ShowAssignments()
     //Get Data
     let AssignmentData = AssignmentsList[i]
     let Assignment = AssignmentData.AssignmentName
-    let AssignmentDueDate = AssignmentData.DueDate
+    let [year, month, day] = AssignmentData.DueDate.split("-").map(Number);
+    let AssignmentDueDate = new Date(year, month - 1, day);
+    AssignmentDueDate.setHours(0, 0, 0, 0); // Set hours to 0 to get local midnight
     let AssignmentPoints = AssignmentData.AssignmentPoints
     let AssignmentNotes = AssignmentData.AssignmentNotes
-    console.log(AssignmentDueDate)
 
     //Create Assignment Bar
     var Bar = document.createElement("div")
@@ -98,7 +194,22 @@ function ShowAssignments()
 
     //Create Due Text
     var DueDateText = document.createElement("p")
-    DueDateText.innerText = ` Due ${AssignmentDueDate}`
+    DueDateText.innerText = ` Due ${AssignmentDueDate.getMonth()}-${AssignmentDueDate.getDate()}-${AssignmentDueDate.getFullYear()}`
+
+    //Check if passed due
+    var pastDueText = document.createElement("p")
+
+    if(AssignmentDueDate.getTime() == CurrentDate.getTime())
+    {
+      console.log('Same')
+      pastDueText.style.color = "yellow"
+      pastDueText.innerText = "Due Today"
+    }
+    else if(AssignmentDueDate < CurrentDate)
+    {
+      pastDueText.style.color = "red"
+      pastDueText.innerText = "Passed Due"
+    }
 
     //Create Right
     var Right = document.createElement("div")
@@ -116,7 +227,6 @@ function ShowAssignments()
 
     //Create Notes Section
     var Notes = document.createElement("p")
-    console.log(AssignmentNotes == "" || AssignmentNotes == null)
     if(AssignmentNotes == "" || AssignmentNotes == null)
     {
       AssignmentNotes = "No notes have been set for this assignment."
@@ -135,7 +245,12 @@ function ShowAssignments()
 
     //Append Due Text ti left3
     Left3.appendChild(DueDateText)
-    
+
+    //Appends Past Due Text
+    if(AssignmentDueDate <= CurrentDate)
+    {
+      Left3.appendChild(pastDueText)
+    }
 
     //Append Buttons to Right
     Right.appendChild(ShowNotesButton)
@@ -152,3 +267,14 @@ function ShowAssignments()
     List.append(Bar)
   }
 }
+
+async function GetData()
+{
+  AssignmentsList = await GetHomeworkList()
+  if(AssignmentsList.length > 0)
+  {
+    ShowAssignments()
+  }
+}
+
+GetData()

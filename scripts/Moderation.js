@@ -109,11 +109,6 @@ async function BanUser(UserToBan, type, Experation, Reason)
     }
 }
 
-function cheese()
-{
-    console.log("Cheese")
-}
-
 async function ShowListOfUsers()
 {
     let data = await GetUserList()

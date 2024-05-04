@@ -36,6 +36,7 @@ async function CheckIfModerator()
         {
             var NavBar = document.getElementById("Mod")
             NavBar.style.display = "inline-block"
+            localStorage.setItem("Mod?", true)
         }
 
     } catch (error) {
@@ -90,7 +91,6 @@ async function GetThemeFromServer()
 
 function CheckBanType(BanData)
 {
-    console.log(BanData.Status)
     return BanData.Status;
 }
 
