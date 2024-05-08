@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html id="html" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -49,15 +49,9 @@
     </div>
 
     <!--MainPage-->
-    <div style="padding: 0; margin: 0;" class="center">
-        <div style="border-radius: 30px;" class="box">
-            <button style="width: 200px;" onclick="HidePopUp('ViewOtherFeedbackPage'), ShowPopUp('SubmitFeedbackPage', 'block')" class="LoginButton"><p>Make a Post</p></button>
-            <button style="width: 200px;" onclick="HidePopUp('SubmitFeedbackPage'), ShowPopUp('ViewOtherFeedbackPage', 'block')" class="SignUpButton"><p>View Posts</p></button>            
-        </div>
-    </div>
 
-    <!--Submit Feedback-->
-    <div id="SubmitFeedbackPage">
+    <!--Post-->
+    <div style="margin-top: 70px;">
         <div class="box">
             <h1 style="text-align: left;">Make a post</h1>
             <label for="category"><p>Category</p></label>
@@ -66,6 +60,7 @@
                 <option value="Serious">Serious</option>
                 <option value="Community">Community</option>
                 <option value="Complaint">Complaint</option>
+                <option value="Confession">Confession</option>
                 <option value="Other">Other</option>
             </select>
                 
@@ -86,9 +81,9 @@
         </div>
     </div>
 
-    <!--View Other Feedback-->
-    <div style="display: none;" id="ViewOtherFeedbackPage">
-        <div id="PostBox" class="box">
+    <!--Other Post-->
+    <div>
+        <div class="box">
             <h2>Posts</h2>
             <div class="center">
                 <div id="LoadAnimation" style="margin-left: 0; margin-top: 0; margin-bottom: 20px; margin-right: 50px;" class="loading-icon">
@@ -97,6 +92,7 @@
                     <div class="dot"></div>
                 </div>
             </div>
+            <div style="margin: 0;" id="PostBox"></div>
         </div>
         
     </div>
@@ -106,5 +102,6 @@
     <script src="scripts/Themes.js"></script><!--Themes-->
     <script src="scripts/PopUp.js"></script>
     <script src="scripts/Posting.js"></script>
+    <script src="scripts/Music.js"></script>
 </body>
 </html>

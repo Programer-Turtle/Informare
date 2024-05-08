@@ -1,8 +1,12 @@
 async function PublishPost() {
     let Username = localStorage.getItem("username")
     let StoredToken = localStorage.getItem("token");
-    let Type = document.getElementById("category").value;
-    let Text = document.getElementById("PostTextInput").value;
+    let TypeInput = document.getElementById("category");
+    let TextInput = document.getElementById("PostTextInput");
+    let Type = TypeInput.value;
+    let Text = TextInput.value;
+    TypeInput.value = "Fun"
+    TextInput.value = null
     ShowPopUp("PostLoad", "block");
     HidePopUp("PostButton");
     try {
@@ -31,8 +35,10 @@ async function PublishPost() {
         }
 
         if (response.status === 200) {
+            ShowPopUp("PostButton", "block");
+            HidePopUp("PostLoad");
             console.log('Good')
-            location.reload()
+            GetPostList()
         } else {
             // Handle other status codes if needed
             throw new Error(`Unexpected response status: ${response.status} - ${response.statusText}`);
@@ -79,7 +85,7 @@ async function DeltePost(messageID) {
 
         if (response.status === 200) {
             console.log('Good')
-            location.reload()
+            GetPostList()
         } else {
             // Handle other status codes if needed
             throw new Error(`Unexpected response status: ${response.status} - ${response.statusText}`);
@@ -99,6 +105,9 @@ async function GetPostList()
 {
     let email = localStorage.getItem("username");
     let StoredToken = localStorage.getItem("token");
+    let Post = document.getElementById("PostBox")
+    Post.innerHTML = ""
+    ShowPopUp("LoadAnimation", "block")
 
     if (!email || !StoredToken) {
         return false;
@@ -134,7 +143,7 @@ async function GetPostList()
         ShowPostList(Data)
 
     } catch (error) {
-        console.error(error.message);
+        console.error(error);
         return null;
     }
 }
@@ -143,8 +152,10 @@ async function ShowPostList(Data)
 {
     let DataKeys = Object.keys(Data)
     var Post = document.getElementById("PostBox")
-    for(i=0;i<DataKeys.length;i++)
+    Post.innerHTML = ""
+    for(z=1;z<=DataKeys.length;z++)
     {
+        let i = DataKeys.length - z
         var NewBar = document.createElement("div")
         NewBar.className = "version_bar"
         NewBar.style.paddingBottom = "15px"
@@ -157,7 +168,7 @@ async function ShowPostList(Data)
         NewName.innerText = Data[DataKeys[i]].User
         var RoleText = document.createElement("p")
         let UserLevel = Data[DataKeys[i]].Level
-        RoleText.innerText = UserLevel
+        RoleText.innerText = UserLevel.replace("_", " ")
         RoleText.style.fontSize = "50px"
         RoleText.style.fontWeight = 800;
         if(UserLevel == "Admin")
@@ -166,7 +177,7 @@ async function ShowPostList(Data)
         }
         else if (UserLevel == "Daily_Messenger")
         {
-            RoleText.style.color = "purple"
+            RoleText.style.color = "#BF40BF"
         }
         else if (UserLevel == "Head_Moderator")
         {
@@ -183,6 +194,10 @@ async function ShowPostList(Data)
         else if (UserLevel == "Moderator")
         {
             RoleText.style.color = "red"
+        }
+        else if (UserLevel == "Judge")
+        {
+            RoleText.style.color = "#FFAF18"
         }
         var DeleteButton = document.createElement("div")
         DeleteButton.innerHTML = `<button onclick="DeltePost('${DataKeys[i]}')"><p>Delete</p></button>`

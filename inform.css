@@ -435,6 +435,7 @@ img.logo
     display: block;
     margin-left: 0;
     transition: .6s;
+    color: rgb(204, 0, 204);
 }
 
 .theme-dropdown:hover .dropdown-content 
