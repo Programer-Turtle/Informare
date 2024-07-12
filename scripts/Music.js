@@ -1,5 +1,6 @@
 // let audioTrack = document.createElement("audio")
-// let htmlListen = document.getElementById('html')
+// let htmlListen = document.getElementsByTagName("html")
+// htmlListen = htmlListen[0]
 // audioTrack.loop = true
 
 // function GetPage()
@@ -23,6 +24,18 @@
 //         PlayAudio("AHappyTune.mp3")
 //     }
 //     else if (page == "Homework.html" || page == "Homework")
+//     {
+//         PlayAudio("WorkinTime.mp3")
+//     }
+//     else if (page == "Home.html" || page == "Home")
+//     {
+//         PlayAudio("ToBegin.mp3")
+//     }
+//     else if (page == "Policy.html" || page == "Policy")
+//     {
+//         PlayAudio("FrameandPlay.mp3")
+//     }
+//     else if (page == "MessageOfTheDay.html" || page == "MessageOfTheDay")
 //     {
 //         PlayAudio("AChillExploration.mp3")
 //     }
