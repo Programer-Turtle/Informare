@@ -59,7 +59,7 @@ function OnMove(event)
     {
         PlayAudio("LoginScreen.mp3")
     }
-    htmlListen.removeEventListener("click", OnMove)
+    htmlListen.removeEventListener('mousedown', OnMove)
 }
 
-htmlListen.addEventListener("click", OnMove)
+htmlListen.addEventListener('mousedown', OnMove)
