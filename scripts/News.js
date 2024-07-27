@@ -132,6 +132,9 @@ async function SetNewsData()
     }
 }
 
+//Text Area
+let textarea = document.getElementById("NewsEditInput")
+
 async function GetUIData()
 {
     const IfWriter = await CheckIfWriter()
@@ -140,11 +143,9 @@ async function GetUIData()
         ShowPopUp("EditButton", "block")    
     }
     const CurrentNews = await GetNewsData()
+    textarea.value = CurrentNews
     ChangeInnerHTML("NewsText", CurrentNews)
 }
-
-//Text Area
-let textarea = document.getElementById("NewsEditInput")
 
 function InsertText(text)
 {
