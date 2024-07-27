@@ -198,6 +198,7 @@ function SetPageTheme()
         var Custom_SignUp_Button_color = `rgb(${rgb.r+57}, ${rgb.g-141}, ${rgb.b-20})`
         var Custom_TextArea_color = `rgb(${rgb.r+143}, ${rgb.g-92}, ${rgb.b-0})`
         var Custom_DropDown_color = `rgb(${rgb.r+117}, ${rgb.g-114}, ${rgb.b-10})`
+        var Custom_Description_color = `rgb(${rgb.r+80}, ${rgb.g-125}, ${rgb.b-19})`
 
         // Generate CSS for body background and box background
         var colorHTML = `
@@ -227,6 +228,7 @@ function SetPageTheme()
             textarea{background-color:${Custom_TextArea_color};}
             select{background-color:${Custom_DropDown_color};}
             option{background-color:${Custom_DropDown_color};}
+            .Description{background-color:${Custom_Description_color};}
         `;
 
         // Set the CSS styles

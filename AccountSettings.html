@@ -102,6 +102,20 @@
     </div>
 
     <!--MainPage-->
+    <!-- <div style="margin-bottom: 20px;" class="box">
+        <h1 class="version_bar">Account Info</h1>
+        <div style="align-items: center;" class="center">
+            <p id="ShowEmail" style="margin-right: auto;">!Email</p>
+            <div id="Verified" class="Verify">
+                <label id="Des" for="PFP" class="Description"><p style="margin: 0;">Verified</p></label>
+                <img width="35px" style="margin-right: 10px;" src="photos/Verified.png" alt="">
+            </div>
+            <img id="PFP" width="60px" style="margin-right: 10px; margin-bottom: 5px;" src="photos/NoPFP.png" alt="">
+        </div>
+        <p>ActiveToken: <span style="display: none;" id="ShowToken"></span><span id="HideToken">###########</span></p><button id="ShowButton" onclick="ShowPopUp('ShowToken', 'inline'), ShowPopUp('HideButton', 'inline'), HidePopUp('HideToken'), HidePopUp('ShowButton')"><p>Show</p></button><button style="display: none;" id="HideButton" onclick="ShowPopUp('HideToken', 'inline'), ShowPopUp('ShowButton', 'inline'), HidePopUp('ShowToken'), HidePopUp('HideButton')"><p>Hide</p></button>
+        <br>
+        <p style="color: rgb(247, 50, 50);">Don't Share this info with anyone!</p>
+    </div> -->
     <div class="box">
         <h1 class="version_bar">Account Settings</h1>
         <br>
@@ -122,10 +136,11 @@
         </div>
     </div>
 
+    <script src="scripts/PopUp.js"></script>
     <script src="scripts/Verify.js"></script>
     <script src="scripts/Login.js"></script>
     <script src="scripts/Account.js"></script>
     <script src="scripts/Themes.js"></script>
-    <script src="scripts/PopUp.js"></script>
+    <!-- <script>GetAccountInfo()</script> -->
 </body>
 </html>

@@ -145,6 +145,13 @@ function DeleteAccount()
     });
 }
 
+function GetAccountInfo()
+{
+    ChangeInnerText("ShowEmail", `Email: ${localStorage.getItem("username")}`)
+    ChangeInnerText("ShowToken", localStorage.getItem("token"))
+    //HidePopUp("Verified")
+}
+
 // function SetPFP(image) {
 //     console.log(image);
 //     var url = URL.createObjectURL(image);
