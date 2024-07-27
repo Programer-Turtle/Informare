@@ -3,3 +3,4 @@ Disallow: /ProVersion/
 Disallow: /Ban.html
 Disallow: /404.html
 Disallow: /ShortcutAPI.html
+Disallow: /Moderation.html
