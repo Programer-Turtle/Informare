@@ -1,5 +1,7 @@
 User-agent: *
 Disallow: /ProVersion/
+Disallow: /photos/
+Disallow: /scripts/
 Disallow: /Ban.html
 Disallow: /404.html
 Disallow: /ShortcutAPI.html
