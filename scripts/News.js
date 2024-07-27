@@ -144,6 +144,8 @@ async function GetUIData()
     }
     const CurrentNews = await GetNewsData()
     textarea.value = CurrentNews
+    textarea.style.height = ''
+    textarea.style.height = textarea.scrollHeight + 'px'
     ChangeInnerHTML("NewsText", CurrentNews)
 }
 
