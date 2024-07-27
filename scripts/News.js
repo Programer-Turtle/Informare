@@ -144,8 +144,6 @@ async function GetUIData()
     }
     const CurrentNews = await GetNewsData()
     textarea.value = CurrentNews
-    textarea.style.height = ''
-    textarea.style.height = textarea.scrollHeight + 'px'
     ChangeInnerHTML("NewsText", CurrentNews)
 }
 
@@ -196,6 +194,14 @@ function AddCenter()
 function AddRight()
 {
     InsertText('<div class="right">Content Here</div>')
+}
+
+function OpenEditMenu()
+{
+    ShowPopUp('NewsEditor', 'block')
+    HidePopUp('NewsViewer')
+    textarea.style.height = ''
+    textarea.style.height = textarea.scrollHeight + 'px'
 }
 
 textarea.addEventListener('input', (event) =>
