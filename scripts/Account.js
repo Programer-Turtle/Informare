@@ -145,11 +145,36 @@ function DeleteAccount()
     });
 }
 
-function GetAccountInfo()
+async function GetAccountInfo()
 {
     ChangeInnerText("ShowEmail", `Email: ${localStorage.getItem("username")}`)
     ChangeInnerText("ShowToken", localStorage.getItem("token"))
-    //HidePopUp("Verified")
+
+    let response = await fetch("https://informare-web-server-karsonoculus.replit.app/CheckIfVerified", {
+        method:"POST",
+        headers:{
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            username: localStorage.getItem("username"),
+            token: localStorage.getItem("token")
+        })
+    })
+    if(!response.ok){
+        console.log("Error Occured");
+        return null;
+    }
+    let Data = await response.json()
+    HidePopUp("Load")
+    console.log(Data.message)
+    if(Data.message == "Worker"){
+        ChangeInnerText("VerifiedText", "Verified Worker")
+        document.getElementById("VerifiedPhoto").src = "photos/Worker.png"
+        ShowPopUp("Verified", "flex")
+    }
+    else if(Data.message == true){
+        ShowPopUp("Verified", "flex")
+    }
 }
 
 // function SetPFP(image) {
