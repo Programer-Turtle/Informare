@@ -1,5 +1,5 @@
-let menu = ["Sunday", "Labor Day", "Corn Dog", "Crispy Chicken Sandwich", "Orange Chicken", "Porkchop", "Saturday", "Sunday", "Quesadilla", "Hamburger and Cheese", "Papa Johns", "Mac and Cheese Bites", "Chicken Alfredo", "Saturday", "Sunday", "Hotdog/Chili/Cheese", "Hamburger and Cheese", "Popcorn Chicken", "Loaded Fries", "Chicken & Noodles", "Saturday", "Sunday", "Tornado", "Chicken Strips", "Papa Johns", "Philly Steak", "Mac and Cheese", "Saturday", "Sunday", "Popcorn Chicken"]
-let grade = ["N/A", "N/A", "34", "48.5", "42.5", "New", "N/A", "N/A", "45", "15", "45", "N/A", "48", "N/A", "N/A", "26", "15", "44.5", "54", "49", "N/A", "N/A", "39", "44", "45", "N/A", "38", "N/A", "N/A", "44.5"]
+let menu = ["Corn Dog", "Hamb/Cheese", "Taco Salad", "Chicken and Dumplings", "Saturday", "Sunday", "Tornados", "Biscuit and Gravy", "Papa John's", "Mini Subs", "Chicken Alfredo", "Saturday", "Sunday", "Hot Dog/Chili Cheese", "Loaded Potato Skins", "No School", "Pasta Bake", "Pork Chop", "Saturday", "Sunday", "Fall Break", "Fall Break", "Fall Break", "Fall Break", "Fall Break", "Saturday", "Sunday", "Pulled Pork Nachos", "Hamb/Cheese", "Papa John's", "Vampires Cold Cream"]
+let grade = ["34", "15", "51", "44", "N/A", "N/A", "39", "45", "45", "45", "48", "N/A", "N/A", "26", "54", "N/A", "57", "30", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "N/A", "60", "15", "45", "N/A"]
 var date = new Date();
 var day = date.getDate() - 1;
 let finalgrade = grade[day];
