@@ -11,44 +11,44 @@ if (finalgrade === "schoolnull")
 
 if (finalgrade == 60)
 {
-    document.getElementById("grade").style.textShadow = "0 0 10px yellow, 0 0 20px gold, 0 0 30px goldenrod";
-    document.getElementById("grade").style.color = "yellow";
+    document.getElementById("grade").style.textShadow = "0 0 10px lime, 0 0 20px green, 0 0 30px green";
+    document.getElementById("grade").style.color = "rgb(125, 249, 125)";
 }
 
 if (finalgrade <= 59 & finalgrade >= 51)
 {
-    document.getElementById("grade").style.textShadow = "0 0 10px rgb(0, 255, 0), 0 0 20px rgb(0, 245, 0), 0 0 30px rgb(0, 155, 32)";
-    document.getElementById("grade").style.color = "rgb(0, 255, 0)";
+    document.getElementById("grade").style.textShadow = "0 0 10px rgb(201, 127, 251), 0 0 20px rgb(201, 137, 251), 0 0 30px rgb(201, 147, 281)";
+    document.getElementById("grade").style.color = "rgb(201, 127, 251)";
 }
 
 if (finalgrade <= 50 & finalgrade >= 41)
 {
-    document.getElementById("grade").style.textShadow = "0 0 10px rgb(145, 233, 0), 0 0 20px rgb(145, 223, 0), 0 0 30px rgb(145, 133, 32)";
-    document.getElementById("grade").style.color = "rgb(145, 233, 0)";
+    document.getElementById("grade").style.textShadow = "0 0 10px rgb(108, 198, 247), 0 0 20px rgb(108, 208, 247), 0 0 30px rgb(108, 218, 277)";
+    document.getElementById("grade").style.color = "rgb(108, 198, 247)";
 }
 
 if (finalgrade <= 40 & finalgrade >= 31)
 {
-    document.getElementById("grade").style.textShadow = "0 0 10px rgb(196, 186, 0), 0 0 20px rgb(196, 176, 0), 0 0 30px rgb(196, 86, 32)";
-    document.getElementById("grade").style.color = "rgb(196, 186, 0)";
+    document.getElementById("grade").style.textShadow = "0 0 10px rgb(143, 249, 249), 0 0 20px rgb(143, 259, 249), 0 0 30px rgb(143, 269, 279)";
+    document.getElementById("grade").style.color = "rgb(143, 249, 249)";
 }
 
 if (finalgrade <= 30 & finalgrade >= 21) 
 {
-    document.getElementById("grade").style.textShadow = "0 0 10px rgb(229, 145, 0), 0 0 20px rgb(229, 135, 0), 0 0 30px rgb(229, 45, 32)";
-    document.getElementById("grade").style.color = "rgb(229, 145, 0)";
+    document.getElementById("grade").style.textShadow = "0 0 10px rgb(255, 237, 165), 0 0 20px rgb(255, 247, 165), 0 0 30px rgb(255, 257, 195)";
+    document.getElementById("grade").style.color = "rgb(255, 237, 165)";
 }
 
 if (finalgrade <= 20 & finalgrade >= 11)
 {
-    document.getElementById("grade").style.textShadow = "0 0 10px rgb(249, 96, 0), 0 0 20px rgb(249, 86, 0), 0 0 30px rgb(249, 6, 32)";
-    document.getElementById("grade").style.color = "rgb(249, 96, 0)";
+    document.getElementById("grade").style.textShadow = "0 0 10px rgb(246, 159, 123), 0 0 20px rgb(246, 169, 123), 0 0 30px rgb(246, 179, 133)";
+    document.getElementById("grade").style.color = "rgb(246, 159, 123)";
 }
 
 if (finalgrade <= 10 & finalgrade >= 0)
 {
-    document.getElementById("grade").style.textShadow = "0 0 10px rgb(255, 0, 0), 0 0 20px rgb(255, 10, 0), 0 0 30px rgb(255, 100, 32)";
-    document.getElementById("grade").style.color = "rgb(255, 0, 0)";
+    document.getElementById("grade").style.textShadow = "0 0 10px rgb(254, 119, 119), 0 0 20px rgb(254, 129, 119), 0 0 30px rgb(254, 139, 32)";
+    document.getElementById("grade").style.color = "rgb(254, 119, 119)";
 }
 
 document.getElementById("Item").innerHTML = menu[day];
