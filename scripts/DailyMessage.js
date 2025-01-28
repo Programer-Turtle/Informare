@@ -16,7 +16,7 @@ async function GetDailyMessage() {
     }
 
     try {
-        const response = await fetch('GetDailyMessage', {
+        const response = await fetch('https://informare-api.onrender.com/GetDailyMessage', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
