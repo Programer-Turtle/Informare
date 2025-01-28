@@ -8,7 +8,7 @@ async function GetUserList()
     }
 
     try {
-        const response = await fetch('https://informare-web-server-karsonoculus.replit.app/GetUserList', {
+        const response = await fetch('https://informare-api.onrender.com/GetUserList', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -73,7 +73,7 @@ async function BanUser(UserToBan, type, Experation, Reason)
     }
 
     try {
-        const response = await fetch('https://informare-web-server-karsonoculus.replit.app/BanUser', {
+        const response = await fetch('https://informare-api.onrender.com/BanUser', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

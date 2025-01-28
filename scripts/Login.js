@@ -65,7 +65,7 @@ function Login(TypeOfLogin, email, password) {
         SetLoadingIcon('Login')
     }
 
-    fetch('https://informare-web-server-karsonoculus.replit.app/login', {
+    fetch('https://informare-api.onrender.com/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -148,7 +148,7 @@ function SignUp() {
 
     SetLoadingIcon('SignUp')
 
-    fetch('https://informare-web-server-karsonoculus.replit.app/createAccount', {
+    fetch('https://informare-api.onrender.com/createAccount', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

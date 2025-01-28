@@ -7,7 +7,7 @@ async function CheckIfWriter() {
     }
 
     try {
-        const response = await fetch('https://informare-web-server-karsonoculus.replit.app/CheckForPermission', {
+        const response = await fetch('https://informare-api.onrender.com/CheckForPermission', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -52,7 +52,7 @@ async function GetNewsData()
     }
 
     try {
-        const response = await fetch('https://informare-web-server-karsonoculus.replit.app/GetNews', {
+        const response = await fetch('https://informare-api.onrender.com/GetNews', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -97,7 +97,7 @@ async function SetNewsData()
         return false;
     }
     try{
-        const response = await fetch('https://informare-web-server-karsonoculus.replit.app/PostNews', {
+        const response = await fetch('https://informare-api.onrender.com/PostNews', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

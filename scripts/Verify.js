@@ -8,7 +8,7 @@ async function CheckIfModerator()
     }
 
     try {
-        const response = await fetch('https://informare-web-server-karsonoculus.replit.app/CheckIfModerator', {
+        const response = await fetch('https://informare-api.onrender.com/CheckIfModerator', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -55,7 +55,7 @@ async function GetThemeFromServer()
     }
 
     try {
-        const response = await fetch('https://informare-web-server-karsonoculus.replit.app/GetThemeData', {
+        const response = await fetch('https://informare-api.onrender.com/GetThemeData', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -108,7 +108,7 @@ async function Verify_Account() {
     }
 
     try {
-        const response = await fetch('https://informare-web-server-karsonoculus.replit.app/checkifloggedin', {
+        const response = await fetch('https://informare-api.onrender.com/checkifloggedin', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

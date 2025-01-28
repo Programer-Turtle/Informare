@@ -14,7 +14,7 @@ async function GetHomeworkList()
     }
 
     try {
-        const response = await fetch('https://informare-web-server-karsonoculus.replit.app/GetHomework', {
+        const response = await fetch('https://informare-api.onrender.com/GetHomework', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -53,7 +53,7 @@ async function SetHomeworkList(HomeWorkList) {
   let StoredToken = localStorage.getItem("token");
 
   try {
-      const response = await fetch('https://informare-web-server-karsonoculus.replit.app/SetHomework', {
+      const response = await fetch('https://informare-api.onrender.com/SetHomework', {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json',

@@ -27,7 +27,7 @@ function ResetTokens(TypeOfReset, email, password)
         console.error("No Password");
         return;
     }
-    fetch('ResetTokens', {
+    fetch('https://informare-api.onrender.com/ResetTokens', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
