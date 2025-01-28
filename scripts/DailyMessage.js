@@ -16,7 +16,7 @@ async function GetDailyMessage() {
     }
 
     try {
-        const response = await fetch('https://informare-web-server-karsonoculus.replit.app/GetDailyMessage', {
+        const response = await fetch('GetDailyMessage', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -76,7 +76,7 @@ async function PostDailyMessage() {
         ShowPopUp('EditLoadAnimation', 'block');
         HidePopUp('ConfirmButton');
         HidePopUp("EditErrorText")
-        const response = await fetch('https://informare-web-server-karsonoculus.replit.app/AddDailyMessage', {
+        const response = await fetch('https://informare-api.onrender.com/AddDailyMessage', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -131,7 +131,7 @@ async function CheckIfEditor() {
     }
 
     try {
-        const response = await fetch('https://informare-web-server-karsonoculus.replit.app/CheckForPermission', {
+        const response = await fetch('https://informare-api.onrender.com/CheckForPermission', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
