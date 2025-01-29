@@ -14,7 +14,7 @@ async function GetHomeworkList()
     }
 
     try {
-        const response = await fetch('https://informare-api.onrender.com/GetHomework', {
+        const response = await fetch('http://34.121.153.71:3000/GetHomework', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -53,7 +53,7 @@ async function SetHomeworkList(HomeWorkList) {
   let StoredToken = localStorage.getItem("token");
 
   try {
-      const response = await fetch('https://informare-api.onrender.com/SetHomework', {
+      const response = await fetch('http://34.121.153.71:3000/SetHomework', {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json',

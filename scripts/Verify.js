@@ -8,7 +8,7 @@ async function CheckIfModerator()
     }
 
     try {
-        const response = await fetch('https://informare-api.onrender.com/CheckIfModerator', {
+        const response = await fetch('http://34.121.153.71:3000/CheckIfModerator', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -55,7 +55,7 @@ async function GetThemeFromServer()
     }
 
     try {
-        const response = await fetch('https://informare-api.onrender.com/GetThemeData', {
+        const response = await fetch('http://34.121.153.71:3000/GetThemeData', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -108,7 +108,7 @@ async function Verify_Account() {
     }
 
     try {
-        const response = await fetch('https://informare-api.onrender.com/checkifloggedin', {
+        const response = await fetch('http://34.121.153.71:3000/checkifloggedin', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -125,7 +125,7 @@ async function Verify_Account() {
         console.error('Error occurred during account verification', error);
         return false;
     }
-}
+} 
 
 async function handlePageLoad() {
     const url = window.location.href;

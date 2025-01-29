@@ -65,7 +65,7 @@ function Login(TypeOfLogin, email, password) {
         SetLoadingIcon('Login')
     }
 
-    fetch('https://informare-api.onrender.com/login', {
+    fetch('http://34.121.153.71:3000/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -148,7 +148,7 @@ function SignUp() {
 
     SetLoadingIcon('SignUp')
 
-    fetch('https://informare-api.onrender.com/createAccount', {
+    fetch('http://34.121.153.71:3000/createAccount', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

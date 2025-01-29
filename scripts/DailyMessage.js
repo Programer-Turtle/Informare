@@ -16,7 +16,7 @@ async function GetDailyMessage() {
     }
 
     try {
-        const response = await fetch('https://informare-api.onrender.com/GetDailyMessage', {
+        const response = await fetch('http://34.121.153.71:3000/GetDailyMessage', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -76,7 +76,7 @@ async function PostDailyMessage() {
         ShowPopUp('EditLoadAnimation', 'block');
         HidePopUp('ConfirmButton');
         HidePopUp("EditErrorText")
-        const response = await fetch('https://informare-api.onrender.com/AddDailyMessage', {
+        const response = await fetch('http://34.121.153.71:3000/AddDailyMessage', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -131,7 +131,7 @@ async function CheckIfEditor() {
     }
 
     try {
-        const response = await fetch('https://informare-api.onrender.com/CheckForPermission', {
+        const response = await fetch('http://34.121.153.71:3000/CheckForPermission', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

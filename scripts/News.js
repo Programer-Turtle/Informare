@@ -7,7 +7,7 @@ async function CheckIfWriter() {
     }
 
     try {
-        const response = await fetch('https://informare-api.onrender.com/CheckForPermission', {
+        const response = await fetch('http://34.121.153.71:3000/CheckForPermission', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -52,7 +52,7 @@ async function GetNewsData()
     }
 
     try {
-        const response = await fetch('https://informare-api.onrender.com/GetNews', {
+        const response = await fetch('http://34.121.153.71:3000/GetNews', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -97,7 +97,7 @@ async function SetNewsData()
         return false;
     }
     try{
-        const response = await fetch('https://informare-api.onrender.com/PostNews', {
+        const response = await fetch('http://34.121.153.71:3000/PostNews', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
