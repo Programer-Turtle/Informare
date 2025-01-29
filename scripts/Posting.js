@@ -10,7 +10,7 @@ async function PublishPost() {
     ShowPopUp("PostLoad", "block");
     HidePopUp("PostButton");
     try {
-        const response = await fetch('https://informare-web-server-karsonoculus.replit.app/PublishPost', {
+        const response = await fetch('http://34.121.153.71:3000/PublishPost', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -59,7 +59,7 @@ async function DeltePost(messageID) {
     let StoredToken = localStorage.getItem("token");
 
     try {
-        const response = await fetch('https://informare-web-server-karsonoculus.replit.app/DeletePost', {
+        const response = await fetch('http://34.121.153.71:3000/DeletePost', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -114,7 +114,7 @@ async function GetPostList()
     }
 
     try {
-        const response = await fetch('https://informare-web-server-karsonoculus.replit.app/GetPosts', {
+        const response = await fetch('http://34.121.153.71:3000/GetPosts', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

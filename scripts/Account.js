@@ -27,7 +27,7 @@ function ResetTokens(TypeOfReset, email, password)
         console.error("No Password");
         return;
     }
-    fetch('https://informare-web-server-karsonoculus.replit.app/ResetTokens', {
+    fetch('http://34.121.153.71:3000/ResetTokens', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -71,7 +71,7 @@ function ChangePassword()
         console.error("No Password");
         return;
     }
-    fetch('https://informare-web-server-karsonoculus.replit.app/ChangePassword', {
+    fetch('http://34.121.153.71:3000/ChangePassword', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -114,7 +114,7 @@ function DeleteAccount()
         console.error("No Password");
         return;
     }
-    fetch('https://informare-web-server-karsonoculus.replit.app/DeleteAccount', {
+    fetch('http://34.121.153.71:3000/DeleteAccount', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -150,7 +150,7 @@ async function GetAccountInfo()
     ChangeInnerText("ShowEmail", `Email: ${localStorage.getItem("username")}`)
     ChangeInnerText("ShowToken", localStorage.getItem("token"))
 
-    let response = await fetch("https://informare-web-server-karsonoculus.replit.app/CheckIfVerified", {
+    let response = await fetch("http://34.121.153.71:3000/CheckIfVerified", {
         method:"POST",
         headers:{
             'Content-Type': 'application/json'

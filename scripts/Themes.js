@@ -15,7 +15,7 @@ async function PostTheme() {
     console.log("Theme: " + Theme + " Rgb: " + Rgb)
 
     try {
-        const response = await fetch('https://informare-web-server-karsonoculus.replit.app/SetTheme', {
+        const response = await fetch('http://34.121.153.71:3000/SetTheme', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
