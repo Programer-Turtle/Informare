@@ -126,6 +126,7 @@ async function Verify_Account() {
         return false;
     }
 } 
+} 
 
 async function handlePageLoad() {
     const url = window.location.href;
