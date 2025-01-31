@@ -8,7 +8,7 @@ async function GetUserList()
     }
 
     try {
-        const response = await fetch('http://34.121.153.71:3000/GetUserList', {
+        const response = await fetch('https://informapi.xyz/GetUserList', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -73,7 +73,7 @@ async function BanUser(UserToBan, type, Experation, Reason)
     }
 
     try {
-        const response = await fetch('http://34.121.153.71:3000/BanUser', {
+        const response = await fetch('https://informapi.xyz/BanUser', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

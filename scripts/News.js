@@ -7,7 +7,7 @@ async function CheckIfWriter() {
     }
 
     try {
-        const response = await fetch('http://34.121.153.71:3000/CheckForPermission', {
+        const response = await fetch('https://informapi.xyz/CheckForPermission', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -52,7 +52,7 @@ async function GetNewsData()
     }
 
     try {
-        const response = await fetch('http://34.121.153.71:3000/GetNews', {
+        const response = await fetch('https://informapi.xyz/GetNews', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -97,7 +97,7 @@ async function SetNewsData()
         return false;
     }
     try{
-        const response = await fetch('http://34.121.153.71:3000/PostNews', {
+        const response = await fetch('https://informapi.xyz/PostNews', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

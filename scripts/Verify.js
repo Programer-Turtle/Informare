@@ -8,7 +8,7 @@ async function CheckIfModerator()
     }
 
     try {
-        const response = await fetch('http://34.121.153.71:3000/CheckIfModerator', {
+        const response = await fetch('https://informapi.xyz/CheckIfModerator', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -55,7 +55,7 @@ async function GetThemeFromServer()
     }
 
     try {
-        const response = await fetch('http://34.121.153.71:3000/GetThemeData', {
+        const response = await fetch('https://informapi.xyz/GetThemeData', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -108,7 +108,7 @@ async function Verify_Account() {
     }
 
     try {
-        const response = await fetch('http://34.121.153.71:3000/checkifloggedin', {
+        const response = await fetch('https://informapi.xyz/checkifloggedin', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

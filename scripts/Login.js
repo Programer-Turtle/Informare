@@ -45,6 +45,14 @@ function SignUpError(Type)
     console.error(Type);
     SetErrorText("SignUp", Type);
 }
+function containsUnallowedSymbol(str, allowedSymbols) {
+    // Create a regex pattern that allows only characters in the list
+    let regex = new RegExp(`^[a-zA-Z0-9${allowedSymbols.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&')}]*$`);
+    
+    // Return true if the string contains an unallowed symbol
+    return !regex.test(str);
+}
+
 
 function Login(TypeOfLogin, email, password) {
     if (TypeOfLogin == "Auto")
@@ -54,9 +62,8 @@ function Login(TypeOfLogin, email, password) {
         password = document.getElementById("password").value;
     }
 
-    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-    if (!emailRegex.test(email)) {
-        LoginError("Not Valid Email Format");
+    if (containsUnallowedSymbol(email, "-_")) {
+        LoginError("Usernames can only contain letters, numbers, dashes, and underscores.");
         return; // Exit the function if the email is not valid
     }
 
@@ -65,7 +72,7 @@ function Login(TypeOfLogin, email, password) {
         SetLoadingIcon('Login')
     }
 
-    fetch('http://34.121.153.71:3000/login', {
+    fetch('https://informapi.xyz/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -140,15 +147,14 @@ function SignUp() {
     email = email.toLowerCase();
     let password = document.getElementById("passwordSignUp").value;
 
-    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-    if (!emailRegex.test(email)) {
-        SignUpError("Not Valid Email Format");
+    if (containsUnallowedSymbol(email, "-_")) {
+        LoginError("Usernames can only contain letters, numbers, dashes, and underscores.");
         return; // Exit the function if the email is not valid
     }
 
     SetLoadingIcon('SignUp')
 
-    fetch('http://34.121.153.71:3000/createAccount', {
+    fetch('https://informapi.xyz/createAccount', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

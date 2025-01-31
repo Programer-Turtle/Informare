@@ -27,7 +27,7 @@ function ResetTokens(TypeOfReset, email, password)
         console.error("No Password");
         return;
     }
-    fetch('http://34.121.153.71:3000/ResetTokens', {
+    fetch('https://informapi.xyz/ResetTokens', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -71,7 +71,7 @@ function ChangePassword()
         console.error("No Password");
         return;
     }
-    fetch('http://34.121.153.71:3000/ChangePassword', {
+    fetch('https://informapi.xyz/ChangePassword', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -114,7 +114,7 @@ function DeleteAccount()
         console.error("No Password");
         return;
     }
-    fetch('http://34.121.153.71:3000/DeleteAccount', {
+    fetch('https://informapi.xyz/DeleteAccount', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -150,7 +150,7 @@ async function GetAccountInfo()
     ChangeInnerText("ShowEmail", `Email: ${localStorage.getItem("username")}`)
     ChangeInnerText("ShowToken", localStorage.getItem("token"))
 
-    let response = await fetch("http://34.121.153.71:3000/CheckIfVerified", {
+    let response = await fetch("https://informapi.xyz/CheckIfVerified", {
         method:"POST",
         headers:{
             'Content-Type': 'application/json'
