@@ -14,7 +14,7 @@ async function GetHomeworkList()
     }
 
     try {
-        const response = await fetch('https://informapi.xyz/GetHomework', {
+        const response = await fetch('https://informare.weathersystem.org/GetHomework', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -53,7 +53,7 @@ async function SetHomeworkList(HomeWorkList) {
   let StoredToken = localStorage.getItem("token");
 
   try {
-      const response = await fetch('https://informapi.xyz/SetHomework', {
+      const response = await fetch('https://informare.weathersystem.org/SetHomework', {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json',

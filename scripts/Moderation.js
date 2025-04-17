@@ -8,7 +8,7 @@ async function GetUserList()
     }
 
     try {
-        const response = await fetch('https://informapi.xyz/GetUserList', {
+        const response = await fetch('https://informare.weathersystem.org/GetUserList', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -73,7 +73,7 @@ async function BanUser(UserToBan, type, Experation, Reason)
     }
 
     try {
-        const response = await fetch('https://informapi.xyz/BanUser', {
+        const response = await fetch('https://informare.weathersystem.org/BanUser', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

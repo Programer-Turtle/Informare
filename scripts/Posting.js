@@ -10,7 +10,7 @@ async function PublishPost() {
     ShowPopUp("PostLoad", "block");
     HidePopUp("PostButton");
     try {
-        const response = await fetch('https://informapi.xyz/PublishPost', {
+        const response = await fetch('https://informare.weathersystem.org/PublishPost', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -59,7 +59,7 @@ async function DeltePost(messageID) {
     let StoredToken = localStorage.getItem("token");
 
     try {
-        const response = await fetch('https://informapi.xyz/DeletePost', {
+        const response = await fetch('https://informare.weathersystem.org/DeletePost', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -114,7 +114,7 @@ async function GetPostList()
     }
 
     try {
-        const response = await fetch('https://informapi.xyz/GetPosts', {
+        const response = await fetch('https://informare.weathersystem.org/GetPosts', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

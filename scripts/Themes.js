@@ -15,7 +15,7 @@ async function PostTheme() {
     console.log("Theme: " + Theme + " Rgb: " + Rgb)
 
     try {
-        const response = await fetch('https://informapi.xyz/SetTheme', {
+        const response = await fetch('https://informare.weathersystem.org/SetTheme', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

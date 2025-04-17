@@ -16,7 +16,7 @@ async function GetDailyMessage() {
     }
 
     try {
-        const response = await fetch('https://informapi.xyz/GetDailyMessage', {
+        const response = await fetch('https://informare.weathersystem.org/GetDailyMessage', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -76,7 +76,7 @@ async function PostDailyMessage() {
         ShowPopUp('EditLoadAnimation', 'block');
         HidePopUp('ConfirmButton');
         HidePopUp("EditErrorText")
-        const response = await fetch('https://informapi.xyz/AddDailyMessage', {
+        const response = await fetch('https://informare.weathersystem.org/AddDailyMessage', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -131,7 +131,7 @@ async function CheckIfEditor() {
     }
 
     try {
-        const response = await fetch('https://informapi.xyz/CheckForPermission', {
+        const response = await fetch('https://informare.weathersystem.org/CheckForPermission', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

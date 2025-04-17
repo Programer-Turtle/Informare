@@ -7,7 +7,7 @@ async function CheckIfWriter() {
     }
 
     try {
-        const response = await fetch('https://informapi.xyz/CheckForPermission', {
+        const response = await fetch('https://informare.weathersystem.org/CheckForPermission', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -52,7 +52,7 @@ async function GetNewsData()
     }
 
     try {
-        const response = await fetch('https://informapi.xyz/GetNews', {
+        const response = await fetch('https://informare.weathersystem.org/GetNews', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -97,7 +97,7 @@ async function SetNewsData()
         return false;
     }
     try{
-        const response = await fetch('https://informapi.xyz/PostNews', {
+        const response = await fetch('https://informare.weathersystem.org/PostNews', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

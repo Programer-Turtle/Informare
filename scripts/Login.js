@@ -72,7 +72,7 @@ function Login(TypeOfLogin, email, password) {
         SetLoadingIcon('Login')
     }
 
-    fetch('https://informapi.xyz/login', {
+    fetch('https://informare.weathersystem.org/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -154,7 +154,7 @@ function SignUp() {
 
     SetLoadingIcon('SignUp')
 
-    fetch('https://informapi.xyz/createAccount', {
+    fetch('https://informare.weathersystem.org/createAccount', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

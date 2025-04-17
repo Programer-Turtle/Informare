@@ -8,7 +8,7 @@ async function CheckIfModerator()
     }
 
     try {
-        const response = await fetch('https://informapi.xyz/CheckIfModerator', {
+        const response = await fetch('https://informare.weathersystem.org/CheckIfModerator', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -55,7 +55,7 @@ async function GetThemeFromServer()
     }
 
     try {
-        const response = await fetch('https://informapi.xyz/GetThemeData', {
+        const response = await fetch('https://informare.weathersystem.org/GetThemeData', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -108,7 +108,7 @@ async function Verify_Account() {
     }
 
     try {
-        const response = await fetch('https://informapi.xyz/checkifloggedin', {
+        const response = await fetch('https://informare.weathersystem.org/checkifloggedin', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

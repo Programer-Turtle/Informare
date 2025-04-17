@@ -27,7 +27,7 @@ function ResetTokens(TypeOfReset, email, password)
         console.error("No Password");
         return;
     }
-    fetch('https://informapi.xyz/ResetTokens', {
+    fetch('https://informare.weathersystem.org/ResetTokens', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -71,7 +71,7 @@ function ChangePassword()
         console.error("No Password");
         return;
     }
-    fetch('https://informapi.xyz/ChangePassword', {
+    fetch('https://informare.weathersystem.org/ChangePassword', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -114,7 +114,7 @@ function DeleteAccount()
         console.error("No Password");
         return;
     }
-    fetch('https://informapi.xyz/DeleteAccount', {
+    fetch('https://informare.weathersystem.org/DeleteAccount', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -150,7 +150,7 @@ async function GetAccountInfo()
     ChangeInnerText("ShowEmail", `Email: ${localStorage.getItem("username")}`)
     ChangeInnerText("ShowToken", localStorage.getItem("token"))
 
-    let response = await fetch("https://informapi.xyz/CheckIfVerified", {
+    let response = await fetch("https://informare.weathersystem.org/CheckIfVerified", {
         method:"POST",
         headers:{
             'Content-Type': 'application/json'
