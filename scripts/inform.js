@@ -1,4 +1,4 @@
-let menu = []
+let menu = ["","","","","","","","","","","","","","","","","","Chicken and Dumpling"]
 let grade = []
 var date = new Date();
 var day = date.getDate() - 1;
