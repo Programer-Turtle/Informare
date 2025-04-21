@@ -1,4 +1,4 @@
-let menu = ["","","","","","","","","","","","","","","","","","Chicken and Dumpling","Working On It"
+let menu = ["","","","","","","","","","","","","","","","","","Chicken and Dumpling","","","Calzones"
 ]
 let grade = []
 var date = new Date();
