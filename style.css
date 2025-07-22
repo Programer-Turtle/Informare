@@ -1,0 +1,133 @@
+@font-face {
+  font-family: "roboto";
+  src: url("Roboto/Roboto-VariableFont_wdth\,wght.ttf");
+}
+
+body {
+  margin: 0%;
+  padding: 0%;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-family: "roboto";
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+}
+
+p {
+  font-family: "roboto";
+  font-size: 1.4rem;
+  color: rgb(255, 255, 255);
+}
+
+a {
+  text-decoration: none;
+}
+
+.BackgroundHolder {
+  position: fixed;
+  margin: 0%;
+  padding: 0%;
+  top: 0%;
+  left: 0%;
+  z-index: -1;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(109, 189, 189),
+    rgb(176, 91, 255)
+  );
+  width: 100vw;
+  height: 100vh;
+}
+
+.center {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+}
+
+.localcenter {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.box {
+  background-color: rgba(219, 255, 255, 0.555);
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 20px;
+}
+
+input {
+  background-color: rgba(255, 255, 255, 0.705);
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+  font-size: 1.5rem;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  font-size: 2rem;
+  background-color: rgb(146, 230, 255);
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+button:hover {
+  background-color: rgb(116, 204, 231);
+  cursor: pointer;
+}
+
+button:active {
+  background-color: rgb(89, 182, 211);
+}
+
+.Calendar {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.CalendarBox {
+  width: 10rem;
+  height: 10rem;
+  padding: 0;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  background-color: rgba(83, 186, 255, 0.596);
+}
+
+.CalendarBox p {
+  text-align: center;
+  margin: 0%;
+  margin-bottom: 10px;
+}
+
+.CalendarLabel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: rgb(154, 154, 255);
+}
+
+.CalendarLabel p {
+  margin: 0%;
+  padding: 0%;
+}
