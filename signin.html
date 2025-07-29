@@ -7,24 +7,26 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="Images/logo.png" type="image/x-icon" />
     <script defer src="Scripts/UILoad.js"></script>
+    <script defer src="Scripts/authenticate.js"></script>
   </head>
   <body>
-    <div
-      style="height: 100vh; align-content: center; flex-wrap: wrap"
-      class="center"
-    >
+    <div style="padding: 0%; margin: 0%" id="Main">
       <div
-        style="
-          height: fit-content;
-          width: 90%;
-          max-width: 530px;
-          margin-bottom: 1rem;
-        "
-        class="box"
+        style="height: 100vh; align-content: center; flex-wrap: wrap"
+        class="center"
       >
-        <div class="localcenter">
-          <img style="width: 15%" src="Images/logo.png" alt="" />
-          <!-- <h1
+        <div
+          style="
+            height: fit-content;
+            width: 90%;
+            max-width: 530px;
+            margin-bottom: 1rem;
+          "
+          class="box"
+        >
+          <div class="localcenter">
+            <img style="width: 15%" src="Images/logo.png" alt="" />
+            <!-- <h1
             style="
               margin: 0%;
               margin-left: 5px;
@@ -34,25 +36,36 @@
           >
             Informare
           </h1> -->
-        </div>
+          </div>
 
-        <h1 style="text-align: center; font-size: 3rem">Sign In</h1>
-        <h1 style="text-align: center; font-size: 3rem; margin-top: 1rem">
-          Username
-        </h1>
-        <div class="localcenter">
-          <input type="text" />
+          <h1 style="text-align: center; font-size: 3rem">Sign In</h1>
+          <h1 style="text-align: center; font-size: 3rem; margin-top: 1rem">
+            Username
+          </h1>
+          <div class="localcenter">
+            <input id="UsernameInput" type="text" />
+          </div>
+          <h1 style="text-align: center; font-size: 3rem">Password</h1>
+          <div class="localcenter">
+            <input id="PasswordInput" type="password" />
+          </div>
+          <div style="margin-top: 1rem" class="localcenter">
+            <button onclick="SignIn()">Submit</button>
+          </div>
+          <p id="ErrorText" style="text-align: center; color: red"></p>
+          <div class="localcenter">
+            <div id="Loading" class="loading" style="display: none"></div>
+          </div>
+          <p style="text-align: center">Don't Have an Account?</p>
+          <p style="text-align: center"><a href="signup.html">Sign Up</a></p>
         </div>
-        <h1 style="text-align: center; font-size: 3rem">Password</h1>
-        <div class="localcenter">
-          <input type="password" name="" id="" />
-        </div>
-        <div style="margin-top: 1rem" class="localcenter">
-          <button>Submit</button>
-        </div>
-        <p style="text-align: center">Don't Have an Account?</p>
-        <p style="text-align: center"><a href="signup.html">Sign Up</a></p>
       </div>
+    </div>
+    <div style="display: none; padding: 0%; margin: 0%" id="Checking">
+      <h1 style="text-align: center; margin-top: 15rem">
+        Checking Your Credentials
+      </h1>
+      <div class="center"><div class="loading"></div></div>
     </div>
   </body>
 </html>
