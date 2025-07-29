@@ -1,3 +1,7 @@
+function isSafari() {
+  return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+}
+
 const menu = [
   "Popcorn Chicken",
   "Hamb/Cheese",
@@ -84,25 +88,25 @@ if (finalgrade == 60) {
 
 if ((finalgrade <= 59) & (finalgrade >= 51)) {
   GradeText.style.textShadow =
-    "0 0 10px rgb(201, 127, 251), 0 0 20px rgb(201, 137, 251), 0 0 30px rgb(201, 147, 281)";
+    "0 0 10px rgb(201, 127, 251), 0 0 20px rgb(201, 137, 251), 0 0 30px rgb(201, 147, 255)";
   GradeText.style.color = "rgb(201, 127, 251)";
 }
 
 if ((finalgrade <= 50) & (finalgrade >= 41)) {
   GradeText.style.textShadow =
-    "0 0 10px rgb(108, 198, 247), 0 0 20px rgb(108, 208, 247), 0 0 30px rgb(108, 218, 277)";
+    "0 0 10px rgb(108, 198, 247), 0 0 20px rgb(108, 208, 247), 0 0 30px rgb(108, 218, 255)";
   GradeText.style.color = "rgb(108, 198, 247)";
 }
 
 if ((finalgrade <= 40) & (finalgrade >= 31)) {
   GradeText.style.textShadow =
-    "0 0 10px rgb(143, 249, 249), 0 0 20px rgb(143, 259, 249), 0 0 30px rgb(143, 269, 279)";
+    "0 0 10px rgb(143, 249, 249), 0 0 20px rgb(143, 259, 249), 0 0 30px rgb(143, 255, 255)";
   GradeText.style.color = "rgb(143, 249, 249)";
 }
 
 if ((finalgrade <= 30) & (finalgrade >= 21)) {
   GradeText.style.textShadow =
-    "0 0 10px rgb(255, 237, 165), 0 0 20px rgb(255, 247, 165), 0 0 30px rgb(255, 257, 195)";
+    "0 0 10px rgb(255, 237, 165), 0 0 20px rgb(255, 247, 165), 0 0 30px rgb(255, 255, 195)";
   GradeText.style.color = "rgb(255, 237, 165)";
 }
 
@@ -116,6 +120,10 @@ if ((finalgrade <= 10) & (finalgrade >= 0)) {
   GradeText.style.textShadow =
     "0 0 10px rgb(254, 119, 119), 0 0 20px rgb(254, 129, 119), 0 0 30px rgb(254, 139, 32)";
   GradeText.style.color = "rgb(254, 119, 119)";
+}
+
+if (isSafari()) {
+  GradeText.style.textShadow = "none";
 }
 
 MenuText.innerText = menu[day];
