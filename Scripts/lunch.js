@@ -127,10 +127,12 @@ if (isSafari()) {
 }
 
 MenuText.innerText = menu[day];
-GradeText.innerText = finalgrade;
-if (GradeText.innerText != "N/A") {
-  GradeText.innerText += "/60";
+if (finalgrade != "N/A") {
+  finalgrade += "/60";
+} else {
+  finalgrade = "No Grade Available";
 }
+GradeText.innerText = finalgrade;
 
 if (Month != UpdateMonth) {
   console.log("test");

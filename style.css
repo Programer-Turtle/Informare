@@ -202,8 +202,9 @@ button:active {
   padding-right: 4rem;
   padding-left: 1rem;
   z-index: 3;
-  min-height: 100vh;
+  height: 100vh;
   overflow-x: hidden;
+  overflow-y: auto;
   transition: transform 500ms ease;
 }
 
@@ -213,8 +214,33 @@ button:active {
 
 .sidebar p {
   font-size: 2rem;
+  width: fit-content;
 }
 
 .navbutton:hover {
-  transform: scale(120%);
+  transform: scale(110%);
+}
+
+.PatchBox {
+  padding: 0%;
+  padding-bottom: 0.5rem;
+  margin-bottom: 4rem;
+}
+
+.PatchBox p {
+  margin: 0.5rem;
+  font-size: 2rem;
+}
+
+.PatchHeader {
+  margin: 0%;
+  padding: 0.5rem;
+  border-bottom-right-radius: 0%;
+  border-bottom-left-radius: 0%;
+  background-color: rgba(166, 212, 255, 0.555);
+}
+
+.PatchHeader h1 {
+  font-size: 3rem;
+  margin: 0%;
 }

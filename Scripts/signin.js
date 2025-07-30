@@ -38,7 +38,7 @@ async function SignIn() {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      username: UsernameInput.value,
+      username: UsernameInput.value.toLowerCase(),
       password: PasswordInput.value,
     }),
   });

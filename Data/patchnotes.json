@@ -1,0 +1,118 @@
+[
+  {
+    "header": "Small Patch",
+    "paragraph": "Posting is on the nav bar on every page now."
+  },
+  {
+    "header": "Logo Competition",
+    "paragraph": "We're working on a logo competition. The winner of this competition will have their logo be the new logo for Informare and will become the new Graphic Designer. No head staff can participate and staff that win will have their job title switched. We need 2 logos, one that is just a symbol and then one with a symbol and text. Submissions will be due May 10 and submission will be open on May 1st or earlier. Contact me if you have any further questions."
+  },
+  {
+    "header": "Added News and Music 2.8.9.9(Beta)",
+    "paragraph": "I have added a news feature that allows the chosen writer to give you a news story written by every once in a while. While this won\u2019t be daily like the daily message, the new feature also includes more text customization. The news feature includes custom text size, colored text, images, links, heading, functional buttons, and more. This was pulled off by letting the news writer make a basic HTML document and sending the code to the server. I have also added a music feature. Every page will have music and will start playing when you interact with the page. I later plan to add a setting to disable this, but for now you will have to just mute the tab or your computer. I hope you all appreciate the features I have added. This will be the last beta update, and the next update will be the final accounts updates, so a vote on the next major update is coming."
+  },
+  {
+    "header": "Posting Removed (Undone)",
+    "paragraph": "Posting has been removed for community reasons. Update, posting has returned."
+  },
+  {
+    "header": "Posting Fixes 2.8.9.5(Beta)",
+    "paragraph": "I have fixed the issues the community requested to be fixed. I first merged posting and viewing to the same page. The next fix is I made underscores spaces and fixed tags colors. The final major fixes I made were making new posts go to the top, and when you post or delete a message the page doesn\u2019t refresh, but recollects the posts. I have also cleaned out old alt accounts."
+  },
+  {
+    "header": "New Policy, Improved HomeworkManager, and Posting 2.8.9(Beta)",
+    "paragraph": "This new update has been a long time coming so let's get caught up. The first subject is our new policy. We have introduced a new system of authority. This new system includes creating a board consisting of Admin(Me), Daily Messenger, Head Moderator, Head Judge, and Designer. This will hopefully distribute responsibility making this easier on my work. Now we will go over the improved homework manager. I have updated the UI allowing you to keep track of the name of the assignment, how many points it\u2019s worth, its due date, and you can also add notes to the assignment. It will also tell you if an assignment is due soon, while saving all the info to your account, fixing the major issue with the previous homework manager. Finally we will talk about the last, but most important feature, the posting feature. I have made a feature where you can post a public message, with a category for the rest of the community to read. I have also made sure to give the option to delete any message you post. Our moderation branch will take the duty to watch and control these chats. We plead that you use this responsibly for kindness, helping each other, and a safe place to talk to people. We hope you enjoy what I have made."
+  },
+  {
+    "header": "Moderator Update 2.8.8.1(Beta)",
+    "paragraph": "This will only effect moderators, but moderators can now see who is already banned."
+  },
+  {
+    "header": "Montserrat Font 2.8.8(Beta)",
+    "paragraph": "I have made Montserrat the brand new font for Informare. If you do not like this font please talk to me, and if I get enough complaints the font will be changed back."
+  },
+  {
+    "header": "UI Fix 2.8.7.1(Beta)",
+    "paragraph": "I have fixed the UI being cutoff on the ban screen."
+  },
+  {
+    "header": "Moderation & Policy 2.8.7(Beta)",
+    "paragraph": "I have appointed moderators who have the ability to ban any accounts that violate policy. I hope this improves the community of Informare in a beneficial way. There is a new policy page, and you can go there to read the rules. We have also got rid of accidental death bug."
+  },
+  {
+    "header": "Server Stored Themes 2.8.6(Beta)",
+    "paragraph": "I have fixed the bug that required you to manually log in to get the theme data from the server, and removed John."
+  },
+  {
+    "header": "Server Stored Themes 2.8.5(Beta)",
+    "paragraph": "I have made it where the server stores your theme setting. This is in beta so there are some bugs, and one known bug is if you don't manually log in it won't grab the theme. We will have this fixed by the full release. I hope you enjoy the new update!"
+  },
+  {
+    "header": "Servers Back Online",
+    "paragraph": "Its been awhile, and I would like to apologise for being gone for a while. I sadly can't confirm the servers will stay up, because Informare lacks the money to pay for servers now."
+  },
+  {
+    "header": "New Team Member, Accounts, and Daily Message 2.8.4(Beta)",
+    "paragraph": "I've added a new Daily Message tab, providing a regular source of humor to lift your spirits. These messages are intentionally lighthearted, possibly including playful misinformation for satirical purposes and generally unrelated to educational content. On another note, there's a new team member at Informare, responsible for crafting the latest daily messages. Loading animations have been introduced on specific pages to signal communication between Informare and the server. I hope you enjoy the fresh daily messages!"
+  },
+  {
+    "header": "Server Outage and Missing Lunch Schedule",
+    "paragraph": "I apologize for the inconvenience caused by Informare's server being down for an entire day. The issue has been addressed, and we appreciate your understanding. Additionally, we regret that the schedule currently lacks information, as the school has not yet published the lunch menu on their website or in their parent newsletter. We hope this does not cause too much inconvenience for you."
+  },
+  {
+    "header": "ProVersion, Accounts, and Banning 2.8.3(Beta)",
+    "paragraph": "I've introduced a banning feature to Informare, encompassing two distinct types of bans. Social Bans restrict access to solely social features, such as sending feedback and chatting\u2014though these features are yet to be implemented, rendering these bans currently inactive. Additionally, All Bans encompass a broader restriction, prohibiting access to all features, including checking the lunch schedule and using the homework manager."
+  },
+  {
+    "header": "ProVersion, Accounts, and Future Plans 2.8.2(Beta)",
+    "paragraph": "I've added more error text to handle incorrect email and password inputs, and I've also beefed up the security on Informare's server."
+  },
+  {
+    "header": "ProVersion, Accounts, and Future Plans 2.8.1(Beta)",
+    "paragraph": "I've updated the account settings page, adding new functionalities for an improved user experience. You can now change your password, which also resets and clears all existing tokens, enhancing security. There's also an option to reset tokens, which logs out all devices connected to your account, though they can still re-access using the password. Additionally, deleting your account is now a straightforward option. I'm happy to report that the auto-login issue has been fixed, ensuring smoother functionality. Looking ahead, the next update will introduce a chat feature, enabling users to participate in public threads for various activities like seeking assignment help or casual chatting. These enhancements are just the beginning. My vision for Informare is to evolve it into a comprehensive hub for all school-related matters, expanding well beyond its initial scope. Exciting developments are on the horizon!"
+  },
+  {
+    "header": "ProVersion and Accounts 2.8(Beta)",
+    "paragraph": "I'm excited to announce the introduction of accounts to Informare, a significant step towards our upcoming Pro version. This new feature is set to enhance your experience with exclusive functionalities. With the integration of accounts, we're paving the way for improved connectivity and personalization. You'll soon be able to add your own profile pictures, ensuring a more tailored experience. Moreover, we're enhancing data security and persistence; even if your local storage is cleared or deleted, your data will remain safe and accessible. To further ensure your security, it's crucial to remember not to share your passwords with anyone, as this is a key part of protecting your personal information and maintaining the integrity of your account. These features, along with many other enhancements, are on the horizon, all made possible by the implementation of user accounts. Stay tuned for these exciting updates!"
+  },
+  {
+    "header": "Themes 2.7",
+    "paragraph": "I have added Light, Custom, and Night themes. Custom themes allow you to set the background color to whatever you want, and the rest of the page will adjust accordingly. I have also redesigned the site by reducing empty space, removing unnecessary colons, and redesigning the schedule box to have the header above the category, instead of a colon separating them. Additionally, I implemented a protection system to safeguard against the bypassing of features still in development. This system is currently inactive but will be a significant security enhancement when activated. Furthermore, dates have been added to the schedule boxes, complete with a hovering animation for a more dynamic user experience. To keep users informed, I've introduced an update pop-up screen that summarizes the main features of each update. I hope you all enjoy these updates and find the new features beneficial."
+  },
+  {
+    "header": "Themes and Protection Update 2.7.8 (Beta)",
+    "paragraph": "I fixed any errors and improved the protection system to prevent bypassing by editing HTML"
+  },
+  {
+    "header": "Themes and Protection Update 2.7.7 (Beta)",
+    "paragraph": "I have nearly finished the Themes Update and have added a protection system to prevent bypassing restrictions on using unfinished features."
+  },
+  {
+    "header": "Themes BugPatch 2.7.6 (Beta)",
+    "paragraph": "I fixed the bug when hovering over a DateBox on the lunch schedule could cause stuttering."
+  },
+  {
+    "header": "Themes 2.7.5 (Beta)",
+    "paragraph": "The update is not only about new colors; it also brings a major design upgrade to the website. I've removed unnecessary colons and reduced large empty spaces to tidy things up. Animations have been added, and dates are now included in the schedule. Additionally, I've redesigned the layout of the date boxes, placing categories above the items instead of to the left with a colon."
+  },
+  {
+    "header": "Themes 2.7 (Beta)",
+    "paragraph": "The custom themes update is not yet fully finished, but I have released a beta that introduces Light and Night mode. I hope you all enjoy the update!"
+  },
+  {
+    "header": "Themes Update Coming 2.6",
+    "paragraph": "Great news! Themes won the vote, but don't worry, Informare Pro is still coming. I have also added a surprise; have fun finding it!"
+  },
+  {
+    "header": "Voting Update 2.5",
+    "paragraph": "I  am sorry but I had to remove the Halloween theme for development reasons, but I have added a voting tab where you can help control the development process. There is currently an open vote. Go check it out!"
+  },
+  {
+    "header": "Halloween 2.2",
+    "paragraph": "I have updated the theme for spooky month, but this is a hint to the update that coming next that will be decently bigger than this update. Color themes are about to get alot better."
+  },
+  {
+    "header": "Major Update 2.0",
+    "paragraph": "As you can see I updated the PatchNotes screen and NavBar. I have also added a color code for the rank of the grades. The homework manager has been updated and is a lot more simpler to use now."
+  }
+]

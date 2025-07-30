@@ -32,6 +32,8 @@ const SideBar = document.createElement("div");
 SideBar.className = "sidebar";
 SideBar.innerHTML = `
 <p class="navbutton" onclick="HideSideBar()">Back</p>
+<p class="navbutton" onclick="LoadPage('lunch.html')">Lunch</p>
+<p class="navbutton" onclick="LoadPage('patchnotes.html')">Patch Notes</p>
 <p class="navbutton" onclick="LogOut()">Log Out</p>
 `;
 document.body.insertBefore(SideBar, NavBar);
@@ -39,6 +41,7 @@ document.body.insertBefore(SideBar, NavBar);
 SideBar.classList.add("offscreen");
 
 async function ShowSideBar() {
+  document.body.style.overflow = "hidden";
   Overlay.style.display = "block";
   SideBar.classList.remove("offscreen");
 }
@@ -46,6 +49,11 @@ async function ShowSideBar() {
 async function HideSideBar() {
   Overlay.style.display = "none";
   SideBar.classList.add("offscreen");
+  document.body.style.overflow = "scroll";
+}
+
+function LoadPage(url) {
+  window.location = url;
 }
 
 function LogOut() {
