@@ -2,6 +2,7 @@ const Main = document.getElementById("Main");
 const Checking = document.getElementById("Checking");
 const UsernameInput = document.getElementById("UsernameInput");
 const PasswordInput = document.getElementById("PasswordInput");
+const ConfirmPasswordInput = document.getElementById("ConfirmPasswordInput");
 const ErrorText = document.getElementById("ErrorText");
 const Loading = document.getElementById("Loading");
 
@@ -13,7 +14,13 @@ UsernameInput.addEventListener("keydown", (key) => {
 
 PasswordInput.addEventListener("keydown", (key) => {
   if (key.key == "Enter") {
-    SignIn();
+    ConfirmPasswordInput.focus();
+  }
+});
+
+ConfirmPasswordInput.addEventListener("keydown", (key) => {
+  if (key.key == "Enter") {
+    SignUp();
   }
 });
 
@@ -27,14 +34,48 @@ function containsUnallowedSymbol(str) {
   return !regex.test(str);
 }
 
-async function SignIn() {
+async function SignUp() {
+  ErrorText.innerText = "";
+  if (
+    UsernameInput.value == "" ||
+    PasswordInput.value == "" ||
+    ConfirmPasswordInput.value == ""
+  ) {
+    ErrorText.innerText = "Please Enter a Username and Password";
+    return;
+  }
+  if (PasswordInput.value != ConfirmPasswordInput.value) {
+    ErrorText.innerText = "Passwords Don't Match";
+    return;
+  }
   Loading.style.display = "block";
+  const response = await fetch(
+    "https://informare.weathersystem.org/createAccount",
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        username: UsernameInput.value,
+        password: PasswordInput.value,
+      }),
+    }
+  );
+
+  Loading.style.display = "none";
+  if (response.status == 200) {
+    SignIn();
+  } else {
+    ErrorText.innerText = "Account Already Exist";
+  }
+}
+
+async function SignIn() {
   ErrorText.innerText = "";
   if (UsernameInput.value == "" || PasswordInput.value == "") {
     ErrorText.innerText = "Please Enter Your Username and Password";
-    console.log("No");
     return;
   }
+  Loading.style.display = "block";
   const response = await fetch("https://informare.weathersystem.org/login", {
     method: "POST",
     headers: { "Content-Type": "application/json" },

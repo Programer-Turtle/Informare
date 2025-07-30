@@ -104,7 +104,9 @@ button:active {
 }
 
 .CalendarBox {
-  width: 10rem;
+  min-width: 7rem;
+  max-width: 10rem;
+  width: 20%;
   height: 10rem;
   padding: 0;
   margin-left: 15px;
@@ -145,6 +147,7 @@ button:active {
   top: 0%;
   left: 0%;
   margin: 0%;
+  margin-bottom: 2rem;
   padding: 0%;
   width: 100vw;
 }
@@ -172,4 +175,46 @@ button:active {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.navbutton {
+  transition: 250ms;
+  cursor: pointer;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  background-color: rgba(59, 59, 59, 0.582);
+  z-index: 2;
+  margin: 0%;
+  padding: 0%;
+  height: 100vh;
+  width: 100vw;
+}
+
+.sidebar {
+  background-color: rgba(193, 230, 230, 0.76);
+  position: fixed;
+  right: 0;
+  padding-right: 4rem;
+  padding-left: 1rem;
+  z-index: 3;
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: transform 500ms ease;
+}
+
+.sidebar.offscreen {
+  transform: translateX(100%);
+}
+
+.sidebar p {
+  font-size: 2rem;
+}
+
+.navbutton:hover {
+  transform: scale(120%);
 }

@@ -4,7 +4,7 @@ function isSafari() {
 
 const menu = [
   "Popcorn Chicken",
-  "Hamb/Cheese",
+  "Hamb Cheese",
   "Chicken Alfredo",
   "BBQ Riblet",
   "Saturday",
@@ -16,7 +16,7 @@ const menu = [
   "Calzone",
   "Saturday",
   "Sunday",
-  "Hamb/Cheese",
+  "Hamb Cheese",
   "Old School Pizza",
   "Cheesy Scrambled Eggs",
   "Ham",
@@ -127,7 +127,10 @@ if (isSafari()) {
 }
 
 MenuText.innerText = menu[day];
-GradeText.innerText = finalgrade + "/60";
+GradeText.innerText = finalgrade;
+if (GradeText.innerText != "N/A") {
+  GradeText.innerText += "/60";
+}
 
 if (Month != UpdateMonth) {
   console.log("test");
@@ -149,7 +152,10 @@ if (Month != UpdateMonth) {
     const CurrentItemText = document.createElement("p");
     CurrentItemText.innerText = CurrentMenuItem;
     const CurrentGradeText = document.createElement("p");
-    CurrentGradeText.innerText = `${CurrentGrade}/60`;
+    CurrentGradeText.innerText = CurrentGrade;
+    if (CurrentGradeText.innerText != "N/A") {
+      CurrentGradeText.innerText += "/60";
+    }
 
     CalendarBox.appendChild(CalendarLabel);
     CalendarBox.appendChild(CurrentItemText);
