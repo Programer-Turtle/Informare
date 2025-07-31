@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily Message</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="Images/logo.png" type="image/x-icon" />
+    <script defer src="Scripts/UILoad.js"></script>
+    <script defer src="Scripts/verify.js"></script>
+    <script defer src="Scripts/dailymessage.js"></script>
+  </head>
+  <body>
+    <div id="View" class="center">
+      <div class="box PatchBox" style="width: 80%">
+        <div style="display: flex" class="box PatchHeader">
+          <h1>Daily Message</h1>
+          <button
+            onclick="ShowEditView()"
+            id="EditButton"
+            style="margin-left: auto; display: none"
+          >
+            Edit
+          </button>
+        </div>
+        <div id="Loading" class="localcenter">
+          <div style="margin: 1rem" class="loading"></div>
+        </div>
+        <h1 id="Message"></h1>
+      </div>
+    </div>
+
+    <div id="Edit" class="center" style="display: none">
+      <div class="box PatchBox" style="width: 80%">
+        <div style="display: flex" class="box PatchHeader">
+          <button onclick="ShowView()" style="margin-right: 1rem">
+            Cancel
+          </button>
+          <h1>Edit Daily Message</h1>
+        </div>
+        <div style="display: flex; margin-top: 1rem">
+          <h1>Date</h1>
+          <input type="date" name="" id="Date" />
+        </div>
+        <div class="localcenter" style="margin-top: 1rem">
+          <textarea id="EditMessage"></textarea>
+        </div>
+        <div
+          class="localcenter"
+          style="justify-content: right; margin-top: 1rem"
+        >
+          <h1 id="EditError" style="color: red"></h1>
+          <button
+            id="SubmitButton"
+            onclick="EditMessage()"
+            style="margin-right: 10px"
+          >
+            Submit
+          </button>
+          <div
+            id="EditLoading"
+            class="loading"
+            style="margin-right: 10px; display: none"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
