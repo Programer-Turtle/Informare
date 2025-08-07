@@ -258,10 +258,16 @@ textarea {
   width: 90%;
   font-size: 1.5rem;
   color: black;
-  padding: 1rem;
+  padding: 0.7rem;
   height: 10rem;
   margin-left: auto;
   margin-right: auto;
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.705);
+}
+
+.HomeworkBox {
+  width: 90%;
+  border-radius: 20px;
+  background-color: rgba(166, 212, 255, 0.555);
 }

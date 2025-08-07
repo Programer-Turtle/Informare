@@ -3,70 +3,72 @@ function isSafari() {
 }
 
 const menu = [
+  "Summer",
+  "Summer",
+  "Summer",
+  "Summer",
+  "Summer",
+  "Hamb/Cheese",
+  "Pizza",
+  "BBQ Beef Dip",
+  "Saturday",
+  "Sunday",
   "Popcorn Chicken",
-  "Hamb Cheese",
-  "Chicken Alfredo",
-  "BBQ Riblet",
-  "Saturday",
-  "Sunday",
-  "Crispy Chicken Sandwich",
-  "Philly Steak",
-  "Papa Johns",
-  "Orange Chicken",
-  "Calzone",
-  "Saturday",
-  "Sunday",
-  "Hamb Cheese",
-  "Old School Pizza",
-  "Cheesy Scrambled Eggs",
-  "Ham",
-  "Popcorn Chicken",
-  "Saturday",
-  "Sunday",
-  "Calzones",
+  "Loaded Fries",
   "Taco Salad",
-  "Papa Johns",
-  "Mini Subs",
+  "Chicken and Dumplings",
   "Corn Dogs",
   "Saturday",
   "Sunday",
-  "Beef Brisket",
-  "Spaghetti",
-  "Chicken Buffalo",
+  "Calzone",
+  "Chicken Alfredo",
+  "Papa John's",
+  "Buffalo Dip",
+  "Crispy Chicken",
+  "Saturday",
+  "Sunday",
+  "Quesailla",
+  "Mini Subs",
+  "Philly Steak",
+  "Orange Chicken",
+  "Tornado",
+  "Saturday",
+  "Sunday",
 ];
 const grade = [
-  "44.5",
-  "15",
-  "48",
-  "42",
   "N/A",
   "N/A",
-  "60",
   "N/A",
-  "45",
-  "42.5",
-  "22",
   "N/A",
   "N/A",
   "15",
   "49",
-  "32",
-  "N/A",
-  "42.5",
   "N/A",
   "N/A",
-  "22",
+  "N/A",
+  "44.5",
+  "54",
   "51",
-  "45",
-  "45",
+  "44",
   "34",
   "N/A",
   "N/A",
-  "N/A",
-  "N/A",
+  "22",
+  "48",
+  "45",
   "0",
+  "60",
+  "N/A",
+  "N/A",
+  "45",
+  "45",
+  "N/A",
+  "42.5",
+  "44",
+  "N/A",
+  "N/A",
 ];
-const UpdateMonth = 7;
+const UpdateMonth = 8;
 const MenuText = document.getElementById("MenuText");
 const GradeText = document.getElementById("GradeText");
 const Calendar = document.getElementById("Calendar");
@@ -154,9 +156,10 @@ if (Month != UpdateMonth) {
     const CurrentItemText = document.createElement("p");
     CurrentItemText.innerText = CurrentMenuItem;
     const CurrentGradeText = document.createElement("p");
-    CurrentGradeText.innerText = CurrentGrade;
-    if (CurrentGradeText.innerText != "N/A") {
-      CurrentGradeText.innerText += "/60";
+    if (CurrentGrade != "N/A") {
+      CurrentGradeText.innerText = `${CurrentGrade}/60`;
+    } else {
+      CurrentGradeText.innerText = "No Grade";
     }
 
     CalendarBox.appendChild(CalendarLabel);

@@ -34,6 +34,7 @@ SideBar.innerHTML = `
 <p class="navbutton" onclick="HideSideBar()">Back</p>
 <p class="navbutton" onclick="LoadPage('lunch.html')">Lunch</p>
 <p class="navbutton" onclick="LoadPage('patchnotes.html')">Patch Notes</p>
+<!-- <p class="navbutton" onclick="LoadPage('homework.html')">Homework</p> -->
 <p class="navbutton" onclick="LoadPage('dailymessage.html')">Daily Message</p>
 <p class="navbutton" onclick="LogOut()">Log Out</p>
 `;

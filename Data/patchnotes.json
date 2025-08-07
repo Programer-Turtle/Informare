@@ -1,5 +1,9 @@
 [
   {
+    "header": "UI Redesign 3.0(Beta)",
+    "paragraph": "I have redesigned the UI to make Informare much smoother for everyone to navigate. This update is missing some pages, which is why this is marked as a beta. The next update will include all of the pages, and the new logo."
+  },
+  {
     "header": "Small Patch",
     "paragraph": "Posting is on the nav bar on every page now."
   },
@@ -20,7 +24,7 @@
     "paragraph": "I have fixed the issues the community requested to be fixed. I first merged posting and viewing to the same page. The next fix is I made underscores spaces and fixed tags colors. The final major fixes I made were making new posts go to the top, and when you post or delete a message the page doesn\u2019t refresh, but recollects the posts. I have also cleaned out old alt accounts."
   },
   {
-    "header": "New Policy, Improved HomeworkManager, and Posting 2.8.9(Beta)",
+    "header": "New Policy, Improved Homework Manager, and Posting 2.8.9(Beta)",
     "paragraph": "This new update has been a long time coming so let's get caught up. The first subject is our new policy. We have introduced a new system of authority. This new system includes creating a board consisting of Admin(Me), Daily Messenger, Head Moderator, Head Judge, and Designer. This will hopefully distribute responsibility making this easier on my work. Now we will go over the improved homework manager. I have updated the UI allowing you to keep track of the name of the assignment, how many points it\u2019s worth, its due date, and you can also add notes to the assignment. It will also tell you if an assignment is due soon, while saving all the info to your account, fixing the major issue with the previous homework manager. Finally we will talk about the last, but most important feature, the posting feature. I have made a feature where you can post a public message, with a category for the rest of the community to read. I have also made sure to give the option to delete any message you post. Our moderation branch will take the duty to watch and control these chats. We plead that you use this responsibly for kindness, helping each other, and a safe place to talk to people. We hope you enjoy what I have made."
   },
   {

@@ -51,7 +51,9 @@ async function GetMessage() {
   if (response.status == 200) {
     const data = await response.json();
     const today = new Date();
-    const formattedDate = today.toISOString().split("T")[0];
+    const formattedDate = today.toLocaleDateString("en-CA");
+    console.log(data);
+    console.log(formattedDate);
     const TodaysMessage = data[formattedDate];
     if (TodaysMessage) {
       MessageText.innerText = TodaysMessage;
