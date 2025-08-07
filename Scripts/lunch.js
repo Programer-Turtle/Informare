@@ -8,7 +8,7 @@ const menu = [
   "Summer",
   "Summer",
   "Summer",
-  "Hamb/Cheese",
+  "Hamb and Cheese",
   "Pizza",
   "BBQ Beef Dip",
   "Saturday",
