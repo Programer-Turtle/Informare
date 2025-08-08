@@ -10,7 +10,7 @@ const menu = [
   "Summer",
   "Hamb and Cheese",
   "Pizza",
-  "BBQ Beef Dip",
+  "BBQ Beef Rib",
   "Saturday",
   "Sunday",
   "Popcorn Chicken",
@@ -168,3 +168,4 @@ if (Month != UpdateMonth) {
     Calendar.appendChild(CalendarBox);
   }
 }
+
