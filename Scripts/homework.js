@@ -1,12 +1,10 @@
 const ErrorText = document.getElementById("ErrorText");
 
-async function AppendAssignment(Name, Notes, Points, Date) {
-    
-}
+async function AppendAssignment(Name, Notes, Points, Date) {}
 
 async function GetHomework() {
   const response = await fetch(
-    "https://informare.weathersystem.org/GetHomework",
+    "https://informareapi.weathersystem.org/GetHomework",
     {
       method: "POST",
       headers: {

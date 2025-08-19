@@ -168,4 +168,3 @@ if (Month != UpdateMonth) {
     Calendar.appendChild(CalendarBox);
   }
 }
-

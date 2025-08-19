@@ -11,7 +11,7 @@ const EditError = document.getElementById("EditError");
 
 async function CheckIfMessanger() {
   const response = await fetch(
-    "https://informare.weathersystem.org/CheckForPermission",
+    "https://informareapi.weathersystem.org/CheckForPermission",
     {
       method: "POST",
       headers: {
@@ -35,7 +35,7 @@ async function CheckIfMessanger() {
 
 async function GetMessage() {
   const response = await fetch(
-    "https://informare.weathersystem.org/GetDailyMessage",
+    "https://informareapi.weathersystem.org/GetDailyMessage",
     {
       method: "POST",
       headers: {
@@ -81,7 +81,7 @@ async function EditMessage() {
   }
 
   const response = await fetch(
-    "https://informare.weathersystem.org/AddDailyMessage",
+    "https://informareapi.weathersystem.org/AddDailyMessage",
     {
       method: "POST",
       headers: {

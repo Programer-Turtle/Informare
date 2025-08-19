@@ -50,7 +50,7 @@ async function SignUp() {
   }
   Loading.style.display = "block";
   const response = await fetch(
-    "https://informare.weathersystem.org/createAccount",
+    "https://informareapi.weathersystem.org/createAccount",
     {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -76,7 +76,7 @@ async function SignIn() {
     return;
   }
   Loading.style.display = "block";
-  const response = await fetch("https://informare.weathersystem.org/login", {
+  const response = await fetch("https://informareapi.weathersystem.org/login", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
@@ -111,7 +111,7 @@ async function CheckIfCanLogIn() {
     Checking.style.display = "block";
 
     const response = await fetch(
-      "https://informare.weathersystem.org/checkifloggedin",
+      "https://informareapi.weathersystem.org/checkifloggedin",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
