@@ -1,71 +1,9 @@
 function isSafari() {
   return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 }
-
-const menu = [
-  "No School",
-  "Hamburger and Cheese",
-  "Pizza",
-  "Chicken and Noodles",
-  "Chicken Chunks",
-  "Saturday",
-  "Sunday",
-  "Loaded Fries",
-  "Calzone",
-  "Chicken Alfredo",
-  "BBQ Beef Rib Sandwich",
-  "Roasted Chicken Nuggets",
-  "Saturday",
-  "Sunday",
-  "Corn Dogs",
-  "Orange Chicken",
-  "Torandos",
-  "Chicken Buffalom Dip",
-  "Calzone",
-  "Saturday",
-  "Sunday",
-  "Hamburger and Cheese",
-  "Pizza",
-  "Ranch Chicken Wraps",
-  "Mini Subs",
-  "Boneless Pork Chop",
-  "Saturday",
-  "Sunday",
-  "Quesadilla",
-  "Crispy Chicken Patty",
-];
-const grade = [
-  "N/A",
-  "15",
-  "49",
-  "49",
-  "N/A",
-  "N/A",
-  "N/A",
-  "54",
-  "22",
-  "48",
-  "42",
-  "N/A",
-  "N/A",
-  "N/A",
-  "34",
-  "44.5",
-  "44",
-  "0",
-  "22",
-  "N/A",
-  "N/A",
-  "15",
-  "49",
-  "N/A",
-  "45",
-  "30",
-  "N/A",
-  "N/A",
-  "45",
-  "60",
-];
+const MainCalendar = document.getElementById("MainCalendar");
+const menu = [];
+const grade = [];
 const UpdateMonth = 9;
 const MenuText = document.getElementById("MenuText");
 const GradeText = document.getElementById("GradeText");
@@ -137,6 +75,7 @@ GradeText.innerText = finalgrade;
 if (Month != UpdateMonth) {
   console.log("test");
   MenuText.innerText = "Hasn't Been Updated This Month";
+  MainCalendar.style.display = "none";
   GradeText.innerText = "";
 } else {
   for (let index = 0; index < menu.length; index++) {

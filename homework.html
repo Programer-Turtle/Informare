@@ -21,16 +21,53 @@
           <div class="loading"></div>
         </div>
 
-        <div id="HomeworkHolder" class="HomeworkHolder">
-          <div class="HomeworkBox">
-            <h1>Homework</h1>
-            <p>100 Points</p>
-            <p>2025/08/02 <span style="color: red">Passed Due</span></p>
-            <div class="right">
-              <button title="Show Notes"><h1>Show Notes</h1></button>
-              <button title="Mark Done"><h1>Mark Done</h1></button>
-            </div>
-          </div>
+        <div id="HomeworkHolder" class="HomeworkHolder"></div>
+      </div>
+    </div>
+
+    <div class="center">
+      <div class="box PatchBox" style="width: 80%">
+        <div style="margin-bottom: 1rem" class="box PatchHeader">
+          <h1 style="text-align: center">Add Assignments</h1>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; width: 100%">
+          <input
+            type="text"
+            name="AssignmentName"
+            placeholder="Name"
+            id="AssignmentName"
+            style="flex: 1"
+          />
+          <input
+            type="number"
+            name="Points"
+            placeholder="Points"
+            id="Points"
+            style="flex: 1"
+          />
+          <input
+            type="date"
+            name="DueDate"
+            placeholder=""
+            id="DueDate"
+            style="flex: 1"
+          />
+          <input
+            type="text"
+            name="Notes"
+            placeholder="Notes"
+            id="Notes"
+            style="flex-basis: 100%"
+          />
+        </div>
+        <div style="margin-top: 5px" class="right">
+          <div
+            id="AddLoading"
+            style="margin-right: 10px; display: none"
+            class="loading"
+          ></div>
+          <p id="AddErrorText" style="color: red; font-size: 1rem"></p>
+          <button onclick="AddHomework()" id="AddButton">Add</button>
         </div>
       </div>
     </div>

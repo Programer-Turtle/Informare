@@ -69,6 +69,7 @@ a {
 input {
   background-color: rgba(255, 255, 255, 0.705);
   border-width: 2px;
+  margin: 5px;
   border-color: black;
   border-style: solid;
   font-size: 1.5rem;
@@ -245,7 +246,7 @@ button:active {
   padding: 0.5rem;
   border-bottom-right-radius: 0%;
   border-bottom-left-radius: 0%;
-  background-color: rgba(166, 212, 255, 0.555);
+  background-color: rgba(136, 194, 249, 0.555);
 }
 
 .PatchHeader h1 {
@@ -268,15 +269,20 @@ textarea {
 
 .HomeworkHolder {
   width: 100%;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  flex-wrap: nowrap;
+  flex-wrap: nowrap; */
 }
 
 .HomeworkBox {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
   width: 95%;
   border-radius: 20px;
-  background-color: rgba(166, 212, 255, 0.555);
+  padding-bottom: 1px;
+  background-color: rgba(136, 194, 249, 0.555);
 }
 
 .HomeworkBox h1 {
