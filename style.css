@@ -103,20 +103,17 @@ button:active {
 
 .Calendar {
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1.2rem;
 }
 
 .CalendarBox {
-  min-width: 7rem;
-  max-width: 10rem;
-  width: 20%;
-  height: 10rem;
-  padding: 0;
-  margin-left: 15px;
-  margin-right: 15px;
-  margin-bottom: 30px;
+  min-height: 146px;
+  aspect-ratio: 1/1;
   border-radius: 20px;
+  margin: 0;
+  padding: 0;
   background-color: rgba(83, 186, 255, 0.596);
 }
 

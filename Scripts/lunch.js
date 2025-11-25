@@ -2,9 +2,73 @@ function isSafari() {
   return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 }
 const MainCalendar = document.getElementById("MainCalendar");
-const menu = [];
-const grade = [];
-const UpdateMonth = 9;
+const menu = [
+  "Calzone",
+  "Chicken and Dumplings",
+  "Tornados",
+  "BBQ Rib Sandwich",
+  "Hamburger and Cheese",
+  "Saturday",
+  "Sunday",
+  "Popcorn Chicken",
+  "Cheesy Scrambled Eggs",
+  "Crispy Chicken Sandwich",
+  "Orange Chicken",
+  "Corn Dog",
+  "Satuday",
+  "Sunday",
+  "Calzones",
+  "Pork Roast",
+  "Pizza",
+  "Cheese Sticks",
+  "Hamburger and Cheese",
+  "Saturday",
+  "Sunday",
+  "Christmas Break",
+  "Christmas Break",
+  "Christmas Break",
+  "Christmas Break",
+  "Christmas Break",
+  "Saturday",
+  "Sunday",
+  "Christmas Break",
+  "Christmas Break",
+  "Christmas Break",
+];
+const grade = [
+  "22",
+  "44",
+  "39",
+  "42",
+  "15",
+  "N/A",
+  "N/A",
+  "44.5",
+  "32",
+  "60",
+  "42.5",
+  "34",
+  "N/A",
+  "N/A",
+  "22",
+  "30",
+  "49",
+  "47",
+  "15",
+  "N/A",
+  "N/A",
+  "N/A",
+  "N/A",
+  "N/A",
+  "N/A",
+  "N/A",
+  "N/A",
+  "N/A",
+  "N/A",
+  "N/A",
+  "N/A",
+];
+const UpdateMonth = 12;
 const MenuText = document.getElementById("MenuText");
 const GradeText = document.getElementById("GradeText");
 const Calendar = document.getElementById("Calendar");
