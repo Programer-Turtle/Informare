@@ -1,4 +1,5 @@
 const ErrorText = document.getElementById("ErrorText");
+const HomeworkHolder = document.getElementById("HomeworkHolder");
 
 async function AppendAssignment(Name, Notes, Points, Date) {}
 
@@ -18,14 +19,19 @@ async function GetHomework() {
   );
   if (response.status == 200) {
     const data = await response.json();
-    if (data.length == 0) {
-      ErrorText.innerText = "No Assignments Currently";
-    }
-    console.log(data);
+    return data;
   } else {
     ErrorText.style.color = "red";
     ErrorText.innerText = "An Error Occured";
   }
 }
 
-GetHomework();
+async function ShowHomework() {
+  const data = await GetHomework();
+  if (data.length == 0) {
+    ErrorText.innerText = "No Assignments Currently";
+    return;
+  }
+}
+
+ShowHomework();

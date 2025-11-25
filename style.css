@@ -266,8 +266,31 @@ textarea {
   background-color: rgba(255, 255, 255, 0.705);
 }
 
+.HomeworkHolder {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
 .HomeworkBox {
-  width: 90%;
+  width: 95%;
   border-radius: 20px;
   background-color: rgba(166, 212, 255, 0.555);
+}
+
+.HomeworkBox h1 {
+  margin-bottom: 0%;
+}
+
+.right {
+  /* padding: 10px; */
+  margin-bottom: 0.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: right;
+}
+
+.right button {
+  margin-right: 1rem;
 }
