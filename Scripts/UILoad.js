@@ -4,6 +4,7 @@ document.body.appendChild(Background);
 
 const Overlay = document.createElement("div");
 Overlay.className = "overlay";
+Overlay.onclick = HideSideBar;
 document.body.insertBefore(Overlay, document.body.firstChild);
 
 const NavBar = document.createElement("div");
@@ -36,6 +37,7 @@ SideBar.innerHTML = `
 <p class="navbutton" onclick="LoadPage('patchnotes.html')">Patch Notes</p>
 <p class="navbutton" onclick="LoadPage('homework.html')">Homework</p>
 <p class="navbutton" onclick="LoadPage('dailymessage.html')">Daily Message</p>
+<p class="navbutton" onclick="LoadPage('policy.html')">Policy</p>
 <p class="navbutton" onclick="LogOut()">Log Out</p>
 `;
 document.body.insertBefore(SideBar, NavBar);
