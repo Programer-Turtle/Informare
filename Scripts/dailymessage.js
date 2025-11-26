@@ -64,7 +64,7 @@ async function GetMessage() {
   } else {
     MessageText.style.color = "red";
     MessageText.innerText =
-      "An error occured. You may be banned from this service.";
+      "An error occured. You may be suspended from this service.";
   }
 }
 

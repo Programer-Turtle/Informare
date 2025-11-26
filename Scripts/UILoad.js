@@ -16,7 +16,7 @@ if (localStorage.getItem("username")) {
   <a href="signin.html">
     <img src="Images/logo.png" style="width: 70px; margin: 10px" />
   </a>
-  <p class="navbutton" onclick="ShowSideBar()" style="margin-right: 3rem; margin-left: auto">Menu</p>
+  <p id="MenuButton" class="navbutton" onclick="ShowSideBar()" style="margin-right: 3rem; margin-left: auto">Menu</p>
 </div>
 `;
 } else {

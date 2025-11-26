@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lunch</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="Images/logo.png" type="image/x-icon" />
+    <script defer src="Scripts/UILoad.js"></script>
+    <script defer src="Scripts/Ban.js"></script>
+    <style>
+      .BackgroundHolder {
+        background-image: linear-gradient(
+          to bottom right,
+          rgb(255, 138, 42),
+          rgb(226, 43, 43)
+        );
+      }
+
+      .box {
+        background-color: rgba(255, 155, 155, 0.555);
+      }
+
+      .PatchHeader {
+        background-color: rgba(248, 111, 111, 0.555);
+      }
+
+      .NavBar {
+        background-color: rgba(248, 111, 111, 0.76);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <div style="padding: 0%; width: 80%; padding-bottom: 5px" class="box">
+        <div style="margin: 0%" class="box PatchHeader">
+          <h1 class="BanText">Account Suspended</h1>
+        </div>
+        <h1 class="BanText">Type</h1>
+        <p id="Type" class="BanText"></p>
+
+        <h1 class="BanText">Restoration Date</h1>
+        <p id="Restoration" class="BanText"></p>
+
+        <h1 class="BanText">Reason</h1>
+        <p id="Reason" class="BanText"></p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -294,3 +294,17 @@ textarea {
 .right button {
   margin-right: 1rem;
 }
+
+h1.BanText {
+  font-size: 3rem;
+  margin-top: 0%;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+p.BanText {
+  font-size: 2rem;
+  margin-top: 0%;
+  margin-bottom: 3rem;
+  text-align: center;
+}

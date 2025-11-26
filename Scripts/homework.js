@@ -26,7 +26,8 @@ async function GetHomework() {
     return data;
   } else {
     ErrorText.style.color = "red";
-    ErrorText.innerText = "An Error Occured";
+    ErrorText.innerText =
+      "An error occured. You may be suspended from this service.";
   }
 }
 
