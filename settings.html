@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="Images/logo.png" type="image/x-icon" />
     <script defer src="Scripts/UILoad.js"></script>
     <script defer src="Scripts/verify.js"></script>
+    <script defer src="Scripts/settings.js"></script>
   </head>
   <body>
     <div class="center">
@@ -18,24 +19,44 @@
         <div style="display: flex; flex-wrap: wrap; margin: 0%; padding: 0%">
           <div class="SettingList">
             <div class="SettingBar">
-              <h1>Account</h1>
+              <h1 onclick="ShowSettingPage('AccountSettings')">Account</h1>
             </div>
             <div class="SettingBar">
-              <h1>Customization</h1>
+              <h1 onclick="ShowSettingPage('CustomSettings')">Customization</h1>
             </div>
             <div style="margin-bottom: 0%" class="SettingBar">
-              <h1 style="color: red">Danger Zone</h1>
+              <h1
+                onclick="ShowSettingPage('DangerSettings')"
+                style="color: red"
+              >
+                Danger Zone
+              </h1>
             </div>
           </div>
-          <div id="AccountSettings" class="SettingHolder">
+          <div
+            style="display: block"
+            id="AccountSettings"
+            class="SettingHolder"
+          >
             <h1>Account Settings</h1>
             <div class="SettingSplit">
               <button>Reset Tokens</button>
               <p>Log out all devices that are signed in.</p>
             </div>
             <div class="SettingSplit">
-              <button>Reset Tokens</button>
-              <p>Log out all devices that are signed in.</p>
+              <button>Change Password</button>
+              <p>Change your account password.</p>
+            </div>
+          </div>
+          <div id="CustomSettings" class="SettingHolder">
+            <h1>Customization</h1>
+            <p>This is still under construction.</p>
+          </div>
+          <div id="DangerSettings" class="SettingHolder">
+            <h1 style="color: red">Danger Zone</h1>
+            <div class="SettingSplit">
+              <button style="color: red">Delete Account</button>
+              <p>Permantly delete account.</p>
             </div>
           </div>
         </div>

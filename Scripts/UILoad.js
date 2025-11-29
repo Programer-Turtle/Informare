@@ -38,6 +38,8 @@ SideBar.innerHTML = `
 <p class="navbutton" onclick="LoadPage('homework.html')">Homework</p>
 <p class="navbutton" onclick="LoadPage('dailymessage.html')">Daily Message</p>
 <p class="navbutton" onclick="LoadPage('policy.html')">Policy</p>
+<p class="navbutton" onclick="LoadPage('moderation.html')">Moderation</p>
+<p class="navbutton" onclick="LoadPage('settings.html')">Settings</p>
 <p class="navbutton" onclick="LogOut()">Log Out</p>
 `;
 document.body.insertBefore(SideBar, NavBar);

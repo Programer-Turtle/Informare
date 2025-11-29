@@ -48,7 +48,7 @@ a {
 
 .center {
   display: flex;
-  width: 100vw;
+  width: 100%;
   justify-content: center;
 }
 
@@ -314,7 +314,7 @@ p.BanText {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 30%;
+  width: 50%;
   padding: 0%;
   margin: 0%;
   background-color: rgb(98, 153, 204);
@@ -342,6 +342,7 @@ p.BanText {
 }
 
 .SettingHolder {
+  display: none;
   border-color: rgba(136, 194, 249);
   border-style: solid;
   border-width: 5px;
