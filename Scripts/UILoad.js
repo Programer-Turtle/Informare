@@ -4,6 +4,7 @@ document.body.appendChild(Background);
 
 const Overlay = document.createElement("div");
 Overlay.className = "overlay";
+Overlay.onclick = HideSideBar;
 document.body.insertBefore(Overlay, document.body.firstChild);
 
 const NavBar = document.createElement("div");
@@ -15,7 +16,7 @@ if (localStorage.getItem("username")) {
   <a href="signin.html">
     <img src="Images/logo.png" style="width: 70px; margin: 10px" />
   </a>
-  <p class="navbutton" onclick="ShowSideBar()" style="margin-right: 3rem; margin-left: auto">Menu</p>
+  <p id="MenuButton" class="navbutton" onclick="ShowSideBar()" style="margin-right: 3rem; margin-left: auto">Menu</p>
 </div>
 `;
 } else {
@@ -34,8 +35,9 @@ SideBar.innerHTML = `
 <p class="navbutton" onclick="HideSideBar()">Back</p>
 <p class="navbutton" onclick="LoadPage('lunch.html')">Lunch</p>
 <p class="navbutton" onclick="LoadPage('patchnotes.html')">Patch Notes</p>
-<!-- <p class="navbutton" onclick="LoadPage('homework.html')">Homework</p> -->
+<p class="navbutton" onclick="LoadPage('homework.html')">Homework</p>
 <p class="navbutton" onclick="LoadPage('dailymessage.html')">Daily Message</p>
+<p class="navbutton" onclick="LoadPage('policy.html')">Policy</p>
 <p class="navbutton" onclick="LogOut()">Log Out</p>
 `;
 document.body.insertBefore(SideBar, NavBar);
