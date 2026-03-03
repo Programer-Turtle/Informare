@@ -1,0 +1,36 @@
+{
+  "name": "SQL Database Fundamentals (345) State 2025",
+  "time": 60,
+  "questions": [
+    {
+      "question": "Which of the following backup terms does not fit with the others?",
+      "answer": "D",
+      "options": [
+        "Hot backup",
+        "Cold backup",
+        "Online backup",
+        "Dynamic backup"
+      ]
+    },
+    {
+      "question": "A view built from two or more different tables can have which of the following properties?",
+      "answer": "B",
+      "options": [
+        "Can be updated directly",
+        "Can be deleted without affecting underlying data",
+        "Will make database maintenance easier",
+        "Limits database overhead"
+      ]
+    },
+    {
+      "question": "What is the primary purpose of the SQL CASCADE option in a foreign key constraint?",
+      "answer": "D",
+      "options": [
+        "Restricts changes in the parent table",
+        "Creates a backup of the database",
+        "Automatically generates unique values for the foreign key",
+        "Updates or deletes related records in child tables when changes occur in the parent table"
+      ]
+    }
+  ]
+}

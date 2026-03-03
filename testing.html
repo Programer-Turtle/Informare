@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patch Notes</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="Images/logo.png" type="image/x-icon" />
+    <script defer src="Scripts/UILoad.js"></script>
+    <script defer src="Scripts/verify.js"></script>
+    <script defer src="Scripts/testing.js"></script>
+  </head>
+  <body>
+    <div id="TestStart" class="box">
+      <h1 id="TestName" style="text-align: center"></h1>
+      <h1 id="TimeText" style="text-align: center"></h1>
+      <h1 id="QuestionCount" style="text-align: center"></h1>
+      <div class="center">
+        <button onclick="StartTest()" style="border-radius: 30px">
+          <h1>Start Test</h1>
+        </button>
+      </div>
+    </div>
+
+    <div style="display: none" id="TestArea" class="box">
+      <h1 id="Timer">00:00</h1> 
+  </body>
+</html>
