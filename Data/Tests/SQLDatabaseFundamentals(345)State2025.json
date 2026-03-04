@@ -1,10 +1,61 @@
 {
   "name": "SQL Database Fundamentals (345) State 2025",
   "time": 60,
+  "answers": [
+    "D",
+    "B",
+    "D",
+    "D",
+    "C",
+    "B",
+    "A",
+    "B",
+    "B",
+    "A",
+    "C",
+    "B",
+    "A",
+    "D",
+    "C",
+    "A",
+    "C",
+    "C",
+    "D",
+    "B",
+    "A",
+    "C",
+    "C",
+    "B",
+    "B",
+    "A",
+    "D",
+    "A",
+    "C",
+    "C",
+    "A",
+    "B",
+    "C",
+    "C",
+    "B",
+    "A",
+    "B",
+    "D",
+    "C",
+    "B",
+    "A",
+    "C",
+    "B",
+    "B",
+    "B",
+    "A",
+    "D",
+    "B",
+    "A",
+    "B"
+  ],
   "questions": [
     {
       "question": "Which of the following backup terms does not fit with the others?",
-      "answer": "D",
       "options": [
         "Hot backup",
         "Cold backup",
@@ -14,7 +65,6 @@
     },
     {
       "question": "A view built from two or more different tables can have which of the following properties?",
-      "answer": "B",
       "options": [
         "Can be updated directly",
         "Can be deleted without affecting underlying data",
@@ -24,12 +74,419 @@
     },
     {
       "question": "What is the primary purpose of the SQL CASCADE option in a foreign key constraint?",
-      "answer": "D",
       "options": [
         "Restricts changes in the parent table",
         "Creates a backup of the database",
         "Automatically generates unique values for the foreign key",
         "Updates or deletes related records in child tables when changes occur in the parent table"
+      ]
+    },
+    {
+      "question": "Which SQL statement is used to add a new column to an existing table?",
+      "options": [
+        "UPDATE COLUMN",
+        "MODIFY COLUMN",
+        "INSERT COLUMN",
+        "ADD COLUMN"
+      ]
+    },
+    {
+      "question": "What does CRUD stand for in the context of database operations?",
+      "options": [
+        "Create, Recover, Update, Delete",
+        "Create, Read, Update, Debug",
+        "Create, Read, Update, Delete",
+        "Configure, Read, Update, Delete"
+      ]
+    },
+    {
+      "question": "What does ACID stand for in the context of database transactions?",
+      "options": [
+        "All Command Integrity Declaration",
+        "Atomicity, Consistency, Isolation, Durability",
+        "Access Control and Identity Declaration",
+        "Automated Concurrency and Isolation Definition"
+      ]
+    },
+    {
+      "question": "What is normalization in database design?",
+      "options": [
+        "Reducing redundancy and dependency by organizing fields and tables",
+        "Increasing redundancy for faster retrieval",
+        "Randomizing data for better security",
+        "Adding unnecessary fields for future use"
+      ]
+    },
+    {
+      "question": "Which of the following best describes a data warehouse?",
+      "options": [
+        "A database optimized for online transaction processing (OLTP)",
+        "A database optimized for analysis and reporting of large volumes of data",
+        "A database used for temporary storage of data",
+        "A database used for real-time data processing"
+      ]
+    },
+    {
+      "question": "What does the term \"OLAP\" stand for in the context of databases?",
+      "options": [
+        "Online Analysis Process",
+        "Online Analytical Processing",
+        "Offline Analytical Process",
+        "Offline Analytical Processing"
+      ]
+    },
+    {
+      "question": "What is a composite key in a database?",
+      "options": [
+        "A key that consists of multiple attributes",
+        "A key that is generated automatically by the system",
+        "A key that is unique across all tables in the database",
+        "A key that is used for sorting records"
+      ]
+    },
+    {
+      "question": "Which of the following is an example of a NoSQL database?",
+      "options": ["PostgreSQL", "Oracle Database", "MongoDB", "SQLite"]
+    },
+    {
+      "question": "What does the term \"SQL injection\" refer to?",
+      "options": [
+        "A technique for optimizing SQL queries",
+        "A security vulnerability that allows attackers to execute malicious SQL code",
+        "A method for encrypting SQL data",
+        "A mechanism for creating temporary SQL tables"
+      ]
+    },
+    {
+      "question": "Which of the following is NOT a characteristic of NoSQL databases?",
+      "options": [
+        "Structured schema",
+        "Scalability",
+        "High availability",
+        "Flexibility in data storage formats"
+      ]
+    },
+    {
+      "question": "Which of the following is NOT a type of database constraint?",
+      "options": [
+        "Primary key constraint",
+        "Foreign key constraint",
+        "Null constraint",
+        "Dynamic constraint"
+      ]
+    },
+    {
+      "question": "What does the term \"database schema\" represent?",
+      "options": [
+        "A physical storage location for database files",
+        "A predefined set of rules governing data integrity",
+        "The structure that defines the organization of data in a database",
+        "A mechanism for restricting access to certain database objects"
+      ]
+    },
+    {
+      "question": "What is the typical workload pattern in OLTP systems?",
+      "options": [
+        "Consistent and predictable",
+        "Highly variable with peaks and troughs",
+        "Intermittent with long periods of inactivity",
+        "Linearly increasing over time"
+      ]
+    },
+    {
+      "question": "What is the purpose of using table aliases in SQL joins?",
+      "options": [
+        "To limit the number of rows returned by the join operation",
+        "To enforce referential integrity constraints between joined tables",
+        "To avoid ambiguity when referencing columns from multiple tables",
+        "To improve query performance by optimizing the join algorithm"
+      ]
+    },
+    {
+      "question": "Which of the following operations is typically performed using DML?",
+      "options": [
+        "Creating tables",
+        "Modifying table structure",
+        "Inserting records into a table",
+        "Deleting tables"
+      ]
+    },
+    {
+      "question": "What does the acronym BCNF stand for in terms of database normalization?",
+      "options": [
+        "Binary Code Normal Form",
+        "Basic Complete Normal Form",
+        "Balanced Centralized Normal Form",
+        "Boyce-Codd Normal Form"
+      ]
+    },
+    {
+      "question": "What is the key constraint for the fourth normalization form?",
+      "options": [
+        "It requires every determinant to be a candidate key",
+        "It ensures no multiple independent multi-valued facts about an entity in a record",
+        "It eliminates all non-temporal redundancy",
+        "It eliminates transitive dependency"
+      ]
+    },
+    {
+      "question": "What is a transitive functional dependency?",
+      "options": [
+        "Changing a non-key column might cause another non-key column to change",
+        "When there exists more than one candidate key",
+        "It ensures rows in one table have corresponding rows in another",
+        "A primary key is functional dependent on a subset of candidate key relationships"
+      ]
+    },
+    {
+      "question": "In a multi-user database system, what does the term \"concurrency control\" refer to?",
+      "options": [
+        "The ability to process transactions independently of each other",
+        "The ability to ensure that transactions are processed as a single unit of work",
+        "The ability to ensure that changes made by one transaction do not interfere with changes made by other transactions",
+        "The ability to maintain the consistency of the database before and after a transaction"
+      ]
+    },
+    {
+      "question": "Which of the following is an example of a transitive dependency?",
+      "options": [
+        "A customer's name and address",
+        "A product's price and quantity",
+        "A student's ID, course, and instructor",
+        "A department's name and location"
+      ]
+    },
+    {
+      "question": "What is a \"dirty read\" in the context of database transactions?",
+      "options": [
+        "A read operation that retrieves data from the database without applying any locks",
+        "A read operation that retrieves uncommitted data changes made by another transaction",
+        "A read operation that retrieves inconsistent data due to a database corruption",
+        "A read operation that retrieves data from a table without any specified criteria"
+      ]
+    },
+    {
+      "question": "Which of the following is NOT a level of isolation defined by the SQL standard?",
+      "options": [
+        "READ UNCOMMITTED",
+        "READ COMMITTED",
+        "REPEATABLE READ",
+        "WRITE PENDING"
+      ]
+    },
+    {
+      "question": "In which isolation level are dirty reads allowed in most database systems?",
+      "options": [
+        "READ UNCOMMITTED",
+        "READ COMMITTED",
+        "REPEATABLE READ",
+        "WRITE PENDING"
+      ]
+    },
+    {
+      "question": "Given user A reads a record and user B inserts or deleted rows to A\u2019s record. If user A reads the same rows again, a new row is found. This is known as what?",
+      "options": [
+        "A Dirty Read",
+        "A non-Repeatable Read",
+        "A Lost Read",
+        "A Phantom Read"
+      ]
+    },
+    {
+      "question": "Which database locking mechanism allows multiple transactions to read a data item simultaneously but prevents any transaction from writing to it?",
+      "options": ["Shared lock", "Exclusive lock", "Intent lock", "Update lock"]
+    },
+    {
+      "question": "What is an advantage of using optimistic locking over pessimistic locking?",
+      "options": [
+        "Reduced risk of deadlock",
+        "Higher level of data consistency",
+        "Improved concurrency and performance",
+        "Enhanced data durability"
+      ]
+    },
+    {
+      "question": "In which scenario would you choose to use a stored procedure instead of an ad-hoc SQL query executed from an application?",
+      "options": [
+        "When the SQL query needs to be executed only once",
+        "When the SQL query needs to be executed multiple times with different parameters",
+        "When the SQL query involves complex business logic or multiple steps",
+        "When the SQL query requires dynamic table creation or alteration"
+      ]
+    },
+    {
+      "question": "How can stored procedures improve database performance compared to executing ad-hoc SQL queries from an application?",
+      "options": [
+        "Stored procedures cache execution plans, reducing query compilation overhead",
+        "Stored procedures enforce stronger data consistency rules",
+        "Stored procedures automatically optimize SQL statements for better performance",
+        "Stored procedures eliminate the need for indexes on database tables"
+      ]
+    },
+    {
+      "question": "What is the difference between a stored procedure and a user-defined function (UDF) in a database?",
+      "options": [
+        "Stored procedures can only return scalar values, whereas UDFs can return result sets",
+        "Stored procedures can execute DML statements, whereas UDFs cannot",
+        "Stored procedures can only be invoked by the database administrator, whereas UDFs can be invoked by any user",
+        "Stored procedures are precompiled and stored in the database, whereas UDFs are compiled at runtime"
+      ]
+    },
+    {
+      "question": "Which of the following statements accurately describes dynamic SQL within a stored procedure?",
+      "options": [
+        "Dynamic SQL allows stored procedures to be executed without compilation",
+        "Dynamic SQL is a feature that enables the creation of temporary tables within a stored procedure",
+        "Dynamic SQL allows stored procedures to construct and execute SQL statements at runtime",
+        "Dynamic SQL provides built-in error handling mechanisms for stored procedures"
+      ]
+    },
+    {
+      "question": "A key that is invented or made up for the sole purpose of being used as the primary key is known as what type of key?",
+      "options": ["Natural Key", "Composite Key", "Surrogate Key", "Unique Key"]
+    },
+    {
+      "question": "Which of the following operations is NOT typically performed using DDL?",
+      "options": [
+        "Deleting tables",
+        "Inserting records into a table",
+        "Creating tables",
+        "Modifying table structure"
+      ]
+    },
+    {
+      "question": "In a database ER diagram, what does a solid line connecting two entity sets represent?",
+      "options": [
+        "A one-to-many relationship",
+        "A many-to-many relationship",
+        "A one-to-one relationship",
+        "An associative relationship"
+      ]
+    },
+    {
+      "question": "What does DBaaS stand for?",
+      "options": [
+        "Distributed Business as a Service",
+        "Database as a Service",
+        "Digital Backup as a Service",
+        "Data Backup and Storage"
+      ]
+    },
+    {
+      "question": "Which of the following is a typical use case for DBaaS?",
+      "options": [
+        "High-performance computing",
+        "Small-scale personal websites",
+        "On-premises legacy systems",
+        "Enterprise-level data warehousing"
+      ]
+    },
+    {
+      "question": "What is a key benefit of using a managed DBaaS solution?",
+      "options": [
+        "Increased need for in-house database expertise",
+        "Enhanced control over infrastructure",
+        "Reduced operational overhead",
+        "Longer deployment times"
+      ]
+    },
+    {
+      "question": "What is polyglot persistence?",
+      "options": [
+        "Storing data in multiple languages for internationalization purposes",
+        "Using multiple database management systems within a single application",
+        "Persisting data in a single database system to maintain consistency",
+        "Utilizing multiple programming languages for database interaction"
+      ]
+    },
+    {
+      "question": "Which challenge is commonly associated with maintaining polyglot persistence?",
+      "options": [
+        "Increased development complexity",
+        "Reduced data consistency",
+        "Limited scalability options",
+        "Lower performance across all databases"
+      ]
+    },
+    {
+      "question": "Which query optimization technique involves restructuring SQL queries to produce the same result more efficiently?",
+      "options": [
+        "Query parallelization",
+        "Query caching",
+        "Query rewriting",
+        "Query indexing"
+      ]
+    },
+    {
+      "question": "How does query parallelization contribute to database optimization?",
+      "options": [
+        "By executing multiple queries in sequence to reduce resource consumption",
+        "By executing multiple queries concurrently to improve performance",
+        "By optimizing query execution plans for complex queries",
+        "By limiting the number of concurrent database connections"
+      ]
+    },
+    {
+      "question": "What is schema-on-read in the context of data lakes?",
+      "options": [
+        "Data is stored in a structured format before being read by applications",
+        "Data is stored without a predefined schema and is structured at the time of analysis",
+        "Data is transformed into a standard schema before being stored in the data lake",
+        "Data is encrypted and secured before being read by applications"
+      ]
+    },
+    {
+      "question": "What is the purpose of database auditing?",
+      "options": [
+        "To encrypt data stored in the database",
+        "To monitor and record database activity for security and compliance purposes",
+        "To restrict access to certain database objects based on user roles",
+        "To authenticate users before allowing them to access the database"
+      ]
+    },
+    {
+      "question": "Which property of BASE emphasizes that a system continues to operate even in the presence of partial failures?",
+      "options": [
+        "Basic Availability",
+        "Soft state",
+        "Eventually consistent",
+        "Scalability"
+      ]
+    },
+    {
+      "question": "Which aspect of BASE ensures that system performance remains stable as load increases?",
+      "options": [
+        "Basic Availability",
+        "Soft state",
+        "Eventually consistent",
+        "Scalability"
+      ]
+    },
+    {
+      "question": "What does data lineage tracing involve?",
+      "options": [
+        "Encrypting data during transmission",
+        "Tracing the movement and transformation of data across systems and processes",
+        "Auditing user access to sensitive data",
+        "Validating data consistency within a database"
+      ]
+    },
+    {
+      "question": "What is one of the biggest challenges associated with data migration?",
+      "options": [
+        "Ensuring data consistency across systems",
+        "Implementing encryption for data in transit",
+        "Managing access controls within the database",
+        "Optimizing database performance after migration"
+      ]
+    },
+    {
+      "question": "What is a weak entity in an ER model?",
+      "options": [
+        "An entity that does not have a primary key",
+        "An entity that relies on another entity for identification",
+        "An entity with a high degree of cardinality",
+        "An entity that contains only derived attributes"
       ]
     }
   ]

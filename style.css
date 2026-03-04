@@ -408,5 +408,9 @@ input[type="radio"] {
 }
 
 .QuestionHolder {
+  margin-bottom: 5rem;
+}
+
+.RadioHolder.QuestionHolder {
   display: none;
 }

@@ -1,12 +1,19 @@
 const TestStart = document.getElementById("TestStart");
 const TestArea = document.getElementById("TestArea");
+const TestResults = document.getElementById("TestResults");
 const TestName = document.getElementById("TestName");
 const TimeText = document.getElementById("TimeText");
+const Timer = document.getElementById("Timer");
+const ScoreText = document.getElementById("ScoreText");
+const PercentText = document.getElementById("PercentText");
 const Letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const QuestionCount = document.getElementById("QuestionCount");
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
-let TimeIndex = 0;
+let data;
+let TotalQuestions;
+let CorrectAnswers;
+let Duration;
 let CurrentQuestion = 0;
 let interval;
 
@@ -30,15 +37,87 @@ function Next() {
   ShowQuestion();
 }
 
+function Submit() {
+  clearInterval(interval);
+  const answers = [];
+
+  for (
+    let i = 0;
+    i < document.querySelectorAll(".QuestionHolder").length;
+    i++
+  ) {
+    const selected = document.querySelector(`input[name="${i}"]:checked`);
+
+    if (selected) {
+      answers.push(selected.value);
+    } else {
+      answers.push(null);
+    }
+  }
+
+  console.log(answers);
+  let GradedAnswers = [];
+  let CorrectCount = 0;
+  for (let i = 0; i < answers.length; i++) {
+    const CorrectAnswer = CorrectAnswers[i];
+    const SelectedAnswer = answers[i];
+    const Correct = SelectedAnswer == CorrectAnswer;
+    if (Correct) {
+      CorrectCount += 1;
+    }
+    GradedAnswers.push({
+      Correct: Correct,
+      CorrectAnswer: CorrectAnswer,
+      SelectedAnswer: SelectedAnswer,
+    });
+  }
+  console.log(GradedAnswers);
+  TestArea.style.display = "none";
+  TestResults.style.display = "block";
+  console.log(`${CorrectCount}/${TotalQuestions}`);
+  ScoreText.innerText = `${CorrectCount}/${TotalQuestions}`;
+  PercentText.innerText = `${Math.round((CorrectCount / TotalQuestions) * 100)}%`;
+
+  const Questions = data["questions"];
+  for (let i = 0; i < Questions.length; i++) {
+    const CurrentQuestion = Questions[i];
+    const QuestionHolder = document.createElement("div");
+    QuestionHolder.className = "QuestionHolder";
+    QuestionHolder.style.dispaly = "block";
+    QuestionHolder.innerHTML = `<h1>${i + 1}. ${CurrentQuestion["question"]}</h1>`;
+
+    for (let x = 0; x < CurrentQuestion["options"].length; x++) {
+      const CurrentOption = CurrentQuestion["options"][x];
+      const OptionText = document.createElement("h1");
+      OptionText.innerText = `${Letters[x]}) ${CurrentOption}`;
+      if (!GradedAnswers[i]["Correct"]) {
+        if (Letters.indexOf(GradedAnswers[i]["SelectedAnswer"]) == x) {
+          OptionText.style.color = "red";
+        }
+      }
+
+      if (Letters.indexOf(GradedAnswers[i]["CorrectAnswer"]) == x) {
+        OptionText.style.color = "green";
+      }
+      QuestionHolder.appendChild(OptionText);
+    }
+
+    TestResults.appendChild(QuestionHolder);
+  }
+}
+
 async function GetTest() {
   const response = await fetch(`Data/Tests/${id}.json`);
   if (!response.ok) {
     return;
   }
-  const data = await response.json();
+  data = await response.json();
   TestName.innerText = data["name"];
+  Duration = data["time"] * 60 * 1000;
   TimeText.innerText = `Time: ${data["time"]} minutes`;
-  QuestionCount.innerText = `${data["questions"].length} Questions`;
+  TotalQuestions = data["questions"].length;
+  QuestionCount.innerText = `${TotalQuestions} Questions`;
+  CorrectAnswers = data["answers"];
 
   for (let i = 0; i < data["questions"].length; i++) {
     console.log(data["questions"][i]);
@@ -50,7 +129,7 @@ async function GetTest() {
     let RadioHTML = `<div class="RadioHolder">`;
     for (let x = 0; x < Question["options"].length; x++) {
       const Option = Question["options"][x];
-      RadioHTML += `<div class="OptionHolder"><input type="radio" name="${i}" id="" /><h1>${Letters[x]}) ${Option}</h1></div>`;
+      RadioHTML += `<div class="OptionHolder"><input type="radio" name="${i}" value="${Letters[x]}" /><h1>${Letters[x]}) ${Option}</h1></div>`;
     }
     RadioHTML += `</div>`;
     let ButtonHTML = `<div class="right">`;
@@ -59,6 +138,8 @@ async function GetTest() {
     }
     if (i != data["questions"].length - 1) {
       ButtonHTML += `<button onclick="Next()"><h1>Next</h1></button>`;
+    } else {
+      ButtonHTML += `<button onclick="Submit()"><h1>Submit</h1></button>`;
     }
     ButtonHTML += "</div>";
     QuestionHolder.innerHTML += RadioHTML + ButtonHTML;
@@ -74,9 +155,18 @@ async function StartTest() {
   TestArea.style.display = "block";
 
   ShowQuestion();
-
+  const StartTime = Date.now();
   interval = setInterval(() => {
-    console.log(TimeIndex);
-    TimeIndex += 1;
+    const Elapsed = Date.now() - StartTime;
+    const Remaining = Duration - Elapsed;
+    if (Remaining <= 0) {
+      Submit();
+      return;
+    }
+
+    const Minutes = Math.floor(Remaining / 60000);
+    const Seconds = Math.floor((Remaining % 60000) / 1000);
+    console.log(`${Minutes}:${Seconds}`);
+    Timer.innerText = `${Minutes}:${Seconds}`;
   }, 1);
 }
