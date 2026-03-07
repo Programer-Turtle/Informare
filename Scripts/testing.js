@@ -82,7 +82,10 @@ function Submit() {
     const QuestionHolder = document.createElement("div");
     QuestionHolder.className = "QuestionHolder";
     QuestionHolder.style.display = "block";
-    QuestionHolder.innerHTML = `<h1>${i + 1}. ${CurrentQuestion["question"].replace(/\\n/g, "<br>")}</h1>`;
+    if (CurrentQuestion["image"]) {
+      QuestionHolder.innerHTML += `<div class="center"><img src="Data/Tests/${CurrentQuestion["image"]}" style="width:70%"></div>`;
+    }
+    QuestionHolder.innerHTML += `<h1>${i + 1}. ${CurrentQuestion["question"].replace(/\\n/g, "<br>")}</h1>`;
 
     for (let x = 0; x < CurrentQuestion["options"].length; x++) {
       const CurrentOption = CurrentQuestion["options"][x];
