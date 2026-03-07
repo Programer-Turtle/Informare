@@ -1,0 +1,348 @@
+{
+  "name": "SQL Database Fundamentals (345) State 2021",
+  "time": 60,
+  "answers": [
+    "A",
+    "A",
+    "B",
+    "A",
+    "B",
+    "A",
+    "C",
+    "C",
+    "B",
+    "A",
+    "A",
+    "A",
+    "B",
+    "B",
+    "C",
+    "D",
+    "A",
+    "B",
+    "A",
+    "A",
+    "B",
+    "D",
+    "B",
+    "A",
+    "A",
+    "B",
+    "B",
+    "D",
+    "A",
+    "C",
+    "A",
+    "D",
+    "A",
+    "A",
+    "B",
+    "B",
+    "B",
+    "D",
+    "A",
+    "B",
+    "C",
+    "A",
+    "C",
+    "A",
+    "B",
+    "A",
+    "B",
+    "D",
+    "B",
+    "C"
+  ],
+  "questions": [
+    {
+      "question": "The main purpose of constraints is to ______.",
+      "options": [
+        "limit what data is allowed in a table",
+        "define how other tables reference a given table",
+        "restrict which queries can be used to modify a table",
+        "none of the above"
+      ]
+    },
+    {
+      "question": "Constraints can be used on columns and tables.",
+      "options": ["True", "False"]
+    },
+    {
+      "question": "If records in a table cannot have a NULL value for a column, then that column should\\nhave what type of constraint?",
+      "options": ["UNNULLABLE", "NOT NULL", "NULLABLE", "UNIQUE"]
+    },
+    {
+      "question": "Suppose the table Products has the column Price which holds amount of money each\\nproduct costs. A product must have a price. What constraint is necessary for this column?",
+      "options": ["NOT NULL", "UNIQUE", "DEFAULT", "None of the above"]
+    },
+    {
+      "question": "The INDEX constraint creates an index of all the columns in a table.",
+      "options": ["True", "False"]
+    },
+    {
+      "question": "Which constraint is used to ensure all values of a column meet a certain condition?",
+      "options": ["CHECK", "WHERE", "ON", "VERIFY"]
+    },
+    {
+      "question": "In SQL Server, what type of join is performed by the following query: SELECT * FROM\\nStudent AS s JOIN Enrollment AS e ON s.Id = c.StudentId",
+      "options": [
+        "Left Outer Join",
+        "Right Outer Join",
+        "Inner Join",
+        "Full Outer Join"
+      ]
+    },
+    {
+      "question": "Suppose we have two tables, Student and Enrollment. Which type of join would return all\\nthe Student records and the matched Enrollment records, assuming Student is the left\\ntable and Enrollment is the right table?",
+      "options": [
+        "Right Outer Join",
+        "Full Outer Join",
+        "Left Outer Join",
+        "Inner Join"
+      ]
+    },
+    {
+      "question": "The WITH clause can be used to join tables based on a condition.",
+      "options": ["True", "False"]
+    },
+    {
+      "question": "UNION ALL is different from UNION because ______.",
+      "options": [
+        "UNION ALL selects duplicate values",
+        "UNION only selects duplicate values",
+        "UNION ALL selects all the records in both tables",
+        "UNION ALL can be used with any number of tables"
+      ]
+    },
+    {
+      "question": "Look at the following SQL query:\\nSELECT p.Name\\nFROM Person AS p\\nUNION\\nSELECT e.ID, e.EmployeeName\\nFROM Employee AS e;\\nWhat is wrong with this query?",
+      "options": [
+        "Both SELECT statements do not select the same number of columns.",
+        "The SELECT statements do not query from the same table.",
+        "UNION ALL should be used instead of UNION.",
+        "None of the above."
+      ]
+    },
+    {
+      "question": "Each SELECT statement in a UNION must have the same number of columns.",
+      "options": ["True", "False"]
+    },
+    {
+      "question": "Each SELECT statement in a UNION can have different types of columns.",
+      "options": ["True", "False"]
+    },
+    {
+      "question": "Which command is used to combine the results of two or more SELECT statements?",
+      "options": ["JOIN", "UNION", "AND", "MINUS"]
+    },
+    {
+      "question": "Which command is used to combine the distinct results of two or more SELECT\\nstatements?",
+      "options": ["SELECT DISTINCT", "JOIN DISTINCT", "UNION ALL", "SELECT ALL"]
+    },
+    {
+      "question": "Microsoft SQL Server uses the ______ dialect of SQL, while Oracle uses ______.",
+      "options": [
+        "PL/SQL; T-SQL",
+        "PL/SQL;PL/pgSQL",
+        "PL/pgSQL; PL/SQL",
+        "T-SQL; PL/SQL"
+      ]
+    },
+    {
+      "question": "What is a schema in Microsoft SQL Server?",
+      "options": [
+        "A collection of database objects",
+        "The definition of a table in a database",
+        "The definition of a database in a server",
+        "None of the above"
+      ]
+    },
+    {
+      "question": "In SQL Server, a ______ is a set of tables that contains a database\u2019s definition.",
+      "options": ["Schema", "Data dictionary", "Index", "View"]
+    },
+    {
+      "question": "A foreign key constraint can be added to a table after the table is created.",
+      "options": ["True", "False"]
+    },
+    {
+      "question": "Which query correctly adds a foreign key to an existing table?",
+      "options": [
+        "ALTER TABLE Person ADD FOREIGN KEY (ID) REFERENCES Person(ID);",
+        "UPDATE TABLE Person ADD FOREIGN KEY (ID) REFERENCES\\nPerson(ID);",
+        "ALTER TABLE Person FOREIGN KEY (ID) REFERENCES Person(ID);",
+        "UPDATE TABLE Person FOREIGN KEY (ID) REFERENCES Person(ID);"
+      ]
+    },
+    {
+      "question": "Which of the following data type categories does not exist in all SQL databases?",
+      "options": ["Numeric", "Spatial", "Character/String", "Date/Time"]
+    },
+    {
+      "question": "What is the difference between the int and bigint types in Transact-SQL?",
+      "options": [
+        "Bigint can hold decimals, int can only hold integers",
+        "Bigint takes up 2 bytes of space, int takes up 4 bytes",
+        "Bigint takes up 8 bytes of space, int takes up 2 bytes",
+        "Bigint takes up 8 bytes of space, int takes up 4 bytes"
+      ]
+    },
+    {
+      "question": "Which of the following Transact-SQL data types would be best suited for storing a\\nperson\u2019s birthday (storing only the day when the person was born)?",
+      "options": ["Datetime", "Date", "Time", "Datetimeoffset"]
+    },
+    {
+      "question": "Which of the following Transact-SQL data types would be best suited for storing the\\nprice of an item?",
+      "options": ["Money", "Decimal", "Numeric", "Float"]
+    },
+    {
+      "question": "All SQL databases have a data type for storing dates and times.",
+      "options": ["True", "False"]
+    },
+    {
+      "question": "Preparing SQL code that can be saved to be executed in the future requires creating a(n)\\n______.",
+      "options": ["Index", "Stored Procedure", "View", "Parameterized Query"]
+    },
+    {
+      "question": "Stored procedures cannot take user defined parameters, a parameterized query must be\\nused instead.",
+      "options": ["True", "False"]
+    },
+    {
+      "question": "Stored procedures cannot ______.",
+      "options": [
+        "take parameters",
+        "call other stored procedures",
+        "return a status value to a calling procedure",
+        "all the above can be done with stored procedures"
+      ]
+    },
+    {
+      "question": "Which of the following is a disadvantage of stored procedures?",
+      "options": [
+        "Stored procedures cannot be easily ported to another RDBMS",
+        "Stored procedures allow for SQL injection from user input",
+        "Stored procedures are not efficient for processing large queries",
+        "None of the above"
+      ]
+    },
+    {
+      "question": "Which command is used to run a stored procedure in SQL Server?",
+      "options": ["RUN", "START", "EXEC", "STORE"]
+    },
+    {
+      "question": "Which aggregate function is used to get the largest value of the selected column?",
+      "options": ["MAX", "MIN", "MAXIMUM", "COUNT"]
+    },
+    {
+      "question": "Which aggregate function is used to get the number of rows returned by a SELECT\\nstatement?",
+      "options": ["AVG", "NUMBER", "SUM", "COUNT"]
+    },
+    {
+      "question": "What is the difference between aggregate and scalar functions?",
+      "options": [
+        "Aggregate functions take many values while scalar functions take one value.",
+        "Aggregate functions return many values while scalar functions return one value.",
+        "Aggregate functions return one value while scalar functions return many values.",
+        "Aggregate functions take one value while scalar functions take many values."
+      ]
+    },
+    {
+      "question": "The SQL function ABS takes a number and returns the absolute value of that number.\\nTherefore, the ABS function is a(n) _____.",
+      "options": [
+        "Aggregate function",
+        "String function",
+        "Scalar function",
+        "None of the above"
+      ]
+    },
+    {
+      "question": "Scalar functions take one value and return at least one value.",
+      "options": ["True", "False"]
+    },
+    {
+      "question": "In relational databases, all transaction must follow _____ principles.",
+      "options": ["CRUD", "ACID", "RDBMS", "BLOB"]
+    },
+    {
+      "question": "Which of the following statements regarding database transactions is false?",
+      "options": [
+        "Transactions provide isolation between programs.",
+        "Transactions are made up one operation.",
+        "Transactions represent a single unit of work in a database.",
+        "Transactions can only modify data in allowed ways."
+      ]
+    },
+    {
+      "question": "Transactions in relational databases are said to be ______, since they make a single unit\\nof work.",
+      "options": ["Elemental", "Concrete", "Static", "Atomic"]
+    },
+    {
+      "question": "Which T-SQL command is used to clear all work done by a transaction?",
+      "options": ["ROLLBACK WORK", "STASH WORK", "HIDE WORK", "ERASE WORK"]
+    },
+    {
+      "question": "Which aggregate function is used to get the average value of a numeric column?",
+      "options": ["NUMBER", "AVG", "SUM", "COUNT"]
+    },
+    {
+      "question": "Below is a SQL query for the Person and Student tables:\\nSELECT p.Name, s.Grade\\nFROM Person AS p\\nINNER JOIN Student AS s ON p.Id = s.StudentId;\\nWhich of the following best describes the query\u2019s results?",
+      "options": [
+        "The student with the highest grade",
+        "The name of every student with a grade greater than 3.0",
+        "The name and grade of every person",
+        "The name and grade of every person that is a student"
+      ]
+    },
+    {
+      "question": "Which of the following SQL statements could be added to the end of the above query to\\nsort the results by the person\u2019s name?",
+      "options": [
+        "ORDER BY p.Name",
+        "GROUP BY s.Grade",
+        "ORDER BY s.Grade",
+        "GROUP BY p.Name"
+      ]
+    },
+    {
+      "question": "Below is a SQL query for the Student tables:\\nSELECT s.Grade, COUNT(s.Grade)\\nFROM Student AS s\\nGROUP BY s.Grade;\\nWhich of the following best describes the query\u2019s results?",
+      "options": [
+        "The total number of students",
+        "The names of all students, grouped by grade",
+        "The number of students with each grade",
+        "The number of students with the highest grade"
+      ]
+    },
+    {
+      "question": "By default, the ORDER BY keyword sorts results in ascending order.",
+      "options": ["True", "False"]
+    },
+    {
+      "question": "Below is a SQL query for the Student tables:\\nDELETE FROM Student AS s WHERE s.HasGraduated = 1;\\nWhat would the query do if the WHERE clause is removed?",
+      "options": [
+        "Delete all students who have graduated.",
+        "Delete all students from the table.",
+        "Delete the student table.",
+        "None of the above."
+      ]
+    },
+    {
+      "question": "Which SQL operator returns the results of multiple SELECT statements, where each\\nrecord is present in all the queried tables?",
+      "options": ["INTERSECT", "UNION", "UNION ALL", "None of the above"]
+    },
+    {
+      "question": "Unlike the UNION operator, every SELECT statement used with INTERSECT must\\nhave the same number and type of columns selected.",
+      "options": ["True", "False"]
+    },
+    {
+      "question": "Data that is in 3NF is said to be more ______ compared to data in 0NF.",
+      "options": ["clean", "secure", "redundant", "normalized"]
+    },
+    {
+      "question": "Every student in a high school has a homeroom class, and each homeroom class can\\ncontain multiple students. What type of relationship is being described?",
+      "options": ["One-to-one", "One-to-many", "Many-to-many", "Many-to-none"]
+    },
+    {
+      "question": "Every student in a high school has a locker, and each locker belongs to only a single\\nstudent. What type of relationship is being described?",
+      "options": ["Many-to-many", "Many-to-none", "One-to-one", "One-to-many"]
+    }
+  ]
+}

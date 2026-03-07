@@ -171,6 +171,6 @@ async function StartTest() {
 
     const Minutes = Math.floor(Remaining / 60000);
     const Seconds = Math.floor((Remaining % 60000) / 1000);
-    Timer.innerText = `${Minutes}:${Seconds}`;
+    Timer.innerText = `${Minutes.toString().padStart(2, "0")}:${Seconds.toString().padStart(2, "0")}`;
   }, 1);
 }

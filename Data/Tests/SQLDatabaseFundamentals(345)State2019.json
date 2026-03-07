@@ -1,0 +1,392 @@
+{
+  "name": "SQL Database Fundamentals (345) State 2019",
+  "time": 60,
+  "answers": [
+    "B",
+    "B",
+    "D",
+    "A",
+    "C",
+    "A",
+    "A",
+    "C",
+    "D",
+    "D",
+    "B",
+    "A",
+    "C",
+    "B",
+    "A",
+    "C",
+    "D",
+    "D",
+    "B",
+    "A",
+    "A",
+    "C",
+    "A",
+    "D",
+    "A",
+    "D",
+    "D",
+    "C",
+    "B",
+    "B",
+    "C",
+    "D",
+    "A",
+    "A",
+    "B",
+    "A",
+    "C",
+    "D",
+    "D",
+    "B",
+    "C",
+    "A",
+    "C",
+    "B",
+    "C",
+    "B",
+    "A",
+    "B",
+    "D",
+    "D"
+  ],
+  "questions": [
+    {
+      "question": "The following example utilizes proper syntax to grant permission to the database user\\nIssac to alter a database.\\nUSE master;\\nGO\\nGRANT ALTER DATABASE TO [Issac];\\nGO",
+      "options": ["True", "False"]
+    },
+    {
+      "question": "All mathematical functions are deterministic.",
+      "options": ["True", "False"]
+    },
+    {
+      "question": "Which of the following apply to the SUM aggregate function in SQL Server?",
+      "options": [
+        "Compute the sum of all values within the function including Null values",
+        "DISTINCT is not a valid argument",
+        "Returns data type int or big money",
+        "Computes the sum of all non-null values within an expression"
+      ]
+    },
+    {
+      "question": "Which of the following is not true about the AVG function in SQL Server?",
+      "options": [
+        "Unique Values are not considered within the DISTINCT argument",
+        "The Group By argument computes the AVG function, based on the group and not\\nthe whole table",
+        "The over argument divides the result set based upon the FROM clause",
+        "ALL is the default argument"
+      ]
+    },
+    {
+      "question": "In SQL Server, which of the following is a valid ALTER statement?",
+      "options": [
+        "ALTER INDEX",
+        "ALTER CONSTRAINT",
+        "ALTER TABLE",
+        "ALTER ROLE"
+      ]
+    },
+    {
+      "question": "Which of the following statements is used to select the existing database TEST in SQL\\nschema?",
+      "options": ["USE TEST", "ALTER TEST", "OPEN TEST", "SELECT TEST"]
+    },
+    {
+      "question": "Which of the following are SQL conjunctive operators?",
+      "options": ["OR, AND", "NOT, IS NULL", "AND, BETWEEN", "ALL, ANY"]
+    },
+    {
+      "question": "The formal term for saving changes invoked by a transaction to the database is a(n)\\n______.",
+      "options": ["alter", "rollback", "commit", "execute"]
+    },
+    {
+      "question": "The following ALTER TABLE statement ______.\\nALTER TABLE TestTaking ADD Column\\nTestscore Int,\\nTestdate datetime NOT NULL DEFAULT GETDATE(),",
+      "options": [
+        "alters the table",
+        "creates a column with the data type int",
+        "creates a column to store test date based upon when the test was taken",
+        "all the above"
+      ]
+    },
+    {
+      "question": "A multivalued dependency occurs when ______.",
+      "options": [
+        "dependency of an attribute on a set of attributes",
+        "dependency formed by two functional dependencies",
+        "attributes dependent upon each other",
+        "more than one independent multivalued attributes within a table"
+      ]
+    },
+    {
+      "question": "Non-Clustered indexes sort and store data rows within the table based upon their key\\nvalues.",
+      "options": ["True", "False"]
+    },
+    {
+      "question": "Clustered and Non-Clustered indexes can be unique so that no two rows can have the\\nsame values within the index key.",
+      "options": ["True", "False"]
+    },
+    {
+      "question": "A table that doesn\u2019t have a clustered index is referred to as a ______.",
+      "options": [
+        "Clustered table",
+        "User-Defined table",
+        "Heap table",
+        "Non-Clustered table"
+      ]
+    },
+    {
+      "question": "In SQL, indexes that have one or more columns are referred to as which of the\\nfollowing?",
+      "options": [
+        "Unique index",
+        "Composite index",
+        "Clustered index",
+        "Table index"
+      ]
+    },
+    {
+      "question": "Besides Clustered and Non-Clustered indexes, other types of indexes include composite,\\nunique, and covering.",
+      "options": ["True", "False"]
+    },
+    {
+      "question": "The acronym ACID stands for the following?",
+      "options": [
+        "Analysis, Console, Intrusion, Durability",
+        "Acidification, Chemistry, Information, Database",
+        "Atomicity, Consistency, Isolation, Durability",
+        "Advanced, Computing, Information, Database"
+      ]
+    },
+    {
+      "question": "In a relational database, a consistent transaction is ______.",
+      "options": [
+        "a series of actions that needs to be completed in order for the transaction to go\\nthrough",
+        "an operation that delete all tables",
+        "one that creates the structure of a certain database table",
+        "one where all data needs to be valid according to all rules including constraints,\\ncascades, and triggers"
+      ]
+    },
+    {
+      "question": "Primary key constraints ensure ______.",
+      "options": [
+        "domain integrity",
+        "referential integrity",
+        "user-defined integrity",
+        "entity integrity"
+      ]
+    },
+    {
+      "question": "The SQL keyword that is used to select records from two tables that have matching\\nvalues is ______.",
+      "options": ["Self-Join", "Inner Join", "Outer Join", "Full Join"]
+    },
+    {
+      "question": "The SQL operator that is used to combine the result sets of two or more SELECT\\nstatements is ______.",
+      "options": [
+        "Union",
+        "Join",
+        "Having",
+        "Exists\\n\\nSQL DATABASE FUNDAMENTALS - STATE 2019\\nPage 5 of 9"
+      ]
+    },
+    {
+      "question": "Which of the following is not a subset of DQL?",
+      "options": ["HTTP", "PQL", "OQL", "MDX"]
+    },
+    {
+      "question": "The SQL function that is used to bring back a certain part of a date as an integer value\\nis:",
+      "options": ["DATEADD", "GETUTCDATE", "DATEPART", "TIMESTAMP"]
+    },
+    {
+      "question": "Consider the following SQL statement\\nCREATE VIEW Customers\\nThe SQL statement ______.",
+      "options": [
+        "generates an error",
+        "creates a view named Customers",
+        "creates a table named Customers",
+        "does nothing"
+      ]
+    },
+    {
+      "question": "Which of the following is not an SQL trigger type?",
+      "options": ["DML", "DDL", "CLR", "DAL"]
+    },
+    {
+      "question": "The following is the correct order of processing within a typical sql statement: SELECT,\\nWHERE, GROUP BY, HAVING",
+      "options": ["True", "False"]
+    },
+    {
+      "question": "Which of the following statements regarding views is false?",
+      "options": [
+        "Can be used for hiding complexity",
+        "DML queries can\u2019t be performed, if there are more than one table within the view",
+        "When you drop the base table, the view becomes inactive",
+        "All of the above statements are true"
+      ]
+    },
+    {
+      "question": "Which of the following command(s) is/are related to transaction control in SQL?",
+      "options": ["SAVEPOINT", "ROLLBACK", "COMMIT", "All of the above"]
+    },
+    {
+      "question": "A subquery in an SQL SELECT statement is enclosed in ______.",
+      "options": [
+        "Braces { }",
+        "Brackets [ ]",
+        "Parenthesis ( )",
+        "None of the above"
+      ]
+    },
+    {
+      "question": "The DMLs that require users to specify what data is needed and how to get it, are called:",
+      "options": [
+        "Non-procedural DMLs",
+        "Procedural DMLs",
+        "DDL DMLs",
+        "None of the above"
+      ]
+    },
+    {
+      "question": "Which of the following statement is not true about embedded SQL?",
+      "options": [
+        "In embed SQL, all query processing is performed by the database system",
+        "Embedded SQL expressions for database modification always returns a result",
+        "An embedded SQL program must be processed by a special processor prior to\\ncompilation",
+        "The exact syntax for embedded SQL request depends on the language in which\\nSQL is embedded"
+      ]
+    },
+    {
+      "question": "Which of the following SQL commands will include all records from one table and\\nmatch it with a second table?",
+      "options": [
+        "LEFT OUTER JOIN",
+        "RIGHT OUTER JOIN",
+        "Both A and B",
+        "Neither A or B"
+      ]
+    },
+    {
+      "question": "SQL Server recognizes which of the following classes of constraints?",
+      "options": ["Index", "Check", "Not Null", "All of the above"]
+    },
+    {
+      "question": "The SCHEMA_ID in SQL Server ______.",
+      "options": [
+        "returns the schema ID associated with the schema name",
+        "returns the schema ID associated with the schema status",
+        "returns the schema ID associated with the schema number",
+        "None of the above"
+      ]
+    },
+    {
+      "question": "What effect will a ROLLBACK statement have after a COMMIT has been issued?",
+      "options": [
+        "No effect, COMMIT ends the transaction.",
+        "Issuing a prompt to make sure you want to commit the rollback.",
+        "All statements within the transaction are rolled back.",
+        "All the above"
+      ]
+    },
+    {
+      "question": "The following statement creates a copy of the data from one table, and inserts it within\\nanother table, so that the data types in both the source and target tables match.",
+      "options": [
+        "INSERT",
+        "INSERT INTO SELECT",
+        "SELECT INSERT",
+        "None of the above"
+      ]
+    },
+    {
+      "question": "The T-SQL REVOKE clause is used to \u201cREVOKE\u201d <some permission> ON <some\\nobject> FROM <some user, login, or group>.",
+      "options": ["True", "False"]
+    },
+    {
+      "question": "Which of the following statements is true about the HAVING clause?",
+      "options": [
+        "The HAVING keyword collects data across multiple records and groups them by\\none or more columns.",
+        "The HAVING keyword removes duplications from the results.",
+        "The HAVING keyword is used in conjunction with the GROUP BY keyword to\\nfilter out certain rows.",
+        "None of the above"
+      ]
+    },
+    {
+      "question": "When three or more AND and OR operators are combined, it is easier to use the\\nfollowing SQL keyword(s) ______.",
+      "options": ["IN Only", "NOT LIKE Only", "Like Only", "Both IN and NOT IN"]
+    },
+    {
+      "question": "The following SQL is which type of join: SELECT CUSTOMER_T.CUSTOMER_ID,\\nORDER_T.CUSTOMER_ID, NAME, ORDER_ID FROM CUSTOMER_T, ORDER_T\\nWHERE CUSTOMER_T.CUSTOMER_ID = ORDER_T.CUSTOMER_ID?",
+      "options": ["Left Join", "Inner Join", "Outer Join", "Equi-join"]
+    },
+    {
+      "question": "Which of the following statements is true concerning subqueries?",
+      "options": [
+        "Do not start with the word SELECT",
+        "Involves the use of an inner and outer query",
+        "Cannot return the same result as a query that is not a subquery",
+        "All of the above"
+      ]
+    },
+    {
+      "question": "What type of lock will deny users any access to a table?",
+      "options": ["Implicit", "Shared", "Exclusive", "Explicit"]
+    },
+    {
+      "question": "The INSERT in line l, performs the function of insert values into the columns that are\\nwithin the table.",
+      "options": ["True", "False"],
+      "image": "2019-State-Table.png"
+    },
+    {
+      "question": "What statement is true about syntax VARCHAR, in line i?",
+      "options": [
+        "Holds a string with a maximum length of 10 characters",
+        "Variable width Unicode string data type",
+        "The ability to hold a variable amount of characters",
+        "None of the above"
+      ],
+      "image": "2019-State-Table.png"
+    },
+    {
+      "question": "The code in line a, checks to see if a certain table doesn\u2019t exist within the database.",
+      "options": ["True", "False"],
+      "image": "2019-State-Table.png"
+    },
+    {
+      "question": "The \u2018dbo\u2019 in a line refers to ______.",
+      "options": [
+        "User Name",
+        "Object Name",
+        "Table Schema",
+        "None of the above"
+      ],
+      "image": "2019-State-Table.png"
+    },
+    {
+      "question": "What will be the result of: Select e.Department, sum(h.Normalhours) from Employee as\\ne inner join HoursVolunteered as h on e.EmpID = h.EmpID where e.Department like\\n\u2018IT\u2019 Group by e.Department ______.",
+      "options": [
+        "shows a total of normal hours volunteered by all departments",
+        "shows average of normal hours worked by the IT department",
+        "shows a total of normal hours volunteered by the IT department",
+        "displays a list of normal hours volunteered by the IT department"
+      ]
+    },
+    {
+      "question": "Primary key values must be unique.",
+      "options": ["True", "False"]
+    },
+    {
+      "question": "Which of the following performs the ability to insert a data file within a database table\\nas a user-specified format within SQL?",
+      "options": ["INSERT", "BULK INSERT", "CREATE", "MERGE"]
+    },
+    {
+      "question": "Who is considered as the \u201cfather\u201d of the relational model for database management?",
+      "options": ["Steve Jobs", "Bill Gates", "Brian Krzanich", "Edgar Codd"]
+    },
+    {
+      "question": "The SQL ORDER BY clause ______.",
+      "options": [
+        "sorts records among a column either in ascending or descending order",
+        "WHERE conditions ASC or DESC are optional within an ORDER BY clause",
+        "if no ASC or DESC modifier is not provided, the results will still be sorted in\\nascending order",
+        "All the above"
+      ]
+    }
+  ]
+}

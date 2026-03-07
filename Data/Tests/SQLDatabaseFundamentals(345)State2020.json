@@ -1,0 +1,379 @@
+{
+  "name": "SQL Database Fundamentals (345) State 2020",
+  "time": 60,
+  "answers": [
+    "A",
+    "D",
+    "D",
+    "C",
+    "D",
+    "D",
+    "A",
+    "D",
+    "C",
+    "A",
+    "D",
+    "A",
+    "A",
+    "A",
+    "B",
+    "B",
+    "A",
+    "D",
+    "D",
+    "B",
+    "B",
+    "D",
+    "D",
+    "B",
+    "D",
+    "B",
+    "D",
+    "C",
+    "D",
+    "C",
+    "B",
+    "A",
+    "C",
+    "A",
+    "B",
+    "A",
+    "C",
+    "A",
+    "A",
+    "A",
+    "D",
+    "C",
+    "A",
+    "B",
+    "C",
+    "B",
+    "A",
+    "A",
+    "C",
+    "B"
+  ],
+  "questions": [
+    {
+      "question": "The ______ SQL keyword combination is used to return only unique values.",
+      "options": [
+        "Select Distinct",
+        "Select Unique",
+        "Select Distinct Unique",
+        "Select Different"
+      ]
+    },
+    {
+      "question": "The ______ SQL statement may be used with aggregate functions to group the result-set by\\none or more columns.",
+      "options": ["Order By", "Sort By", "Grouping By", "Group By"]
+    },
+    {
+      "question": "A(n) ______ on a table is typically added to speed up the performance of queries.",
+      "options": ["Function", "Trigger", "Column", "Index"]
+    },
+    {
+      "question": "Which of the below SQL statements will filter to records with FruitName values that are not\\nMango, Apple, or Jackfruit?",
+      "options": [
+        "WHERE NOT EXISTS FruitName ('Mango', 'Apple', 'Jackfruit')",
+        "WHERE FruitName DOES NOT CONTAIN ('Mango', 'Apple', 'Jackfruit')",
+        "WHERE FruitName NOT IN ('Mango', 'Apple', 'Jackfruit')",
+        "WHERE FruitName IN ('Mango', 'Apple', 'Jackfruit')"
+      ]
+    },
+    {
+      "question": "What is the purpose of the below SQL?\\nINSERT INTO Categories (CategoryID, CategoryName)\\nVALUES(100, 'Electronics');",
+      "options": [
+        "Generate the Categories table structure",
+        "Insert two rows into the Categories table",
+        "Create the Categories table and then insert a row into the table",
+        "Insert a row into the Categories table"
+      ]
+    },
+    {
+      "question": "What would be the effect of the below DELETE statement, assuming CITIES is a table\\ncontaining multiple records.\\nDELETE FROM CITIES;",
+      "options": [
+        "The statement removes the last row from the table CITIES;",
+        "The statement has no effect on the table CITIES;",
+        "The statement removes the first row from the table CITIES;",
+        "The statement removes all rows from the table CITIES;"
+      ]
+    },
+    {
+      "question": "What would be the effect of the below DELETE statement?\\nDELETE FROM Products\\nWHERE ProductID = 1;",
+      "options": [
+        "The statement removes any rows from the Products table that have ProductID with\\nvalue 1.",
+        "The statement removes any rows from the Products table that have ProductID\\nstarting with 1.",
+        "The statement removes all rows from the Products table.",
+        "The statement removes no rows from the Products even if there is a row with\\nProductID = 1."
+      ]
+    },
+    {
+      "question": "What would be the effect of the below UPDATE statement? Assume Products is a table\\ncontaining multiple records.\\nUPDATE Products SET ProductName = 'My Favorite Product';",
+      "options": [
+        "The statement has no effect.",
+        "The statement changes only the first row to have ProductName with value My\\nFavorite Product.",
+        "The statement would error, since the UPDATE statement requires a WHERE clause.",
+        "The statement changes all rows in the Products table to have ProductName with\\nvalue My Favorite Product."
+      ]
+    },
+    {
+      "question": "The ______ statement removes all rows from a table and frees the space allocated for the\\ntable records.",
+      "options": ["REVOKE", "DELETE", "TRUNCATE", "ROLLBACK"]
+    },
+    {
+      "question": "The acronym DCL stands for",
+      "options": [
+        "Data Control Language",
+        "Data Content Language",
+        "Database Concept Language",
+        "Data Concept Linear"
+      ]
+    },
+    {
+      "question": "Which of the following is an example of DCL?",
+      "options": ["INSERT", "CREATE", "COMMIT", "GRANT"]
+    },
+    {
+      "question": "A Foreign Key constraint may be created to link two columns within the same table?",
+      "options": ["True", "False"]
+    },
+    {
+      "question": "The Order By keyword sorts records in ascending order by default?",
+      "options": ["True", "False"]
+    },
+    {
+      "question": "3NF is typically used in the practice of ______.",
+      "options": [
+        "Database design",
+        "Data modification",
+        "Data transformation",
+        "Data extraction"
+      ]
+    },
+    {
+      "question": "A ______ is a set of SQL statements with an assigned name stored in the database so that it\\nmay be reused.",
+      "options": ["View", "Stored Procedure", "Field", "Index"]
+    },
+    {
+      "question": "A database ______ is procedural code that executes automatically in response to certain\\nevents, including DML events.",
+      "options": ["Transaction", "Trigger", "Stored Procedure", "Function"]
+    },
+    {
+      "question": "In the Oracle database management system, which of the following is a procedural language\\nextension to SQL?",
+      "options": [
+        "PL/SQL",
+        "Transact-SQL",
+        "C#",
+        "JSON\\nSQL DATABASE FUNDAMENTALS \u2013 STATE 2020\\nPage 6 of 12"
+      ]
+    },
+    {
+      "question": "Which of the following database systems is a RDBMS?",
+      "options": ["Neo4j", "MongoDB", "Couchbase", "Teradata"]
+    },
+    {
+      "question": "A ______ is a column or a set of columns in a table that uniquely identifies a row.",
+      "options": ["Fact", "Dimension", "Foreign Key", "Candidate Key"]
+    },
+    {
+      "question": "A ______ for a table is a unique identifier, for records, that has business meaning and is\\noften derived from application data. International Standard Book Number (ISBN) would be\\nan example.",
+      "options": ["Surrogate key", "Natural key", "Select Key", "Fact Key"]
+    },
+    {
+      "question": "Database tables can be created without a Primary Key.",
+      "options": ["True", "False"]
+    },
+    {
+      "question": "With respect to a Foreign Key Constraint, the table containing the Foreign Key is the\\n______ table and the table containing the Candidate Key is the Parent table.",
+      "options": ["Referenced", "Parent", "Application", "Child"]
+    },
+    {
+      "question": "Which of the following joins, essentially, combines the results of both left and right outer\\njoins?",
+      "options": ["All Join", "Inner Join", "Cross Join", "Full Join"]
+    },
+    {
+      "question": "Which range of values defines SMALLINT?",
+      "options": [
+        "Integer data from 0 to 255",
+        "Integer data from -32,768 to 32,767",
+        "Integer data from -8,388,608 to 8,388,607",
+        "Integer data from -2,147,483,648 to 2,147,483,647"
+      ]
+    },
+    {
+      "question": "In SQL Server and Postgres, which range of values defines BIGINT?",
+      "options": [
+        "Integer data from -32,768 to 32,767",
+        "Integer data from -8,388,608 to 8,388,607",
+        "Integer data from -2,147,483,648 to 2,147,483,647",
+        "Integer data from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807"
+      ]
+    },
+    {
+      "question": "In Postgres, which of the below SQL will return the current date and time?",
+      "options": [
+        "SELECT GETDATE();",
+        "SELECT NOW();",
+        "SELECT TIMESTAMP();",
+        "SELECT GETNOW();"
+      ]
+    },
+    {
+      "question": "The date range for the DATE datatype in Postgres is ______.",
+      "options": [
+        "January 1, 0001 through December 31, 9999",
+        "January 1, 1000 through December 31, 9999",
+        "1 BC through 100,000 AD",
+        "4,713 BC through 5,874,897 AD"
+      ]
+    },
+    {
+      "question": "What would be returned by the below SQL, assuming CityName and CountryName have the\\nsame datatype?\\nSELECT CityName FROM Cities\\nUNION\\nSELECT CountryName FROM Countries;",
+      "options": [
+        "A distinct list of CityName values from Cities that also exist as a CountryName in\\nCountries",
+        "A non-distinct list of CityName values from the Cities table combined with the\\nCountryName values from Countries",
+        "A distinct list of the following: CityName values from the Cities table combined with\\nthe CountryName values from Countries",
+        "An error would be returned, as the column name is not the same between the two\\nSelect statements"
+      ]
+    },
+    {
+      "question": "Which of the following may be used to perform an inner join between the Customers and\\nOrders tables using their CustID columns?",
+      "options": [
+        "JOIN Orders ON (Customers.CustID = Orders.CustID)",
+        "INNER JOIN Orders ON (Customers.CustID = Orders.CustID)",
+        "Inner Join Orders ON Customers.CustID = Orders.CustID",
+        "All of the above"
+      ]
+    },
+    {
+      "question": "Which of the below statements adds the column ClientDescription with datatype\\nVARCHAR(10) to the Clients table?",
+      "options": [
+        "AMMEND TABLE Clients ADD COLUMN ClientDescription VARCHAR(10);",
+        "ALTER TABLE Clients AMMEND ClientDescription VARCHAR(10);",
+        "ALTER TABLE Clients ADD ClientDescription VARCHAR(10);",
+        "MODIFY TABLE Clients ADD COLUMN ClientDescription VARCHAR(10);"
+      ]
+    },
+    {
+      "question": "Which of the following creates a Foreign Key?",
+      "options": [
+        "CHECK KEY (CategoryID) REFERENCES Categories(CategoryID)",
+        "FOREIGN KEY (CategoryID) REFERENCES Categories(CategoryID)",
+        "FOREIGN KEY (CategoryID) Categories(CategoryID)",
+        "CHECK KEY (CategoryID) Categories(CategoryID)"
+      ]
+    },
+    {
+      "question": "In a RDBMS, a \u201crelation\u201d is physically represented by a ______.",
+      "options": ["Table", "Column", "Foreign Key", "Index"]
+    },
+    {
+      "question": "In Postgres and MySQL, which SQL statement is used to restrict the number of records\\nreturned by a query result set to a specified number of rows?",
+      "options": ["Top", "Includes", "Limit", "Excludes"]
+    },
+    {
+      "question": "With respect to Consistency, Availability, Partition Tolerance (CAP), relational databases\\ntypically provide ______.",
+      "options": [
+        "Consistency and Availability",
+        "Availability and Partition Tolerance",
+        "Partition Tolerance and Consistency",
+        "Consistency, Availability, and Partition Tolerance"
+      ]
+    },
+    {
+      "question": "A ______ is sequence of database operations that satisfies the ACID principles.",
+      "options": ["Table", "Transaction", "Index", "Foreign Key"]
+    },
+    {
+      "question": "Which of the following is not a date/time data type in Postgres?",
+      "options": ["SMALLDATETIME", "TIMESTAMP", "DATE", "INTERVAL"]
+    },
+    {
+      "question": "______ guarantees that a transaction can only bring the database from one valid state to\\nanother valid state.",
+      "options": [
+        "Atomicity",
+        "Availability",
+        "Consistency",
+        "Partition Tolerance"
+      ]
+    },
+    {
+      "question": "Due to ______ once a transaction has completed execution, the updates to the database are\\npersisted in a way that is recoverable upon system failure.",
+      "options": ["Durability", "Isolation", "Availability", "Consistency"]
+    },
+    {
+      "question": "Which of the below SQL statements tests for a column having a null value?",
+      "options": ["Is Null", "Equals Null", "Contains Null", "Select Null"]
+    },
+    {
+      "question": "The BETWEEN operator is inclusive. The begin and end values are included.",
+      "options": ["True", "False"]
+    },
+    {
+      "question": "A table or column may be given a temporary name within a query by using a(n) ______.",
+      "options": ["Join", "Rename", "Includes", "Alias"]
+    },
+    {
+      "question": "What is the result of the below SQL?\\nSELECT COUNT(*) FROM Orders;",
+      "options": ["1", "3", "5", "7"],
+      "image": "2020-State-Table1.png"
+    },
+    {
+      "question": "How many rows are returned by the below SQL?\\nSELECT CustomerID, SUM(OrderTotal) AS OrderTotals\\nFROM Orders\\nGROUP BY CustomerID\\nHAVING SUM(OrderTotal) > 12;",
+      "options": ["1", "3", "5", "7"],
+      "image": "2020-State-Table1.png"
+    },
+    {
+      "question": "Which of the below SQL statements will return a single row with the value 3, which is the\\nnumber of different CustomerID values in the Orders table?",
+      "options": [
+        "SELECT COUNT(CustomerID) FROM Orders;",
+        "SELECT COUNT(DISTINCT CustomerID) FROM Orders;",
+        "SELECT DISTINCT CustomerID FROM Orders;",
+        "SELECT CustomerID from Orders GROUP BY CustomerID;"
+      ],
+      "image": "2020-State-Table1.png"
+    },
+    {
+      "question": "If additional rows were inserted into the Orders table, which column could accept a NULL\\nvalue?",
+      "options": ["OrderID", "OrderDate", "OrderTotal", "CustomerID"],
+      "image": "2020-State-Table1.png"
+    },
+    {
+      "question": "Which of the below SQL will return the value 5.0000, which is the lowest OrderTotal value?",
+      "options": [
+        "SELECT SUM(OrderTotal) FROM Orders;",
+        "SELECT MIN(OrderTotal) FROM Orders;",
+        "SELECT FLOOR(OrderTotal) FROM Orders;",
+        "SELECT FIRST(OrderTotal) FROM Orders;"
+      ],
+      "image": "2020-State-Table1.png"
+    },
+    {
+      "question": "Which of the below SQL will return the following results set?\\n-----------\\n|CustomerID | HighestTotal|\\n|1 | 15.0000|\\n|3 | 10.0000|\\n|4 | 10.0000|\\n-----------",
+      "options": [
+        "SELECT CustomerID, MAX(OrderTotal) AS HighestTotal FROM Orders GROUP\\nBY CustomerID ORDER BY CustomerID;",
+        "SELECT CustomerID, CEILING(OrderTotal) AS HighestTotal FROM Orders\\nGROUP BY CustomerID ORDER BY CustomerID;",
+        "SELECT CustomerID, HIGHEST(OrderTotal) AS HighestTotal FROM Orders\\nGROUP BY CustomerID ORDER BY CustomerID;",
+        "SELECT CustomerID, TOP(HighestTotal) AS HighestTotal FROM Orders GROUP\\nBY CustomerID ORDER BY CustomerID;"
+      ],
+      "image": "2020-State-Table1.png"
+    },
+    {
+      "question": "In Postgres and SQL Server, what would the below SQL do?\\nSELECT * INTO ProductsCopy\\nFROM Products;",
+      "options": [
+        "Creates a new table called ProductsCopy and then copies the Products table data into\\nthat table.",
+        "Copies Products table data into ProductsCopy if ProductsCopy already exists.",
+        "Creates a new table called ProductsCopy and then copies the Product table data into\\nthat table and then removes all rows from the Product table.",
+        "Attempts to create a new table called ProductsCopy if it doesn\u2019t already exist and\\nthen copies the Products table data into that table."
+      ]
+    },
+    {
+      "question": "As of SQL Server 2017 and earlier, which of the following is not a numeric data type in\\nSQL Server?",
+      "options": ["TinyInt", "SmallInt", "MediumInt", "Int"]
+    },
+    {
+      "question": "The date ranges for the DATE datatype in SQL Server, Postgres, and MySQL are identical?",
+      "options": ["True", "False"]
+    }
+  ]
+}
