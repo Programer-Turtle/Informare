@@ -134,7 +134,7 @@ async function GetTest() {
     QuestionHolder.innerHTML += `<h1>${i + 1}. ${Question["question"].replace(/\\n/g, "<br>")}</h1>`;
     let RadioHTML = `<div class="RadioHolder">`;
     for (let x = 0; x < Question["options"].length; x++) {
-      const Option = Question["options"][x];
+      const Option = Question["options"][x].replace(/\\n/g, "<br>");
       RadioHTML += `<div class="OptionHolder"><input type="radio" name="${i}" value="${Letters[x]}" /><h1>${Letters[x]}) ${Option}</h1></div>`;
     }
     RadioHTML += `</div>`;
