@@ -19,7 +19,6 @@ let interval;
 
 function ShowQuestion() {
   const QuestHolders = document.querySelectorAll(".QuestionHolder");
-  console.log(QuestHolders);
   for (let i = 0; i < QuestHolders.length; i++) {
     QuestHolders[i].style.display = "none";
   }
@@ -32,7 +31,6 @@ function Back() {
 }
 
 function Next() {
-  console.log("test");
   CurrentQuestion += 1;
   ShowQuestion();
 }
@@ -84,7 +82,7 @@ function Submit() {
     const QuestionHolder = document.createElement("div");
     QuestionHolder.className = "QuestionHolder";
     QuestionHolder.style.display = "block";
-    QuestionHolder.innerHTML = `<h1>${i + 1}. ${CurrentQuestion["question"]}</h1>`;
+    QuestionHolder.innerHTML = `<h1>${i + 1}. ${CurrentQuestion["question"].replace(/\\n/g, "<br>")}</h1>`;
 
     for (let x = 0; x < CurrentQuestion["options"].length; x++) {
       const CurrentOption = CurrentQuestion["options"][x];
@@ -124,7 +122,6 @@ async function GetTest() {
   CorrectAnswers = data["answers"];
 
   for (let i = 0; i < data["questions"].length; i++) {
-    console.log(data["questions"][i]);
     const Question = data["questions"][i];
     const QuestionHolder = document.createElement("div");
     QuestionHolder.className = "QuestionHolder";
@@ -134,7 +131,7 @@ async function GetTest() {
       QuestionHolder.innerHTML += `<div class="center"><img src="Data/Tests/${Question["image"]}" style="width:70%"></div>`;
     }
 
-    QuestionHolder.innerHTML += `<h1>${i + 1}. ${Question["question"]}</h1>`;
+    QuestionHolder.innerHTML += `<h1>${i + 1}. ${Question["question"].replace(/\\n/g, "<br>")}</h1>`;
     let RadioHTML = `<div class="RadioHolder">`;
     for (let x = 0; x < Question["options"].length; x++) {
       const Option = Question["options"][x];
@@ -152,7 +149,6 @@ async function GetTest() {
     }
     ButtonHTML += "</div>";
     QuestionHolder.innerHTML += RadioHTML + ButtonHTML;
-    console.log(ButtonHTML);
     TestArea.appendChild(QuestionHolder);
   }
 }
@@ -175,9 +171,6 @@ async function StartTest() {
 
     const Minutes = Math.floor(Remaining / 60000);
     const Seconds = Math.floor((Remaining % 60000) / 1000);
-    console.log(
-      `${Minutes.toString().padStart(2, "0")}:${Seconds.toString().padStart(2, "0")}`,
-    );
     Timer.innerText = `${Minutes}:${Seconds}`;
   }, 1);
 }

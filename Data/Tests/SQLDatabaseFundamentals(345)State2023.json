@@ -1,0 +1,406 @@
+{
+  "name": "SQL Database Fundamentals (345) State 2023",
+  "time": 60,
+  "answers": [
+    "B",
+    "D",
+    "B",
+    "D",
+    "B",
+    "B",
+    "D",
+    "A",
+    "A",
+    "C",
+    "C",
+    "A",
+    "D",
+    "A",
+    "C",
+    "C",
+    "C",
+    "B",
+    "D",
+    "B",
+    "A",
+    "A",
+    "C",
+    "B",
+    "B",
+    "D",
+    "B",
+    "C",
+    "C",
+    "B",
+    "C",
+    "C",
+    "B",
+    "B",
+    "C",
+    "A",
+    "D",
+    "D",
+    "A",
+    "B",
+    "A",
+    "C",
+    "D",
+    "D",
+    "B",
+    "C",
+    "A",
+    "D",
+    "D",
+    "B"
+  ],
+  "questions": [
+    {
+      "question": "What output would the following query produce \u2013 SELECT \"Res\"\"ult\"?",
+      "options": ["A. Result", "B. Res\"ult", "C. Res", "D. No output"]
+    },
+    {
+      "question": "What output would the following query produce \u2013 SELECT 8*8 FROM Customers?",
+      "options": [
+        "A. No result",
+        "B. 8 repeated 8 times",
+        "C. 64",
+        "D. 64 repeated for every record in the customer table"
+      ]
+    },
+    {
+      "question": "What output would the following query produce \u2013 SELECT * FROM Customers ORDER\\nBY field1 ASC, field1 DESC?",
+      "options": [
+        "A. All columns in the Customers table order by field1 descending (Z-A)",
+        "B. All columns in the Customers table order by field1 ascending (A-Z)",
+        "C. All columns in the Customers table with no order applied",
+        "D. No result"
+      ]
+    },
+    {
+      "question": "Which of the following is NOT a DBMS?",
+      "options": ["A. PostgreSQL", "B. Access", "C. MySQL", "D. VeriSQL"]
+    },
+    {
+      "question": "LIMIT is the ANSI standard way to restrict the number of rows returned in a query?",
+      "options": ["A. True", "B. False"]
+    },
+    {
+      "question": "\u201cSELECT field1, MAX(field2) FROM Customers\u201d will return _______.",
+      "options": [
+        "A. the maximum value in field2 and the field1 that corresponds to it",
+        "B. the maximum value in field2 and a potentially unrelated field1",
+        "C. the maximum value in field2 and the last field1 in the table",
+        "D. the maximum value in field2 and the first field1 in the table"
+      ]
+    },
+    {
+      "question": "To gather all of rows where field1 is either \u2018A\u2019, \u2018B\u2019, or \u2018C\u2019 the WHERE clause would be\\n\u201cWHERE _______\u201d.",
+      "options": [
+        "A. field1 = ('A', 'B', 'C')",
+        "B. field1 = 'A' or 'B' or 'C'",
+        "C. field1 = 'A' and field1 = 'B' and field1 = 'C'",
+        "D. field1 in ('A', 'B', 'C')"
+      ]
+    },
+    {
+      "question": "_______ are all DML statements.",
+      "options": [
+        "A. INSERT, UPDATE, and DELETE",
+        "B. SELECT, WHERE, ORDER BY, and INTO",
+        "C. AS, ALIAS, and CONCAT",
+        "D. Transaction, Roll Back, Backup"
+      ]
+    },
+    {
+      "question": "The UNION operator is used to _______.",
+      "options": [
+        "A. combine the result sets of two or more SELECT statements",
+        "B. uniquely identify the rows in a table",
+        "C. combine two disparate tables into one",
+        "D. extract the columns from one table to alter the columns from a second table"
+      ]
+    },
+    {
+      "question": "\u201c_______\u201d would add a new field to the Customers table with the name email.",
+      "options": [
+        "A. MODIFY TABLE Customers ADD COLUMN Email varchar(255)",
+        "B. ALTER TABLE Customers NEW COLUMN Email varchar(255)",
+        "C. ALTER TABLE Customers ADD Email varchar(255)",
+        "D. MODIFY TABLE Customers NEW Email varchar(255)"
+      ]
+    },
+    {
+      "question": "Prepared SQL code that can be stored and called over and over is call a stored _______.",
+      "options": ["A. object", "B. function", "C. procedure", "D. method"]
+    },
+    {
+      "question": "Which of the following is NOT an SQL logical operator?",
+      "options": ["A. LESS", "B. SOME", "C. ALL", "D. ANY"]
+    },
+    {
+      "question": "Given the table mytable, where field1 is either 1 or 0 and field2 is either 1 or 0, what will\\nbe the result of the query \u201cSELECT field1|field2 FROM mytable\u201d?",
+      "options": [
+        "A. All rows from mytable with field1 and field2 concatenated together",
+        "B. Only rows from mytable where either field1 or field2 is 1",
+        "C. Field1 if its 1, else field2 if its 1, otherwise no row",
+        "D. A 0 for each row where field1 and field2 are 0; all other rows will be 1"
+      ]
+    },
+    {
+      "question": "A GROUP BY clause cannot contain aggregate functions?",
+      "options": ["A. True", "B. False"]
+    },
+    {
+      "question": "_______ are used to restrict the type of data that can go into a table.",
+      "options": [
+        "A. Simple Keys",
+        "B. Views",
+        "C. Constraints",
+        "D. Wildcards"
+      ]
+    },
+    {
+      "question": "What of the following is NOT a true statement about the differences between primary and\\ncandidate keys?",
+      "options": [
+        "A. A primary key cannot be null, but a candidate key can",
+        "B. A primary key is a candidate key",
+        "C. A table can have multiple primary or candidate keys",
+        "D. A candidate key may not be a primary key"
+      ]
+    },
+    {
+      "question": "Assuming the maximum value for the varchar datatype is 255, why would it be necessary\\nto use any value other than 255 in the definition?",
+      "options": [
+        "A. Varchar(50) uses much less space than varchar(255)",
+        "B. You don\u2019t think they\u2019d use it so you wouldn\u2019t assign the extra space",
+        "C. The business logic has expectations for the field size",
+        "D. It wouldn\u2019t be necessary \u2013 standards say use 255"
+      ]
+    },
+    {
+      "question": "The process of adding a unique value to the beginning or the end of a password before\\nthe password is hashed is called _______.",
+      "options": ["A. encrypting", "B. salting", "C. prepending", "D. a cipher"]
+    },
+    {
+      "question": "When using a UNION in a SELECT statement _______.",
+      "options": [
+        "A. the two queries on either side of the UNION must be from the same table",
+        "B. the two queries on either side of the UNION must not be from the same table",
+        "C. the results are sorted ascending by default",
+        "D. the results are distinct by default"
+      ]
+    },
+    {
+      "question": "_______ is a data structure technique which allows you to quickly retrieve records from a\\ndatabase file.",
+      "options": ["A. Clustering", "B. Indexing", "C. Paging", "D. Transacting"]
+    },
+    {
+      "question": "Which of the following is NOT a command used to control transactions?",
+      "options": ["A. START", "B. SET TRANSACTION", "C. COMMIT", "D. ROLLBACK"]
+    },
+    {
+      "question": "The acronym _______ representing the standard properties of a transaction?",
+      "options": ["A. ACID", "B. CROSS", "C. CIDD", "D. DOTS"]
+    },
+    {
+      "question": "Which of the answers below is categorized as a data manipulation language command?",
+      "options": ["A. CREATE", "B. SELECT", "C. INSERT", "D. COMMIT"]
+    },
+    {
+      "question": "The SQL statement \u201c_______\u201d, will remove all records from a table and will lock each\\nrow prior to the delete.",
+      "options": [
+        "A. TRUNCATE TABLE mytable",
+        "B. DELETE FROM mytable",
+        "C. ERASE TABLE mytable",
+        "D. DROP TABLE mytable"
+      ]
+    },
+    {
+      "question": "How many rows would be returned from the following query?\\nSELECT f_name, l_name, descrip, paid\\nFROM member a\\nINNER JOIN member_item b on a.m_id = b.m_id\\nINNER JOIN item c on b.item_id = c.id\\nWHERE paid BETWEEN 33.50 and 90;",
+      "options": ["A. 5", "B. 4", "C. 3", "D. 2"],
+      "image": "2023-State-Table1.png"
+    },
+    {
+      "question": "Which query will get a unique list of the items Jan Smith purchased?",
+      "options": [
+        "A. SELECT DISTINCT descrip\\nFROM member a\\nINNER JOIN member_item b ON a.m_id = b.m_id\\nINNER JOIN Item c ON b.item_id = c.id\\nWHERE m_id = 1117",
+        "B. SELECT DISTINCT (f_name, descrip)\\nFROM member\\nINNER JOIN member_item a ON a.m_id = member.m_id\\nINNER JOIN item ON a.item_id = item.id\\nWHERE f_name = \"Jan\"",
+        "C. SELECT DISTINCT descrip\\nFROM member_item a\\nINNER JOIN member b ON a.m_id = b.m_id\\nINNER JOIN item c ON a.item_id = c.id\\nWHERE c.m_id = 1117",
+        "D. SELECT DISTINCT descrip\\nFROM member_item a\\nINNER JOIN member b ON a.m_id = b.m_id\\nINNER JOIN item c ON a.item_id = c.id\\nWHERE f_name = \"Jan\""
+      ],
+      "image": "2023-State-Table1.png"
+    },
+    {
+      "question": "The following query produces the record set below and the sum(paid) field is incorrect \u2013\\nwhy?\\nSELECT status, descrip, sum(paid) AS total\\nFROM member a\\nINNER JOIN member_item b on a.m_id = b.m_id\\nINNER JOIN item c on b.item_id = c.id\\nWHERE paid BETWEEN 33.50 and 90\\n\\nGROUP BY status, descrip;\\nstatus descrip total\\nRetired Item3 80.80000305175781\\nActive Item1 67\\nRetired Item1 33.5",
+      "options": [
+        "A. Using multiple group by columns makes math an approximation",
+        "B. Floating point math is an approximation",
+        "C. Using an alias on an aggregate field makes math an approximation",
+        "D. The number is correct, just shows too many digits"
+      ],
+      "image": "2023-State-Table1.png"
+    },
+    {
+      "question": "How many foreign keys are in the member_item table?",
+      "options": ["A. 0", "B. 1", "C. 2", "D. 3"],
+      "image": "2023-State-Table1.png"
+    },
+    {
+      "question": "The following query produces how many rows?\\nSELECT status, descrip, sum(paid) AS total\\nFROM member CROSS JOIN item",
+      "options": ["A. 3", "B. 9", "C. 18", "D. 36"],
+      "image": "2023-State-Table1.png"
+    },
+    {
+      "question": "What would \u201cCREATE INDEX master ON member (m_id)\u201d do?",
+      "options": [
+        "A. It would add an extra column to the master table with the sort order",
+        "B. It would create a small lookup table",
+        "C. It would create an additional sorted version of the master table",
+        "D. It would sort the master table in place"
+      ],
+      "image": "2023-State-Table1.png"
+    },
+    {
+      "question": "The highest level of normalization met by the member table is _______.",
+      "options": ["A. 3NF", "B. BCNF", "C. 4NF", "D. 5NF"],
+      "image": "2023-State-Table1.png"
+    },
+    {
+      "question": "The following query created how many rows?\\nSELECT f_name FROM member\\nUNION\\nSELECT f_name FROM member",
+      "options": ["A. 0", "B. 1", "C. 3", "D. 6"],
+      "image": "2023-State-Table1.png"
+    },
+    {
+      "question": "What would be the result of the following query?\\nSELECT descrip\\nFROM item a\\nLEFT JOIN member_item b ON a.id = b.item_id\\nWHERE b.item_id IS NULL",
+      "options": [
+        "A. No result",
+        "B. Item2, Item4",
+        "C. Item3a, Item5a",
+        "D. Item1, Item2, Item3, Item3a, Item4, Item5, Item5a"
+      ],
+      "image": "2023-State-Table1.png"
+    },
+    {
+      "question": "Which is NOT a benefit of database normalization?",
+      "options": [
+        "A. Minimizes data redundancy (duplicate data).",
+        "B. Removes all null values from your data.",
+        "C. Results in a more compact database (due to less data redundancy/null values).",
+        "D. Minimizes / avoids data modification issues"
+      ]
+    },
+    {
+      "question": "NoSQL stands for _______.",
+      "options": [
+        "A. Numerical SQL",
+        "B. No SQL",
+        "C. Not Only SQL",
+        "D. Normal SQL"
+      ]
+    },
+    {
+      "question": "A _______ join is formed between two tables where the values of identically named and\\ndefined columns are equal.",
+      "options": ["A. Natural", "B. Complete", "C. Just", "D. Proper"]
+    },
+    {
+      "question": "The SQL language has the ability to do conditional statements using _______.",
+      "options": [
+        "A. If \u2013 Then - Else",
+        "B. Verify \u2013 Else",
+        "C. Ternary operators",
+        "D. Case \u2013 When - Then \u2013 Else"
+      ]
+    },
+    {
+      "question": "Which of the following is NOT true about a temporary table in SQL?",
+      "options": [
+        "A. The table gets deleted once the session in which it was created ends",
+        "B. Temp tables are created with SELECT .... INTO <tableName>",
+        "C. Temporary tables can be manually deleted at any time",
+        "D. You cannot alter a temporary table once its created"
+      ]
+    },
+    {
+      "question": "Constraints can be added to a table with both a CREATE TABLE statement and an\\nALTER TABLE statement",
+      "options": ["A. True", "B. False"]
+    },
+    {
+      "question": "Which of the following is a table constraint in SQL?",
+      "options": ["A. CREATE", "B. DEFAULT", "C. JOIN", "D. EXISTS"]
+    },
+    {
+      "question": "What is a DBA when referring to SQL?",
+      "options": [
+        "A. Database Administrator",
+        "B. Data By Additive",
+        "C. Doing Business Applications",
+        "D. Driven By Association"
+      ]
+    },
+    {
+      "question": "What is meant by a database trigger?",
+      "options": [
+        "A. A log that a specific table was accessed",
+        "B. A log that a potentially mischievous connection was made to the database",
+        "C. A statement executed automatically when a table is modified",
+        "D. A batch process that runs at a specific time and date"
+      ]
+    },
+    {
+      "question": "The situation where a data is stored in the database at a particular moment of time is\\ncalled a(n) _______.",
+      "options": ["A. record", "B. update", "C. opportunity", "D. Instance"]
+    },
+    {
+      "question": "An advantage of a database view is it _______.",
+      "options": [
+        "A. allows for easier database updates",
+        "B. reduces the dependency on pessimistic locks",
+        "C. provides consistency to applications",
+        "D. allows for quicker updates and reads"
+      ]
+    },
+    {
+      "question": "What can be said of the following two queries?\\nSELECT fname, MAX(cost) FROM theTable\\nSELECT fname, cost FROM theTable ORDER BY cost DESC LIMIT 1",
+      "options": [
+        "A. The queries will return the exact same values",
+        "B. The queries may return the exact same values",
+        "C. The queries cannot return the exact same value",
+        "D. The first query will get the max, second will get the min"
+      ]
+    },
+    {
+      "question": "A _______ table in SQL results from turning rows into columns.",
+      "options": ["A. Conversion", "B. Wide", "C. Pivot", "D. Transitional"]
+    },
+    {
+      "question": "What does the following query return?\\nSELECT member_no, name\\nFROM theTableAbove\\nWHERE name = NULL",
+      "options": ["A. 0 rows", "B. 2 row", "C. 5 rows", "D. Syntax error"],
+      "image": "2023-State-Table2.png"
+    },
+    {
+      "question": "What does the following query return?\\nSELECT dob\\nFROM theTableAbove\\nWHERE member_no= \u2018901\u2019",
+      "options": [
+        "A. 04/15/1945",
+        "B. 11/11/2011",
+        "C. 04/15/1955",
+        "D. 12/31/1999"
+      ],
+      "image": "2023-State-Table2.png"
+    },
+    {
+      "question": "The table already has a primary key on the member_no. How would we set up a\\ncomposite key on this table?",
+      "options": [
+        "A. CREATE COMPOSITE INDEX myComposite ON theTableAbove (name)",
+        "B. CREATE INDEX myComposite ON theTabelAbove (name); CREATE INDEX\\nmyComposite ON theTabelAbove (dob)",
+        "C. CREATE INDEX myComposite ON theTabelAbove (member_no)",
+        "D. CREATE INDEX myComposite ON theTabelAbove (name, dob)"
+      ],
+      "image": "2023-State-Table2.png"
+    },
+    {
+      "question": "The theTableAbove meets the highest standardized level of normalization \u2013 5NF.",
+      "options": ["A. True", "B. False"],
+      "image": "2023-State-Table2.png"
+    }
+  ]
+}

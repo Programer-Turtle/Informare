@@ -1,0 +1,424 @@
+{
+  "name": "SQL Database Fundamentals (345) State 2022",
+  "time": 60,
+  "answers": [
+    "A",
+    "B",
+    "C",
+    "B",
+    "C",
+    "D",
+    "B",
+    "A",
+    "B",
+    "C",
+    "B",
+    "A",
+    "C",
+    "A",
+    "B",
+    "C",
+    "D",
+    "C",
+    "A",
+    "D",
+    "A",
+    "C",
+    "C",
+    "B",
+    "C",
+    "D",
+    "A",
+    "B",
+    "A",
+    "D",
+    "D",
+    "B",
+    "B",
+    "A",
+    "B",
+    "C",
+    "A",
+    "C",
+    "C",
+    "D",
+    "D",
+    "B",
+    "D",
+    "B",
+    "B",
+    "A",
+    "C",
+    "B",
+    "B",
+    "A"
+  ],
+  "questions": [
+    {
+      "question": "A database that follows 2NF has to first meet 1NF.",
+      "options": ["True", "False"]
+    },
+    {
+      "question": "1NF states that each table must have a primary key that is not a composite key.",
+      "options": ["True", "False"]
+    },
+    {
+      "question": "One of the rules of 3NF is the database has no transitive functional dependencies. This\\nmeans ________.",
+      "options": [
+        "there are no composite keys",
+        "every child table has a foreign key that matches the size and datatype of the parent\\ntable",
+        "changing a non-key column, might cause any of the other non-key columns to\\nchange",
+        "the primary key is a numeric, auto-incremented key"
+      ]
+    },
+    {
+      "question": "When using GROUP BY on a Primary Key you would ________.",
+      "options": [
+        "expect a much smaller dataset then if you didn\u2019t roll up the data",
+        "expect a dataset that is the exact same size as if you didn\u2019t roll up the data",
+        "not have any expectations without analyzing the data in the tables",
+        "not be able to interpret the data"
+      ]
+    },
+    {
+      "question": "When aggregating, the data will _______ come back sorted based on the grouped\\ncolumns",
+      "options": [
+        "always",
+        "never",
+        "sometimes",
+        "depend on further information to"
+      ]
+    },
+    {
+      "question": "To sort the Name field alphabetically from a-z and the Total field from largest to smallest\\nthe ORDER BY clause will be as follows: __________.",
+      "options": [
+        "ORDER BY Name, Total",
+        "ORDER BY Name (a-z), Total (high-low)",
+        "ORDER BY Name ASC, Total ASC",
+        "ORDER BY Name, Total DESC"
+      ]
+    },
+    {
+      "question": "Because Indexes are used to speed up the execution of queries, DBAs will typically have\\nmultiple indexes on the key column of parent tables.",
+      "options": ["True", "False"]
+    },
+    {
+      "question": "The command to list all tables in a given database is _______.",
+      "options": ["SHOW TABLES", "LIST TABLES", "MORE TABLES", "ANALYZE TABLES"]
+    },
+    {
+      "question": "Given a table with field value, to find if that value that matches the contents of a list you\\nwould add the following to a WHERE clause: _________.",
+      "options": [
+        "WHERE value LIKE (\u201cA\u201d, \u201cB\u201d, \u201cC\u201d)",
+        "WHERE value IN (\u201cA\u201d, \u201cB\u201d, \u201cC\u201d)",
+        "WHERE value IS GREATER THAN \u201cA\u201d and LESS THAN \u201cC\u201d",
+        "WHERE value BELONGS TO (\u201cA\u201d, \u201cB\u201d, \u201cC\u201d)"
+      ]
+    },
+    {
+      "question": "Which of these is not a common use for an SQL trigger?",
+      "options": [
+        "Enforce business rules",
+        "Cascading Deletes",
+        "Reducing complexity during development",
+        "Complex auditing to track table changes"
+      ]
+    },
+    {
+      "question": "How many records will the following query produce?\\nSELECT a.movieId FROM Movie a INNER JOIN MovieActor b ON a.movieId =\\nb.movieId",
+      "options": ["8", "7", "6", "5"],
+      "image": "2022-State-Table1.png"
+    },
+    {
+      "question": "How many records will the following query produce?\\nSELECT a.movieId FROM Movie a LEFT JOIN MovieActor b ON a.movieid =\\nb.moveId",
+      "options": ["8", "7", "6", "5"],
+      "image": "2022-State-Table1.png"
+    },
+    {
+      "question": "What would be the order of the actorId given the following query: SELECT DISTINCT\\nc.actorID FROM Movie a INNER JOIN MovieActor b ON a.movieId = b.movieId\\nINNER JOIN Actor c ON b.actorId = c. actorId WHERE genreId = 2 ORDER by name\\nASC, dob DESC",
+      "options": ["2, 4, 6", "6, 4, 2", "4, 6, 2", "2, 2, 6"],
+      "image": "2022-State-Table1.png"
+    },
+    {
+      "question": "Which query will produce a list of only the Movies that do not have any actors?",
+      "options": [
+        "SELECT title FROM Movie a LEFT JOIN MovieActor b ON a.movieId =",
+        "b.moveId WHERE b.movieId IS NULL\\nb. SELECT title FROM Movie a LEFT JOIN MovieActor b ON a.movieId =\\nb.moveId WHERE a.movieId IS NULL",
+        "SELECT title FROM Actor a RIGHT JOIN MovieActor b ON a.movieId =\\nb.movieId WHERE b.movieId IS NULL",
+        "SELECT title FROM Actor a RIGHT JOIN MovieActor b ON a.movieId =\\nb.movieId WHERE a.movieId IS NULL"
+      ],
+      "image": "2022-State-Table1.png"
+    },
+    {
+      "question": "It has been determined that Sally is also in the movie \u201csize\u201d. Which one of the following\\nstatements adds Sally as an actor for the movie.",
+      "options": [
+        "UPDATE MovieActor SET movieId = 3, actorId = 6",
+        "INSERT INTO MovieActor values (3, 6)",
+        "ADD TO MovieActor (movieId, actorId) VALUES (3, 6)",
+        "CREATE ROW IN MovieActor (movieId, actorId) VALUES (3, 6)"
+      ],
+      "image": "2022-State-Table1.png"
+    },
+    {
+      "question": "What is the first normalization form that the Movie table fails?",
+      "options": ["1NF", "2NF", "3NF", "4NF"],
+      "image": "2022-State-Table1.png"
+    },
+    {
+      "question": "The Actor table fails which database normalization form?",
+      "options": [
+        "1NF",
+        "2NF",
+        "3NF",
+        "The Actor table does not fail any normalization forms"
+      ],
+      "image": "2022-State-Table1.png"
+    },
+    {
+      "question": "Which query will produce the movie(s) with the oldest actors / actresses?",
+      "options": [
+        "SELECT title, dob FROM Movie a INNER JOIN Actor b ON a.movieId =",
+        "b.movieId WHERE dob = MAX(dob)\\nb. SELECT title, dob FROM Movie a INNER JOIN MovieActor b ON a.movieId =\\nb.movieId INNER JOIN Actor c ON b.actorId = c.actorId WHERE dob =\\nMAX(dob)",
+        "SELECT title, dob FROM Movie a INNER JOIN MovieActor b ON a.movieId =\\nb.movieId INNER JOIN Actor c ON b.actorId = c.actorId WHERE dob in\\n(SELECT MAX(dob) FROM Actor)",
+        "SELECT title, dob FROM Movie a INNER JOIN MovieActor b ON a.movieId =\\nb.movieId INNER JOIN Actor c ON b.actorId = c.actorId WHERE dob =\\n(NOW()-dob)"
+      ],
+      "image": "2022-State-Table1.png"
+    },
+    {
+      "question": "The Movie table is known as a ________ table because it only contains foreign keys that\\nallow two other tables to join to each other.",
+      "options": ["mapping", "composite", "interval", "Boyce Codd"],
+      "image": "2022-State-Table1.png"
+    },
+    {
+      "question": "Given two tables, table1 and table2, CROSS JOIN produces _________.",
+      "options": [
+        "Every row where the key used in the join is in both tables",
+        "Every row where the key used in the join is in table1, regardless of whether or not\\nit is in table2",
+        "Every row where the key used in the join is in table2, regardless of whether or not\\nit is table 1",
+        "Every row from table1 joined with each row in table2"
+      ]
+    },
+    {
+      "question": "Which would not be a reason to create a database view to present to your users?",
+      "options": [
+        "Views always make accessing data more efficient",
+        "To hide Complexity",
+        "To protect specific data from specific users",
+        "They can replace tables to support legacy code"
+      ]
+    },
+    {
+      "question": "The year field is an integer and we are only storing the years it takes to disintegrate.\\nGiven a max number of years of 2999, what is the smallest data type to hold that value?",
+      "options": ["Blob", "Tinyint", "SmallInt", "MediumInt"],
+      "image": "2022-State-Table2.png"
+    },
+    {
+      "question": "The description field is currently a varchar(150). How much space is taken up for this\\nfield when the data in the field is only 50 bytes?",
+      "options": ["150", "75", "52", "50"],
+      "image": "2022-State-Table2.png"
+    },
+    {
+      "question": "How would you add an index to the category table on the item field?",
+      "options": [
+        "ADD INDEX index1 ON category item",
+        "CREATE INDEX index1 ON category (item)",
+        "ALTER TABLE category ADD INDEX item",
+        "USE category ADD INDEX index1 ON item"
+      ],
+      "image": "2022-State-Table2.png"
+    },
+    {
+      "question": "How would you remove the category table?",
+      "options": [
+        "DELETE FROM lift WHERE table_name = \u201ccategory\u201d",
+        "REMOVE TABLE category",
+        "DROP TABLE category",
+        "ERASE TABLE category"
+      ],
+      "image": "2022-State-Table2.png"
+    },
+    {
+      "question": "A _______ is a named and optionally parameterized compiled set of SQL database access\\nstatements that can be executed as a unit.",
+      "options": [
+        "Parameterized Function",
+        "Dynamic Linked Library",
+        "Application Programming Interface",
+        "Stored Procedure"
+      ]
+    },
+    {
+      "question": "To combine the data from two separate queries one could use a ________.",
+      "options": ["UNION", "SUBQUERY", "FULL OUTER JOIN", "INTERSECTION"]
+    },
+    {
+      "question": "Standard properties of a transaction are often referred to by the acronym ________.",
+      "options": ["CARD", "ACID", "DARC", "DAC"]
+    },
+    {
+      "question": "What is the purpose of the \u201cC\u201d property, Consistency, in transaction processing?",
+      "options": [
+        "Only valid data following all rules and constraints is written in the database",
+        "Enabled transactions to operated independently of each other",
+        "Ensures the result of a committed transaction is permanent in case of a system\\nfailure",
+        "Ensures that all operations are completed successfully"
+      ]
+    },
+    {
+      "question": "What is the purpose of the \u201cA\u201d property, Automicity, in transaction processing?",
+      "options": [
+        "Only valid data following all rules and constraints is written in the database",
+        "Enabled transactions to operated independently of each other",
+        "Ensures the result of a committed transaction is permanent in case of a system\\nfailure",
+        "Ensures that all operations are completed successfully"
+      ]
+    },
+    {
+      "question": "Which of the following is not a commonly used column constraint in a database?",
+      "options": ["UNIQUE", "NOT NULL", "FOREIGN", "MAX"]
+    },
+    {
+      "question": "A primary key can allow duplicates in special circumstances?",
+      "options": ["True", "False"]
+    },
+    {
+      "question": "When designing a child table, the foreign key column(s) in the child table must have the\\nsame name as the primary key column(s) in the parent table.",
+      "options": ["True", "False"]
+    },
+    {
+      "question": "When changing a column\u2019s data type, which of the following is a true statement?",
+      "options": [
+        "varchar(50) to char(20) may result in data loss",
+        "Int to tinyint will cause an error",
+        "Int to char will cause an error",
+        "Int to smallint will result in data loss"
+      ]
+    },
+    {
+      "question": "A database will experience a deadlock when _________.",
+      "options": [
+        "Two transactions try to update the same record",
+        "Transaction one locks table1 but needs table2; transaction two locks table2 but\\nneeds table1",
+        "A database is being maintained while a transaction is trying to update a table",
+        "Transaction one is waiting on transaction two to be rolled back after a system\\nfailure."
+      ]
+    },
+    {
+      "question": "SELECT id FROM testTable will return ________.",
+      "options": [
+        "Null, 12, null, 24, null",
+        "1, 12, 2, 24, 3",
+        "2, 12, 13, 24, 25",
+        "1, 12, 13, 24, 25"
+      ]
+    },
+    {
+      "question": "What will SELECT COUNT(DISTINCT fName), MAX(dob) FROM testTable return?",
+      "options": [
+        "4, 2000-05-05",
+        "5, 2000-05-05",
+        "5, 1980-01-01",
+        "4, 1985-01-01"
+      ],
+      "image": "2022-State-Table3.png"
+    },
+    {
+      "question": "How many rows will the following query produce - SELECT 5*6+4 FROM testTable\\nWHERE true?",
+      "options": ["0", "1", "5", "6"],
+      "image": "2022-State-Table3.png"
+    },
+    {
+      "question": "How many rows will the following query produce: SELECT fName, count(id) FROM\\ntestTable GROUP BY fName?",
+      "options": ["1", "3", "4", "5"],
+      "image": "2022-State-Table3.png"
+    },
+    {
+      "question": "The following SQL statement - INSERT INTO testTable VALUES (24, \u201cGinny\u201d,\\n\u201cGerber\u201d, \u201c2000-04-04\u201d) will have __________ as a result.",
+      "options": [
+        "The table now has 6 rows, the auto-increment will take care of creating a new id.",
+        "The table will continue to have 5 rows and the row with id 24 will be overwritten",
+        "The table will have 6 rows, the id will be 24, different names assure uniqueness",
+        "An Error be will thrown"
+      ],
+      "image": "2022-State-Table3.png"
+    },
+    {
+      "question": "The following SQL statement - INSERT INTO testTable (lName, dob) VALUES\\n(\u201cLincoln\u201d, \u201c2006-01-01\u201d) will have ____________ as a result:",
+      "options": [
+        "A new row will be added to the end of the table with a new id which is one larger\\nthan the last id created, null first name, Lincoln last name, and dob of 2006-01-01",
+        "A new row will be added to the end of the table with a null id, null first name,\\nLincoln last name, and dob of 2006-01-01",
+        "A new row will be inserted into the middle of the table with a new id which fills\\nin with an unused id, Lincoln last name, and dob of 2006-01-01",
+        "An Error will be thrown"
+      ],
+      "image": "2022-State-Table3.png"
+    },
+    {
+      "question": "What will be the result set of the following query - SELECT fName, count(id) as idCount\\nFROM testTable GROUP by fName HAVING idCount > 1?",
+      "options": [
+        "Joe, 1\\nJoe, 1",
+        "Joe, 2",
+        "Joe, 2\\nBob, 2",
+        "An error will be thrown"
+      ],
+      "image": "2022-State-Table3.png"
+    },
+    {
+      "question": "What is the difference between the following two queries?\\nSELECT fName FROM testTable WHERE id > 15\\nSELECT fName FROM testTable HAVING id > 15",
+      "options": [
+        "The two queries produce identical result",
+        "Having is only applies with a GROUP BY - second query produces no result",
+        "The query with the WHERE clause will error because id is not in the field list",
+        "The query with the HAVING clause will error because id in not in the field list"
+      ],
+      "image": "2022-State-Table3.png"
+    },
+    {
+      "question": "When writing applications that use a database, it is customary to use the \u201croot\u201d user so\\nthe application can accomplish the tasks it needs to accomplish.",
+      "options": ["True", "False"],
+      "image": "2022-State-Table3.png"
+    },
+    {
+      "question": "In database terminology what is a sandbox?",
+      "options": [
+        "The process of ensuring the database passes all Normalization forms",
+        "A development database separate from production",
+        "The name given to a multi-user database",
+        "The name given to a database backup"
+      ]
+    },
+    {
+      "question": "What holds true for the following SQL to be valid - SELECT theName FROM\\nfirstDB.table1 UNION SELECT theTitle FROM secondDB.table2?",
+      "options": [
+        "theName must be a compatible data type with theTitle",
+        "theName must be the same data type as theTitle",
+        "Query can not run because column names must be the same",
+        "Query can not run because tables are from different databases"
+      ]
+    },
+    {
+      "question": "Which of the following is not a standard key type on a database table?",
+      "options": [
+        "Candidate Key",
+        "Primary Key",
+        "Associate Key",
+        "Alternate Key"
+      ]
+    },
+    {
+      "question": "Production databases automatically maintain referential integrity between tables using\\nprimary and foreign keys.",
+      "options": ["True", "False"]
+    },
+    {
+      "question": "Like a standard if statement, a WHERE clause evaluates in the order in which it is\\npresented.",
+      "options": ["True", "False"]
+    },
+    {
+      "question": "A duty a DBA is not typically in charge of would be ________.",
+      "options": [
+        "designing stored procedures",
+        "creating databases",
+        "capacity planning",
+        "scheduling database backups"
+      ]
+    }
+  ]
+}
