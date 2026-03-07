@@ -8,7 +8,7 @@ with open(input("File: "), "r", encoding="utf-8") as file:
     test_data = file.readlines()
 
 for i, data in enumerate(test_data):
-    test_data[i] = data.rstrip("\n")
+    test_data[i] = data.replace("<", "&lt;").replace(">", "&gt;").rstrip("\n")
 
 new_text = ""
 

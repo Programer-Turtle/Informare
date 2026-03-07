@@ -295,7 +295,7 @@
       ]
     },
     {
-      "question": "The T-SQL REVOKE clause is used to \u201cREVOKE\u201d <some permission> ON <some\\nobject> FROM <some user, login, or group>.",
+      "question": "The T-SQL REVOKE clause is used to \u201cREVOKE\u201d &lt;some permission&gt; ON &lt;some object&gt; FROM &lt;some user, login, or group&gt;.",
       "options": ["True", "False"]
     },
     {
