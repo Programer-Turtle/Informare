@@ -160,12 +160,7 @@
     },
     {
       "question": "In the Oracle database management system, which of the following is a procedural language\\nextension to SQL?",
-      "options": [
-        "PL/SQL",
-        "Transact-SQL",
-        "C#",
-        "JSON\\nSQL DATABASE FUNDAMENTALS \u2013 STATE 2020"
-      ]
+      "options": ["PL/SQL", "Transact-SQL", "C#", "JSON"]
     },
     {
       "question": "Which of the following database systems is a RDBMS?",

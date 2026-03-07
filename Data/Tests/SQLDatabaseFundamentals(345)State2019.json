@@ -182,12 +182,7 @@
     },
     {
       "question": "The SQL operator that is used to combine the result sets of two or more SELECT\\nstatements is ______.",
-      "options": [
-        "Union",
-        "Join",
-        "Having",
-        "Exists\\n\\nSQL DATABASE FUNDAMENTALS - STATE 2019"
-      ]
+      "options": ["Union", "Join", "Having", "Exists"]
     },
     {
       "question": "Which of the following is not a subset of DQL?",
