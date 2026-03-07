@@ -87,7 +87,7 @@ function Submit() {
     for (let x = 0; x < CurrentQuestion["options"].length; x++) {
       const CurrentOption = CurrentQuestion["options"][x];
       const OptionText = document.createElement("h1");
-      OptionText.innerText = `${Letters[x]}) ${CurrentOption.replace(/\\n/g, "<br>")}`;
+      OptionText.innerHTML = `${Letters[x]}) ${CurrentOption.replace(/\\n/g, "<br>")}`;
       if (!GradedAnswers[i]["Correct"]) {
         if (Letters.indexOf(GradedAnswers[i]["SelectedAnswer"]) == x) {
           OptionText.style.color = "red";
