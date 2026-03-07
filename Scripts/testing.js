@@ -83,7 +83,7 @@ function Submit() {
     const CurrentQuestion = Questions[i];
     const QuestionHolder = document.createElement("div");
     QuestionHolder.className = "QuestionHolder";
-    QuestionHolder.style.dispaly = "block";
+    QuestionHolder.style.display = "block";
     QuestionHolder.innerHTML = `<h1>${i + 1}. ${CurrentQuestion["question"]}</h1>`;
 
     for (let x = 0; x < CurrentQuestion["options"].length; x++) {
@@ -97,7 +97,11 @@ function Submit() {
       }
 
       if (Letters.indexOf(GradedAnswers[i]["CorrectAnswer"]) == x) {
-        OptionText.style.color = "green";
+        if (GradedAnswers[i]["SelectedAnswer"]) {
+          OptionText.style.color = "green";
+        } else {
+          OptionText.style.color = "blue";
+        }
       }
       QuestionHolder.appendChild(OptionText);
     }
@@ -125,7 +129,12 @@ async function GetTest() {
     const QuestionHolder = document.createElement("div");
     QuestionHolder.className = "QuestionHolder";
     QuestionHolder.id = `Question${i}`;
-    QuestionHolder.innerHTML = `<h1>${i + 1}. ${Question["question"]}</h1>`;
+
+    if (Question["image"]) {
+      QuestionHolder.innerHTML += `<div class="center"><img src="Data/Tests/${Question["image"]}" style="width:70%"></div>`;
+    }
+
+    QuestionHolder.innerHTML += `<h1>${i + 1}. ${Question["question"]}</h1>`;
     let RadioHTML = `<div class="RadioHolder">`;
     for (let x = 0; x < Question["options"].length; x++) {
       const Option = Question["options"][x];
@@ -166,7 +175,9 @@ async function StartTest() {
 
     const Minutes = Math.floor(Remaining / 60000);
     const Seconds = Math.floor((Remaining % 60000) / 1000);
-    console.log(`${Minutes}:${Seconds}`);
+    console.log(
+      `${Minutes.toString().padStart(2, "0")}:${Seconds.toString().padStart(2, "0")}`,
+    );
     Timer.innerText = `${Minutes}:${Seconds}`;
   }, 1);
 }
