@@ -142,7 +142,7 @@
     {
       "question": "Which query will produce a list of only the Movies that do not have any actors?",
       "options": [
-        "SELECT title FROM Movie a LEFT JOIN MovieActor b ON a.movieId =",
+        "SELECT title FROM Movie a LEFT JOIN MovieActor b ON a.movieId =\\nb.moveId WHERE b.movieId IS NULL",
         "b.moveId WHERE b.movieId IS NULL\\nb. SELECT title FROM Movie a LEFT JOIN MovieActor b ON a.movieId =\\nb.moveId WHERE a.movieId IS NULL",
         "SELECT title FROM Actor a RIGHT JOIN MovieActor b ON a.movieId =\\nb.movieId WHERE b.movieId IS NULL",
         "SELECT title FROM Actor a RIGHT JOIN MovieActor b ON a.movieId =\\nb.movieId WHERE a.movieId IS NULL"
