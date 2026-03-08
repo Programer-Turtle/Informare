@@ -309,7 +309,8 @@
         "1, 12, 2, 24, 3",
         "2, 12, 13, 24, 25",
         "1, 12, 13, 24, 25"
-      ]
+      ],
+      "image": "2022-State-Table3.png"
     },
     {
       "question": "What will SELECT COUNT(DISTINCT fName), MAX(dob) FROM testTable return?",
