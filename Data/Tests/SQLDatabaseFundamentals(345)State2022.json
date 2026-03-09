@@ -177,8 +177,8 @@
     {
       "question": "Which query will produce the movie(s) with the oldest actors / actresses?",
       "options": [
-        "SELECT title, dob FROM Movie a INNER JOIN Actor b ON a.movieId =",
-        "b.movieId WHERE dob = MAX(dob)\\nb. SELECT title, dob FROM Movie a INNER JOIN MovieActor b ON a.movieId =\\nb.movieId INNER JOIN Actor c ON b.actorId = c.actorId WHERE dob =\\nMAX(dob)",
+        "SELECT title, dob FROM Movie a INNER JOIN Actor b ON a.movieId =\\nb.movieId WHERE dob = MAX(dob)",
+        "b. SELECT title, dob FROM Movie a INNER JOIN MovieActor b ON a.movieId =\\nb.movieId INNER JOIN Actor c ON b.actorId = c.actorId WHERE dob =\\nMAX(dob)",
         "SELECT title, dob FROM Movie a INNER JOIN MovieActor b ON a.movieId =\\nb.movieId INNER JOIN Actor c ON b.actorId = c.actorId WHERE dob in\\n(SELECT MAX(dob) FROM Actor)",
         "SELECT title, dob FROM Movie a INNER JOIN MovieActor b ON a.movieId =\\nb.movieId INNER JOIN Actor c ON b.actorId = c.actorId WHERE dob =\\n(NOW()-dob)"
       ],
