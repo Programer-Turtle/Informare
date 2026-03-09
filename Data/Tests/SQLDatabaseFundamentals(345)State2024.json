@@ -210,7 +210,7 @@
       "options": ["CROSS", "OUTTER", "INNER", "FULL"]
     },
     {
-      "question": "Which WHERE clause would check if the field1 contains \"appl \", \"pear\", or \"grape\"",
+      "question": "Which WHERE clause would check if the field1 contains \"apple \", \"pear\", or \"grape\"",
       "options": [
         "WHERE field1 IN (\"apple\", \"pear\", \"grape \")",
         "WHERE field1 = \"apple\", \"pear\", \"grape\"",
