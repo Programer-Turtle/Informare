@@ -1,0 +1,492 @@
+{
+  "name": "SQL Database Fundamentals (345) National 2021",
+  "time": 60,
+  "answers": [
+    "D",
+    "A",
+    "A",
+    "B",
+    "C",
+    "D",
+    "A",
+    "B",
+    "D",
+    "B",
+    "B",
+    "A",
+    "B",
+    "C",
+    "B",
+    "B",
+    "C",
+    "B",
+    "A",
+    "B",
+    "D",
+    "C",
+    "A",
+    "B",
+    "A",
+    "D",
+    "B",
+    "C",
+    "A",
+    "D",
+    "B",
+    "C",
+    "D",
+    "A",
+    "C",
+    "B",
+    "A",
+    "C",
+    "D",
+    "C",
+    "A",
+    "A",
+    "B",
+    "C",
+    "D",
+    "C",
+    "A",
+    "D",
+    "A",
+    "B"
+  ],
+  "questions": [
+    {
+      "question": "Which query of the Person and Employment tables ONLY gets a person’s name and job\ntitle, for all people that have jobs?",
+      "options": [
+        "SELECT *\nFROM Person AS p\nINNER JOIN Employment AS e ON p.Id = e.EmployeeId;",
+        "SELECT p.Name, e.JobTitle\nFROM Person AS p\nLEFT JOIN Employment AS e ON p.Id = e.EmployeeId;",
+        "SELECT p.Name, e.JobTitle\nFROM Person AS p\nINNER JOIN Employment AS e ON p.Name = e.JobTitle;",
+        "SELECT p.Name, e.JobTitle\nFROM Person AS p\nINNER JOIN Employment AS e ON p.Id = e.EmployeeId;"
+      ]
+    },
+    {
+      "question": "Look at the following query of the Person and Employment tables:\n\nSELECT *\nFROM Person AS p\nLEFT JOIN Employment AS e ON p.Id = e.EmployeeId\nWHERE e.Id IS NULL;\n\nWhich of the following best describes the query’s behavior?",
+      "options": [
+        "Selects all people who are unemployed",
+        "Selects all people who are employed",
+        "Selects all Employment records",
+        "Selects all Employment records that match to a Person record"
+      ]
+    },
+    {
+      "question": "Which type of database stores and provides access to data points that are related to one\nanother?",
+      "options": [
+        "Relational database",
+        "Graph database",
+        "Document database",
+        "None of the above"
+      ]
+    },
+    {
+      "question": "Which type of database stores data as a series of nodes connected by edges?",
+      "options": [
+        "Relational database",
+        "Graph database",
+        "Document database",
+        "None of the above"
+      ]
+    },
+    {
+      "question": "Which type of database stores data in JSON-like documents?",
+      "options": [
+        "Relational database",
+        "Graph database",
+        "Document database",
+        "None of the above"
+      ]
+    },
+    {
+      "question": "Which of the following are examples of relational databases?",
+      "options": [
+        "SQL Server",
+        "MySQL",
+        "Oracle Database",
+        "All the above"
+      ]
+    },
+    {
+      "question": "SQL is typically only used to query relational databases",
+      "options": [
+        "True",
+        "False"
+      ]
+    },
+    {
+      "question": "A SQL query written for SQL Server can also run on Oracle Database, since they are\nboth relational databases",
+      "options": [
+        "True",
+        "False"
+      ]
+    },
+    {
+      "question": "Which aggregate function is used to get the number of rows returned by a SELECT\nstatement?",
+      "options": [
+        "AVG",
+        "NUMBER",
+        "SUM",
+        "COUNT"
+      ]
+    },
+    {
+      "question": "Which aggregate function is used to get the average value of a numeric column?",
+      "options": [
+        "NUMBER",
+        "AVG",
+        "SUM",
+        "COUNT"
+      ]
+    },
+    {
+      "question": "Entity Integrity is maintained in relational databases by assigning each table row a\nunique, nullable primary key value",
+      "options": [
+        "True",
+        "False"
+      ]
+    },
+    {
+      "question": "The SQL function ABS takes a number and returns the absolute value of that number.\nTherefore, the ABS function is a _____.",
+      "options": [
+        "Scalar function",
+        "Aggregate function",
+        "String function",
+        "None of the above"
+      ]
+    },
+    {
+      "question": "Look at the following Transact-SQL query:\n\nSELECT MIN(p.Age) FROM Person AS p;\n\nWhat does this query return?",
+      "options": [
+        "The age of the oldest person",
+        "The age of the youngest person",
+        "The first age in the Person table",
+        "None of the above"
+      ]
+    },
+    {
+      "question": "In relational databases, entity integrity is the practice of ensuring each row in a table\n_____?",
+      "options": [
+        "Follows the table’s schema",
+        "Is different from all the other records",
+        "Has a unique identifier",
+        "None of the above"
+      ]
+    },
+    {
+      "question": "What property does a primary key not need to maintain entity integrity?",
+      "options": [
+        "Unique",
+        "Integer",
+        "Non-nullable",
+        "All properties are required to maintain entity integrity"
+      ]
+    },
+    {
+      "question": "Which of the following statements regarding entity integrity is true?",
+      "options": [
+        "Every table row needs a unique integer as a primary key",
+        "A primary key can be comprised of more than one column",
+        "Entity integrity is not practiced in relational databases",
+        "A primary key can only be on column"
+      ]
+    },
+    {
+      "question": "Stored procedures can help prevent SQL injection by ______.",
+      "options": [
+        "Allowing the execution of custom SQL from the user",
+        "Allowing the user to define parameters for the stored procedure",
+        "Only allowing user input through predefined parameters",
+        "None of the above"
+      ]
+    },
+    {
+      "question": "Assume there is a client application that wants to query a SQL database over a network.\nWould it be more or less efficient to make the query a stored procedure?",
+      "options": [
+        "More efficient, storing the query in physical memory takes too much space",
+        "More efficient, reading the query from memory will take less time",
+        "Less efficient, reading the query from memory will take more time",
+        "Less efficient, querying the database over the network will take less time"
+      ]
+    },
+    {
+      "question": "Which SQL statement will create a copy of the database?",
+      "options": [
+        "BACKUP DATABASE",
+        "SAVE DATABASE",
+        "COPY DATABASE",
+        "EXPORT DATABASE"
+      ]
+    },
+    {
+      "question": "Database backups should be stored on the same disk as the primary database",
+      "options": [
+        "True",
+        "False"
+      ]
+    },
+    {
+      "question": "Look at the following SQL query:\n\nBACKUP DATABASE Production\nTO DISK = ‘D:/Backup’\nWITH DIFFERENTIAL;\n\nWhich of the following best describes what the query will do when executed?",
+      "options": [
+        "Creates a backup of the staging database to the folder ‘D:/Backup’",
+        "Creates a full backup of the production database to ‘D:/Backup’",
+        "Creates a partial backup of the production database to ‘C:/Backup’",
+        "Creates a backup of the production database with only the records that have\nchanged since the last full database backup"
+      ]
+    },
+    {
+      "question": "Which SQL Server command recovers a database from a database backup?",
+      "options": [
+        "LOAD DATABASE",
+        "RECOVER DATABASE",
+        "RESTORE DATABASE",
+        "RELOAD DATABASE"
+      ]
+    },
+    {
+      "question": "What is the difference between a UNION and an INTERSECT?",
+      "options": [
+        "UNION combines results from multiple queries, INTERSECT only takes results\nthat exist in all queries",
+        "UNION only takes results that exist in all queries, INTERSECT combines results\nfrom multiple queries",
+        "UNION and INTERSECT combine results from multiple queries, but\nINTERSECT only returns unique results",
+        "None of the above"
+      ]
+    },
+    {
+      "question": "The UNION ALL and INTERSECT commands are functionally identical",
+      "options": [
+        "True",
+        "False"
+      ]
+    },
+    {
+      "question": "In SQL Server, the type of join used with only the JOIN keyword is a ______ join.",
+      "options": [
+        "Inner",
+        "Full Outer",
+        "Left",
+        "Right"
+      ]
+    },
+    {
+      "question": "A ______ join produces a result set that is the cartesian product of two tables, where each\nrecord in the left table if joined with every row in the right table.",
+      "options": [
+        "Cartesian",
+        "Full Outer",
+        "Self",
+        "Cross"
+      ]
+    },
+    {
+      "question": "SQL Server is a ______ database since it stores data in a tabular form and preserves the\nrelations in the data.",
+      "options": [
+        "Document",
+        "Relational",
+        "Chronological",
+        "Graph"
+      ]
+    },
+    {
+      "question": "MongoDB is a ______ database since it stores data in JSON-like form in documents.",
+      "options": [
+        "Graph",
+        "Relational",
+        "Document",
+        "Constraint"
+      ]
+    },
+    {
+      "question": "Neo4Jj is a ______ database since it stores data as nodes and uses edges to represent the\nrelationship between nodes.",
+      "options": [
+        "Graph",
+        "Object-oriented",
+        "Document",
+        "Relational"
+      ]
+    },
+    {
+      "question": "What is the main purpose of constraints in relational databases?",
+      "options": [
+        "Constraints give tables a method for creating primary keys",
+        "Constraints ensure columns can be made non-nullable",
+        "Constraints ensure columns can only contain unique values",
+        "Constraints ensure data in a table or column has certain properties"
+      ]
+    },
+    {
+      "question": "Which of the following constraints is applied to an entire table?",
+      "options": [
+        "NOT NULL",
+        "INDEX",
+        "CHECK",
+        "UNIQUE"
+      ]
+    },
+    {
+      "question": "The CREATE, DROP, and ALTER commands are all examples of ______ commands.",
+      "options": [
+        "DML",
+        "DCL",
+        "DDL",
+        "DQI"
+      ]
+    },
+    {
+      "question": "The INSERT, SELECT, UPDATE, and DELETE commands are all examples of ______\ncommands.",
+      "options": [
+        "DQI",
+        "DCL",
+        "DDL",
+        "DML"
+      ]
+    },
+    {
+      "question": "Transactions in SQL databases have four properties: Atomicity, Consistency, Isolation,\nand ______.",
+      "options": [
+        "Durability",
+        "Mutability",
+        "Dependency",
+        "Immutability"
+      ]
+    },
+    {
+      "question": "The ______ command is used to save the changes made in a transaction.",
+      "options": [
+        "SAVEPOINT",
+        "ROLLBACK",
+        "COMMIT",
+        "WRITE"
+      ]
+    },
+    {
+      "question": "Transactional commands can only be used with DDL commands, since DML command\nare automatically committed to the database.",
+      "options": [
+        "True",
+        "False"
+      ]
+    },
+    {
+      "question": "MySQL, Oracle, and MariaDB are all examples of relational databases.",
+      "options": [
+        "True",
+        "False"
+      ]
+    },
+    {
+      "question": "A ______ is a virtual table based on the result set of a SQL statement.",
+      "options": [
+        "Index",
+        "Backup",
+        "View",
+        "Stored Procedure"
+      ]
+    },
+    {
+      "question": "Look at the SQL below:\n\nCREATE VIEW HonorStudent AS\nSELECT s.Id\nFROM Student AS s\nWHERE s.GPA > 3.5 AND s.Grade >= 10;\n\nWhich records in Student can be found in the HonorStudent view?",
+      "options": [
+        "Students below 10th grade with a GPA greater than 3.5",
+        "Students above 10th grade with a GPA less than 3.5",
+        "Students with a GPA greater than 3.5",
+        "Students in and above 10th grade with a GPA greater than 3.5"
+      ]
+    },
+    {
+      "question": "Which of the following describes an advantage of using views?",
+      "options": [
+        "Querying a view can faster than running the equivalent query",
+        "Views can be used instead of indexes",
+        "Calling a view leads to simpler queries",
+        "The view’s columns are stored in separate physical memory for easy access"
+      ]
+    },
+    {
+      "question": "Which SQL Server data type is least suited for storing numerical data?",
+      "options": [
+        "Binary",
+        "Int",
+        "Money",
+        "Decimal"
+      ]
+    },
+    {
+      "question": "The ______ data type in MySQL should be used for storing binary objects",
+      "options": [
+        "Blob",
+        "Varchar",
+        "Text",
+        "Binary"
+      ]
+    },
+    {
+      "question": "Look at the following DDL command:\n\nALTER TABLE Student\n______ COLUMN Grade FLOAT(3, 2);\n\nWhich of the following keywords should be used to fill the blank?",
+      "options": [
+        "UPDATE",
+        "MODIFY",
+        "ALTER",
+        "SELECT"
+      ]
+    },
+    {
+      "question": "Look at the following DDL command:\nCREATE TABLE UnderclassStudents AS\nSELECT * FROM Students WHERE Grade > 8 AND Grade < 11;\nWhich of the following best describes the command’s behavior?",
+      "options": [
+        "Creates a complete copy of the Students table",
+        "Creates a copy of the Students table only with students in grades 11 and 12",
+        "Creates a copy of the Students table only with students in grades 9 and 10",
+        "None of the above"
+      ]
+    },
+    {
+      "question": "Which of the following is NOT a DML command?",
+      "options": [
+        "INSERT",
+        "SELECT",
+        "UPDATE",
+        "ALTER"
+      ]
+    },
+    {
+      "question": "Which of the following is NOT a DDL command?",
+      "options": [
+        "CREATE",
+        "ALTER",
+        "SELECT",
+        "DROP"
+      ]
+    },
+    {
+      "question": "Views, triggers, and stored procedures are all database objects that could be in a ______\nin SQL Server.",
+      "options": [
+        "Schema",
+        "Table",
+        "Index",
+        "Materialized view"
+      ]
+    },
+    {
+      "question": "Foreign keys are used to represented which type of relationship between SQL tables?",
+      "options": [
+        "One to many",
+        "Many to many",
+        "Many to one",
+        "All the above"
+      ]
+    },
+    {
+      "question": "Let there exist two SQL tables, a Student table for storing student records and a\nHomeroom table for storing all the homerooms in a school. If every student has one\nhomeroom and every homeroom has many students, which table has a foreign key\nconstraint on one of its columns?",
+      "options": [
+        "Student",
+        "Homeroom",
+        "Both tables",
+        "Neither tables"
+      ]
+    },
+    {
+      "question": "Stored procedures are less susceptible to SQL injection since they take direct input from\nthe user.",
+      "options": [
+        "True",
+        "False"
+      ]
+    }
+  ]
+}

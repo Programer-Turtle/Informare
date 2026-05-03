@@ -1,0 +1,514 @@
+{
+  "name": "SQL Database Fundamentals (345) National 2022",
+  "time": 60,
+  "answers": [
+    "C",
+    "C",
+    "D",
+    "A",
+    "B",
+    "A",
+    "D",
+    "C",
+    "C",
+    "B",
+    "A",
+    "A",
+    "D",
+    "D",
+    "C",
+    "A",
+    "A",
+    "C",
+    "B",
+    "A",
+    "A",
+    "B",
+    "A",
+    "D",
+    "B",
+    "D",
+    "C",
+    "B",
+    "A",
+    "B",
+    "B",
+    "D",
+    "B",
+    "D",
+    "D",
+    "C",
+    "B",
+    "D",
+    "A",
+    "B",
+    "B",
+    "B",
+    "C",
+    "B",
+    "B",
+    "C",
+    "A",
+    "C",
+    "C",
+    "C"
+  ],
+  "questions": [
+    {
+      "question": "_______ is the name of a query that is placed within a WHERE clause.",
+      "options": [
+        "Partial query",
+        "Master query",
+        "Sub query",
+        "Where query"
+      ]
+    },
+    {
+      "question": "In a relational database model, a tuple is commonly referred to as a _______.",
+      "options": [
+        "table",
+        "column",
+        "row",
+        "relationship"
+      ]
+    },
+    {
+      "question": "Given CREATE TEMPORARY TABLE  t1 (c1 int primary key) ENGINE=INNODB\nWhat command would be used to find and display t1 - the name of the temp table?",
+      "options": [
+        "SHOW TABLES FROM INFORMATION_SCHEMA LIKE 'INNODB_TEMP%'",
+        "SELECT * FROM\nINFORMATION_SCHEMA.INNODB_TEMP_TABLE_INFO",
+        "SHOW TABLES WHERE TYPE(test) = TEMP",
+        "The actual table name cannot be returned"
+      ]
+    },
+    {
+      "question": "Temporary tables created during a stored procedure persist until ________.",
+      "options": [
+        "the stored procedure ends",
+        "a commit has completed on a transaction",
+        "it is manually deleted inside the stored procedure code",
+        "the user connection is successfully terminated"
+      ]
+    },
+    {
+      "question": "What is the purpose of port obfuscation?",
+      "options": [
+        "To allow all RDBMs to utilize a standardized port",
+        "To alter the default port as an additional layer against targeted attacks",
+        "To ensure portability when utilizing multiple programming languages",
+        "To move a database from a local instance to the cloud"
+      ]
+    },
+    {
+      "question": "The standard endpoint Port for common database servers would be ________.",
+      "options": [
+        "MySQL/Aurora - 3306, SQL Server - 1433, PostgreSQL - 5432, Oracle - 1521",
+        "MySQL/Aurora - 80, SQL Server - 443, PostgreSQL - 8000, Oracle - 5430",
+        "MySQL/Aurora - 2213, SQL Server - 6155, PostgreSQL - 4433, Oracle - 2204",
+        "MySQL/Aurora - 7100, SQL Server - 7100, PostgreSQL - 7100, Oracle – 7100"
+      ]
+    },
+    {
+      "question": "What is the difference between a super key and a candidate key?",
+      "options": [
+        "A super key is a synonym for a primary key whereas one of the candidate keys\ncan be a primary key",
+        "All super keys are candidate keys",
+        "All parts of a super key are necessary to uniquely identify a row, whereas not all\nparts of a candidate key are necessary to identify a unique row.",
+        "Super keys can contain null values and candidate keys cannot contain null values"
+      ]
+    },
+    {
+      "question": "An example of data redundancy would be ________.",
+      "options": [
+        "Table of Users has a status_id and table of Administrators has a status_id",
+        "Table of Users has an entry for a John Jones and an entry in the Administrator\ntable has the same name of John Jones",
+        "Table of Users has character state field and table of Administrators has a character\nstate field",
+        "Table of Users contains the same exact columns as the Administrators table"
+      ]
+    },
+    {
+      "question": "Why would a database administrator choose to denormalize a database?",
+      "options": [
+        "To avoid duplication of data",
+        "To save space",
+        "To make certain queries more efficient",
+        "They wouldn’t, rules of normalization apply when designing databases"
+      ]
+    },
+    {
+      "question": "Which of the following best describes database transactional isolation?",
+      "options": [
+        "The transaction only occurs in one process",
+        "The transactions occur independently without interference from other transactions",
+        "The entire transaction takes place after all others complete",
+        "The transaction must be consistent before and after the transaction"
+      ]
+    },
+    {
+      "question": "What is meant by database consistency?",
+      "options": [
+        "Integrity constraints must be maintained so that the database is consistent before\nand after a transaction.",
+        "Atomicity constraints must be maintained so that the database is consistent before\nand after a transaction.",
+        "Isolation constraints must be maintained so that the database is consistent before\nand after a transaction.",
+        "None of these are correct"
+      ]
+    },
+    {
+      "question": "The four standard database Isolation levels are ________.",
+      "options": [
+        "Read Uncommitted, Read Committed, Serializable, Repeatable Read",
+        "Dirty Read, Repeatable Dirty Read, Serializable, Phantom Read.",
+        "Dirty Read, Repeatable Dirty Read, Repeatable Read, Phantom Read.",
+        "Dirty Read, Uncommitted, Committed, Phantom Read."
+      ]
+    },
+    {
+      "question": "Which of the following is not an example of a Transactional Phantom Read?",
+      "options": [
+        "When the same queries are executed, but the rows retrieved by the two are\ndifferent",
+        "While in the course of a transaction, new rows are added or removed by another\ntransaction to the records being read",
+        "When range locks are not acquired on performing a SELECT/WHERE operation\nwhile new rows are added or removed by another transaction",
+        "When two or more processes attempt to access the same data at the same time"
+      ]
+    },
+    {
+      "question": "Which of the following does not describe the Read Uncommitted Isolation Level?",
+      "options": [
+        "It is used to allow dirty reads",
+        "It is used to improve performance in high concurrency environments",
+        "It allows non-repeatable reads",
+        "It is used to lock a row so no other read can access the data"
+      ]
+    },
+    {
+      "question": "Optimistic concurrency control allows _______.",
+      "options": [
+        "Multiple transactions to run simultaneously.",
+        "Selecting data based on the system controller.",
+        "Commits or rollbacks based on conflict validation.",
+        "Performance improvements in high data contention environment"
+      ]
+    },
+    {
+      "question": "Concurrency should be implemented as _______.",
+      "options": [
+        "Optimistic or pessimistic",
+        "Optimistic and pessimistic",
+        "Semi-optimistic or semi-pessimistic",
+        "Semi-optimistic and semi-pessimistic"
+      ]
+    },
+    {
+      "question": "What is a pessimistic database lock?",
+      "options": [
+        "Lock is granted upon attempting to access the data; others can’t access data until\ntransaction is complete",
+        "Lock is granted upon update only; others access when update has completed",
+        "Used mostly when multiple transactions do not interfere with each other",
+        "Lock is granted after reading the data; others can’t access data until transaction is\ncomplete"
+      ]
+    },
+    {
+      "question": "Commitment ordering is best described as a _______.",
+      "options": [
+        "specific set of interoperable serializability libraries in concurrency control of\ndatabases & transaction processing",
+        "language extension library of interoperable serializability methods in concurrency\ncontrol of databases & transaction processing",
+        "class of interoperable serializability techniques in concurrency control of\ndatabases & transaction processing",
+        "way to ensure a specific isolation level is achieved upon transaction commits"
+      ]
+    },
+    {
+      "question": "The most important advantage of concurrency is _______.",
+      "options": [
+        "isolation integrity",
+        "increased program throughput",
+        "high responsiveness for database mirroring",
+        "pessimistic isolation level"
+      ]
+    },
+    {
+      "question": "Which of the following is a true statement?",
+      "options": [
+        "Native SQL stored procedures are written exclusively with SQL commands.",
+        "Native SQL stored procedures can be written in a language such as Java, C, and\nJavaScript.",
+        "Stored procedures are only supported in major databases.",
+        "Stored procedures are compatible across databases."
+      ]
+    },
+    {
+      "question": "______ is an advantage of a stored procedure.",
+      "options": [
+        "Maintainability",
+        "Localizes business rules",
+        "Ease of development",
+        "Portability"
+      ]
+    },
+    {
+      "question": "What would be the definition of a natural join?",
+      "options": [
+        "A join between two tables where the data returned is restricted to key data.",
+        "A join between two tables where columns are defined and named the same.",
+        "A join where data types of the keys between the two tables have differing data\ntypes.",
+        "A join where the data returned does not contain any orphaned data."
+      ]
+    },
+    {
+      "question": "What is the key difference between SQL and NoSQL?",
+      "options": [
+        "SQL is associated with relational databases and NoSQL are not relational",
+        "NoSQL uses standard programming languages to access the database instead of\nthe SQL standard",
+        "NoSQL is modeled using tabular relations",
+        "SQL is used in big data applications and NoSQL does not meet the needs of big\ndata"
+      ]
+    },
+    {
+      "question": "_______ is a DML command.",
+      "options": [
+        "COMMIT",
+        "ROLLBACK",
+        "SAVEPOINT",
+        "SELECT"
+      ]
+    },
+    {
+      "question": "Which of the following is true about an E-R Model?",
+      "options": [
+        "Current tools to display are not complete",
+        "It defines the conceptual view of the database",
+        "Best to create for business after database is in production",
+        "It’s an outdated method of designing databases"
+      ]
+    },
+    {
+      "question": "In an E-R diagram, the degree of a relationship is most often represented by which\nrelationships?",
+      "options": [
+        "Connectivity, cardinality",
+        "One-one, one-many, many-one",
+        "Subtype, supertype",
+        "Binary, ternary, unary"
+      ]
+    },
+    {
+      "question": "An example of a schema in a database would be a _______.",
+      "options": [
+        "relational",
+        "tree",
+        "logical",
+        "modular"
+      ]
+    },
+    {
+      "question": "In an E-R diagram, the connectivity of a relationship is most often represented by which\nrelationships?",
+      "options": [
+        "Binary, ternary, unary",
+        "One-one, one-many, many-one",
+        "Subtype, supertype",
+        "Connectivity, cardinality"
+      ]
+    },
+    {
+      "question": "An example of a binary relationship would be _______.",
+      "options": [
+        "a teacher teaches a subject",
+        "a subject is a prerequisite for another subject",
+        "a teacher teaches a course which defines a subject",
+        "the same subject is taught in multiple courses"
+      ]
+    },
+    {
+      "question": "What is an implicit cursor (Oracle)?",
+      "options": [
+        "An implicit cursor changes the consistent state of the database to another state",
+        "A temporary table",
+        "Implicit cursors are declared automatically when running complex queries that\ninclude subqueries",
+        "A data structure used between two connected databases"
+      ]
+    },
+    {
+      "question": "A difference between a clustered and a non-clustered index is a _______.",
+      "options": [
+        "clustered index involves multiple tables and a non-clustered is one table",
+        "clustered index re-orders the way the records in the tables are stored and a non-\nclustered does not",
+        "clustered index optimizes the data with multiple keys and a non-clustered uses a\nsingle key",
+        "clustered index stores data in one location and indices in another and a non-\nclustered index stores them together"
+      ]
+    },
+    {
+      "question": "What is not a property of a data dictionary in database terms?",
+      "options": [
+        "Holds the names of all the tables and their schemas",
+        "It lists security constraints on the tables",
+        "Describes where and how tables are stored",
+        "It’s a graphical representation of the data model"
+      ]
+    },
+    {
+      "question": "The following two queries will produce the same result.\nSELECT * FROM table WHERE item IN (9,10,11,12)\nSELECT * FROM table WHERE item BETWEEN (8, 13)",
+      "options": [
+        "True",
+        "False"
+      ]
+    },
+    {
+      "question": "What would not be the appropriate constraints for the Member_Item table?",
+      "options": [
+        "FOREIGN KEY (memberId) REFERENCES Member(memberId)",
+        "FOREIGN KEY (itemId) REFERENCES Item(id)",
+        "PRIMARY KEY (memberId) FOREIGN KEY(itemId)",
+        "PRIMARY KEY (itemId) FOREIGN KEY (memberId)"
+      ],
+      "image": "2022-National-Table.png"
+    },
+    {
+      "question": "How many rows will be returned from the following query?\nSELECT memberId\nFROM Member a\nINNER JOIN Member_Item b on a.memberId = b.memberId\nINNER JOIN Item c on b.itemId = c.id\nWHERE paid < 52.31",
+      "options": [
+        "5",
+        "3",
+        "1",
+        "0"
+      ],
+      "image": "2022-National-Table.png"
+    },
+    {
+      "question": "What level of normalization is the Member table?",
+      "options": [
+        "1NF, 2NF, 4NF, 5NF (not 3NF)",
+        "1NF, 2NF, 3NF, 4NF",
+        "1NF, 2NF, 3NF",
+        "1NF, 2NF"
+      ],
+      "image": "2022-National-Table.png"
+    },
+    {
+      "question": "How many rows will be returned from the following query?\nSELECT a.memberId\nFROM Member a\nINNER JOIN Member_Item b on a.memberId = b.memberId\nINNER JOIN Item c on b.itemId = c.id\nWHERE paid < (SELECT AVG(paid) FROM Item)",
+      "options": [
+        "5",
+        "4",
+        "3",
+        "2"
+      ],
+      "image": "2022-National-Table.png"
+    },
+    {
+      "question": "What will the result be from the following query?\nSELECT MAX(size_cm), MIN(size_cm)\nFROM Member a\nINNER JOIN Member_Item b on a.memberId = b.memberId\nRIGHT JOIN Item c on b.itemId = c.id\nWHERE paid < (SELECT SUM(paid) / COUNT(size_cm) FROM Item)",
+      "options": [
+        "5512, 5",
+        "5512, 16",
+        "3232, 5",
+        "3232, 16"
+      ],
+      "image": "2022-National-Table.png"
+    },
+    {
+      "question": "What statement would change the datatype of the size_cm field from int to smallint?",
+      "options": [
+        "ALTER TABLE Item CHANGE COLUMN size_cm size_cm smallint",
+        "UPDATE TABLE Item SET DATA_TYPE = “smallint” WHERE\nCOLUMN_NAME = size_cm",
+        "ALTER TABLE Item CHANGE size_cm FROM int TO smallint",
+        "ALTER TABLE Item MODIFY size_cm DATA_TYPE = smallint"
+      ],
+      "image": "2022-National-Table.png"
+    },
+    {
+      "question": "What would the joins look like to show them items not associated with any members?\nSELECT fName, lname, descrip\nFROM Member a\n< Fill in the JOINS here>\nWHERE fname is NULL",
+      "options": [
+        "INNER JOIN Member_Item b on a.memberId = b.memberId\nINNER JOIN Item c on b.itemId = c.id",
+        "INNER JOIN Member_Item b on a.memberId = b.memberId\nRIGHT JOIN Item c on b.itemId = c.id",
+        "LEFT JOIN Member_Item b on a.memberId = b.memberId\nRIGHT JOIN Item c on b.itemId = c.id",
+        "RIGHT JOIN Member_Item b on a.memberId = b.memberId\nRIGHT JOIN Item c on b.itemId = c.id"
+      ],
+      "image": "2022-National-Table.png"
+    },
+    {
+      "question": "What would the following statement produce?\nINSERT INTO Item VALUES (75, ?Item 5a?, 202.20, 1212);",
+      "options": [
+        "Id 75 will be replaced with the record being added",
+        "A duplicate item will be added with an id of 75",
+        "A new item will be inserted with an id of 76",
+        "A message about record being overwritten (If warning settings are set to warn)"
+      ],
+      "image": "2022-National-Table.png"
+    },
+    {
+      "question": "Under what situation will an index not have a positive impact on performance?",
+      "options": [
+        "When a database is has a small amount of tables",
+        "During a data import",
+        "During a query that accesses the index",
+        "When table join includes multiple tables"
+      ]
+    },
+    {
+      "question": "Which of the following is not a measure a developer can use to avoid SQL Injection?",
+      "options": [
+        "Build parameterized queries",
+        "Use stored procedures",
+        "By having one entry point to the database",
+        "Restrict administrative access to database"
+      ]
+    },
+    {
+      "question": "What is a major difference between MySQL and Microsoft’s SQL Server?",
+      "options": [
+        "SQL Server is designed for high scalability; MySQL’s major market is companies\nwith less than a million records",
+        "SQL Server is proprietary; MySQL is open source",
+        "SQL Server supports more platforms than MySQL",
+        "MySQL does not use E-R model tools and SQL Server does"
+      ]
+    },
+    {
+      "question": "Consider the following for questions 45-47 (MySQL).\nDROP TABLE IF EXISTS testTable;\nCREATE TABLE `testTable` (\n`id` INT NOT NULL AUTO_INCREMENT,\n`fName` VARCHAR(45) NOT NULL,\n`lName` VARCHAR(45),\n`dob` DATETIME NOT NULL,\nPRIMARY KEY (`id`));\n\nHow would you add an index on last name followed by first name to the table above?",
+      "options": [
+        "USE testTable ADD INDEX fullName (lName, fName)",
+        "ALTER TABLE testTable ADD INDEX fullName (lName, fName)",
+        "MODIFY testTable ADD SECONDARY fullName (lName, fName)",
+        "INDEX ON (lName, fName) INTO testTable"
+      ]
+    },
+    {
+      "question": "Consider the following for questions 45-47 (MySQL).\nDROP TABLE IF EXISTS testTable;\nCREATE TABLE `testTable` (\n`id` INT NOT NULL AUTO_INCREMENT,\n`fName` VARCHAR(45) NOT NULL,\n`lName` VARCHAR(45),\n`dob` DATETIME NOT NULL,\nPRIMARY KEY (`id`));\n\nWhat would the query be to show the table information (name, column, datatypes, etc.)\nfor testTable?",
+      "options": [
+        "SELECT Columns FROM TestDB WHERE TABLE = “testTable”",
+        "SELECT Schema.* FROM TABLE_INFORMATION WHERE TABLE_NAME\n= “testTable”",
+        "SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE\nTABLE_NAME = “testTable”",
+        "SELECT * FROM SCHEMA WHERE TABLE_NAME = “testTable”"
+      ]
+    },
+    {
+      "question": "Consider the following for questions 45-47 (MySQL).\nDROP TABLE IF EXISTS testTable;\nCREATE TABLE `testTable` (\n`id` INT NOT NULL AUTO_INCREMENT,\n`fName` VARCHAR(45) NOT NULL,\n`lName` VARCHAR(45),\n`dob` DATETIME NOT NULL,\nPRIMARY KEY (`id`));\n\nTo import a CSV file into this table from the command line you would use _______.",
+      "options": [
+        "LOAD DATA LOCAL INFILE 'file.csv' INTO TABLE testTable FIELDS\nTERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\\n'",
+        "IMPORT 'file.csv' INTO testTable",
+        "ADD DATA TO testTable FROM testTable WITH ( ',' , '\\n')",
+        "UPDATE testTable FROM  'file.csv' DEFAULT"
+      ]
+    },
+    {
+      "question": "Which of the following would not be considered a typical database index type?",
+      "options": [
+        "Bitmap",
+        "B-tree",
+        "Alpha",
+        "Clustered"
+      ]
+    },
+    {
+      "question": "Given tables CarCustomers and PaintCustomers, which query would not get you all the\nunique first names that exist in both tables?",
+      "options": [
+        "SELECT DISTINCT first_name FROM\n(SELECT first_name FROM CarCustomers\nUNION\nSELECT first_name FROM PaintCustomers) names",
+        "SELECT DISTINCT a.first_name FROM CarCustomers a\nINNER JOIN PaintCustomers b ON a.first_name = b.first_name\nWHERE  b.first_name IS NULL\nUNION\nSELECT DISTINCT b.first_name FROM CarCustomers a\nRIGHT JOIN PaintCustomers b ON a.first_name = b.first_name\nWHERE a.first_name IS NULL\nUNION\nSELECT DISTINCT a.first_name FROM CarCustomers a\nINNER JOIN PaintCustomers b ON a.first_name = b.first_name",
+        "SELECT DISTINCT a.first_name, b.first_name FROM CarCustomers a,\nPaintCustomers b\nWHERE a.first_name = b.first_name",
+        "SELECT first_name FROM CarCustomers\nUNION\nSELECT first_name FROM PaintCustomer"
+      ]
+    },
+    {
+      "question": "Given two databases CarSales and PaintSales existing on the same database server, what\ncan be said about the following query?\nSELECT title, sales FROM\n(SELECT “Car” as title, SUM(sales) as sales FROM CarSales.sales\nUNION\nSELECT “Paint” as title, SUM(paintsSold) as sales FROM PaintSales.sales)",
+      "options": [
+        "It is not possible to query between databases",
+        "When using UNIONs the columns that are selected must be the same - this query\nwill not run",
+        "The query will produce an error stating the derived table needs an alias",
+        "The query will run as expected"
+      ]
+    }
+  ]
+}

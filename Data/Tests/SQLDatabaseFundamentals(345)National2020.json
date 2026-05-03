@@ -1,0 +1,498 @@
+{
+  "name": "SQL Database Fundamentals (345) National 2020",
+  "time": 60,
+  "answers": [
+    "D",
+    "D",
+    "A",
+    "B",
+    "A",
+    "A",
+    "C",
+    "D",
+    "B",
+    "A",
+    "B",
+    "C",
+    "A",
+    "A",
+    "D",
+    "D",
+    "A",
+    "A",
+    "D",
+    "D",
+    "D",
+    "A",
+    "A",
+    "B",
+    "A",
+    "D",
+    "D",
+    "D",
+    "D",
+    "A",
+    "D",
+    "A",
+    "D",
+    "A",
+    "B",
+    "A",
+    "A",
+    "C",
+    "A",
+    "B",
+    "A",
+    "B",
+    "A",
+    "C",
+    "D",
+    "A",
+    "B",
+    "A",
+    "A",
+    "B"
+  ],
+  "questions": [
+    {
+      "question": "The acronym TCL stands for",
+      "options": [
+        "Type Control Link",
+        "Type Content Language",
+        "Transaction Concept Language",
+        "Transaction Control Language"
+      ]
+    },
+    {
+      "question": "Which of the following is an example of TCL?",
+      "options": [
+        "COMMIT",
+        "ROLLBACK",
+        "SAVEPOINT",
+        "All of the above"
+      ]
+    },
+    {
+      "question": "A ______ provides a way of implementing sub-transactions?",
+      "options": [
+        "SAVEPOINT",
+        "ROLLBACKPOINT",
+        "TRANSACTIONPOINT",
+        "REVOKEPOINT"
+      ]
+    },
+    {
+      "question": "With respect to a table column, the ______ constraint is used to limit the value range that\nmay be placed in the column.",
+      "options": [
+        "PRIMARY KEY",
+        "CHECK",
+        "ADD",
+        "DEFAULT"
+      ]
+    },
+    {
+      "question": "A ______ constraint is used to provide a default value for a table’s column.",
+      "options": [
+        "DEFAULT",
+        "FOREIGN KEY",
+        "CHECK",
+        "ADD"
+      ]
+    },
+    {
+      "question": "A ______ is a column or a set of columns in a table that uniquely identifies a row but was\nnot selected as the Primary Key.",
+      "options": [
+        "Secondary Key",
+        "Dimension",
+        "Foreign Key",
+        "Candidate Key"
+      ]
+    },
+    {
+      "question": "Which of the following joins matches each row from the first table with each row from the\nsecond table, creating a Cartesian product?",
+      "options": [
+        "All Join",
+        "Right Join",
+        "Cross Join",
+        "Full Join"
+      ]
+    },
+    {
+      "question": "Which of the following may be used to perform a left join between the Customers and\nOrders tables using their CustID columns?",
+      "options": [
+        "JOIN Orders ON (Customers.CustID = Orders.CustID)",
+        "LEFT JOIN Orders ON (Customers.CustID = Orders.CustID)",
+        "LEFT OUTER JOIN Orders ON (Orders.CustID = Customers.CustID)",
+        "Both b and c"
+      ]
+    },
+    {
+      "question": "Which of the below SQL statements tests for a column having a non-null value?",
+      "options": [
+        "Not Equals NULL",
+        "Is Not Null",
+        "Not Contains Null",
+        "Not Select Null"
+      ]
+    },
+    {
+      "question": "When creating a table, FirstName VARCHAR(100) ______ would constrain the FirstName\ncolumn to non-null values.",
+      "options": [
+        "NOT NULL",
+        "IS NOT NULL",
+        "NON NULL",
+        "NON-NULL"
+      ]
+    },
+    {
+      "question": "What would be returned by the below SQL?\nSELECT FirstName from Customers\nUNION ALL\nSELECT FirstName from Employees;",
+      "options": [
+        "A distinct list of FirstName values from Customers that also exist as a FirstName in\nEmployees.",
+        "A non-distinct list of FirstName values from the Customers table combined with a\nnon-distinct list of the FirstName values from Employees",
+        "A distinct list of FirstName values from the Customers table combined with the\nFirstName values from Employees",
+        "An error would be returned, as UNION ALL is not a SQL command"
+      ]
+    },
+    {
+      "question": "What would be the effect of the following UPDATE statement? Assume Products is a table\ncontaining multiple records.\n\nUPDATE Products SET ProductName = 'My Favorite Product'\nWHERE CategoryID = 1;",
+      "options": [
+        "The statement updates all rows to have ProductName value My Favorite Product.",
+        "The statement updates any rows to have ProductName value My Favorite Product if\nthe CategoryID is not 1.",
+        "The statement updates any rows to have ProductName value My Favorite Product if\nthe CategoryID is 1.",
+        "The statement updates rows whose ProductName is already My Favorite Product to\nhave a CategoryID with value 1."
+      ]
+    },
+    {
+      "question": "What would be the effect of the following DELETE statement? Assume Products is a table\ncontaining multiple records and with a foreign key to table Categories.\n\nDELETE FROM Products\nWHERE CategoryID IN\n(SELECT CategoryID FROM Categories\nWHERE Categories.CategoryName = 'Electronics');",
+      "options": [
+        "The statement removes all rows in the Products table that correspond to a Categories\nrow whose CategoryName is Electronics.",
+        "The statement removes all rows from the Products table that contains a non-NULL\nCategoryID.",
+        "The statement would error due to the DELETE and WHERE keywords not being\nallowed to be used in combination.",
+        "The statement removes all rows from the Products table corresponding to a\nCategories row whose CategoryName is Electronics, while also removing the rows\nfrom Categories with CategoryName Electronics."
+      ]
+    },
+    {
+      "question": "Which of the SQL below can be used to insert a row into a table called Products?",
+      "options": [
+        "INSERT INTO Products(ProductID, ProductName, CurrentPrice)\nVALUES(8, 'Scarf', 9.99);",
+        "INSERT INTO Products(ProductID, ProductName, CurrentPrice)\n(8, 'Scarf', 9.99);",
+        "INSERT ROW Products(ProductID, ProductName, CurrentPrice)\nVALUES(8, 'Scarf', 9.99);",
+        "INSERT SINGLE ROW Products(ProductID, ProductName, CurrentPrice)\nVALUES(8, 'Scarf', 9.99);"
+      ]
+    },
+    {
+      "question": "______ may be added to the following SQL in order to filter it down to result-set rows with\ncount > 2:\nSELECT CategoryID, COUNT(*) FROM Products GROUP BY CategoryID;",
+      "options": [
+        "GROUPING COUNT(*) > 2;",
+        "EXISTS COUNT(*) > 2;",
+        "CONTAINING COUNT(*) > 2;",
+        "HAVING COUNT(*) > 2;"
+      ]
+    },
+    {
+      "question": "______ is the alias for a column in the following query:\nSELECT Prd.ProductID as product_id FROM Products Prd;",
+      "options": [
+        "Prd",
+        "Products",
+        "ProductID",
+        "product_id"
+      ]
+    },
+    {
+      "question": "In SQL Server, which of the below SQL will return the current date and time?",
+      "options": [
+        "SELECT GETDATE();",
+        "SELECT NOW();",
+        "SELECT TIMESTAMP();",
+        "SELECT GETNOW();"
+      ]
+    },
+    {
+      "question": "In SQL Server, what is the result of the below SQL?\nSELECT DATEPART(MM, '03/31/2020');",
+      "options": [
+        "3",
+        "31",
+        "2020",
+        "Month"
+      ]
+    },
+    {
+      "question": "In SQL Server, what is the result of the below SQL?\nSELECT DATEADD(MM, 2, '05/31/2020');",
+      "options": [
+        "2020-05-31 00:00:00.200",
+        "2020-05-31 00:02:00.000",
+        "2022-05-31 00:00:00.000",
+        "2020-07-31 00:00:00.000"
+      ]
+    },
+    {
+      "question": "Which of the following is not a SQL Server date function?",
+      "options": [
+        "DATEADD",
+        "DATEDIFF",
+        "DATEPART",
+        "DATEFIND"
+      ]
+    },
+    {
+      "question": "Which of the following is a Postgres date function?",
+      "options": [
+        "DATE_PART",
+        "ISFINITE",
+        "TIMEOFDAY",
+        "All of the above"
+      ]
+    },
+    {
+      "question": "In Postgres, what is the result of the below SQL?\nSELECT AGE('2020-03-01', '2020-01-01');",
+      "options": [
+        "{\"months\":2}",
+        "{\"years\":2}",
+        "{\"days\":2}",
+        "{\"minutes\":2}"
+      ]
+    },
+    {
+      "question": "The date range for the SMALLDATETIME datatype in SQL Server is ______.",
+      "options": [
+        "January 1, 1900, through June 6, 2079",
+        "January 1, 1900 through December 31, 2560",
+        "1000 AD through 10,000 AD",
+        "4713 BC through 5874897 AD"
+      ]
+    },
+    {
+      "question": "The date range for the DATE datatype in MySQL is ______.",
+      "options": [
+        "January 1, 0001 through December 31, 9999",
+        "January 1, 1000 through December 31, 9999",
+        "1 BC through 100,000 AD",
+        "4713 BC through 5874897 AD"
+      ]
+    },
+    {
+      "question": "In SQL Server, which range of values defines TINYINT?",
+      "options": [
+        "Integer data from 0 to 255",
+        "Integer data from -32,768 to 32,767",
+        "Integer data from -8,388,608 to 8,388,607",
+        "Integer data from -2,147,483,648 to 2,147,483,647"
+      ]
+    },
+    {
+      "question": "In SQL Server 2017 and earlier, the VARCHAR(10) datatype represents which of the\nfollowing?",
+      "options": [
+        "Fixed-length Unicode and non-Unicode string data with a maximum of 10 characters",
+        "Fixed-length non-Unicode string data with a maximum of 10 characters",
+        "Variable-length Unicode and non-Unicode string data with a maximum of 10\ncharacters",
+        "Variable-length non-Unicode string data with a maximum of 10 characters"
+      ]
+    },
+    {
+      "question": "Which of the following is not a character data type in Postgres?",
+      "options": [
+        "VARCHAR",
+        "CHARACTER VARYING",
+        "CHAR",
+        "NVARCHAR"
+      ]
+    },
+    {
+      "question": "In SQL Server, a ______ index causes a table's data rows to be sorted and stored based upon\nthe key values of the index.",
+      "options": [
+        "Non-clustered",
+        "Heap",
+        "B-tree",
+        "Clustered"
+      ]
+    },
+    {
+      "question": "Which of the following is an index type in Postgres?",
+      "options": [
+        "B-tree",
+        "Hash",
+        "GiST",
+        "All of the above"
+      ]
+    },
+    {
+      "question": "Which of the following is an example of a DML event that can result in a DML Trigger\nbeing activated in SQL Server?",
+      "options": [
+        "INSERT",
+        "CREATE_INDEX",
+        "CREATE_PROCEDURE",
+        "CREATE_VIEW"
+      ]
+    },
+    {
+      "question": "Which of the following is an example of a DDL event that can result in a DDL Trigger\nbeing activated in SQL Server?",
+      "options": [
+        "INSERT",
+        "UPDATE",
+        "DELETE",
+        "CREATE_TABLE"
+      ]
+    },
+    {
+      "question": "A database trigger can execute in response to DML events.",
+      "options": [
+        "True",
+        "False"
+      ]
+    },
+    {
+      "question": "Which of the following is not one of the SQL standards?",
+      "options": [
+        "SQL-89",
+        "SQL-92",
+        "SQL:1999",
+        "SQL:2007"
+      ]
+    },
+    {
+      "question": "Which of the following starts a multi-line comment in SQL?",
+      "options": [
+        "/*",
+        "…",
+        "/>",
+        "–"
+      ]
+    },
+    {
+      "question": "Which of the following SQL commands is used to remove a SQL database?",
+      "options": [
+        "Delete Database",
+        "Drop Database",
+        "Remove Database",
+        "Unpublish Database"
+      ]
+    },
+    {
+      "question": "Which of the following is DDL that may be used to modify the name of a database object?",
+      "options": [
+        "RENAME",
+        "UPDATE",
+        "MODIFY",
+        "GRANT"
+      ]
+    },
+    {
+      "question": "______ is a code insertion technique, used to attack data-driven applications. In this\ntechnique, malicious SQL statements are inserted into an entry field for execution.",
+      "options": [
+        "SQL Injection",
+        "SQL Attack",
+        "Cross-site scripting",
+        "SQL Dynamics"
+      ]
+    },
+    {
+      "question": "Which of the following is not supported in SQL Server?",
+      "options": [
+        "EXCEPT",
+        "INTERSECT",
+        "MINUS",
+        "UNION"
+      ]
+    },
+    {
+      "question": "______ ensures that each transaction is treated as a single \"unit\" which either succeeds\ncompletely or fails completely.",
+      "options": [
+        "Atomicity",
+        "Consistency",
+        "Availability",
+        "Partition Tolerance"
+      ]
+    },
+    {
+      "question": "In Postgres and MySQL, what would the below SQL do?\nINSERT INTO ProductsCopy\nSELECT * FROM Products;",
+      "options": [
+        "If ProductsCopy table doesn’t already exist, it creates the table ProductsCopy and\nthen insert rows from the Products table into ProductsCopy",
+        "Inserts rows from the Products table into ProductsCopy if the ProductsCopy table\nalready exists",
+        "Both a and b",
+        "None of the above"
+      ]
+    },
+    {
+      "question": "Which of the following is not a string function in SQL Server?",
+      "options": [
+        "CSTR",
+        "LEFT",
+        "LEN",
+        "REPLACE"
+      ]
+    },
+    {
+      "question": "In SQL Server, which of the following is not an example of a Ranking Window Function?",
+      "options": [
+        "ROW_NUMBER",
+        "COUNT",
+        "NTILE",
+        "DENSE_RANK"
+      ]
+    },
+    {
+      "question": "Parameterized SQL statements can be helpful in preventing SQL Injection in web\napplications?",
+      "options": [
+        "True",
+        "False"
+      ]
+    },
+    {
+      "question": "Consider the following SQL Server code for questions 44 – 48. Assume the Products table has 100\nrows. (NATIONAL EXAM)\n\nSELECT ProductID, ProductName, CategoryID, CurrentPrice,\nROW_NUMBER() OVER\n(PARTITION BY CategoryID\nORDER BY CurrentPrice DESC) AS PriceRank\nFROM Products\nORDER BY CategoryID, PriceRank ASC;\n\nWhat will the name of the fifth column in the results set be?",
+      "options": [
+        "ROW_NUMBER",
+        "(no column name)",
+        "PriceRank",
+        "5"
+      ]
+    },
+    {
+      "question": "Consider the following SQL Server code for questions 44 – 48. Assume the Products table has 100\nrows. (NATIONAL EXAM)\n\nSELECT ProductID, ProductName, CategoryID, CurrentPrice,\nROW_NUMBER() OVER\n(PARTITION BY CategoryID\nORDER BY CurrentPrice DESC) AS PriceRank\nFROM Products\nORDER BY CategoryID, PriceRank ASC;\n\nThe results set will be sorted in which order?",
+      "options": [
+        "CategoryID highest to lowest and then PriceRank lowest to highest",
+        "CategoryID highest to lowest and then PriceRank highest to lowest",
+        "CategoryID lowest to highest and then PriceRank highest to lowest",
+        "CategoryID lowest to highest and then PriceRank lowest to highest"
+      ]
+    },
+    {
+      "question": "Consider the following SQL Server code for questions 44 – 48. Assume the Products table has 100\nrows. (NATIONAL EXAM)\n\nSELECT ProductID, ProductName, CategoryID, CurrentPrice,\nROW_NUMBER() OVER\n(PARTITION BY CategoryID\nORDER BY CurrentPrice DESC) AS PriceRank\nFROM Products\nORDER BY CategoryID, PriceRank ASC;\n\nFor each first row for a specific CategoryID, what will be the PriceRank value? Assume\nCategoryID has datatype INT.",
+      "options": [
+        "1",
+        "One",
+        "This cannot be predicted",
+        "The value will be one higher than the previous row"
+      ]
+    },
+    {
+      "question": "Consider the following SQL Server code for questions 44 – 48. Assume the Products table has 100\nrows. (NATIONAL EXAM)\n\nSELECT ProductID, ProductName, CategoryID, CurrentPrice,\nROW_NUMBER() OVER\n(PARTITION BY CategoryID\nORDER BY CurrentPrice DESC) AS PriceRank\nFROM Products\nORDER BY CategoryID, PriceRank ASC;\n\nFor the first row in the results set, the CurrentPrice will be the lowest CurrentPrice for its\ncategory:",
+      "options": [
+        "True",
+        "False"
+      ]
+    },
+    {
+      "question": "Consider the following SQL Server code for questions 44 – 48. Assume the Products table has 100\nrows. (NATIONAL EXAM)\n\nSELECT ProductID, ProductName, CategoryID, CurrentPrice,\nROW_NUMBER() OVER\n(PARTITION BY CategoryID\nORDER BY CurrentPrice DESC) AS PriceRank\nFROM Products\nORDER BY CategoryID, PriceRank ASC;\n\nIf two rows have the same CategoryID and CurrentPrice they will have different values in\nPriceRank:",
+      "options": [
+        "True",
+        "False"
+      ]
+    },
+    {
+      "question": "The following SQL statements is an example of DML?\nINSERT INTO Categories (CategoryID, CategoryName) VALUES(100, 'Electronics');",
+      "options": [
+        "True",
+        "False"
+      ]
+    },
+    {
+      "question": "In SQL Server, which of the below SQL statements removes the column ClientDescription\nfrom the Clients table?",
+      "options": [
+        "ALTER TABLE Clients DROP ClientDescription;",
+        "ALTER TABLE Clients DROP COLUMN ClientDescription;",
+        "ALTER TABLE Clients DROP PARAM ClientDescription;",
+        "ALTER TABLE Clients DROP FIELD ClientDescription;"
+      ]
+    }
+  ]
+}

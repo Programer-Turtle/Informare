@@ -1,0 +1,510 @@
+{
+  "name": "SQL Database Fundamentals (345) National 2024",
+  "time": 60,
+  "answers": [
+    "B",
+    "C",
+    "A",
+    "C",
+    "A",
+    "D",
+    "A",
+    "B",
+    "A",
+    "D",
+    "D",
+    "A",
+    "C",
+    "A",
+    "A",
+    "C",
+    "C",
+    "A",
+    "A",
+    "B",
+    "D",
+    "B",
+    "D",
+    "C",
+    "A",
+    "D",
+    "B",
+    "B",
+    "B",
+    "C",
+    "A",
+    "C",
+    "A",
+    "C",
+    "D",
+    "D",
+    "B",
+    "D",
+    "D",
+    "C",
+    "B",
+    "C",
+    "A",
+    "C",
+    "B",
+    "A",
+    "B",
+    "A",
+    "B",
+    "A"
+  ],
+  "questions": [
+    {
+      "question": "In database terminology, DML stands for ______.",
+      "options": [
+        "Database Modification Language",
+        "Data Manipulation Language",
+        "Database Modifiable Location",
+        "Data Mask Location"
+      ]
+    },
+    {
+      "question": "What would be the result of the following SELECT statement – SELECT 1234 & 4321?",
+      "options": [
+        "5555",
+        "44789",
+        "192",
+        "Syntax Error"
+      ]
+    },
+    {
+      "question": "Who is known as the father of the Relational Database?",
+      "options": [
+        "Edgar Codd",
+        "Ken Thompson",
+        "Alan Turing",
+        "Marvin Minsky"
+      ]
+    },
+    {
+      "question": "An example of a NoSQL would be?",
+      "options": [
+        "PostgreSQL",
+        "MariaDB",
+        "MongoDB",
+        "IBM Db2"
+      ]
+    },
+    {
+      "question": "OLTP stands for ____.",
+      "options": [
+        "Online Transactional Processing",
+        "Ordered Level of Transitional Programming",
+        "Object Tabular Packaging",
+        "Objective Language for Transitional Parsing"
+      ]
+    },
+    {
+      "question": "Fourth Normalization Form adds ____.",
+      "options": [
+        "Tables in database should only have one Primary Key",
+        "Tables cannot have multi-valued dependencies on a Primary Key",
+        "No column entry should be dependent on any other entry other than the key for\nthe table",
+        "A composite key shouldn’t have any cyclic dependencies"
+      ]
+    },
+    {
+      "question": "A Surrogate Key ____.",
+      "options": [
+        "Is an artificially generated key",
+        "Is one where values exist in the real world",
+        "Excludes primary attributes in a table",
+        "Is another name for a Candidate Key"
+      ]
+    },
+    {
+      "question": "A Primary Key can allow duplicates under special conditions.",
+      "options": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "question": "What would be a purpose to create a database view to present to the user?",
+      "options": [
+        "To ensure accessing data is the most efficient",
+        "To reduce the amount of storage in the database",
+        "To open up the availability of the data",
+        "To hide data complexity"
+      ]
+    },
+    {
+      "question": "An OLAP database ____.",
+      "options": [
+        "Is best suited for transactional processing",
+        "Frequently stores its data in cubes",
+        "Is traditionally involved with processes heaving in reading and writing",
+        "Must be normalized for efficient use"
+      ]
+    },
+    {
+      "question": "The process of creating a summary of the data in a data warehouse is called ____.",
+      "options": [
+        "Data mart",
+        "Data mining",
+        "Data extraction",
+        "Data aggregation"
+      ]
+    },
+    {
+      "question": "The process of creating a subset of the data warehouse for reporting and analysis is called\n____.",
+      "options": [
+        "Data mart",
+        "Data mining",
+        "Data extraction",
+        "Data aggregation"
+      ]
+    },
+    {
+      "question": "? What is the main difference between First Normal Form (1NF) and Second Normal\nForm (2NF)",
+      "options": [
+        "1NF requires that all data be atomic, while 2NF requires that all data be unique",
+        "1NF requires that all data be unique, while 2NF requires that all data be atomic",
+        "1NF requires that all data be atomic, while 2NF removes partial dependencies",
+        "1NF removes partial dependencies, while 2NF requires that all data be atomic"
+      ]
+    },
+    {
+      "question": "The purpose of the ACID properties in database transaction processing is to ____.",
+      "options": [
+        "Ensure data accuracy and consistency",
+        "Ensure data security",
+        "Improve performance",
+        "Increase scalability"
+      ]
+    },
+    {
+      "question": "What is the main difference between a committed transaction and an uncommitted\ntransaction?",
+      "options": [
+        "Committed transaction are durable, while uncommitted transactions are not",
+        "Committed transactions are atomic, while uncommitted transactions are not",
+        "Committed transactions are isolated, while uncommitted transactions are not",
+        "Committed transactions are flexible, while uncommitted transactions are not"
+      ]
+    },
+    {
+      "question": "A temporary table created during a stored procedure will persist until ____?",
+      "options": [
+        "The stored procedure manually deletes it",
+        "A commit completes the current transaction",
+        "The stored procedure ends",
+        "The user connection is successfully terminated"
+      ]
+    },
+    {
+      "question": "A benefit of denormalization would be ____.",
+      "options": [
+        "That it avoids data duplication",
+        "To save space",
+        "To make some queries more efficient",
+        "To make maintenance of the data easier"
+      ]
+    },
+    {
+      "question": "In a table with multiple columns designated as a primary key, this key is called a ____.",
+      "options": [
+        "Composite Key",
+        "Secondary Key",
+        "Candidate Key",
+        "Super Key"
+      ]
+    },
+    {
+      "question": "In a relational database, a transitive dependency occurs when a ____.",
+      "options": [
+        "Non-key attribute depends on another non-key attribute",
+        "Primary key depends on a non-key attribute",
+        "Non-key attribute depends on a primary key",
+        "Foreign key depends on a primary key"
+      ]
+    },
+    {
+      "question": "Database consistency states ____ constraints must be maintained so that the database is\nconsistent before and after a transaction",
+      "options": [
+        "Automicity",
+        "Integrity",
+        "Isolation",
+        "Consistency"
+      ]
+    },
+    {
+      "question": "In a database, data redundancy can be reduced by ____.",
+      "options": [
+        "Combining multiple tables into a single table",
+        "Adding Indexes on frequently used keywords",
+        "Reducing joins by keeping frequently used data in the same table",
+        "Creating a separate table for each type of data"
+      ]
+    },
+    {
+      "question": "The isolation level that ensures that a transaction's view of the data is consistent across\nmultiple reads is ____.",
+      "options": [
+        "Serializable",
+        "Repeatable Read",
+        "Read Uncommitted",
+        "Read Committed"
+      ]
+    },
+    {
+      "question": "Which of the following does NOT describe the Read Uncommitted Isolation Level?",
+      "options": [
+        "It is used to allow dirty reads.",
+        "It is used to improve performance in high concurrency environments.",
+        "It allows non-repeatable reads.",
+        "It is used to lock a row so no other read can access the data"
+      ]
+    },
+    {
+      "question": "In a relational database, the timestamp ordering protocol is used to ____.",
+      "options": [
+        "Prevent deadlocks",
+        "Ensure data consistency",
+        "Guarantee serializability",
+        "Set the order by row level locking"
+      ]
+    },
+    {
+      "question": "____ is NOT a type of lock in a relational database",
+      "options": [
+        "Shared lock",
+        "Exclusive lock",
+        "Read lock",
+        "Write lock"
+      ]
+    },
+    {
+      "question": "A pessimistic database lock is ____.",
+      "options": [
+        "Granted after reading the data; others can’t access data until transaction is\ncomplete",
+        "Used mostly when multiple transactions do not interfere with each other",
+        "Granted upon update only; others access when update has completed",
+        "Granted upon attempting to access the data; others can’t access data until\ntransaction is complete"
+      ]
+    },
+    {
+      "question": "Which of the following is NOT a benefit of using stored procedures?",
+      "options": [
+        "Improved security",
+        "Increased code readability",
+        "Reduced network traffic",
+        "Increased performance"
+      ]
+    },
+    {
+      "question": "An advantage of using a NoSQL database would be ____.",
+      "options": [
+        "It is trustworthy because it follows ACID properties",
+        "It is good for handling large amount of data",
+        "It is standardized across platforms",
+        "It supports complex transactions"
+      ]
+    },
+    {
+      "question": "The acronym NoSQL stands for ____.",
+      "options": [
+        "Non-Structured Query Language",
+        "Not Only SQL",
+        "Normalized Object-Oriented SQL",
+        "Non-Object-Oriented SQL"
+      ]
+    },
+    {
+      "question": "An example of a DML command would be ____.",
+      "options": [
+        "COMMIT",
+        "INSERT",
+        "SAVEPOINT",
+        "TRUNCATE"
+      ]
+    },
+    {
+      "question": "The purpose of an ER diagram is to ____.",
+      "options": [
+        "Provide a visual representation of the relationships between entities in a database",
+        "Show the structure of a programming language",
+        "Display the flow of data in a system",
+        "Illustrate the architecture of a building"
+      ]
+    },
+    {
+      "question": "In an ER diagram, what is the degree of a ternary relationship?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "question": "In an E-R diagram, the connectivity of a relationship is most often represented by which\nrelationships",
+      "options": [
+        "Cardinality ratios",
+        "Parent / Child",
+        "Primary / Foreign",
+        "Mapping"
+      ]
+    },
+    {
+      "question": "An example of a ternary relationship in a database would be ____.",
+      "options": [
+        "A teacher who teaches connected to a subject table where the teacher teaches\nthree subjects",
+        "A relationship between an ingredients table and a recipe table where it takes\nmultiple ingredients to make the recipe",
+        "A relationship between a teacher, subject, and courses table where each student\ncan take multiple courses, each course is taught by one teacher and each teacher\ncan teach multiple courses.",
+        "A relationship between an ingredient table and a recipe table where many\ningredients exist in many recipes"
+      ]
+    },
+    {
+      "question": "How would you set up a foreign key on the itemID in the Member_Item table?",
+      "options": [
+        "FOREIGN KEY Item(id) REFERENCES Member_Item(itemId)",
+        "PRIMARY KEY Member_Item(itemId) FOREIGN KEY Item(id)",
+        "PRIMARY KEY Item(id) FOREIGN KEY Member_Item(itemId)",
+        "FOREIGN KEY (itemId) REFERENCES Item(id)"
+      ],
+      "image": "2024-National-Table.png"
+    },
+    {
+      "question": "What will be returned from the following query?\nSELECT lName, MAX(paid)\nFROM Member a\nINNER JOIN Member_Item b on a.memberId = b.memberId\nINNER JOIN Item c on b.itemId = c.id\nWHERE paid < 80.80",
+      "options": [
+        "Jones, 66.25",
+        "Jones, 33.50",
+        "Shine, 33.50",
+        "Can’t determine results of the query"
+      ],
+      "image": "2024-National-Table.png"
+    },
+    {
+      "question": "How many rows will be returned from the following query?\nSELECT a.memberId\nFROM Member a\nINNER JOIN Member_Item b on a.memberId = b.memberId\nINNER JOIN Item c on b.itemId = c.id\nWHERE paid < (SELECT AVG(size_cm) FROM Item)",
+      "options": [
+        "1",
+        "4",
+        "6",
+        "7"
+      ],
+      "image": "2024-National-Table.png"
+    },
+    {
+      "question": "What is the level of normalization of the Member table?",
+      "options": [
+        "1NF",
+        "2NF",
+        "3NF",
+        "4NF"
+      ],
+      "image": "2024-National-Table.png"
+    },
+    {
+      "question": "What would the joins look like to show members who have not purchased anything?\nSELECT fName, lname, descrip\nFROM Member a\n< Fill in the JOINS here>\nWHERE fname is NULL",
+      "options": [
+        "INNER JOIN Member_Item b on a.member_Id = b.member_Id\nINNER JOIN Item c on b.item_id = c.id",
+        "LEFT JOIN Member_Item b on a.member_Id = b.member_Id\nINNER JOIN Item c on b.item_id = c.id",
+        "INNER JOIN Member_Item b on a.member_Id = b.member_Id\nLEFT JOIN Item c on b.item_id = c.id",
+        "LEFT JOIN Member_Item b on a.member_Id = b.member_Id\nLEFT JOIN Item c on b.item_id = c.id"
+      ],
+      "image": "2024-National-Table.png"
+    },
+    {
+      "question": "How many rows are returned from the following query?\nSELECT fName, lname, descrip\nFROM Member a\nLEFT JOIN Member_Item b on a.member_Id = b.member_Id\nINNER JOIN Item c on b.item_id = c.id",
+      "options": [
+        "0",
+        "3",
+        "6",
+        "7"
+      ],
+      "image": "2024-National-Table.png"
+    },
+    {
+      "question": "A stored procedure can NOT be called inside a query.",
+      "options": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "question": "Having many processes request an exclusive lock on one table, it is know as a ____.",
+      "options": [
+        "Deadlock",
+        "Lock Escalation",
+        "Lock Contention",
+        "Lock Order"
+      ]
+    },
+    {
+      "question": "The highest isolation level in a database transaction would be ____.",
+      "options": [
+        "Serializable",
+        "Read Uncommitted",
+        "Read Committed",
+        "Repeatable Reads"
+      ]
+    },
+    {
+      "question": "What is the main difference between a clustered index and a non-clustered index?",
+      "options": [
+        "A clustered index using multiple keys as the index and a non-clustered index only\nuses one.",
+        "Clustered indexes are indexes across multiple tables and non-clustered only\ninvolve one table.",
+        "A clustered index sorts the physical tables based on a key and a non-clustered\nindex stores the index in a separate file.",
+        "Many clustered indexed can exist on one table where only one non-clustered\nindex can exist."
+      ]
+    },
+    {
+      "question": "What is one main difference between a stored procedure and a trigger?",
+      "options": [
+        "A stored procedure can be written in a high-level language (e.g. Java) where a\ntrigger cannot.",
+        "A stored procedure can be called on its own and a trigger cannot.",
+        "Stored procedures are portable between different types of databases and triggers\nare not.",
+        "Stored procedures are invoked at the database level and triggers are invoked at the\ntable level."
+      ]
+    },
+    {
+      "question": "Database sharding is ____.",
+      "options": [
+        "A process of dividing table records into smaller tables where each table has the\nsame columns.",
+        "A process of dividing table records into smaller tables where each table has a\nsubset of columns from the original table.",
+        "Also known as vertical partitioning",
+        "A process of splitting databases into smaller, more discreet databases."
+      ]
+    },
+    {
+      "question": "A database Materialized VIEW is ____.",
+      "options": [
+        "A temporary table used to hold aggregate data derived from joining multiple\ntables.",
+        "A result of an SQL query kept for future reference that is stored on disk.",
+        "A Virtual Table, stored in memory, that allows the user to not have to rerun\ncommon queries.",
+        "A view that does not need to be updated because the parent data is static"
+      ]
+    },
+    {
+      "question": "Cardinality in a database refers to the data’s ____.",
+      "options": [
+        "Uniqueness",
+        "Importance",
+        "Normalization Level",
+        "Persistence"
+      ]
+    },
+    {
+      "question": "Which of the following is NOT a type of SQL injections attack?",
+      "options": [
+        "Union-based injection",
+        "Error-based injection",
+        "Blind Injection",
+        "Authenticated injection"
+      ]
+    },
+    {
+      "question": "Which of the following is a common technique to prevent cross-site scripting (XSS)\nattacks?",
+      "options": [
+        "Input validation",
+        "SSL encryption",
+        "Token-based authentication",
+        "Password hashing"
+      ]
+    }
+  ]
+}

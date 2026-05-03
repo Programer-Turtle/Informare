@@ -1,0 +1,512 @@
+{
+  "name": "SQL Database Fundamentals (345) National 2023",
+  "time": 60,
+  "answers": [
+    "C",
+    "B",
+    "A",
+    "C",
+    "B",
+    "B",
+    "A",
+    "D",
+    "C",
+    "C",
+    "A",
+    "A",
+    "A",
+    "B",
+    "D",
+    "A",
+    "C",
+    "A",
+    "C",
+    "D",
+    "B",
+    "A",
+    "C",
+    "C",
+    "C",
+    "A",
+    "D",
+    "A",
+    "D",
+    "A",
+    "C",
+    "C",
+    "B",
+    "B",
+    "B",
+    "D",
+    "B",
+    "A",
+    "D",
+    "C",
+    "B",
+    "B",
+    "B",
+    "A",
+    "C",
+    "C",
+    "B",
+    "A",
+    "C",
+    "A"
+  ],
+  "questions": [
+    {
+      "question": "What output would the following query produce – SELECT \"Hello from BPA\" FROM\nCustomers WHERE (TRUE OR !TRUE) AND NOT(!FALSE) OR TRUE?",
+      "options": [
+        "No result",
+        "Hello from BPA",
+        "Hello from BPA repeated for every record in the Customer table",
+        "Hello from BPA, but only from the first record"
+      ]
+    },
+    {
+      "question": "What does the acronym OLAP stand for?",
+      "options": [
+        "Ordered linear programming",
+        "Online analytical processing",
+        "Organizational lists advanced programming",
+        "Object language advanced package"
+      ]
+    },
+    {
+      "question": "To represent the relative compliment of two tables in SQL you would use a(n) _______\njoin.",
+      "options": [
+        "OUTTER",
+        "INNER",
+        "FULL",
+        "COMPLIMENT"
+      ]
+    },
+    {
+      "question": "Given the table mytable, where field1 is either 1 or 0 and field2 is either 1 or 0, what will\nbe the result of the query “SELECT field1^field2 FROM mytable”?",
+      "options": [
+        "A 0 for each row where field1 and field2 are 0; all other rows will be 1",
+        "Only rows from mytable where either field1 or field2 is 1",
+        "A 0 where both field1 and field2 have the same value; all other rows will be 1",
+        "Only rows where either field1 is 1 or field2 is 1, but not both"
+      ]
+    },
+    {
+      "question": "The result of a(n) _______ join is known as a Cartesian Product.",
+      "options": [
+        "FULL",
+        "CROSS",
+        "OUTTER",
+        "INNER"
+      ]
+    },
+    {
+      "question": "The WHERE and HAVING clauses can be used interchangeably – the WHERE clause\nprocesses data during the QUERY and the HAVING clause processes data once the\nQUERY has finished.",
+      "options": [
+        "TRUE",
+        "FALSE"
+      ]
+    },
+    {
+      "question": "To achieve the normalization standard of _______, you must eliminate any transitive\ndependencies.",
+      "options": [
+        "3NF",
+        "BCNF",
+        "4NF",
+        "5NF"
+      ]
+    },
+    {
+      "question": "A _______ key is a combination of one or more columns that can uniquely identify\nrecords in a table.",
+      "options": [
+        "Foreign",
+        "Combined",
+        "Complex",
+        "Composite"
+      ]
+    },
+    {
+      "question": "Which of the following is an appropriate step to take to lessen the potential of an SQL\ninjection attack on your database?",
+      "options": [
+        "Implement brute force controls such as account lockout after a set number of\ninvalid attempts",
+        "Require users change their passwords regularly",
+        "Use parameterized queries instead of dynamic queries",
+        "Do not house the database and application servers on the same physical machine"
+      ]
+    },
+    {
+      "question": "_______ is a condition where the foreign key column values in all of the rows of one\ntable have matching rows in the primary key of a second table.",
+      "options": [
+        "Restriction factor",
+        "Record Instance",
+        "Referential integrity",
+        "Concurrency"
+      ]
+    },
+    {
+      "question": "The _______ property ensures that all operations within a transaction are successful.",
+      "options": [
+        "Atomicity",
+        "Consistency",
+        "Completeness",
+        "Durability"
+      ]
+    },
+    {
+      "question": "GRANT and REVOKE are which types of commands?",
+      "options": [
+        "DCL",
+        "DDL",
+        "TCL",
+        "DML"
+      ]
+    },
+    {
+      "question": "A clustered index _______.",
+      "options": [
+        "modifies the original table to sort in place",
+        "creates a separate file that hold a key and its position",
+        "must be created on the primary key",
+        "is only available for tables with 3 columns or less"
+      ]
+    },
+    {
+      "question": "_______ is a procedure in DBMS which manages two simultaneous processes to execute\nwithout conflicts between each other.",
+      "options": [
+        "Dependency management",
+        "Concurrency control",
+        "UTLI",
+        "Strobe control"
+      ]
+    },
+    {
+      "question": "Which of the following is NOT a Data Model in a DBMS?",
+      "options": [
+        "Hierarchical Model",
+        "Network Model",
+        "Relational  Model",
+        "Functional Model"
+      ]
+    },
+    {
+      "question": "CREATE, ALTER, & RENAME are all examples of which data language?",
+      "options": [
+        "DDL",
+        "DCL",
+        "DML",
+        "DXL"
+      ]
+    },
+    {
+      "question": "Assume a query fails in the middle of a transaction and an auto rollback takes place.\nWhich of the following describes why the auto rollback takes place?",
+      "options": [
+        "Durability",
+        "Isolation",
+        "Atomicity",
+        "Transactional persistence"
+      ]
+    },
+    {
+      "question": "Assume a transaction completes and then there is a system failure.  Which of the\nfollowing describes why the data persists after a system failure?",
+      "options": [
+        "Durability",
+        "Isolation",
+        "Atomicity",
+        "Transactional persistence"
+      ]
+    },
+    {
+      "question": "What would be the result of the following query?\nSELECT 5+5 where 4 not in (1, 2, NULL)",
+      "options": [
+        "10",
+        "Syntax Error",
+        "No Rows",
+        "55"
+      ]
+    },
+    {
+      "question": "The highest normalization form the member_info table meets is _______.",
+      "options": [
+        "2NF",
+        "BCNF",
+        "4NF",
+        "5NF"
+      ],
+      "image": "2023-National-Table.png"
+    },
+    {
+      "question": "When the customer table was created the cust_no was set up as a primary key and the\nmem_no was not created as a key. Both pieces of data uniquely identify each given\nrecord. If the mem_no was added a key, which type of key would it be?",
+      "options": [
+        "Foreign",
+        "Candidate",
+        "Associate",
+        "Primary"
+      ],
+      "image": "2023-National-Table.png"
+    },
+    {
+      "question": "How would the key above be created on the customer table?",
+      "options": [
+        "ALTER TABLE customer ADD UNIQUE KEY cust_no(cust_no)",
+        "ALTER TABLE customer ADD KEY cust_no",
+        "ALTER TABLE customer ADD PRIMARY KEY cust_no(cust_no)",
+        "ALTER TABLE customer MODIFY KEY mem_no(mem_no, cust_no)"
+      ],
+      "image": "2023-National-Table.png"
+    },
+    {
+      "question": "The sales table above was originally created in error with the following create statement.\nWhat statement had to be run before the data was inserted?\nCREATE TABLE `sales` (\n`mem_no` INT NOT NULL,\n`month` VARCHAR(45) NULL,\n`gross` DOUBLE NULL,\n`net` DOUBLE NULL,\nPRIMARY KEY (`mem_no`));",
+      "options": [
+        "ALTER TABLE sales MODIFY mem_no ALLOW DUPS",
+        "ALTER TABLE sales MODIFY COLUMN mem_no INT NULL",
+        "ALTER TABLE sales DROP PRIMARY INDEX",
+        "ALTER TABLE sales MODIFY INDEX (\"cust_ no\") REMOVE PRIMARY\nCONSTRAINT"
+      ],
+      "image": "2023-National-Table.png"
+    },
+    {
+      "question": "The highest normalization form the customer table meets is _______.",
+      "options": [
+        "2NF",
+        "BCNF",
+        "4NF",
+        "5NF"
+      ],
+      "image": "2023-National-Table.png"
+    },
+    {
+      "question": "How many rows would the following query produce?\nSELECT name\nFROM member_info a\nINNER JOIN sales b ON a.mem_no = b.mem_no\nWHERE a.mem_no IN\n(SELECT mem_no\nFROM sales\nGROUP BY mem_no\nHAVING SUM(gross) > 1500)",
+      "options": [
+        "0",
+        "1",
+        "3",
+        "5"
+      ],
+      "image": "2023-National-Table.png"
+    },
+    {
+      "question": "Why will this query result in a syntax error?\nSELECT name\nFROM member_info\nWHERE mem_no NOT IN\n(SELECT mem_no\nFROM sales\nGROUP BY month\nWHERE AVG(net) > 500)",
+      "options": [
+        "Cannot use an aggregate function in a WHERE clause",
+        "Cannot have two WHERE clauses in the same query",
+        "NOT is not allowed in this context",
+        "GROUP BY column is not part of the field list"
+      ],
+      "image": "2023-National-Table.png"
+    },
+    {
+      "question": "The customer and member_info table appear to have a one to one relationship. What\nwould be the need to have the tables separated?",
+      "options": [
+        "Having them together violates BCNF",
+        "Having them together violates 4NF",
+        "Having them together violates 5NF",
+        "There is no need to have them as separate tables"
+      ],
+      "image": "2023-National-Table.png"
+    },
+    {
+      "question": "A WITH clause is used in SQL to support CTSs.  What does CTE stand for?",
+      "options": [
+        "Common Table Expression",
+        "Concurrent Tabulation Entity",
+        "Consistent Tab Execution",
+        "Classic Transposition Encoding"
+      ]
+    },
+    {
+      "question": "Using a WITH clause, the temporary entity remains _______.",
+      "options": [
+        "for the duration of the current transaction",
+        "until it is manually deleted",
+        "for the duration of the current database connection",
+        "for the duration of the query it is a part of"
+      ]
+    },
+    {
+      "question": "With using a stored procedure, SQL queries can still be recursive.",
+      "options": [
+        "True",
+        "False"
+      ]
+    },
+    {
+      "question": "In SQL the EXCEPT clause is closely related to what other clause?",
+      "options": [
+        "WITH",
+        "ALTER",
+        "UNION",
+        "NOT"
+      ]
+    },
+    {
+      "question": "Which does the acronym BASE refer to in database development?",
+      "options": [
+        "Branching, Available, Structured, Enterprise",
+        "aBsolute structure, Active monitoring, Syntactic, Entity relationship",
+        "Basically Available, Soft state, Eventually consistent",
+        "Broad Action, Strong relationships, Extensible content"
+      ]
+    },
+    {
+      "question": "The BASE Model of data manipulation is used in place of the ACID model for which\ntype of Database?",
+      "options": [
+        "PostgreSQL",
+        "MongoDB",
+        "MariaDB",
+        "Microsoft SQL Server"
+      ]
+    },
+    {
+      "question": "_______ is what happen if a database table is locked exclusively and a process is stopped\nfrom accessing the table until the lock is release.",
+      "options": [
+        "A deadlock",
+        "Blocking",
+        "Impeding",
+        "Stopping"
+      ]
+    },
+    {
+      "question": "_______ is what happens when a transaction has to wait for an indefinite amount of time\nto acquire a lock.",
+      "options": [
+        "Increasing priority",
+        "Starvation",
+        "Wait-die and wound",
+        "Resource leak"
+      ]
+    },
+    {
+      "question": "One benefit of a NoSQL database over a Relational Database is _______.",
+      "options": [
+        "security and compliance",
+        "data integrity",
+        "the strength of the transaction",
+        "the relative ease of updating the schema"
+      ]
+    },
+    {
+      "question": "When designing a database, _______ is one reason to not fully normalize some of the\ndata.",
+      "options": [
+        "data security",
+        "query efficiency",
+        "atomicity",
+        "requires less disk space"
+      ]
+    },
+    {
+      "question": "One method of ensuring the database only has data in that that belongs is to use _______.",
+      "options": [
+        "constraints",
+        "error logging",
+        "stored procedures",
+        "audit transformation"
+      ]
+    },
+    {
+      "question": "Given two resources and two users, each user wants both resources.  If user1 has resource\n1 locked and user 2 has resource 2 locked, this situation is known as a _______.",
+      "options": [
+        "hot lock",
+        "lock timeout",
+        "stored procedures",
+        "dead lock"
+      ]
+    },
+    {
+      "question": "A(n) _______ can occur after or instead of a DML action.",
+      "options": [
+        "update",
+        "alter",
+        "trigger",
+        "transaction"
+      ]
+    },
+    {
+      "question": "The highest of the four levels of the isolation property is known as _______.",
+      "options": [
+        "read committed",
+        "serializable",
+        "absolute",
+        "immediate"
+      ]
+    },
+    {
+      "question": "Database _______ is the ability of a database to allow multiple users to affect multiple\ntransactions.",
+      "options": [
+        "synchronicity",
+        "concurrency",
+        "multiplicity",
+        "concomitants"
+      ]
+    },
+    {
+      "question": "A _______ occurs where a transaction is allowed to read a row that has been modified by\nanother transaction.",
+      "options": [
+        "phantom read",
+        "dirty read",
+        "lost read",
+        "non-repeatable"
+      ]
+    },
+    {
+      "question": "A(n) _______ occurs when two transactions want to change the same column and the\nsecond update overwrites the first.",
+      "options": [
+        "lost update",
+        "optimistic transaction",
+        "phantom update",
+        "overwrite anomaly"
+      ]
+    },
+    {
+      "question": "An advantage of a database view is it _______.",
+      "options": [
+        "allows for easier database updates",
+        "reduces the dependency on pessimistic locks",
+        "provides consistency to applications",
+        "allows for quicker updates and reads"
+      ]
+    },
+    {
+      "question": "A(n) _______ defines the conceptual view of a database.",
+      "options": [
+        "Composite Attribute",
+        "Mapping Cardinality",
+        "ER Model",
+        "Relational Set"
+      ]
+    },
+    {
+      "question": "Which of the following is NOT a benefit of referential integrity?",
+      "options": [
+        "Ensures no duplication of data",
+        "Allows orphan data to be found and flagged",
+        "Avoids one table pointing to non-existent field in another table",
+        "Prevents the deletion of a record that is reference by a foreign key in another table"
+      ]
+    },
+    {
+      "question": "A _______ database is a data model in which records are organized into a tree-like or\nparent-child structure.",
+      "options": [
+        "hierarchical",
+        "cloud",
+        "distributed",
+        "centralized"
+      ]
+    },
+    {
+      "question": "Which of the following is NOT a type of OLAP server?",
+      "options": [
+        "Specialized SQL servers",
+        "Relational OLAP",
+        "Distributed OLAP",
+        "Hybrid OLAP"
+      ]
+    },
+    {
+      "question": "IBM devised a system of the four Vs to stand for the four dimensions of big data.  What\nare they?",
+      "options": [
+        "Volume, Velocity, Variety, Veracity",
+        "Veracity, Variable, Virtual, Volume",
+        "Virtual, Value, Volume, Vantage",
+        "Volume, Virtual, Variable, Veracity"
+      ]
+    }
+  ]
+}

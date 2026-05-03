@@ -1,0 +1,502 @@
+{
+  "name": "SQL Database Fundamentals (345) National 2019",
+  "time": 60,
+  "answers": [
+    "A",
+    "D",
+    "C",
+    "D",
+    "B",
+    "C",
+    "A",
+    "D",
+    "D",
+    "C",
+    "B",
+    "A",
+    "A",
+    "B",
+    "C",
+    "B",
+    "D",
+    "B",
+    "C",
+    "A",
+    "D",
+    "B",
+    "C",
+    "D",
+    "D",
+    "A",
+    "B",
+    "A",
+    "D",
+    "A",
+    "C",
+    "B",
+    "B",
+    "A",
+    "D",
+    "C",
+    "B",
+    "A",
+    "D",
+    "D",
+    "B",
+    "C",
+    "A",
+    "D",
+    "C",
+    "A",
+    "B",
+    "A",
+    "D",
+    "D"
+  ],
+  "questions": [
+    {
+      "question": "Which of the following will produce the average of all salaries among employees?",
+      "options": [
+        "Select avg(salary) from Employees_T",
+        "Select salary from avg(Employees_T)",
+        "Select sum(salary) from Employees_T where salary = avg",
+        "Select average salary from Employees_T"
+      ]
+    },
+    {
+      "question": "What are the commands that are used in order to insert data from one table to another?",
+      "options": [
+        "INSERT…EXECUTE",
+        "INSERT INTO…ALTER",
+        "INSERT…SELECT",
+        "INSERT INTO…SELECT"
+      ]
+    },
+    {
+      "question": "The following syntax issues a call to the stored procedure sp_indexinfo",
+      "options": [
+        "GO sp_indexinfo",
+        "CALL sp_indexinfo",
+        "EXEC sp_indexinfo",
+        "RUN sp_indexinfo"
+      ]
+    },
+    {
+      "question": "Which of the following are methods to backup a database?",
+      "options": [
+        "Virtual Full",
+        "Incremental",
+        "Differential",
+        "All of the above"
+      ]
+    },
+    {
+      "question": "A unique index allows the ability to include duplicate values:",
+      "options": [
+        "True",
+        "False"
+      ]
+    },
+    {
+      "question": "Besides tuples, which of the following objects are needed in order to make up a\nrelationship?",
+      "options": [
+        "Data Types",
+        "Primary Key",
+        "Attributes",
+        "None of the above"
+      ]
+    },
+    {
+      "question": "What organization developed SQL back in the late 1970s?",
+      "options": [
+        "IBM",
+        "Microsoft",
+        "Oracle",
+        "Intel"
+      ]
+    },
+    {
+      "question": "Which of the following is not a relational database?",
+      "options": [
+        "SQL",
+        "Oracle",
+        "MySQL",
+        "MongoDB"
+      ]
+    },
+    {
+      "question": "Which of the above figures refer to an OUTER JOIN?",
+      "options": [
+        "Figure 9.1",
+        "Figure 9.2",
+        "Figure 9.3",
+        "Figure 9.4"
+      ],
+      "image": "2019-National-Table.png"
+    },
+    {
+      "question": "Which of the above figures refer to an RIGHT JOIN?",
+      "options": [
+        "Figure 9.1",
+        "Figure 9.2",
+        "Figure 9.3",
+        "Figure 9.4"
+      ],
+      "image": "2019-National-Table.png"
+    },
+    {
+      "question": "Which of the above figures refer to an LEFT JOIN?",
+      "options": [
+        "Figure 9.1",
+        "Figure 9.2",
+        "Figure 9.3",
+        "Figure 9.4"
+      ],
+      "image": "2019-National-Table.png"
+    },
+    {
+      "question": "Which of the above figures refer to an INNER JOIN?",
+      "options": [
+        "Figure 9.1",
+        "Figure 9.2",
+        "Figure 9.3",
+        "Figure 9.4"
+      ],
+      "image": "2019-National-Table.png"
+    },
+    {
+      "question": "Refer to the following code to answer questions 13 through 17.\n\na. SELECT ProudctName, Price, InvQuantity\nb. FROM Inventory.Products\nc. WHERE InventoryProductSubCategoryID IN\nd. (SELECT InventoryProductSubCategoryID\ne. FROM Inventory.ProductSubcategory\nf. WHERE ProductName = ‘Computers’\n\nThe step executed in the above inner query (line d to f) finds the ProductName from\nProductSubCategory table",
+      "options": [
+        "True",
+        "False"
+      ]
+    },
+    {
+      "question": "Refer to the following code to answer questions 13 through 17.\n\na. SELECT ProudctName, Price, InvQuantity\nb. FROM Inventory.Products\nc. WHERE InventoryProductSubCategoryID IN\nd. (SELECT InventoryProductSubCategoryID\ne. FROM Inventory.ProductSubcategory\nf. WHERE ProductName = ‘Computers’\n\nThe syntax “Inventory” on line b refers to",
+      "options": [
+        "Table Name",
+        "Schema Name",
+        "Database Name",
+        "None of the above"
+      ]
+    },
+    {
+      "question": "Refer to the following code to answer questions 13 through 17.\n\na. SELECT ProudctName, Price, InvQuantity\nb. FROM Inventory.Products\nc. WHERE InventoryProductSubCategoryID IN\nd. (SELECT InventoryProductSubCategoryID\ne. FROM Inventory.ProductSubcategory\nf. WHERE ProductName = ‘Computers’\n\nThe above SQL statement is evaluated in how many steps?",
+      "options": [
+        "3",
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "question": "Refer to the following code to answer questions 13 through 17.\n\na. SELECT ProudctName, Price, InvQuantity\nb. FROM Inventory.Products\nc. WHERE InventoryProductSubCategoryID IN\nd. (SELECT InventoryProductSubCategoryID\ne. FROM Inventory.ProductSubcategory\nf. WHERE ProductName = ‘Computers’\n\nThe step within the outer query evaluated in the above SQL statement (line a to c) finds\nthe product subcategory from the field ProductName selected in the inner query.",
+      "options": [
+        "True",
+        "False"
+      ]
+    },
+    {
+      "question": "Refer to the following code to answer questions 13 through 17.\n\na. SELECT ProudctName, Price, InvQuantity\nb. FROM Inventory.Products\nc. WHERE InventoryProductSubCategoryID IN\nd. (SELECT InventoryProductSubCategoryID\ne. FROM Inventory.ProductSubcategory\nf. WHERE ProductName = ‘Computers’\n\nWhat key definition in the Products and ProductSubCategory tables from the SQL\nstatement above is most probable?",
+      "options": [
+        "The field Name is a primary key in the Product table",
+        "The field ProductSubcategoryID is the primary key in the Product table",
+        "The field Name is a foreign key in the ProductSubcategory table",
+        "The field ProductSubcategoryID is a foreign key in the Products table"
+      ]
+    },
+    {
+      "question": "Refer to the following data set below for questions 18 and 19\n\n{10, 20, 20, 35, 70, 70, 90, 100, 115, 115}\n\nWhat is the result of running a NTILE on the set, if we were to make 3 buckets on the\nabove dataset?",
+      "options": [
+        "Bucket 1:115, 115, 100\nBucket 2: 90, 70, 70\nBucket 3: 35, 20, 20, 10",
+        "Bucket 1: 10, 20, 20, 35\nBucket 2: 70, 70, 90\nBucket 3:  100, 115, 115",
+        "Bucket 1: 115, 115\nBucket 2: 100, 90\nBucket 3: 70, 70, 35, 20, 20, 10",
+        "None of the above"
+      ]
+    },
+    {
+      "question": "What is the result of running a DENSE_RANK on the set?",
+      "options": [
+        "{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}",
+        "{1, 2, 2, 4, 5, 5, 7, 8, 9, 9}",
+        "{1, 2, 2, 3, 4, 4, 5, 6, 7, 7}",
+        "None of the above"
+      ]
+    },
+    {
+      "question": "What is a set of technologies that is used for copying and distributing data and database\nobjects from one database to another?",
+      "options": [
+        "Replication",
+        "Database Logging",
+        "Database Mirroring",
+        "None of the above"
+      ]
+    },
+    {
+      "question": "What issues does replication help overcome within an SQL Server?",
+      "options": [
+        "Availability problems",
+        "Maintenance problems",
+        "Performance problems",
+        "All of the above"
+      ]
+    },
+    {
+      "question": "Which of the following is used in order to make data available to be replicated from one\nserver to another?",
+      "options": [
+        "Subscription",
+        "Publisher",
+        "Article",
+        "Distributor"
+      ]
+    },
+    {
+      "question": "Which of the following is not a typical use scenario of transactional replication?",
+      "options": [
+        "Integrating data from multiple sites",
+        "Data warehousing and reporting",
+        "Mobile applications or distributed server applications that have possible data\nconflicts.",
+        "Server-to-server scenarios that require high throughput, including: improving\nscalability and availability"
+      ]
+    },
+    {
+      "question": "Which of the following are types of replications?",
+      "options": [
+        "Transactional",
+        "Snapshot",
+        "Merge",
+        "All of the above"
+      ]
+    },
+    {
+      "question": "Which of the following are types of replication agents?",
+      "options": [
+        "Snapshot Agent",
+        "Merge Agent",
+        "Queue Reader Agent",
+        "All of the above"
+      ]
+    },
+    {
+      "question": "Which of the following replication agents are used to move transactions that are ready to\nbe replicated from the transaction log within the Publisher to the distributor database?",
+      "options": [
+        "Log Reader Agent",
+        "Queue Reader Agent",
+        "Snapshot Agent",
+        "Distribution Agent"
+      ]
+    },
+    {
+      "question": "Which of the following replication agents are used to move transactions that are\ncurrently held in the distributor database and pushes them to the subscribers?",
+      "options": [
+        "Merge Agent",
+        "Distribution Agent",
+        "Snapshot Agent",
+        "Log Reader Agent"
+      ]
+    },
+    {
+      "question": "Replication can occur no matter if the database recovery model is simple or full.",
+      "options": [
+        "True",
+        "False"
+      ]
+    },
+    {
+      "question": "The following clause(s) can contain search JOINS:",
+      "options": [
+        "HAVING",
+        "FROM",
+        "WHERE",
+        "All of the above"
+      ]
+    },
+    {
+      "question": "Subqueries cannot be nested inside which of the following statements?",
+      "options": [
+        "CREATE",
+        "DELETE",
+        "SELECT",
+        "UPDATE"
+      ]
+    },
+    {
+      "question": "Which of the following is true about the result of a sub-query?",
+      "options": [
+        "The result of a sub-query is always NULL",
+        "The result of a sub-query is generally ignored when executed",
+        "The result of a sub-query is used by the main query",
+        "The result of a sub-query doesn't give a result; it is just helpful in speeding up the\nmain query execution."
+      ]
+    },
+    {
+      "question": "Which of the following is a method for writing a sub-query in a main query?",
+      "options": [
+        "By using WHERE clause",
+        "By writing a SELECT statement embedded in the clause of another SELECT\nstatement",
+        "By using the GROUP BY clause",
+        "By using JOINS"
+      ]
+    },
+    {
+      "question": "Which of the following operators cannot be used in a sub-query?",
+      "options": [
+        "< >",
+        "AND",
+        ">",
+        "<"
+      ]
+    },
+    {
+      "question": "What is true about the ALL operator used for sub-queries?",
+      "options": [
+        "Returns rows only if all the values match in a list/sub-query",
+        "Returns rows that match only some values in a list/sub-query",
+        "Returns rows that match all the values in a list/sub-query",
+        "All of the above"
+      ]
+    },
+    {
+      "question": "Which of the following statements cannot be parent statements for a sub-query?",
+      "options": [
+        "UPDATE",
+        "DELETE",
+        "SELECT",
+        "GROUP BY"
+      ]
+    },
+    {
+      "question": "What standard did SQL become a part of in 1986 and 1987?",
+      "options": [
+        "American National Standards Institute",
+        "International Organization for Standardization",
+        "Both a and b",
+        "None of the above"
+      ]
+    },
+    {
+      "question": "Which of the following is the bitewise operator for NOT?",
+      "options": [
+        "|=",
+        "~",
+        "^=",
+        "&="
+      ]
+    },
+    {
+      "question": "A deadlock exists in the system if and only if the wait for graph:",
+      "options": [
+        "Has a cycle in it",
+        "Is a tree",
+        "Has a path from first node to last node",
+        "None of the above"
+      ]
+    },
+    {
+      "question": "The number of entities to which another entity can be associated via a relationship set is\nexpressed as:",
+      "options": [
+        "Attributes",
+        "Schema",
+        "Entity",
+        "Cardinality"
+      ]
+    },
+    {
+      "question": "SQL view is said to be updatable (that is, inserts, updates or deletes can be applied on\nthe view) if which of the following conditions are satisfied by the query defining the\nview?",
+      "options": [
+        "The query does not have a group by or having clause",
+        "The from clause has only one database relation",
+        "The select clause contains only attribute names of the relation, and does not have\nany expressions, aggregates, or distinct specification",
+        "All of the above"
+      ]
+    },
+    {
+      "question": "Which of the following is true regarding views?",
+      "options": [
+        "A user who creates a view receives all privileges on that view",
+        "If a user creates a view on which no authorization can be granted, the system will\nallow the view creation request",
+        "The user who creates a view cannot be given update authorization on a view\nwithout having update authorization on the relations used to define the view",
+        "The user who creates a view cannot be given update authorization on a view\nwithout having update authorization on the relations used to define the view"
+      ]
+    },
+    {
+      "question": "Domain constraints, functional dependency and referential integrity are special forms\nof?",
+      "options": [
+        "Referential constraint",
+        "Foreign key",
+        "Assertion",
+        "Primary key"
+      ]
+    },
+    {
+      "question": "Which of the following can be addressed by enforcing a referential integrity constraint?",
+      "options": [
+        "Information on the customer must be known before anything can be sold to that\ncustomer",
+        "When entering an order quantity, the user must input a number and not some text\n(i.e., 12 rather than ‘a dozen’)",
+        "Certain fields are required (such as the email address, or phone number) before\nthe record is accepted",
+        "All phone numbers must include the area code"
+      ]
+    },
+    {
+      "question": "Which statement do you use to assign an initial value to a variable",
+      "options": [
+        "PARAMETER",
+        "CALL",
+        "ASSIGN",
+        "DECLARE"
+      ]
+    },
+    {
+      "question": "Which of the following best describes what would be returned by a query with the\nfollowing criteria?\n\nWHERE City LIKE ‘%nd’;",
+      "options": [
+        "All cities that have nd in them",
+        "All cities that have nd and a percent sign in it",
+        "All cities that have nd at the end",
+        "None of the above"
+      ]
+    },
+    {
+      "question": "IF-THEN-ELSE logical processing can be accomplished within an SQL statement",
+      "options": [
+        "True",
+        "False"
+      ]
+    },
+    {
+      "question": "What of the following is not true of a Differential Backup?",
+      "options": [
+        "Ability to allow retention of several versions of the same files",
+        "Files and folders are backed up to one backup set",
+        "Full backup and last differential backup needed for restore",
+        "Less storage space needed"
+      ]
+    },
+    {
+      "question": "There are differences between stored procedures and functions. Which of the following\nis not a difference?",
+      "options": [
+        "Stored procedures can be utilized within a SELECT statement while functions\ncan’t be embedded in a SELECT statement",
+        "Stored procedures can use SELECT, INSERT, UPDATE, DELETE while\nfunctions only use SELECT",
+        "Stored Procedures have input/output parameters while functions only have input\nparameters",
+        "Functions return a value while stored procedures aren’t require to return a value."
+      ]
+    },
+    {
+      "question": "Which of the following is true about stored procedures?",
+      "options": [
+        "A stored procedure uses the DECLARE keyword in the procedure body to declare\nformal parameters.",
+        "A stored procedure is named PL/SQL block with at least one parameter\ndeclaration in the procedure specification.",
+        "A stored procedure uses the DELCLARE keyword in the procedure specification\nto declare formal parameters.",
+        "A stored procedure must have at least one executable statement in the procedure\nbody."
+      ]
+    },
+    {
+      "question": "Consider the following Transact-SQL statement fragment from a stored procedure. What\nhappens if an error occurs during the INSERT statement?\n\nINSERT INTO Temp (Col1)\nVALUES @TempVal\nPRINT @TempVal\nIF @@error <> 0\n\nRETURN 1\nELSE\n\nRETURN 0\n…MORE CODE BELOW…",
+      "options": [
+        "The stored procedure exits with no return value",
+        "The stored procedure continues to execute more code below",
+        "The stored procedure exits with a return value of 1",
+        "The stored procedure exits with a return value of 0"
+      ]
+    }
+  ]
+}

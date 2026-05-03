@@ -1,0 +1,512 @@
+{
+  "name": "SQL Database Fundamentals (345) National 2025",
+  "time": 60,
+  "answers": [
+    "D",
+    "D",
+    "B",
+    "A",
+    "B",
+    "C",
+    "D",
+    "C",
+    "B",
+    "D",
+    "A",
+    "C",
+    "B",
+    "A",
+    "C",
+    "B",
+    "C",
+    "C",
+    "C",
+    "A",
+    "C",
+    "C",
+    "D",
+    "B",
+    "A",
+    "C",
+    "D",
+    "B",
+    "D",
+    "D",
+    "C",
+    "A",
+    "D",
+    "C",
+    "A",
+    "A",
+    "B",
+    "A",
+    "D",
+    "D",
+    "A",
+    "C",
+    "A",
+    "C",
+    "A",
+    "C",
+    "B",
+    "C",
+    "D",
+    "A"
+  ],
+  "questions": [
+    {
+      "question": "What is the purpose of achieving Boyce-Codd Normal Form (BCNF) in database\nnormalization?",
+      "options": [
+        "To optimize data storage space",
+        "To reduce redundancy and dependency",
+        "To eliminate all duplicate records from the database",
+        "To ensure that each non-key attribute is fully functionally dependent on the\nprimary key"
+      ]
+    },
+    {
+      "question": "Which of the following is NOT a type of database constraint?",
+      "options": [
+        "Primary key constraint",
+        "Foreign key constraint",
+        "Null constraint",
+        "Dynamic constraint"
+      ]
+    },
+    {
+      "question": "How are OLTP systems typically scaled to handle increasing transaction loads?",
+      "options": [
+        "By adding more powerful hardware resources",
+        "By partitioning data across multiple servers",
+        "By increasing the size of individual transactions",
+        "By reducing the number of concurrent users"
+      ]
+    },
+    {
+      "question": "Which database model is commonly used in OLTP systems?",
+      "options": [
+        "Relational",
+        "NoSQL",
+        "Data warehousing",
+        "Hierarchical"
+      ]
+    },
+    {
+      "question": "What is the primary purpose of DDL in database management systems?",
+      "options": [
+        "To manipulate data stored in the database",
+        "To define and modify the structure of the database schema",
+        "To generate complex analytical reports",
+        "To optimize database performance"
+      ]
+    },
+    {
+      "question": "What is the process of decomposing a relation into smaller, well-structured relations\ncalled?",
+      "options": [
+        "Denormalization",
+        "Normalization",
+        "Decomposition",
+        "Aggregation"
+      ]
+    },
+    {
+      "question": "Which normal form allows for a composite key and eliminates partial dependencies?",
+      "options": [
+        "First Normal Form (1NF)",
+        "Second Normal Form (2NF)",
+        "Third Normal Form (3NF)",
+        "Boyce-Codd Normal Form (BCNF)"
+      ]
+    },
+    {
+      "question": "What level of normalization does the following table meet?",
+      "options": [
+        "First Normal Form (1NF)",
+        "Second Normal Form (2NF)",
+        "Third Normal Form (3NF)",
+        "Boyce-Codd Normal Form (BCNF)"
+      ],
+      "image": "2025-National-Table-8.png"
+    },
+    {
+      "question": "What does the term \"atomicity\" mean in the context of database normalization?",
+      "options": [
+        "Each transaction has been committed",
+        "Ensuring that each transaction is treated as a single unit",
+        "Ensures concurrent execution of transactions leaves the database in the same state",
+        "Ensures any data written to the database must be valid according to defined rules"
+      ]
+    },
+    {
+      "question": "In which isolation level does a transaction acquire range locks on selected rows and holds\nthem until the end of the transaction?",
+      "options": [
+        "READ UNCOMMITTED",
+        "READ COMMITTED",
+        "REPEATABLE READ",
+        "SERIALIZABLE"
+      ]
+    },
+    {
+      "question": "Which of the following phenomena is associated with a dirty read?",
+      "options": [
+        "Uncommitted dependency",
+        "Lost update",
+        "Phantom read",
+        "Inconsistent retrieval"
+      ]
+    },
+    {
+      "question": "What is a nested stored procedure?",
+      "options": [
+        "A stored procedure that contains multiple levels of control flow statements",
+        "A stored procedure that is called by another stored procedure",
+        "A stored procedure that is created within another stored procedure",
+        "A stored procedure that uses recursive logic to process hierarchical data"
+      ]
+    },
+    {
+      "question": "What is a cursor in the context of stored procedures?",
+      "options": [
+        "A temporary table used to store intermediate results",
+        "A control structure used to iterate over a result set row by row",
+        "A parameter used to pass data between stored procedures",
+        "A mechanism for exception handling within a stored procedure"
+      ]
+    },
+    {
+      "question": "What does CAP theorem state about distributed systems, including NoSQL databases?",
+      "options": [
+        "They can have only one of the following: consistency, availability, or partition\ntolerance",
+        "They must sacrifice consistency in favor of availability and partition tolerance",
+        "They must sacrifice availability in favor of consistency and partition tolerance",
+        "They must sacrifice partition tolerance in favor of consistency and availability"
+      ]
+    },
+    {
+      "question": "What is the main advantage of using a document-based NoSQL database?",
+      "options": [
+        "Strong schema enforcement",
+        "Support for complex joins and transactions",
+        "Flexible schema design and easy scalability",
+        "Strict ACID properties for data consistency"
+      ]
+    },
+    {
+      "question": "Which aspect of DBaaS allows for seamless scaling of database resources?",
+      "options": [
+        "Automated backups",
+        "Elastic provisioning",
+        "Manual sharding",
+        "Fixed instance sizes"
+      ]
+    },
+    {
+      "question": "What does DBaaS abstract away from users?",
+      "options": [
+        "Database security",
+        "Database performance tuning",
+        "Database hardware and software provisioning",
+        "Database schema design"
+      ]
+    },
+    {
+      "question": "How does polyglot persistence relate to the microservices architecture?",
+      "options": [
+        "Polyglot persistence is a prerequisite for implementing microservices",
+        "Microservices and polyglot persistence are unrelated concepts",
+        "Microservices often use polyglot persistence to manage data diversity",
+        "Polyglot persistence simplifies the deployment of microservices"
+      ]
+    },
+    {
+      "question": "What role does data integration play in polyglot persistence?",
+      "options": [
+        "Data integration is not necessary in polyglot persistence environments",
+        "Data integration ensures consistency across multiple databases",
+        "Data integration facilitates communication between different database systems",
+        "Data integration increases complexity and should be avoided"
+      ]
+    },
+    {
+      "question": "Which database optimization strategy involves partitioning large tables into smaller,\nmore manageable segments?",
+      "options": [
+        "Database sharding",
+        "Database clustering",
+        "Database replication",
+        "Database normalization"
+      ]
+    },
+    {
+      "question": "What distinguishes a data lake from a traditional data warehouse?",
+      "options": [
+        "Data lakes store only structured data, while data warehouses store both structured\nand unstructured data.",
+        "Data lakes are designed for real-time processing, while data warehouses are\noptimized for batch processing.",
+        "Data lakes allow for schema-on-read, enabling flexibility in data processing,\nwhile data warehouses enforce schema-on-write.",
+        "Data lakes are typically deployed on-premises, while data warehouses are\ntypically deployed in the cloud."
+      ]
+    },
+    {
+      "question": "What is data ingestion in the context of data lakes?",
+      "options": [
+        "The process of exporting data from a data lake to other systems",
+        "The process of transforming unstructured data into structured data",
+        "The process of loading data into a data lake from various sources",
+        "The process of querying data stored in a data lake"
+      ]
+    },
+    {
+      "question": "Which of the following is NOT a common use case for data lakes?",
+      "options": [
+        "Business intelligence and analytics",
+        "Machine learning and data science",
+        "Log and clickstream analysis",
+        "Real-time transaction processing"
+      ]
+    },
+    {
+      "question": "What is RBAC in database security?",
+      "options": [
+        "The process of encrypting data to prevent unauthorized access",
+        "The process of restricting access to database objects based on user roles and\nprivileges",
+        "The process of monitoring database activity for suspicious behavior",
+        "The process of restricting access to certain IP add"
+      ]
+    },
+    {
+      "question": "What is data masking in the context of database security?",
+      "options": [
+        "The process of obfuscating sensitive data in non-production environments",
+        "The process of backing up data to prevent data loss in case of a disaster",
+        "The process of monitoring and recording database activity for compliance\npurposes",
+        "The process of encrypting data during transmission over a network"
+      ]
+    },
+    {
+      "question": "How does BASE address the challenge of network partitions in distributed systems?",
+      "options": [
+        "By prioritizing consistency over availability",
+        "By ensuring that all replicas of data are consistent at all times",
+        "By sacrificing immediate consistency for increased availability and partition\ntolerance",
+        "By preventing failures from affecting the overall system operation"
+      ]
+    },
+    {
+      "question": "In data lineage, what does a \"data flow\" represent?",
+      "options": [
+        "The movement of data between different database tables",
+        "The encryption of data during transmission",
+        "The sequence of operations performed on data within a database",
+        "The path data takes as it moves through systems and processes"
+      ]
+    },
+    {
+      "question": "In ER modeling, what does cardinality represent?",
+      "options": [
+        "The number of attributes in an entity",
+        "The degree of a relationship between entities",
+        "The type of data stored in a database table",
+        "The size of a database schema"
+      ]
+    },
+    {
+      "question": "What is a subtype in an ER model?",
+      "options": [
+        "An entity that inherits attributes and relationships from another entity",
+        "An entity with a many-to-many relationship",
+        "An entity with a composite primary key",
+        "An entity that represents a specialized version of another entity"
+      ]
+    },
+    {
+      "question": "What does the term \"isolation\" mean in the context of database normalization?",
+      "options": [
+        "Ensuring that each transaction is treated as a single unit",
+        "Ensures any data written to the database must be valid according to defined rule",
+        "Each transaction has been committed",
+        "Ensures concurrent execution of transactions leaves the database in the same state"
+      ]
+    },
+    {
+      "question": "What is aggregation in ER modeling?",
+      "options": [
+        "A process for combining multiple database tables into a single table",
+        "A process for decomposing a database schema into smaller, more manageable\ncomponents",
+        "A process for modeling relationships between entities at different levels of\nabstraction",
+        "A process for optimizing database performance by reducing redundancy"
+      ]
+    },
+    {
+      "question": "In the context of database migration, what does the term \"data drift\" refer to?",
+      "options": [
+        "Inconsistencies between data in the old and new databases",
+        "Unauthorized access to sensitive data during migration",
+        "Migration of data across geographical regions",
+        "Replication lag in distributed databases"
+      ]
+    },
+    {
+      "question": "Which of the following is NOT a characteristic of big data?",
+      "options": [
+        "Veracity",
+        "Variability",
+        "Value",
+        "Viscosity"
+      ]
+    },
+    {
+      "question": "In which scenarios are materialized views most beneficial?",
+      "options": [
+        "When real-time data access is critical",
+        "When storage space is limited",
+        "When the view is accessed frequently",
+        "When data security is the primary concern"
+      ]
+    },
+    {
+      "question": "Which statement best describes the concept of privilege escalation in DCL?",
+      "options": [
+        "Granting additional privileges to a user or role",
+        "Removing existing privileges from a user or role",
+        "Allowing users to access data they are not authorized to access",
+        "Modifying database schema and structure"
+      ]
+    },
+    {
+      "question": "Which of the following indexing strategies is commonly used for columns with high\ncardinality and range queries?",
+      "options": [
+        "B-tree index",
+        "Bitmap index",
+        "Hash index",
+        "Full-text index"
+      ]
+    },
+    {
+      "question": "Which of the following algorithms are commonly used for association rule mining?",
+      "options": [
+        "K-means clustering",
+        "Apriori",
+        "Decision trees",
+        "Linear regression"
+      ]
+    },
+    {
+      "question": "What is the curse of dimensionality in data mining?",
+      "options": [
+        "A phenomenon where the accuracy of a classifier decreases as the number of\nfeatures increases",
+        "An issue that arises when attempting to replicate data on demand",
+        "A problem that occurs when imputing missing values in a dataset",
+        "An unexpected result of reporting data from different sources simultaneously"
+      ]
+    },
+    {
+      "question": "What is the main challenge of association rule mining?",
+      "options": [
+        "Handling missing values in the dataset",
+        "Dealing with high-dimensional data",
+        "Extracting meaningful patterns from large datasets",
+        "Interpreting the discovered rules and making them actionable"
+      ]
+    },
+    {
+      "question": "Which of the following statements about column-family stores is true?",
+      "options": [
+        "They are optimized for OLTP workloads",
+        "They store all columns of a row contiguously on disk",
+        "They are not suitable for analytical queries and reporting",
+        "They use a schema-less design"
+      ]
+    },
+    {
+      "question": "In a distributed database system, what is a key challenge?",
+      "options": [
+        "Ensuring data consistency across multiple nodes",
+        "Minimizing storage space requirements",
+        "Simplifying data access for end-users",
+        "Achieving high availability for the database"
+      ]
+    },
+    {
+      "question": "Which of the following is an advantage of using a columnar database over a row-based\ndatabase for analytical workloads?",
+      "options": [
+        "Faster transaction processing",
+        "Lower storage requirements",
+        "Higher compression ratios",
+        "Better support for OLTP workloads"
+      ]
+    },
+    {
+      "question": "Which of the following concurrency control mechanisms ensures serializability by\nlocking data items that are accessed by transactions?",
+      "options": [
+        "Two-Phase Locking (2PL)",
+        "Concurrency Control (OCC)",
+        "Multi-Version Concurrency Control (MVCC)",
+        "Snapshot Isolation (SSI)"
+      ]
+    },
+    {
+      "question": "What would be the result of the following query:\nSELECT 123 + \"789\"+ 456 from Employee",
+      "options": [
+        "Error",
+        "579",
+        "1368 4 times",
+        "\"123789456\""
+      ],
+      "image": "2025-National-Table-44-46.png"
+    },
+    {
+      "question": "What DDL command would you use to add a Foreign key constraints to the Employee\ntable?",
+      "options": [
+        "ALTER TABLE",
+        "ADD FOREIGN KEY CONSTRAINT",
+        "MODIFY TABLE",
+        "ADD CONSTRAINT"
+      ],
+      "image": "2025-National-Table-44-46.png"
+    },
+    {
+      "question": "How would you get a count of how many employees are in each department?",
+      "options": [
+        "SELECT DepartmentName, COUNT(EmployeeID) FROM Employees\nINNER JOIN Departments ON\nEmployees.EmployeeID = Deparments.ID\nGROUP BY DepartmentName",
+        "SELECT D.DepartmentName, COUNT(E.EmployeeID) FROM Employees E\nLEFT JOIN Departments D ON\nD.EmployeeID = E.ID\nGROUP BY D.DepartmentName",
+        "SELECT DepartmentName, COUNT(EmployeeID) FROM Departments Dept\nLEFT JOIN Employees Emp ON\nEmployeeID = Dept.ID\nGROUP BY DepartmentName",
+        "SELECT DepartmentName, COUNT(EmployeeID) FROM Employees\nCROSS JOIN Departments ON\nEmployees.EmployeeID = Deparments.ID\nGROUP BY DepartmentName"
+      ],
+      "image": "2025-National-Table-44-46.png"
+    },
+    {
+      "question": "What is the purpose of the EXPLAIN statement in SQL?",
+      "options": [
+        "To execute a query and retrieve the result set",
+        "To display the execution plan of a query",
+        "To provide a summary of database statistics",
+        "To analyze the data distribution within tables"
+      ]
+    },
+    {
+      "question": "In a star schema data warehouse design, what is the role of the fact table?",
+      "options": [
+        "To store metadata about the database objects",
+        "To store descriptive attributes about the business entities",
+        "To store hierarchical relationships between data entities",
+        "To store transactional data or business facts"
+      ]
+    },
+    {
+      "question": "Which of the following is a characteristic of a NewSQL database?",
+      "options": [
+        "It is designed for vertical and not horizontal scaling",
+        "It is optimized for ultra-heavy workloads",
+        "It supports only eventual consistency",
+        "It functionally supports OLTP databases"
+      ]
+    },
+    {
+      "question": "What does the term \"Consistency\" mean in the context of database normalization?",
+      "options": [
+        "Ensures any data written to the database must be valid according to defined rules",
+        "Each transaction has been committed",
+        "Ensures concurrent execution of transactions leaves the database in the same state",
+        "Ensuring that each transaction is treated as a single unit"
+      ]
+    }
+  ]
+}
